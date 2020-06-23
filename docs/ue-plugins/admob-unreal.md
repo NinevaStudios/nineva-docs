@@ -17,12 +17,12 @@ Features:
 - Create an AdMob account at https://admob.google.com/home (skip this step if you already have a valid AdMob account)
 - Create an app on your AdMob dashboard and save the App ID
 
-![](images-admob-ue/AdmobCreateApp.jpg)
+![](images/AdmobCreateApp.jpg)
 
 - Copy your app's unique ID to your UE project settings
 For existing apps you can find the unique app ID in the app's settings section:
 
-![](images-admob-ue/AppSettings.jpg)
+![](images/AppSettings.jpg)
 
 It is recommended to copy the ID via the highlighted copy to clipboard button to avoid copying any unnecessary symbols.
 
@@ -30,11 +30,11 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 ?> Please refer to AdMob guides to fill in all the necessary information in your account. When you receive an email that your account is approved and see this banner on your home page you are all set up to use real ads in your application.
 
-![](images-admob-ue/AdmobApproved.jpg)
+![](images/AdmobApproved.jpg)
 
 ## Project Settings
 
-![](images-admob-ue/ProjectSettings.jpg)
+![](images/ProjectSettings.jpg)
 
 - Delay app measurement - delays app measurement until the Ad Subsystem is explicitly initialized. Use this option if you need to collect any kind of consent before gathering user-level event data. By default event data is being sent to Google as soon as the app launches.
 - Admob AppID - unique AdMob app ID. If this field is empty your application will crash when launched on an actual device.
@@ -44,7 +44,7 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 To actually display ads you will also need to setup ad units in your AdMob account. Later you can copy these ad units into respective blueprint nodes. Make sure that you are using an ad unit for the correct ad format. As with the app ID - use the copy button to only get the required data from the website.
 
-![](images-admob-ue/AdmobAdUnits.jpg)
+![](images/AdmobAdUnits.jpg)
 
 ?> During development you can use special Google provided test ad unit IDs. Please refer to [this](#setting-up-test-ads) page for more information.
 
@@ -55,7 +55,7 @@ To present an ad to your users you will need to perform these actions:
 4. Load the ad from the network
 5. Show the ad when it loaded successfully
 
-![](images-admob-ue/AdWorkflowBP.jpg)
+![](images/AdWorkflowBP.jpg)
 
 As banner ads are not intrusive you have the ability to show them as soon as they load. Interstitial and rewarded ads disrupt the flow of the application so it is recommended to show them only during breakpoints in your app. If you want to present multiple ads you will have to load this amount of ads separately.
 
@@ -116,13 +116,13 @@ In case you encounter an error you will receive an error code and message in you
 
 * Init
 
-![](images-admob-ue/AdSubsystemInitBP.jpg)
+![](images/AdSubsystemInitBP.jpg)
 
 Initializes the ad subsystem. You should only call this method when the `Delay app measurement` option is enabled.
 
 * Enable Personalized Ads
 
-![](images-admob-ue/AdSubsystemPersonalizedAdsBP.jpg)
+![](images/AdSubsystemPersonalizedAdsBP.jpg)
 
 Enable/disable personalized ads (enabled by default).
 
@@ -130,7 +130,7 @@ Enable/disable personalized ads (enabled by default).
 
 * Make Banner Ad
 
-![](images-admob-ue/MakeBannerAdBP.jpg)
+![](images/MakeBannerAdBP.jpg)
 
 Create a banner ad
 
@@ -151,7 +151,7 @@ Position - Position of the ad (Top, Bottom, TopLeft, TopRight, BottomLeft, Botto
 
 * Load Ad
 
-![](images-admob-ue/BannerAdLoadAdBP.jpg)
+![](images/BannerAdLoadAdBP.jpg)
 
 Load the ad
 
@@ -160,25 +160,25 @@ Show On Load - Show the ad when it finishes loading
 
 * Show
 
-![](images-admob-ue/BannerAdShowBP.jpg)
+![](images/BannerAdShowBP.jpg)
 
 Show banner ad
 	
 * Hide
 
-![](images-admob-ue/BannerAdHideBP.jpg)
+![](images/BannerAdHideBP.jpg)
 
 Hide banner ad
 
 * Destroy
 
-![](images-admob-ue/BannerAdDestroyBP.jpg)
+![](images/BannerAdDestroyBP.jpg)
 
 Destroy banner ad
 
 * Events
 
-![](images-admob-ue/BannerAdEventsBP.jpg)
+![](images/BannerAdEventsBP.jpg)
 
 You can bind to the following events:
 - Ad Loaded - fires when an ad finishes loading
@@ -191,7 +191,7 @@ You can bind to the following events:
 
 * Make Interstitial Ad
 
-![](images-admob-ue/MakeInterstitialAdBP.jpg)
+![](images/MakeInterstitialAdBP.jpg)
 
 Create an interstitial ad
 
@@ -200,31 +200,31 @@ AdUnitId - Ad unit id (provided by Admob)
 	
 * Load Ad
 
-![](images-admob-ue/InterstitialAdShowBP.jpg)
+![](images/InterstitialAdShowBP.jpg)
 
 Load the ad
 
 * Is Loaded
 
-![](images-admob-ue/InterstitialAdIsLoadedBP.jpg)
+![](images/InterstitialAdIsLoadedBP.jpg)
 
 Check if the ad has loaded. Return true if ad loaded successfully, false otherwise
 	
 * Show
 
-![](images-admob-ue/InterstitialAdShowBP.jpg)
+![](images/InterstitialAdShowBP.jpg)
 
 Show interstitial ad
 
 * Is Valid
 
-![](images-admob-ue/InterstitialAdIsValidBP.jpg)
+![](images/InterstitialAdIsValidBP.jpg)
 
 Check if the ad is valid. This always returns true on Android. On IOS the ad becomes invalid after a single-use. Trying to load an invalid ad will raise an error.
 
 * Events
 
-![](images-admob-ue/InterstitialAdEventsBP.jpg)
+![](images/InterstitialAdEventsBP.jpg)
 
 You can bind to the following events:
 - Ad Loaded - fires when an ad finishes loading
@@ -237,7 +237,7 @@ You can bind to the following events:
 
 * Make Rewarded Ad
 
-![](images-admob-ue/MakeRewardedAdBP.jpg)
+![](images/MakeRewardedAdBP.jpg)
 
 Create a rewarded video ad
 
@@ -246,31 +246,31 @@ AdUnitId - Ad unit id (provided by Admob)
 
 * Load Ad
 
-![](images-admob-ue/RewardedAdLoadAdBP.jpg)
+![](images/RewardedAdLoadAdBP.jpg)
 
 Load the ad
 
 * Is Loaded
 
-![](images-admob-ue/RewardedAdIsLoadedBP.jpg)
+![](images/RewardedAdIsLoadedBP.jpg)
 
 Check if the ad has loaded. Return true if ad loaded successfully, false otherwise
 
 * Show
 
-![](images-admob-ue/RewardedAdShowBP.jpg)
+![](images/RewardedAdShowBP.jpg)
 
 Show rewarded ad
 
 * Get Reward Item
 
-![](images-admob-ue/RewardedAdGetRewardItemBP.jpg)
+![](images/RewardedAdGetRewardItemBP.jpg)
 
 Get the reward data before the user earned it. This data contains the type and amount of the reward.
 
 * Events
 
-![](images-admob-ue/RewardedAdEventsBP.jpg)
+![](images/RewardedAdEventsBP.jpg)
 
 You can bind to the following events:
 - Ad Loaded - fires when an ad finishes loading
