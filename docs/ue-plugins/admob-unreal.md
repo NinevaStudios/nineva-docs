@@ -61,11 +61,12 @@ As banner ads are not intrusive you have the ability to show them as soon as the
 
 All blueprint nodes are described in the [here](#blueprint-nodes) section.
 
-# Setting up test ads
+# Testing Ads
 
 There are two ways to verify that your application will display ads:
 
 ### Google provided test ad units
+
 You can find ready for testing ad units at [this](https://developers.google.com/admob/unity/test-ads#sample_ad_units) page. These units are different for Android and IOS and will work only on the platform they are provided for. Simply copy an ad unit for a specific ad type and pass it to a respective make function in blueprints.
 
 ### Test Devices
