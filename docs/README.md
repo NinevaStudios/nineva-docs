@@ -2,9 +2,16 @@
 
 Welcome to the Nineva Studios doucumentation page!
 
+Useful links:
+
+* [Our web site](https://ninevastudios.com)
+* [Talk to us on discord](https://discord.gg/SuJP9fY)
+* [Explore our Unity plugins](TODO)
+* [Explore our Unreal Engine 4 plugins](TODO)
+
 ## Unreal Engine 4 Plugins
 
-* [Admob Goodies](admob-unreal)
+* [Admob Goodies](ue-plugins/admob-unreal)
 
 ## Unity Plugins
 
