@@ -1,4 +1,4 @@
-# Admob Goodies Documentation for Unreal Engine
+# **Admob Goodies Documentation for Unreal Engine**
 
 Join our [Discord server](https://discord.gg/SuJP9fY) and ask us anything!
 
@@ -12,7 +12,7 @@ Features:
 - Interstitial Ads
 - Rewarded Ads
 
-# Getting started
+# **Getting started**
 
 - Create an AdMob account at https://admob.google.com/home (skip this step if you already have a valid AdMob account)
 - Create an app on your AdMob dashboard and save the App ID
@@ -61,7 +61,7 @@ As banner ads are not intrusive you have the ability to show them as soon as the
 
 All blueprint nodes are described in the [here](#blueprint-nodes) section.
 
-# Testing Ads
+# **Testing Ads**
 
 There are two ways to verify that your application will display ads:
 
@@ -82,7 +82,7 @@ For **Android** you can view this message in logcat (UE device log or via Androi
 For **IOS** device first build and deploy your project using UE. After deploying your application to a device you can launch it via a generated XCode project located at *[Path_to_UE_Project]/Intermidiate/ProjectFilesIOS/[Project_Name].xcodeproj*. Now you can view your device logs in the XCode debug console. Search for a message of this format:
 `GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"YOUR_DEVICE_ID" ]`
 
-# Error codes
+# **Error codes**
 
 In case you encounter an error you will receive an error code and message in your callback. The message is useful to quickly identify the problem and the code can be used to react to certain errors (e. g. in case of a no fill error you can cross advertise your other applications yourself). Android and IOS have different error codes - keep this in mind when checking them.
 
@@ -111,7 +111,7 @@ In case you encounter an error you will receive an error code and message in you
 
 ---
 
-# Blueprint nodes
+# **Blueprint nodes**
 
 ## Ad Subsystem
 
@@ -281,7 +281,7 @@ You can bind to the following events:
 - Ad Closed - fires when a rewarded ad is closed
 - User earned reward - fires when a rewarded ad triggers a reward. The app is responsible for crediting the user with the reward.
 
-# FAQ
+# **FAQ**
 
 * Is there an example showing how to use this plugin?
 
