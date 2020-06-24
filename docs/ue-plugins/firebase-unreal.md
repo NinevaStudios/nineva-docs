@@ -1,4 +1,4 @@
-# Authentication
+# **Authentication**
 
 ## Initial Setup
 
@@ -77,7 +77,7 @@ If there is a need, you can reauthenticate or reload the current user by calling
 Call `Delete` on the FirebaseUser object to delete the user from your user database.
 
 ___________________________________________________________
-# Cloud Storage
+# **Cloud Storage**
 
 ## Initial Setup
 
@@ -148,7 +148,7 @@ To remove files from cloud storage use `DeleteFile` method.
 ![](images/cloud-storage/CloudStorage.DeleteFile.png)
 ___________________________________________________________
 
-# Remote Config
+# **Remote Config**
 
 ## Initial Setup
 
