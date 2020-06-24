@@ -1,10 +1,8 @@
 # Android Goodies PRO Documentation
 
-# TODO - MOVE PICTURES FROM GITHUB!!!
-
 **Join our [Discord server](https://discord.gg/SuJP9fY) and ask us anything!**
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/logo.png" width="256" height="256">
+![alt text](/images/ag/logo.png ':size=256')
 
 **Supported Android versions - API Level 14 and higher (4.0 Ice Cream Sandwich)**
 
@@ -69,7 +67,7 @@ To build and run the demo scene just connect your Android device switch target p
 
 You will see the menu like this on device where you can start testing:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs-PRO/master/images/demo-home.png">
+![alt text](/images/ag/demo-home.png ':size=512')
 
 ---
 
@@ -110,7 +108,7 @@ AGAlarmClock.SetAlarm(1, 1, "My morning alarm", weekdays, vibrate, skipUI);
 
 Result:
 
-<img src="https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/set-alarm.png" width="400">
+![/images/ag/set-alarm.png"]()
 
 ### Setting timer
 
@@ -123,7 +121,7 @@ AGAlarmClock.SetTimer(5, "My awesome timer", skipUI);
 
 Result:
 
-<img src="https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/timer.png" width="400">
+![alt text](/images/ag/timer.png ':size=512')
 
 Please check [article about common Android intents](https://developer.android.com/guide/components/intents-common.html#Clock) for more information.
 
@@ -229,7 +227,7 @@ eventBuilder.BuildAndShow();
 
 Result:
 
-<img src="https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/calendar_event.png">
+![alt text](/images/ag/calendar_event.png ':size=512')
 
 Please check [article about common Android intents](https://developer.android.com/guide/components/intents-common.html#Calendar) for more information.
 
@@ -300,7 +298,7 @@ AGMaps.OpenMapLocation(47.6f, -122.3f, 9);
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/map_location_zoom.png" width="320" height="569">
+![alt text](/images/ag/map_location_zoom.png ':size=512')
 
 ---
 
@@ -316,7 +314,7 @@ AGMaps.OpenMapLocationWithLabel(47.6f, -122.3f, "My Label");
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/map_address.png" width="320" height="569">
+![alt text](/images/ag/map_address.png ':size=512')
 
 ---
 
@@ -332,7 +330,7 @@ AGMaps.OpenMapLocation("1st & Pike, Seattle");
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/map_label.png" width="320" height="569">
+![alt text](/images/ag/map_label.png ':size=512')
 
 ---
 
@@ -374,7 +372,7 @@ You can open application details settings for any application installed on the d
 
 The method `AGSettings.OpenModifySystemSettingsActivity(Action onFailure)` opens system activity where user can allow apps to modify Android system settings.
 
-<img src="https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/modify_system_settings.png" width="320">
+![alt text](/images/ag/modify_system_settings.png ':size=512')
 
 ### Getting/Setting System Screen Brightness
 
@@ -428,15 +426,15 @@ To share images you must add the following permission to your `AndroidManifest.x
 
 or modify Android Build Settings to set Write Access to `External (SDCard)` 
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/external_storage.png "Storage")
+![alt text](/images/ag/external_storage.png ':size=512')
 
 ### Sharing setting for images
 
 If you want to share an image ( `Texture2D` ) from your project assets you have to set **Texture Type** to **Advanced** plus set **Read/Write Enabled** checkbox to true and **Compression Format** to **RGBA 32 bit** otherwise you will get errors.
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/share-image-settings-read-write.png "Image Settings")
+![alt text](/images/ag/share-image-settings-read-write.png ':size=512')
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/share-image-settings.png "Image Settings")
+![alt text](/images/ag/share-image-settings.png ':size=512')
 
 ### Functionality
 
@@ -824,7 +822,7 @@ AGAlertDialog.ShowMessageDialog("Single Button", "This dialog has only positive 
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_1_btn.png" width="320" height="569">
+![alt text](/images/ag/dialog_1_btn.png ':size=512')
 
 ### Message dialog with positive and negative buttons
 
@@ -841,7 +839,7 @@ AGAlertDialog.ShowMessageDialog("Two Buttons", "This dialog has positive and neg
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_2_btn.png" width="320" height="569">
+![alt text](/images/ag/dialog_2_btn.png ':size=512')
 
 ### Message dialog with positive, negative and neutral buttons
 
@@ -860,7 +858,7 @@ AGAlertDialog.ShowMessageDialog("Three Buttons",
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_3_btn.png" width="320" height="569">
+![alt text](/images/ag/dialog_3_btn.png ':size=512')
 
 ### Dialog with simple items chooser
 
@@ -877,7 +875,7 @@ AGAlertDialog.ShowChooserDialog("Choose color", Colors,
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_chooser.png" width="320" height="569">
+![alt text](/images/ag/dialog_chooser.png ':size=512')
 
 ### Dialog with radio buttons items chooser
 
@@ -896,7 +894,7 @@ AGAlertDialog.ShowSingleItemChoiceDialog("Choose color", Colors, defaultSelected
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_single_choice.png" width="320" height="569">
+![alt text](/images/ag/dialog_single_choice.png ':size=512')
 
 ### Dialog with check boxes buttons items chooser
 
@@ -916,7 +914,7 @@ AGAlertDialog.ShowMultiItemChoiceDialog("Choose color", Colors,
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_multi_choice.png" width="320" height="569">
+![alt text](/images/ag/dialog_multi_choice.png ':size=512')
 
 ### Progress dialog (spinner and horizontal progress bar)
 
@@ -1022,7 +1020,7 @@ private void OnTimePickCancel()
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/time_picker.png" width="320" height="569">
+![alt text](/images/ag/time_picker.png ':size=512')
 
 ### Date Picker
 
@@ -1051,7 +1049,7 @@ private void OnDatePickCancel()
 
 Result:
 
-<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/date_picker.png" width="320" height="569">
+![alt text](/images/ag/date_picker.png ':size=512')
 
 ---
 
@@ -1085,7 +1083,7 @@ private IEnumerator ShowSpinnerForDuration()
 
 Result:
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/spinner.png "Spinner")
+![alt text](/images/ag/spinner.png ':size=512')
 
 ### Horizontal progress bar
 
@@ -1124,7 +1122,7 @@ private IEnumerator ShowHorizontalForDuration()
 
 Result:
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/progress-bar.png "Horizontal progress bar")
+![alt text](/images/ag/progress-bar.png ':size=512'")
 
 ---
 
@@ -1156,7 +1154,7 @@ Just put the result into drawable directories *\UnityProject\Assets\Plugins\Andr
 
 If you want to use app icon just set bigIcon = **"app_icon"**.
 
-<img src="https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/notifications.png" width="256">
+![alt text](/images/ag/notifications.png ':size=512')
 
 ### Scheduling the notification
 
@@ -1177,7 +1175,7 @@ AGLocalNotifications.ShowNotification(NotificationId, when, title, message, Colo
 
 Result:
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/notification.png "Local notifications")
+![alt text](/images/ag/notification.png ':size=512')
 
 You can also provide a string icon name but you have to make sure the image is available in `res/drawable` folder of your Android app. By default the application launcher icon will be shown.
 
@@ -1316,7 +1314,7 @@ foreach (var channel in AGNotificationManager.NotificationChannels)
 AGNotificationManager.OpenNotificationChannelSettings(channelId);
 ```
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/NotificationChannelSettings.png "Notification Channel Settings")
+![alt text](/images/ag/NotificationChannelSettings.png ':size=512')
 
 ### Creating notification channel group
 
@@ -1386,7 +1384,7 @@ builder.SetInboxStyle(new Notification.InboxStyle()
 AGNotificationManager.Notify(notificationId, builder.Build());
 ```
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/InboxNotification.png "Inbox style notification")
+![alt text](/images/ag/InboxNotification.png ':size=512')
 
 #### Progress bar style
 
@@ -1401,7 +1399,7 @@ AGNotificationManager.Notify(notificationId, builder.Build());
 StartCoroutine(UpdateProgressBar(builder));
 ```
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/ProgressBarNotification.png "Progress bar notification")
+![alt text](/images/ag/ProgressBarNotification.png ':size=512')
 
 If you can estimate how much of the operation is complete at any time, use the "determinate" form of the indicator (as shown in figure) by calling `SetProgress(max, progress, false)` . 
 The first parameter is what the "complete" value is (such as 100); the second is how much is currently complete, and the last indicates this is a determinate progress bar.
@@ -1444,7 +1442,7 @@ builder.SetMessagingStyle(new Notification.MessagingStyle("John")
 );
 ```
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/MessagingNotification.png "Messaging notification")
+![alt text](/images/ag/MessagingNotification.png ':size=512')
 
 #### Big text/big picture style
 
@@ -1458,7 +1456,7 @@ builder.SetBigPictureStyle(new Notification.BigPictureStyle()
 		.SetBigPicture(bigPictureTexture));
 ```
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/BigPictureNotification.png "Big picture notification")
+![alt text](/images/ag/BigPictureNotification.png ':size=512')
 
 Apply `Notification.BigTextStyle` to display text in the expanded content area of the notification:
 
@@ -1467,7 +1465,7 @@ builder.SetBigTextStyle(new Notification.BigTextStyle()
 					.BigText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
 ```
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/BigTextNotification.png "Big text notification")
+![alt text](/images/ag/BigTextNotification.png ':size=512')
 
 #### Notification with action
 
@@ -1478,7 +1476,7 @@ The following example adds "Open URL" button to the notification. When tapped, i
 builder.AddAction(Notification.CreateOpenUrlAction("https://github.com/TarasOsiris/android-goodies-docs-PRO/wiki", "notify_icon_small", "Open URL"));
 ```
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/ActionNotification.png "Action notification")
+![alt text](/images/ag/ActionNotification.png ':size=512')
 
 ### Passing custom data with notification
 
@@ -1544,25 +1542,25 @@ This class allows you to change device wallpaper image
 
 * Set wallpaper permission must be present in `AndroidManifest.xml` file:
 
-```xml
+``` xml
 <uses-permission android:name="android.permission.SET_WALLPAPER"/>
 ```
 
 * Write external storage permission must be present in `AndroidManifest.xml` file (to save texture to file before setting it as wallpaper):
 
-```xml
+``` xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
-or modify Android Build Settings to set Write Access to `External (SDCard)`
+or modify Android Build Settings to set Write Access to `External (SDCard)` 
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/external_storage.png "Storage")
+![alt text](/images/ag/external_storage.png ':size=512')
 
 ### Checking if setting wallpaper is supported or allowed
 
 Before setting the wallpaper you must make sure it is supported and allowed:
 
-```csharp
+``` csharp
 var isSupported = AGWallpaperManager.IsWallpaperSupported();
 var isAllowed = AGWallpaperManager.IsSetWallpaperAllowed();
 AGUIMisc.ShowToast(string.Format("Wallpaper supported? - {0}, set allowed? - {1}", isSupported, isAllowed));
@@ -1572,9 +1570,9 @@ AGUIMisc.ShowToast(string.Format("Wallpaper supported? - {0}, set allowed? - {1}
 
 To set wallpaper from existing `Texture2D` call `AGWallpaperManager.SetWallpaper(wallpaperTexture)` where `wallpaperTexture` is `Texture2D` texture or `AGWallpaperManager.ShowCropAndSetWallpaperChooser(wallpaperTexture)` if you want to allow the user to crop it beforehand.
 
-?> If you want to set wallpaper (`Texture2D`) from your project assets you have to set **Texture Type** to **Advanced** plus set **Read/Write Enabled** checkbox to true and **Compression Format** to **RGBA 32 bit** otherwise you will get errors.
+?> If you want to set wallpaper ( `Texture2D` ) from your project assets you have to set **Texture Type** to **Advanced** plus set **Read/Write Enabled** checkbox to true and **Compression Format** to **RGBA 32 bit** otherwise you will get errors.
 
-![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/share-image-settings.png "Image Settings")
+![alt text](/images/ag/share-image-settings.png ':size=512')
 
 ### Setting wallpaper from file path
 
@@ -1582,7 +1580,7 @@ You can also set wallpaper from the file path.
 
 This is the example that allows user to pick image from the gallery and then use it to set the wallpaper:
 
-```csharp
+``` csharp
 AGGallery.PickImageFromGallery(
     selectedImage =>
     {
@@ -1620,7 +1618,7 @@ Other methods relevant to UI
 
 You can show toast (short or long) like this:
 
-```csharp
+``` csharp
 AndroidGoodiesMisc.ShowToast("hello long!", AndroidGoodiesMisc.ToastLength.Long);
 ```
 
@@ -1632,7 +1630,7 @@ You can use the `AGUIMisc.ChangeApplicationIconState(false);` to hide the app ic
 
 Use the following methods to show and hide the status bar:
 
-```csharp
+``` csharp
 public void OnShowStatusBar()
 {
     Screen.fullScreen = false;
@@ -1648,15 +1646,13 @@ public void OnHideStatusBar()
 
 ### Immersive mode
 
-
 To enable immersive mode invoke:
 
-```csharp
+``` csharp
 AndroidGoodiesMisc.EnableImmersiveMode();
 ```
 
 ?> Unity 5 has immersive mode enabled by default, so if your using Unity 5 or higher, this method is redundant.
-
 
 ---
 
@@ -1672,17 +1668,92 @@ This class exposes the API of https://developer.android.com/reference/android/co
 
 ## AGDeviceInfo.cs
 
+Class provides various information about device, os.
+
+### Functionality
+
+  + Checking if device has specific feature available (e.g. if device has light sensor). Use `AGDeviceInfo.SystemFeatures.HasSystemFeature(string feature)` to check if device has the specified feature. Features are provided as constants in `AGDeviceInfo.SystemFeatures` class.
+  + Getting [Android ID](https://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID)
+  + Getting properties of `android.os.Build` and `android.os.Build$VERSION` classes. ( `DEVICE, MODEL, PRODUCT, MANUFACTURER, BASE_OS, CODENAME, INCREMENTAL, PREVIEW_SDK_INT, RELEASE, SDK_INT, SECURITY_PATCH` )
+  + Getting application package - `AGDeviceInfo.GetApplicationPackage()` 
+  + Checking if package is installed on device `AGDeviceInfo.IsPackageInstalled(string package)` 
+  + Getting the list of installed packages on device `AGDeviceInfo.GetInstalledPackages()` - returns a list of `PackageInfo` objects that contain `PackageName` , `VersionCode` , `VersionName` 
+
 ---
 
 ## AGEnvironment.cs
+
+Provides access to Android [environment](https://developer.android.com/reference/android/os/Environment.html) variables to get paths to read and write external storage.
+
+### Required permissions
+
+Shortly, writing to this path requires the `WRITE_EXTERNAL_STORAGE` permission, and starting in KITKAT, read access requires the `READ_EXTERNAL_STORAGE` permission, which is automatically granted if you hold the write permission.
+
+``` xml
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+```
+
+Required permissions are dependent on Android version. Read more about permissions to read and write external storage [ `getExternalStorageDirectory` method documentation](https://developer.android.com/reference/android/os/Environment.html#getExternalStorageDirectory()).
+
+### Functionality
+
+This class allows to retrieve default android directory paths like `DirectoryAlarms, DirectoryDCIM, DirectoryDocuments, DirectoryDownloads, DirectoryMovies, DirectoryMusic, DirectoryNotifications, DirectoryPictures, DirectoryPodcasts, DirectoryRingtones, DataDirectoryPath, DownloadCacheDirectoryPath, ExternalStorageDirectoryPath, RootDirectoryPath` .
+
+You can check external storage state with `AGEnvironment.ExternalStorageState` .
+
+You can also check if `AGEnvironment.IsExternalStorageEmulated` or if `AGEnvironment.IsExternalStorageRemovable` .
+
+You can get a top-level shared/external storage directory for placing files of a particular type by invoking `AGEnvironment.GetExternalStoragePublicDirectoryPath(string type)` .
 
 ---
 
 ## AGNetwork.cs
 
+This class allows to retrieve information about device network connectivity.
+
+### Required permissions
+
+The following permissions are required in `AndroidManifest.xml` for the class methods to work:
+
+``` xml
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+```
+
+### Functionality
+
+  + Checking if internet is available ( `AGNetwork.IsInternetAvailable()` )
+  + Checking if wi-fi enabled ( `AGNetwork.IsWifiEnabled()` )
+  + Checking if wi-fi connected ( `AGNetwork.IsWifiConnected()` )
+  + Checking if mobile data connection connected ( `AGNetwork.IsMobileConnected()` )
+  + Getting wi-fi signal level ( `AGNetwork.GetWifiSignalLevel()` )
+  + Getting wi-fi connection info ( `AGNetwork.GetWifiConnectionInfo()` - `BSSID, SSID, MacAddress, LinkSpeed, IpAddress, NetworkId, Rssi` )
+  + Getting Ethernet MAC address if available (useful for Android TV) `AGNetwork.EthernetMacAddress` 
+
 ---
 
 ## AGTelephony.cs
+
+Contains method connected with [Telephony Manager](https://developer.android.com/reference/android/telephony/TelephonyManager.html)
+
+### Required permissions
+
+Note that access to some telephony information is permission-protected. Your application cannot access the protected information unless it has the appropriate permissions declared in its manifest file. Where permissions apply, they are noted in the the methods through which you access the protected information. For more details check [TelephonyManager Documentation](https://developer.android.com/reference/android/telephony/TelephonyManager.html)
+
+To use this class methods you need to add the following permission to `AndroidManifest.xml` :
+
+``` xml
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+```
+
+### Functionality
+
+Currently available functionality:
+
+  + Getting the telephony device identifier. ( `AGTelephony.TelephonyDeviceId` )
+  + Getting the telephony sim serial number. ( `AGTelephony.TelephonySimSerialNumber` )
+  + Getting the ISO country code. ( `AGTelephony.NetworkCountryIso` )
 
 ---
 
@@ -1690,25 +1761,479 @@ This class exposes the API of https://developer.android.com/reference/android/co
 
 ## AGBattery.cs
 
+Methods to get rich info about device battery
+
+### Getting battery charge level
+
+Current method allows to get current battery percentage level of the device:
+
+``` csharp
+// Gets the battery charge level from 1-100.
+var batteryLevel = AGBattery.GetBatteryChargeLevel();
+```
+
+### Getting advanced information about the battery
+
+Here are the properties that you can get about battery state:
+
+* `AGBattery.ChargeTimeRemaining` - An approximation for how much time (in milliseconds) remains until the battery is fully charged.
+* `AGBattery.Capacity` - Remaining battery capacity as an integer percentage of total capacity (with no fractional part).
+* `AGBattery.ChargeCounter` - Battery capacity in micro ampere-hours, as an integer.
+* `AGBattery.CurrentAverage` - Average battery current in micro amperes, as an integer.
+* `AGBattery.CurrentNow` - Instantaneous battery current in micro amperes, as an integer.
+* `AGBattery.EnergyCounter` - Battery remaining energy in nano watt-hours, as a long integer.
+* `AGBattery.Status` - Battery charge status.
+* `AGBattery.IsBatteryLow` - Whether the battery is currently considered to be low.
+* `AGBattery.Health` - Current health constant.
+* `AGBattery.BatteryPlugged` - Value indicating whether the device is plugged in to a power source.
+* `AGBattery.IsBatteryPresent` - Whether a battery is present.
+* `AGBattery.Scale` - The maximum battery level.
+* `AGBattery.Technology` - The technology of the current battery.
+* `AGBattery.Temperature` - The current battery temperature.
+* `AGBattery.Voltage` - The current battery voltage level in mV.
+
 ---
 
 ## AGFlashLight.cs
+
+Turns on camera flashlight in a torch mode.
+
+### Required permissions
+
+To use flashlight you must have the following permissions declared in your `AndroidManifest.xml` :
+
+``` xml
+<!-- Flashlight -->
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-feature android:name="android.hardware.camera" />
+
+<uses-permission android:name="android.permission.FLASHLIGHT"/>
+<uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+```
+
+Also you must request `android.permission.CAMERA` permission at runtime before calling the flashlight methods. [See AGPermissions.cs how to do it](https://github.com/NinevaStudios/android-goodies-docs-PRO/wiki/AGPermissions.cs)
+
+### Checking if flashlight is available on device
+
+To check if if flashlight is available on device call `AGFlashLight.HasFlashlight()` . Perform this check before enabling the flashlight.
+
+### Enabling and disabling flashlight
+
+To enable and disable flashlight:
+
+``` csharp
+// Enable
+AGFlashLight.Enable();
+
+// Disable
+AGFlashLight.Disable();
+```
 
 ---
 
 ## AGGPS.cs
 
+### FAQ
+
+* Will GPS work if there is no internet connection or mobile data etc.?
+* Yes, GPS is seperate hardware module that does not depend on internet connection in any way.
+
+### Required permissions
+
+To use GPS you must have the following permission ([and uses-feature if you target API level 21 or higher (Android 5.0)](https://developer.android.com/guide/topics/location/strategies.html#Permission)) declared in your `AndroidManifest.xml` :
+
+``` xml
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-feature android:name="android.hardware.location.gps" android:required="false" />
+```
+
+### Checking device has GPS module
+
+To check if device has GPS call `AGGPS.DeviceHasGPS` method.
+
+### Checking if GPS enabled and last know location
+
+To check if the device has GPS enabled and available call `AGGPS.IsGPSEnabled()` . You also can retrieve the last known GPS location by calling `AGGPS.GetLastKnownGPSLocation()` (Will return `null` if no last location is available).
+
+### Checking for GPS location updates
+
+To start listening for location updates call `AGGPS.RequestLocationUpdates()` providing update frequency, minimum distance between updates and callback which is invoked when device GPS location changes. To stop tracking location call `AGGPS.RemoveUpdates()` 
+
+`Location` object that is received in a callback contains the following properties: `Latitude` , `Longitude` , `HasAccuracy` , `Accuracy` , `HasSpeed` , `Speed` , `HasBearing` , `Bearing` , `IsFromMockProvider` , `Timestamp` . (Check `AGGPS.cs` file source code for more details)
+
+Example:
+
+``` csharp
+public void OnStartTrackingLocation()
+{
+    // Minimum time interval between location updates, in milliseconds.
+    const long minTimeInMillis = 200;
+    // Minimum distance between location updates, in meters.
+    const float minDistanceInMetres = 1;
+    AGGPS.RequestLocationUpdates(minTimeInMillis, minDistanceInMetres, OnLocationChanged);
+}
+
+public void OnStopTrackingLocation()
+{
+    AGGPS.RemoveUpdates();
+}
+
+private void OnLocationChanged(AGGPS.Location location)
+{
+    gpsText.text = location.Latitude + " " + location.Longtitude;
+}
+```
+
+### Calculating distance between locations
+
+You can calculate distance from one location to another by calling `AGGPS.Location.DistanceTo()` method
+
+Example:
+
+``` csharp
+const double AmsterdamLatitude = 52.3745913;
+const double AmsterdamLongitude = 4.8285751;
+const double BrusselsLatitude = 50.854954;
+const double BrusselsLongitude = 4.3053508;
+
+var amsterdamLocation = new AGGPS.Location(AmsterdamLatitude, AmsterdamLongitude, false, 0,
+    0);
+var brusselsLocation = new AGGPS.Location(BrusselsLatitude, BrusselsLongitude, false, 0, 0);
+var distance = string.Format("Distance between Amsterdam and Brussels is approx: {0} metres",
+    amsterdamLocation.DistanceTo(brusselsLocation));
+```
+
+Another way is to use static method `AGGPS.DistanceBetween()` which is equivalent to Android `android.location.Location.distanceBetween` method
+
+Example:
+
+``` csharp
+var results = new float[3];
+AGGPS.DistanceBetween(AmsterdamLatitude, AmsterdamLongitude,
+    BrusselsLatitude, BrusselsLongitude, results);
+gpsInfoText.text = string.Format("DistanceBetween results: {0}, Initial bearing: {1}, Final bearing: {2}",
+    results[0], results[1], results[2]);
+```
+
 ---
 
 ## AGVibrator.cs
+
+This class allows you to interact with device vibrator.
+
+### Required permissions
+
+To be able to use vibrator you have to add the following permission to `AndroidManifest.xml` :
+
+``` xml
+<uses-permission android:name="android.permission.VIBRATE"/>
+```
+
+### Checking if device has vibrator
+
+To check if device actually has vibrator call
+
+``` csharp
+AGVibrator.HasVibrator()
+```
+
+### Using vibrator
+
+To vibrate once provide vibrate duration in milliseconds:
+
+``` csharp
+AGVibrator.Vibrate(500);
+```
+
+To vibrate a pattern:
+
+``` csharp
+// Start without a delay
+// Each element then alternates between vibrate, sleep, vibrate, sleep...
+long[] pattern = {0, 100, 1000, 300, 200, 100, 500, 200, 100};
+
+AGVibrator.VibratePattern(pattern);
+```
+
+### Using new vibration API starting from API level 26 Android O (8.0)
+
+### Checking if the device has the required API
+
+``` csharp
+bool supportsNewVibrationsApi = AGVibrator.AreVibrationEffectsSupported;
+```
+
+### Checking if the device has amplitude control
+
+``` csharp
+bool hasAmplitudeControl = AGVibrator.HasAmplitudeControl;
+```
+
+### Vibrate once
+
+Create a one shot vibration. One shot vibrations will vibrate constantly for the specified 
+period of time at the specified amplitude, and then stop.
+
+``` csharp
+// Create a one shot vibration for 1000 ms at selected amplitude
+// Amplitude is the strength of the vibration. This must be a value between 1 and 255,
+// or DEFAULT_AMPLITUDE.
+AGVibrator.Vibrate(VibrationEffect.CreateOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE));
+```
+
+### Vibrate with a pattern
+
+Create a waveform vibration. Waveform vibrations are a potentially repeating series of
+timing and amplitude pairs. For each pair, the value in the amplitude array determines
+the strength of the vibration and the value in the timing array determines how long
+it vibrates for.
+To cause the pattern to repeat, pass the index into the timings array at which to start
+the repetition, or -1 to disable repeating.
+
+``` csharp
+// Start without a delay
+// Each element then alternates between vibrate, sleep, vibrate, sleep...
+// To cause the pattern to repeat, pass the index into the pattern array at which to start the repeat, 
+// or -1 to disable repeating.
+long[] mVibratePattern = {0, 400, 1000, 600, 1000, 800, 1000, 1000};
+			
+// Create a waveform vibration.
+AGVibrator.Vibrate(VibrationEffect.CreateWaveForm(mVibratePattern, -1));
+```
+
+### Vibrate with a pattern at different amplitudes
+
+Create a waveform vibration. Waveform vibrations are a potentially repeating series of timing
+and amplitude pairs. For each pair, the value in the amplitude array determines the strength
+of the vibration and the value in the timing array determines how long it vibrates for.
+An amplitude of 0 implies no vibration (i.e. off), and any pairs with a timing value of 0 will be ignored.
+The amplitude array of the generated waveform will be the same size as the given timing array with
+alternating values of 0 (i.e. off) and `DEFAULT_AMPLITUDE` , starting with 0. Therefore the first timing
+value will be the period to wait before turning the vibrator on, the second value will be how long
+to vibrate at `DEFAULT_AMPLITUDE` strength, etc.
+To cause the pattern to repeat, pass the index into the timings array
+at which to start the repetition, or -1 to disable repeating. 
+
+``` csharp
+// Start without a delay
+// Each element then alternates between vibrate, sleep, vibrate, sleep...
+// To cause the pattern to repeat, pass the index into the pattern array at which to start the repeat, 
+// or -1 to disable repeating.
+long[] vibratePattern = {0, 400, 1000, 600, 1000, 800, 1000, 1000};
+// Create a waveform vibration with different vibration amplitudes
+// Numbers of elements in both arrays should be equal
+int[] amplitudes = {0, 255, 0, 255, 0, 255, 0, 255};
+			
+// Create a waveform vibration.
+AGVibrator.Vibrate(VibrationEffect.CreateWaveForm(vibratePattern, amplitudes, 0));
+```
+
+### Cancel vibration
+
+Cancels current vibration.
+
+``` csharp
+AGVibrator.Cancel();
+```
 
 ---
 
 ## AGCamera.cs
 
+This class allows you to check if device has camera and its certain features and to take pictures (big and thumbnail) receiving them as `Texture2D` and record video.
+
+### Requirements
+
+* **CAMERA permission** To take photos you must add this permission to your `AndroidManifest.xml` and also request the `CAMERA` runtime permission BEFORE calling `AGCamera.TakePhoto()` method. [See AGPermissions.cs how to do it](https://github.com/NinevaStudios/android-goodies-docs-PRO/wiki/AGPermissions.cs) or see the `AGCamera.TakePhoto()` example usage in the demo.
+
+``` xml
+<uses-permission android:name="android.permission.CAMERA" />
+```
+
+* To take photos you must add this permission to your `AndroidManifest.xml` or set **Write Access** to **External (SD Card)** in Android build settings:
+
+``` xml
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
+
+### Checking camera features
+
+You can check the following things:
+
+* if device actually has camera: `AGCamera.DeviceHasCamera()` 
+* if device has frontal camera: `AGCamera.DeviceHasFrontalCamera()` 
+* if device has camera with autofocus: `AGCamera.DeviceHasCameraWithAutoFocus()` 
+* if device has camera with flashlight: `AGCamera.DeviceHasCameraWithFlashlight()` 
+
+### Taking a photo and receiving a result
+
+Takes photo using Android camera intent, stores photo in user gallery and returns the photo as a `ImagePickResult` . Method is `AGCamera.TakePhoto()` .
+
+Method parameters are:
+
+* a success callback where you will receive `ImagePickResult` object. Invoke `LoadTexture2D()` or `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` to load `Texture2D` texture. Object also contains such info as display name of the picked image, width, height, size etc. Check the class itself for more information.
+* a cancel callback which is invoked when user cancels taking photo or an error happens.
+* an optional `ImageResultSize` - defaults to `ImageResultSize.Original` - specify this parameter if the photo takes up to much memory and needs to be downscaled before returned.
+* an optional `bool` parameter whether to generate thumnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
+
+Example:
+
+``` csharp
+var imageResultSize = ImageResultSize.Max1024; 
+AGCamera.TakePhoto(
+    selectedImage =>
+    {
+        // Load received image into Texture2D
+        var imageTexture2D = selectedImage.LoadTexture2D();
+        string msg = string.Format("{0} was taken from camera with size {1}x{2}",
+            selectedImage.DisplayName, imageTexture2D.width, imageTexture2D.height);
+        image.sprite = SpriteFromTex2D(imageTexture2D);
+
+        // Clean up
+        Resources.UnloadUnusedAssets();
+    },
+    error => AGUIMisc.ShowToast("Cancelled taking photo from camera: " + error), imageResultSize, shouldGenerateThumbnails);
+}
+```
+
+### Recording video and receiving a result
+
+Records video using Android camera intent, returns the video information as a `VideoPickResult` .
+
+`VideoPickResult` contains the following properties:
+
+* `OriginalPath` 
+* `DisplayName` 
+* `PreviewImagePath` , `PreviewImageThumbnailPath` , `PreviewImageSmallThumbnailPath` - only if requested generating thumbnails
+* `Width` , `Height` 
+* `Orientation` 
+* `Size` 
+* `CreatedAt` 
+
+Also it contains methods to load corresponding preview images into `Texture2D` .
+
+Example:
+
+``` chsarp
+var generatePreviewImages = true;
+AGCamera.RecordVideo(videoFile =>
+    {
+        var msg = "Video file was recorded: " + videoFile;
+        Debug.Log(msg);
+        AGUIMisc.ShowToast(msg);
+        image.sprite = SpriteFromTex2D(videoFile.LoadPreviewImage());
+    },
+    error => AGUIMisc.ShowToast("Cancelled recording video file: " + error), generatePreviewImages);
+```
+
 ---
 
 ## AGFingerprintScanner.cs
+
+This class allows to user fingerprint scanner to identify the user and also for encrypting/decrypting arbitrary strings.
+
+**Currently you must build your own UI, there is no native fingerprint dialog included**
+
+### Required permissions
+
+To use fingerprint scanner you must add the following permission to your `AndroidManifest.xml` :
+
+``` xml
+<uses-permission android:name="android.permission.USE_FINGERPRINT" />
+```
+
+### Checking if a scanner can be used
+
+Before prompting for fingerprint authentication you first have to check two things:
+
+* if the device has the fingerprint scanner by checking `AGFingerprintScanner.HasFingerprintHardware` property
+* if the user has enrolled fingerprints in the scanner by checking `AGFingerprintScanner.HasEnrolledFingerprint` property
+
+### Usage
+
+When ready call `AGFingerprintScanner.Authenticate()` and provide the necessary callbacks for success, warning, and error conditions.
+
+Example:
+
+``` csharp
+AGFingerprintScanner.Authenticate(
+    () =>
+    {
+        statusText.color = Color.green;
+        statusText.text = "Auth success";
+        Debug.Log("Fingerprint authentication sucessful");
+    },
+    warning =>
+    {
+        statusText.color = Color.yellow;
+        statusText.text = "WARNING: " + warning;
+        Debug.Log("Fingerprint authentication failed with warning: " + warning);
+    },
+    error =>
+    {
+        statusText.color = Color.red;
+        statusText.text = "ERROR: " + error;
+        Debug.Log("Fingerprint authentication failed with error: " + error);
+    });
+```
+
+If you want to cancel continuous scanning you have to call `AGFingerprintScanner.Cancel()` method.
+
+### Encrypting and decrypting values
+
+You can use this class to safely encrypt and store sensitive user data.
+
+Encrypting:
+
+``` csharp
+var Key = "MyKey";
+var ToEncrypt = "My Sensitive data to encrypt";
+AGFingerprintScanner.Encrypt(Key, ToEncrypt,
+    encryptedValue =>
+    {
+        encryptionStatusText.color = Color.green;
+        encryptionStatusText.text = "Successfully encrypted: " + encryptedValue;
+        _encryptedValue = encryptedValue;
+    },
+    warning =>
+    {
+        encryptionStatusText.color = Color.yellow;
+        encryptionStatusText.text = "WARNING: " + warning;
+        Debug.Log("Value encryption failed with warning: " + warning);
+    },
+    error =>
+    {
+        encryptionStatusText.color = Color.red;
+        encryptionStatusText.text = "WARNING: " + error;
+        Debug.Log("Value encryption failed with error: " + error);
+    });
+
+```
+
+Decrypting:
+
+``` csharp
+AGFingerprintScanner.Decrypt(Key, _encryptedValue /* Encrypted value that you saved when encrypting */,
+    decryptedValue =>
+    {
+        encryptionStatusText.color = Color.green;
+        encryptionStatusText.text = "Successfully decrypted: " + decryptedValue;
+    },
+    warning =>
+    {
+        encryptionStatusText.color = Color.yellow;
+        encryptionStatusText.text = "WARNING: " + warning;
+        Debug.Log("Value decryption failed with warning: " + warning);
+    },
+    error =>
+    {
+        encryptionStatusText.color = Color.red;
+        encryptionStatusText.text = "WARNING: " + error;
+        Debug.Log("Value encryption failed with error: " + error);
+    });
+```
+
+If you want to cancel continuous scanning you have to call `AGFingerprintScanner.Cancel()` method.
 
 ---
 
@@ -1716,9 +2241,115 @@ This class exposes the API of https://developer.android.com/reference/android/co
 
 ## AGFileUtils.cs
 
+Different methods to interact with file system.
+
+### Saving image to gallery
+
+To save `Texture2D` image to Android gallery use:
+
+``` csharp
+AGFileUtils.SaveImageToGallery(texture2d, imageTitle, "My awesome screenshot");
+```
+
+### Getting `Texture2D` image by Android URI
+
+Sometimes you need to load Unity `Texture2D` from Android content URI, e.g. `content://com.android.contacts/contacts/3752/photo` . You will, for instance, receive an URI to contact avatar image when [picking a contact]() from address book and you can load the actual image using this function. Example illustrates this case:
+
+Example:
+
+``` csharp
+public void OnPickContactFromAddressBook()
+{
+    AGContacts.PickContact(
+        pickedContact =>
+        {
+            var msg = string.Format("Picked contact: {0}, photo URI: {1}, emails: {2}, phones: {3}",
+                          pickedContact.DisplayName,
+                          pickedContact.PhotoUri,
+                          string.Join(",", pickedContact.Emails.ToArray()),
+                          string.Join(",", pickedContact.Phones.ToArray())
+                      );
+
+            Debug.Log(msg);
+            AGUIMisc.ShowToast(msg);
+
+            if (!string.IsNullOrEmpty(pickedContact.PhotoUri))
+            {
+                var contactPicture = AGFileUtils.ImageUriToTexture2D(pickedContact.PhotoUri);
+                image.sprite = SpriteFromTex2D(contactPicture);
+            }
+        },
+        failureReason =>
+        {
+        });
+}
+```
+
 ---
 
 ## AGSharedPrefs.cs
+
+This class contains the functionality to work natively with [Android Shared Preferences](https://developer.android.com/reference/android/content/SharedPreferences.html). 
+
+**Note that unlike Android API where you have to get edtitor instance and commit changes the methods in this class do all at once.**
+
+For each method you call you must specify a shared preferences filename in which prefs will be stored.
+
+### Saving values
+
+Example code:
+
+``` csharp
+// Unique file name
+_sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
+
+AGSharedPrefs.Clear(_sharedPrefsFileKey);
+AGSharedPrefs.SetBool(_sharedPrefsFileKey, BoolKey, false);
+AGSharedPrefs.SetFloat(_sharedPrefsFileKey, FloatKey, float.MinValue);
+AGSharedPrefs.SetInt(_sharedPrefsFileKey, IntKey, int.MinValue);
+AGSharedPrefs.SetLong(_sharedPrefsFileKey, LongKey, long.MinValue);
+AGSharedPrefs.SetString(_sharedPrefsFileKey, StringKey, "custom");
+AGSharedPrefs.GetAll(_sharedPrefsFileKey);
+```
+
+All the methods above return a boolean indicating whether the operation succeeded, you can use it to validate if the value was saved properly.
+
+### Retrieving values
+
+To get all the preferences stored in particular file:
+
+``` csharp
+_sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
+
+var allPrefs = AGSharedPrefs.GetAll(_sharedPrefsFileKey);
+foreach (var key in allPrefs.Keys)
+{
+    Debug.Log(string.Format("{0} : {1}", key, allPrefs[key]));
+}
+```
+
+To get value by key:
+
+``` csharp
+_sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
+
+var boolValue = AGSharedPrefs.GetBool(_sharedPrefsFileKey, BoolKey, true);
+var floatValue = AGSharedPrefs.GetFloat(_sharedPrefsFileKey, FloatKey, float.MaxValue);
+var intValue = AGSharedPrefs.GetInt(_sharedPrefsFileKey, IntKey, int.MaxValue);
+var longValue = AGSharedPrefs.GetLong(_sharedPrefsFileKey, LongKey, long.MaxValue);
+var stringValue = AGSharedPrefs.GetString(_sharedPrefsFileKey, StringKey, "default");
+```
+
+Note that the last parameter is default value and is returned if the current key is not present in preferences.
+
+### Clearing the data
+
+To clear all the saved values:
+
+``` csharp
+_sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
+AGSharedPrefs.Clear(_sharedPrefsFileKey);
+```
 
 ---
 
@@ -1726,9 +2357,117 @@ This class exposes the API of https://developer.android.com/reference/android/co
 
 ## AGPermissions.cs
 
+### About runtime permissions
+
+Beginning in Android 6.0 (API level 23), users grant permissions to apps while the app is running, not when they install the app. This approach streamlines the app install process, since the user does not need to grant permissions when they install or update the app. It also gives the user more control over the app's functionality; for example, a user could choose to give a camera app access to the camera but not to the device location. The user can revoke the permissions at any time, by going to the app's Settings screen.
+
+![alt text](/images/ag/runtime-permission.png ':size=512')
+
+Read more about requesting permissions on [Android Documentation](https://developer.android.com/training/permissions/requesting.html).
+
+### Requirements
+
+* In order to use this class `android-support-v4.jar` and `androidgoodieslib-release.aar` must be inside your `Plugins/Android` folder.
+
+### Disabling Unity asking all the permissions on app start
+
+And the way Unity works with runtime permissions now is it requests all the runtime permissions when you application starts, all in a row. Sometimes it is not what you want so you can disable this behaviour by putting these lines into manifest:
+
+``` xml
+<meta-data
+    android:name="unityplayer.SkipPermissionsDialog"
+    android:value="true"/>
+```
+
+### Checking if user has granted certain permission
+
+To check if the user has granted a specific permission use `AGPermissions.IsPermissionGranted()` 
+
+Example - check if user granted location permission:
+
+``` csharp
+var isLocationPermissionGranted = AGPermissions.IsPermissionGranted(AGPermissions.ACCESS_FINE_LOCATION);
+```
+
+### Requesting permissions at runtime
+
+Remember that you also have to provide permissions you are going to request in your `AndroidManifest.xml` !
+
+Before requesting permissions first always check if the user has already granted the permission and don't request it again if he did. To request permissions at runtime call `AGPermissions.RequestPermissions` , providing the array of required permissions and a callback. The results array will contain permission, its result (granted or denied) and a boolean value `ShouldShowRequestPermissionRationale` which indicates whether you need to show the explanation to the user why you need the specific permission.
+
+This is the example flow, it might seem complicated but look through code carefully:
+
+``` csharp
+public void OnRequestPermissions()
+{
+    // Don't forget to also add the permissions you need to manifest!
+    var permissions = new[]
+    {
+        AGPermissions.WRITE_CONTACTS,
+        AGPermissions.CALL_PHONE,
+        AGPermissions.ACCESS_FINE_LOCATION,
+        AGPermissions.READ_CALENDAR
+    };
+
+    // Filter permissions so we don't request already granted permissions,
+    // otherwise if the user denies already granted permission the app will be killed
+    var nonGrantedPermissions = permissions.ToList().Where(x => !AGPermissions.IsPermissionGranted(x)).ToArray();
+
+    if (nonGrantedPermissions.Length == 0)
+    {
+        Debug.Log("User already granted all these permissions: " + string.Join(",", permissions));
+        return;
+    }
+
+    // Finally request permissions user has not granted yet and log the results
+    AGPermissions.RequestPermissions(permissions, results =>
+        {
+            // Process results of requested permissions
+            foreach (var result in results)
+            {
+                Debug.Log(string.Format("Permission [{0}] is [{1}], should show explanation?: {2}",
+                    result.Permission, result.Status, result.ShouldShowRequestPermissionRationale));
+                if (result.Status == AGPermissions.PermissionStatus.Denied)
+                {
+                    // User denied permission, now we need to find out if he clicked "Do not show again" checkbox
+                    if (result.ShouldShowRequestPermissionRationale)
+                    {
+                        // User just denied permission, we can show explanation here and request permissions again
+                        // or send user to settings to do so
+                    }
+                    else
+                    {
+                        // User checked "Do not show again" checkbox or permission can't be granted.
+                        // We should continue with this permission denied
+                    }
+                }
+            }
+        });
+}
+```
+
 ---
 
 ## AGPrintHelper.cs
+
+This class allows printing images and/or HTML pages.
+
+## Print an image
+
+Use `AGPrintHelper.PrintImage` method to print an image from a `Texture2D` . You can also provide an optional callback to be performed after the job is done and specify additional print parameters (colour mode, orientation and scale mode).
+
+***Note:*** The callback will be performed even if the print job is unsuccessful.
+
+## Print an HTML page
+
+### Print from string
+
+Use `AGPrintHelper.PrintHtmlPage` to print an HTML page from the source HTML-formatted string. 
+
+### Print from URL
+
+Call `AGPrintHelper.PrintHtmlPageFromUrl` method to print an HTML page from the respective URL.
+***Note:*** This method takes time to load the page from the internet.
 
 ---
 
