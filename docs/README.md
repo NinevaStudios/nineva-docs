@@ -12,6 +12,7 @@ Useful links:
 ## Unreal Engine 4 Plugins
 
 * [Admob Goodies](ue-plugins/admob-unreal)
+* [Firebase Goodies](ue-plugins/firebase-unreal)
 
 ## Unity Plugins
 
