@@ -18,39 +18,39 @@ The plugin is in active development and new things will be added. Please [contac
   + [AGAlarmClock.cs](#agalarmclockcs) - Methods to show all alarms, set alarm with all properties or set timer
   + [AGApps.cs](#agappscs) - Open app by package name, watch YouTube video in native app
   + [AGCalendar.cs](#agcalendarcs) - Class that allows to create calendar event with all required params or open calendar app on the provided date
-  + [AGDialer.cs](TODO) - Dial or directly call phone number, check if user has phone app
-  + [AGMaps.cs](TODO) - Open maps location, address, check if user has maps app
-  + [AGSettings.cs](TODO) - Open any system settings screen
-  + [AGShare.cs](TODO) - Native share text, text+image, tweet, email, send SMS etc, check if user has twitter, sms, email app installed.
-  + [AGGallery.cs](TODO) - Pick photo from gallery app, save picture to gallery.
-  + [AGContacts.cs](TODO) - Pick a contact from phone address book
-  + [AGFilePicker.cs](TODO) - Different file pickers (audio file, video file, general file by mime-type)
+  + [AGDialer.cs](#agdialercs) - Dial or directly call phone number, check if user has phone app
+  + [AGMaps.cs](#agmapscs) - Open maps location, address, check if user has maps app
+  + [AGSettings.cs](#agsettingscs) - Open any system settings screen
+  + [AGShare.cs](#TODO) - Native share text, text+image, tweet, email, send SMS etc, check if user has twitter, sms, email app installed.
+  + [AGGallery.cs](#TODO) - Pick photo from gallery app, save picture to gallery.
+  + [AGContacts.cs](#TODO) - Pick a contact from phone address book
+  + [AGFilePicker.cs](#TODO) - Different file pickers (audio file, video file, general file by mime-type)
 * UI
-  + [AGAlertDialog.cs](TODO) - Showing native alert dialogs with buttons/radiobuttons/checkboxes
-  + [AGDateTimePicker.cs](TODO) - Showing date/time picker
-  + [AGProgressDialog.cs](TODO) - Show spinner/horizontal progress bar
-  + [AGLocalNotifications.cs](TODO) - Showing local notifications with info provided. Requires **android-support-v4.jar** in Android/Plugins folder.
-  + [AGUIMisc.cs](TODO) - Showing toasts and immersive mode methods.
+  + [AGAlertDialog.cs](#TODO) - Showing native alert dialogs with buttons/radiobuttons/checkboxes
+  + [AGDateTimePicker.cs](#TODO) - Showing date/time picker
+  + [AGProgressDialog.cs](#TODO) - Show spinner/horizontal progress bar
+  + [AGLocalNotifications.cs](#TODO) - Showing local notifications with info provided. Requires **android-support-v4.jar** in Android/Plugins folder.
+  + [AGUIMisc.cs](#TODO) - Showing toasts and immersive mode methods.
 * Retrieving Info
 
-   * [AGDeviceInfo.cs](TODO) - Various methods to get various info about device and apps ( `android.os.Build` , `android.os.Build.Version` ) and other
-   * [AGEnvironment.cs](TODO) - Access to some `android.os.Environment` properties and methods
-   * [AGNetwork.cs](TODO) - Internet connectivity and wifi related methods
-   * [AGTelephony.cs](TODO) - Telephony related methods
+   * [AGDeviceInfo.cs](#TODO) - Various methods to get various info about device and apps ( `android.os.Build` , `android.os.Build.Version` ) and other
+   * [AGEnvironment.cs](#TODO) - Access to some `android.os.Environment` properties and methods
+   * [AGNetwork.cs](#TODO) - Internet connectivity and wifi related methods
+   * [AGTelephony.cs](#TODO) - Telephony related methods
 
 * Hardware
-  + [AGBattery.cs](TODO) - Get device battery charge level
-  + [AGFlashLight.cs](TODO) - Enable and disable camera flashlight (as torch), check if device has flashlight
-  + [AGGPS.cs](TODO) - Listen to GPS location changes, check if GPS enabled, get last known location.
-  + [AGVibrator.cs](TODO) - Check if device has vibrator, vibrate or vibrate pattern
-  + [AGCamera.cs](TODO) - Take photo (or thumbnail photo) from camera and receive it as `Texture2D` , various methods to check device camera capabilities.
+  + [AGBattery.cs](#TODO) - Get device battery charge level
+  + [AGFlashLight.cs](#TODO) - Enable and disable camera flashlight (as torch), check if device has flashlight
+  + [AGGPS.cs](#TODO) - Listen to GPS location changes, check if GPS enabled, get last known location.
+  + [AGVibrator.cs](#TODO) - Check if device has vibrator, vibrate or vibrate pattern
+  + [AGCamera.cs](#TODO) - Take photo (or thumbnail photo) from camera and receive it as `Texture2D` , various methods to check device camera capabilities.
 * Storage
-  + [AGFileUtils.cs](TODO) - Method to save Unity Texture2D to Android gallery
-  + [AGSharedPrefs.cs](TODO) - Work natively with [Android Shared Preferences](https://developer.android.com/reference/android/content/SharedPreferences.html)
+  + [AGFileUtils.cs](#TODO) - Method to save Unity Texture2D to Android gallery
+  + [AGSharedPrefs.cs](#TODO) - Work natively with [Android Shared Preferences](https://developer.android.com/reference/android/content/SharedPreferences.html)
 * Other
-  + [AGPermissions.cs](TODO) - Manage, request and check [Android runtime permissions](https://developer.android.com/training/permissions/requesting.html).
-  + [AGMediaRecorder.cs](TODO) - Record audio using device microphone
-  + [AGPrintHelper.cs](TODO) - Print images and HTML-pages
+  + [AGPermissions.cs](#TODO) - Manage, request and check [Android runtime permissions](https://developer.android.com/training/permissions/requesting.html).
+  + [AGMediaRecorder.cs](#TODO) - Record audio using device microphone
+  + [AGPrintHelper.cs](#TODO) - Print images and HTML-pages
 
 ## Advantages
 
