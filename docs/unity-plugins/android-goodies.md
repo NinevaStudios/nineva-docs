@@ -21,36 +21,36 @@ The plugin is in active development and new things will be added. Please [contac
   + [AGDialer.cs](#agdialercs) - Dial or directly call phone number, check if user has phone app
   + [AGMaps.cs](#agmapscs) - Open maps location, address, check if user has maps app
   + [AGSettings.cs](#agsettingscs) - Open any system settings screen
-  + [AGShare.cs](#TODO) - Native share text, text+image, tweet, email, send SMS etc, check if user has twitter, sms, email app installed.
-  + [AGGallery.cs](#TODO) - Pick photo from gallery app, save picture to gallery.
-  + [AGContacts.cs](#TODO) - Pick a contact from phone address book
-  + [AGFilePicker.cs](#TODO) - Different file pickers (audio file, video file, general file by mime-type)
+  + [AGShare.cs](#agsharecs) - Native share text, text+image, tweet, email, send SMS etc, check if user has twitter, sms, email app installed.
+  + [AGGallery.cs](#aggallerycs) - Pick photo from gallery app, save picture to gallery.
+  + [AGContacts.cs](#agcontactscs) - Pick a contact from phone address book
+  + [AGFilePicker.cs](#agfilepickercs) - Different file pickers (audio file, video file, general file by mime-type)
 * UI
-  + [AGAlertDialog.cs](#TODO) - Showing native alert dialogs with buttons/radiobuttons/checkboxes
-  + [AGDateTimePicker.cs](#TODO) - Showing date/time picker
-  + [AGProgressDialog.cs](#TODO) - Show spinner/horizontal progress bar
-  + [AGLocalNotifications.cs](#TODO) - Showing local notifications with info provided. Requires **android-support-v4.jar** in Android/Plugins folder.
-  + [AGUIMisc.cs](#TODO) - Showing toasts and immersive mode methods.
+  + [AGAlertDialog.cs](#agalertdialogcs) - Showing native alert dialogs with buttons/radiobuttons/checkboxes
+  + [AGDateTimePicker.cs](#agdatetimepickercs) - Showing date/time picker
+  + [AGProgressDialog.cs](#agprogressdialogcs) - Show spinner/horizontal progress bar
+  + [AGLocalNotifications.cs](#aglocalnotificationscs) - Showing local notifications with info provided. Requires **android-support-v4.jar** in Android/Plugins folder.
+  + [AGUIMisc.cs](#aguimisccs) - Showing toasts and immersive mode methods.
 * Retrieving Info
 
-   * [AGDeviceInfo.cs](#TODO) - Various methods to get various info about device and apps ( `android.os.Build` , `android.os.Build.Version` ) and other
-   * [AGEnvironment.cs](#TODO) - Access to some `android.os.Environment` properties and methods
-   * [AGNetwork.cs](#TODO) - Internet connectivity and wifi related methods
-   * [AGTelephony.cs](#TODO) - Telephony related methods
+   * [AGDeviceInfo.cs](#agdeviceinfocs) - Various methods to get various info about device and apps ( `android.os.Build` , `android.os.Build.Version` ) and other
+   * [AGEnvironment.cs](#agdeviceinfocs) - Access to some `android.os.Environment` properties and methods
+   * [AGNetwork.cs](#agnetworkcs) - Internet connectivity and wifi related methods
+   * [AGTelephony.cs](#agtelephonycs) - Telephony related methods
 
 * Hardware
-  + [AGBattery.cs](#TODO) - Get device battery charge level
-  + [AGFlashLight.cs](#TODO) - Enable and disable camera flashlight (as torch), check if device has flashlight
-  + [AGGPS.cs](#TODO) - Listen to GPS location changes, check if GPS enabled, get last known location.
-  + [AGVibrator.cs](#TODO) - Check if device has vibrator, vibrate or vibrate pattern
-  + [AGCamera.cs](#TODO) - Take photo (or thumbnail photo) from camera and receive it as `Texture2D` , various methods to check device camera capabilities.
+  + [AGBattery.cs](#agbatterycs) - Get device battery charge level
+  + [AGFlashLight.cs](#agflashlightcs) - Enable and disable camera flashlight (as torch), check if device has flashlight
+  + [AGGPS.cs](#aggpscs) - Listen to GPS location changes, check if GPS enabled, get last known location.
+  + [AGVibrator.cs](#agvibratorcs) - Check if device has vibrator, vibrate or vibrate pattern
+  + [AGCamera.cs](#agcameracs) - Take photo (or thumbnail photo) from camera and receive it as `Texture2D` , various methods to check device camera capabilities.
 * Storage
-  + [AGFileUtils.cs](#TODO) - Method to save Unity Texture2D to Android gallery
-  + [AGSharedPrefs.cs](#TODO) - Work natively with [Android Shared Preferences](https://developer.android.com/reference/android/content/SharedPreferences.html)
+  + [AGFileUtils.cs](#agfileutilscs) - Method to save Unity Texture2D to Android gallery
+  + [AGSharedPrefs.cs](#agsharedprefscs) - Work natively with [Android Shared Preferences](https://developer.android.com/reference/android/content/SharedPreferences.html)
 * Other
-  + [AGPermissions.cs](#TODO) - Manage, request and check [Android runtime permissions](https://developer.android.com/training/permissions/requesting.html).
-  + [AGMediaRecorder.cs](#TODO) - Record audio using device microphone
-  + [AGPrintHelper.cs](#TODO) - Print images and HTML-pages
+  + [AGPermissions.cs](#agpermissionscs) - Manage, request and check [Android runtime permissions](https://developer.android.com/training/permissions/requesting.html).
+  + [AGMediaRecorder.cs](#agmediarecordercs) - Record audio using device microphone
+  + [AGPrintHelper.cs](#agprinthelpercs) - Print images and HTML-pages
 
 ## Advantages
 
@@ -61,7 +61,7 @@ The plugin is in active development and new things will be added. Please [contac
 
 ## Running the demo scene
 
-Check the [FAQ section](https://github.com/TarasOsiris/android-goodies-docs-PRO/wiki/FAQ) if you have any problems first!
+Check the [FAQ section](#faq) if you have any problems first!
 
 To build and run the demo scene just connect your Android device switch target platform to Android in Unity build settings and run the example scene on device or emulator. No extra setup is required.
 
@@ -1128,7 +1128,7 @@ Result:
 
 ## AGLocalNotifications.cs
 
-***Note!*** This class is now deprecated. Please, use [AGNotificationManager](https://github.com/TarasOsiris/android-goodies-docs-PRO/wiki/AGNotificationManager.cs) instead.
+***Note!*** This class is now deprecated. Please, use [AGNotificationManager](#agnotificationmanagercs) instead.
 
 This class is used to show local notifications. When clicked on push notification it will open your game if it is not in foreground even if it is not running. If the app is in foreground nothing will happen when clicked.
 
@@ -1473,7 +1473,7 @@ A notification can offer up to three action buttons that allow the user to respo
 The following example adds "Open URL" button to the notification. When tapped, it opens the page in a web-browser.
 
 ``` csharp
-builder.AddAction(Notification.CreateOpenUrlAction("https://github.com/TarasOsiris/android-goodies-docs-PRO/wiki", "notify_icon_small", "Open URL"));
+builder.AddAction(Notification.CreateOpenUrlAction("https://docs.ninevastudios.com", "notify_icon_small", "Open URL"));
 ```
 
 ![alt text](/images/ag/ActionNotification.png ':size=512')
@@ -1811,7 +1811,7 @@ To use flashlight you must have the following permissions declared in your `Andr
 <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
 ```
 
-Also you must request `android.permission.CAMERA` permission at runtime before calling the flashlight methods. [See AGPermissions.cs how to do it](https://github.com/NinevaStudios/android-goodies-docs-PRO/wiki/AGPermissions.cs)
+Also you must request `android.permission.CAMERA` permission at runtime before calling the flashlight methods. [See AGPermissions.cs how to do it](#agpermissionscs)
 
 ### Checking if flashlight is available on device
 
@@ -2044,7 +2044,7 @@ This class allows you to check if device has camera and its certain features and
 
 ### Requirements
 
-* **CAMERA permission** To take photos you must add this permission to your `AndroidManifest.xml` and also request the `CAMERA` runtime permission BEFORE calling `AGCamera.TakePhoto()` method. [See AGPermissions.cs how to do it](https://github.com/NinevaStudios/android-goodies-docs-PRO/wiki/AGPermissions.cs) or see the `AGCamera.TakePhoto()` example usage in the demo.
+* **CAMERA permission** To take photos you must add this permission to your `AndroidManifest.xml` and also request the `CAMERA` runtime permission BEFORE calling `AGCamera.TakePhoto()` method. [See AGPermissions.cs how to do it](#agpermissionscs) or see the `AGCamera.TakePhoto()` example usage in the demo.
 
 ``` xml
 <uses-permission android:name="android.permission.CAMERA" />
