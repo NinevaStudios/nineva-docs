@@ -802,8 +802,257 @@ AGUIMisc.ShowToast(recordingWasStopped ? "Stopped recording" : "Failed to stop r
 
 ## AGAlertDialog.cs
 
+Class for displaying standard Android dialogs
+
+### FAQ
+
+* What if I don't want a callback? Should I pass `null`?
+* No, you should just pass empty lambda `() => {}` and the callback will do nothing.
+
+### Message dialog with positive button
+
+Opens Android [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog.html) with only positive button and optional dismiss callback.
+
+Example usage:
+
+```csharp
+AGAlertDialog.ShowMessageDialog("Single Button", "This dialog has only positive button", "Ok",
+    () => AndroidGoodiesMisc.ShowToast("Positive button Click"),
+    () => AndroidGoodiesMisc.ShowToast("Dismissed"));
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_1_btn.png" width="320" height="569">
+
+### Message dialog with positive and negative buttons
+
+Opens Android [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog.html) with positive and negative buttons and optional dismiss callback.
+
+Example usage:
+
+```csharp
+AGAlertDialog.ShowMessageDialog("Two Buttons", "This dialog has positive and negative button",
+    "Ok", () => AndroidGoodiesMisc.ShowToast("Positive button Click"),
+    "No!", () => AndroidGoodiesMisc.ShowToast("Negative button Click"),
+    () => AndroidGoodiesMisc.ShowToast("Dismissed"));
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_2_btn.png" width="320" height="569">
+
+### Message dialog with positive, negative and neutral buttons
+
+Opens Android [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog.html) with positive, negative and neutral buttons and optional dismiss callback.
+
+Example usage:
+
+```csharp
+AGAlertDialog.ShowMessageDialog("Three Buttons",
+    "This dialog has positive, negative and neutral buttons button",
+    "Ok", () => AndroidGoodiesMisc.ShowToast("Positive button Click"),
+    "No!", () => AndroidGoodiesMisc.ShowToast("Negative button Click"),
+    "Maybe!", () => AndroidGoodiesMisc.ShowToast("Neutral button Click"),
+    () => AndroidGoodiesMisc.ShowToast("Dismissed"));
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_3_btn.png" width="320" height="569">
+
+### Dialog with simple items chooser
+
+Opens Android [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog.html) with a list of items to choose one of them. The dialog is dismissed automatically after the user selects one of the options.
+
+Example usage:
+
+```csharp
+string[] Colors = { "Red", "Green", "Blue" };
+
+AGAlertDialog.ShowChooserDialog("Choose color", Colors,
+    colorIndex => AndroidGoodiesMisc.ShowToast(Colors[colorIndex] + " selected"));
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_chooser.png" width="320" height="569">
+
+### Dialog with radio buttons items chooser
+
+Opens Android [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog.html) with a list of items to choose one of them with radio buttons. Also has a positive button with callback.
+
+Example usage:
+
+```csharp
+string[] Colors = { "Red", "Green", "Blue" };
+int defaultSelectedItemIndex = 1;
+
+AGAlertDialog.ShowSingleItemChoiceDialog("Choose color", Colors, defaultSelectedItemIndex,
+    colorIndex => AndroidGoodiesMisc.ShowToast(Colors[colorIndex] + " selected"),
+    "OK", () => AndroidGoodiesMisc.ShowToast("OK!"));
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_single_choice.png" width="320" height="569">
+
+### Dialog with check boxes buttons items chooser
+
+Opens Android [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog.html) with a list of items to choose multiple of them with check boxes. Also has a positive button with callback.
+
+Example usage:
+
+```csharp
+string[] Colors = { "Red", "Green", "Blue" };
+bool[] initiallyCheckedItems = { false, true, false }; // second item is selected when dialog is shown
+
+AGAlertDialog.ShowMultiItemChoiceDialog("Choose color", Colors,
+    initiallyCheckedItems,
+    (colorIndex, isChecked) => AndroidGoodiesMisc.ShowToast(Colors[colorIndex] + " selected? " + isChecked), "OK",
+    () => AndroidGoodiesMisc.ShowToast("OK!"));
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/dialog_multi_choice.png" width="320" height="569">
+
+### Progress dialog (spinner and horizontal progress bar)
+
+You can also create [Android progress dialogs](https://developer.android.com/reference/android/app/ProgressDialog.html) as spinners as horizontal progress bars. When you want to dismiss the progress dialog call `Dismiss()` on dialog object to dismiss it.
+
+Example usage of spinner (showing spinner for a given period of time):
+
+```csharp
+public void ShowSpinnerProgressDialog()
+{
+    StartCoroutine(ShowSpinnerForDuration());
+}
+
+private IEnumerator ShowSpinnerForDuration()
+{
+    // Create spinner dialog
+    var spinner = AndroidProgressDialog.CreateSpinnerDialog("Spinner", "Call Dismiss() to cancel", AndroidDialogTheme.Dark);
+    spinner.Show();
+    // Spin for some time (do important work)
+    yield return new WaitForSeconds(3.0f);
+    // Dismiss spinner after all the background work is done
+    spinner.Dismiss();
+}
+```
+
+Example usage of horizontal progress bar progress dialog (example is showing incremental progress using coroutine):
+
+```csharp
+public void ShowHorizontalProgressDialog()
+{
+    StartCoroutine(ShowHorizontalForDuration());
+}
+
+private IEnumerator ShowHorizontalForDuration()
+{
+    const int dialogMaxProgress = 200;
+
+    // Create progress bar dialog
+    var progressBar = AndroidProgressDialog.CreateHorizontalDialog("Progress bar", "Call Dismiss() to cancel", dialogMaxProgress);
+    progressBar.Show();
+
+    const float progressDuration = 3.0f;
+    float currentProgress = 0f;
+
+    // Display incremental progress
+    while (currentProgress < progressDuration)
+    {
+        currentProgress += Time.deltaTime;
+        int progress = Mathf.CeilToInt((currentProgress / progressDuration) * dialogMaxProgress);
+        progressBar.SetProgress(progress);
+        yield return null;
+    }
+
+    // Dismiss spinner after all the background work is done
+    progressBar.Dismiss();
+}
+```
+
+### Specifying Dialog Theme
+
+You can also specify the theme of the dialog (light or dark) as an optional parameter to all `Show...Dialog()` methods. If this parameter is not specified the default device theme is used.
+
+Example:
+
+```csharp
+AGAlertDialog.ShowMessageDialog("Single Button", "This dialog has only positive button", "Ok",
+    () => AndroidGoodiesMisc.ShowToast("Positive button Click"), () => AndroidGoodiesMisc.ShowToast("Dismissed"),
+    AndroidDialogTheme.Dark);
+```
+
+---
 
 ## AGDateTimePicker.cs
+
+Android goodies allows you to show default Android [TimePickerDialog](https://developer.android.com/reference/android/app/TimePickerDialog.html) and [DatePickerDialog](https://developer.android.com/reference/android/app/DatePickerDialog.html).
+
+### Time Picker
+
+Show the default Android [TimePickerDialog](https://developer.android.com/reference/android/app/TimePickerDialog.html)
+
+Usage Example:
+
+```csharp
+public void OnTimePickClick()
+{
+    var now = DateTime.Now;
+    var theme = AGDialogTheme.Default;
+    var is24HourFormat = false;
+    AGDateTimePicker.ShowTimePicker(now.Hour, now.Minute, OnTimePicked, OnTimePickCancel, theme, is24HourFormat);
+}
+
+private void OnTimePicked(int hourOfDay, int minute)
+{
+    var picked = new DateTime(2016, 11, 11, hourOfDay, minute, 00);
+    timeText.text = picked.ToString("T");
+}
+
+private void OnTimePickCancel()
+{
+    timeText.text = "Cancelled picking time";
+}
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/time_picker.png" width="320" height="569">
+
+### Date Picker
+
+Show the default Android [DatePickerDialog](https://developer.android.com/reference/android/app/DatePickerDialog.html)
+
+Usage Example:
+
+```csharp
+public void OnPickDateClick()
+{
+    var now = DateTime.Now;
+    AGDateTimePicker.ShowDatePicker(now.Year, now.Month, now.Day, OnDatePicked, OnDatePickCancel);
+}
+
+private void OnDatePicked(int year, int month, int day)
+{
+    var picked = new DateTime(year, month, day);
+    dateText.text = picked.ToString("yyyy MMMMM dd");
+}
+
+private void OnDatePickCancel()
+{
+    dateText.text = "Cancelled picking date";
+}
+```
+
+Result:
+
+<img src="https://raw.githubusercontent.com/TarasOsiris/android-goodies-docs/master/images/date_picker.png" width="320" height="569">
+
+---
 
 
 ## AGProgressDialog.cs
