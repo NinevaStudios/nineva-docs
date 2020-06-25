@@ -13,6 +13,7 @@ Useful links:
 
 * [Admob Goodies](ue-plugins/admob-unreal)
 * [Firebase Goodies](ue-plugins/firebase-unreal)
+* [Android Goodies](ue-plugins/android-goodies-unreal)
 
 ## Unity Plugins
 
