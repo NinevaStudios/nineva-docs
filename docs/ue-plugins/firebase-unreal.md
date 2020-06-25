@@ -8,7 +8,7 @@ If you have not created the Firebase project yet, please, follow the instruction
 
 After the project is created, you can go to the Authentication section on the left and there you can enable all the required sign in providers for your application.
 
-![](images/auth/AuthSetup.PNG)
+![](images/firebase/auth/AuthSetup.png)
 
 !> **NOTE!** Some of the providers may require additional setup. Please, check the official Firebase documentation on how to enable the different sign in methods if you are having any problems with it.
 
@@ -16,15 +16,15 @@ In the Project Settings in the Firebase console, create an Android/iOS app provi
 You will have to provide the SHA1 fingerprints for the keystores that will be used to sign the application on Android. The information on how to generate a keystore and read its fingerprint can be found [here](https://stackoverflow.com/questions/15727912/sha-1-fingerprint-of-keystore-certificate).
 After this, you should download the google-services.json (for Android) and/or GoogleService-info.plist files, you will need them later.
 
-![](images/auth/AuthConfigGoogleServices.PNG)
+![](images/firebase/auth/AuthConfigGoogleServices.png)
 
 After the setup is complete in the Firebase console, you can open your UE4 project and go to Project Settings -> Firebase Goodies. You should provide the path to previously downloaded google-services.json (for Android) and/or GoogleService-info.plist files in order for them to be parsed by the plugin. 
 
-![](images/auth/AuthConfigGoogleServices2.PNG)
+![](images/firebase/auth/AuthConfigGoogleServices2.png)
 
 You should also provide a Client ID for Android. It can be found in the google-services.json file under the `oauth_client` section - the one with the `client_type` value of `3`.
 
-![](images/auth/AuthConfigGoogleServices3.PNG)
+![](images/firebase/auth/AuthConfigGoogleServices3.png)
 
 !> **NOTE!** On Mac, the file picker is somehow broken in the UE4, so you will have to manually paste the path to the files. In order to get the full path to the file, right click it in Finder and hold the Option key. After the menu changes, select the Copy as Pathname option and paste it into the corresponding field in the Project Settings.
 
@@ -34,18 +34,18 @@ Auth library of the plugin allows manipulating users and sessions. The official 
 
 First of all, you should activate the listeners that will be triggered whenever user or token authentication state changes, by calling the `InitListeners` method. This will allow you to react to these changes accordingly during the lifetime of the application.
 
-![](images/auth/AuthInit.PNG)
+![](images/firebase/auth/AuthInit.png)
 
 ### User registration and login
 You can create a new user with an email and password by calling the `CreateUser` method. 
 
-![](images/auth/AuthCreateUser.PNG)
+![](images/firebase/auth/AuthCreateUser.png)
 
 There are several options for sign in. You can either do it with email and password, a custom token, or with a specific credential. There are also methods for obtaining these credentials, but they require an additional integration of the corresponding provider's SDK. For example, you can use Facebook credentials to sign the user in, but you will need a valid Facebook token that can only be obtained if you integrate the Facebook SDK into your project.
 
 We have integrated the Google Sign In SDK as a part of the plugin in order to show an example of how this should be done. Call the `PromptGoogleSignIn` method to show a native sign in with Google dialog. After the user successfully signs in, you will be able to use the AuthCredentials object to either sign the user in Firebase, or link them to an existing account.
 
-![](images/auth/AuthGoogleSignIn.PNG)
+![](images/firebase/auth/AuthGoogleSignIn.png)
 
 You can also use the anonymous sign in by calling the `SignInAnonymously` method.
 
@@ -55,7 +55,7 @@ You can also obtain a reference to the current user object at any time by callin
 
 You can also link a phone number to the existing user. You have to call the `VerifyPhoneNumber` function to start the phone number verification process. On most devices the user experience is the following: when you call this method after obtaining the user's phone number, they will either receive an SMS or a push notification with the code, while the application will receive OnSmsSent callback with the Verification ID needed for creating the AuthCredentials object along with the verification code, obtained by the user. Sometimes on Android devices the operation will be performed silently by the operating system, allowing you to use the AuthCredentials object from the OnSuccess callback. Your application should always be able to handle both cases.
 
-![](images/auth/AuthVerifyPhoneNum.PNG)
+![](images/firebase/auth/AuthVerifyPhoneNum.png)
 
 !> **NOTE!** You have to add the test phone numbers in the Firebase console in order to test the phone verification functionality during development.
 
@@ -76,7 +76,8 @@ If there is a need, you can reauthenticate or reload the current user by calling
 
 Call `Delete` on the FirebaseUser object to delete the user from your user database.
 
-___________________________________________________________
+___
+
 # **Cloud Storage**
 
 ## Initial Setup
@@ -85,7 +86,7 @@ If you have not created the Firebase project yet, please, follow the instruction
 
 After the project is created you can go to the Cloud Storage Section on the left and setup the storage security rules. Refer to this [page](https://firebase.google.com/docs/storage/security/start) for more info.
 
-![](images/cloud-storage/CloudStorageSetup.png)
+![](images/firebase/cloud-storage/CloudStorageSetup.png)
 
 ## Functions
 
@@ -97,11 +98,11 @@ Cloud Storage library of the plugin allows manipulating files. The official docu
 
 You can upload files from device to firebase cloud storage by calling `UploadFromLocalFile` method.
 
-![](images/cloud-storage/CloudStorageUploadFromLocal.png)
+![](images/firebase/cloud-storage/CloudStorageUploadFromLocal.png)
 
 Or upload from memory buffer by calling `UploadFromDataInMemory` method.
 
-![](images/cloud-storage/CloudStorageUploadFromMemory.png)
+![](images/firebase/cloud-storage/CloudStorageUploadFromMemory.png)
 
 Both methods return progress of uploading in % during the whole process. 
 
@@ -109,33 +110,33 @@ Both methods return progress of uploading in % during the whole process.
 
 For downloading files from cloud storage to the device use `DownloadToLocalFile` method.
 
-![](images/cloud-storage/CloudStorageDownloadToLocal.png)
+![](images/firebase/cloud-storage/CloudStorageDownloadToLocal.png)
 
 You can choose the directory to download a file to by selecting the corresponding environment from the dropdown list.
 
-![](images/cloud-storage/CloudStorageDownloadToLocalEnv.png)
+![](images/firebase/cloud-storage/CloudStorageDownloadToLocalEnv.png)
 
 For downloading file into a memory buffer use `DownloadInMemory` method.
 
-![](images/cloud-storage/CloudStorageDownloadToMemory.png)
+![](images/firebase/cloud-storage/CloudStorageDownloadToMemory.png)
 
 You can limit the size of a memory buffer by providing custom value to FileSizeLimit variable in Bytes.
 
 In case you need to get Url for downloading the file call `GetDownloadUrl` method.
 
-![](images/cloud-storage/CloudStorageGetDownloadUrl.png)
+![](images/firebase/cloud-storage/CloudStorageGetDownloadUrl.png)
 
 ### File metadata
 
 After uploading a file to cloud storage, you can obtain file's metadata by calling `GetFileMetadata` method.
 
-![](images/cloud-storage/CloudStorageGetFileMetadata.png)
+![](images/firebase/cloud-storage/CloudStorageGetFileMetadata.png)
 
 Successful callback returns metadata object reference, which you can use to retrieve metadata properties, for a full list of properties refer to [this section](https://firebase.google.com/docs/storage/android/file-metadata#file_metadata_properties).
 
 You can update file metadata at any time after the file is uploaded by using `UpdateFileMetadata` method.
 
-![](images/cloud-storage/CloudStorageUpdateFileMetadata.png)
+![](images/firebase/cloud-storage/CloudStorageUpdateFileMetadata.png)
 
 First you need to create a `NewStorageMetadataValues` object, and after that set all the metadata properties needed. For the list of all the properties that can be set you can refer to [this section](https://firebase.google.com/docs/reference/android/com/google/firebase/storage/StorageMetadata.Builder#public-method-summary).
 
@@ -145,8 +146,8 @@ First you need to create a `NewStorageMetadataValues` object, and after that set
 
 To remove files from cloud storage use `DeleteFile` method.
 
-![](images/cloud-storage/CloudStorage.DeleteFile.png)
-___________________________________________________________
+![](images/firebase/cloud-storage/CloudStorageDeleteFile.png)
+___
 
 # **Remote Config**
 
@@ -154,7 +155,7 @@ ___________________________________________________________
 
 To use Firebase Remote Config in you application you need to login to firebase console and add parameters you need, in Remote Config tab. This plugin can be used in many different ways, for more details refer to [Remote Config use cases](https://firebase.google.com/docs/remote-config/use-cases).  
 
-![](images/remote-config/FirebaseRCSetup.PNG)
+![](images/firebase/remote-config/FirebaseRCSetup.png)
 
 ## Functions
 
@@ -162,25 +163,25 @@ Remote Config of the plugin allows you to define parameters in your app and upda
 
 First of all you should set the minimum fetch interval and fetch timeout of config settings by calling `SetConfigSettings`.
 
-![](images/remote-config/FirebaseRCSetConfigSettings.PNG)
+![](images/firebase/remote-config/FirebaseRCSetConfigSettings.png)
 
 ### Fetch remote config values
 
 To fetch parameter values from the Remote Config backend, call `Fetch` method. Any values that that you set in the backend are fetched, adhering to the default minimum fetch interval
 
-![](images/remote-config/FirebaseRCFetch.PNG) 
+![](images/firebase/remote-config/FirebaseRCFetch.png) 
 
 In case you need to set custom interval for fetching, call `FetchWithInteval` method. It will start fetching configs, adhering to the specified minimum fetch interval. 
 
-![](images/remote-config/FirebaseRCFetchWithInterval.PNG)
+![](images/firebase/remote-config/FirebaseRCFetchWithInterval.png)
 
 Ta make fetched parameter values available to youd app, call `Activate` method.
 
-![](images/remote-config/FirebaseRCActivate.PNG)
+![](images/firebase/remote-config/FirebaseRCActivate.png)
 
 If you want to fetch and activate values in one call, use `FetchAndActivate` method. 
 
-![](images/remote-config/FirebaseRCFetchAndActivate.PNG) 
+![](images/firebase/remote-config/FirebaseRCFetchAndActivate.png) 
 
 ### Read config values
 
@@ -196,8 +197,6 @@ You can set in-app default parameter values in Remote Config, so that your app b
 
 Prior to setting default values, you first need to make a map of parameter names and default parameter values, then call the `SetDefaults` with passing  afterwards.
 
-![](images/remote-config/FirebaseRCSetup.PNG)
+![](images/firebase/remote-config/FirebaseRCSetup.png)
 
-_____________________________________________________________________________________
-
-#
+___
