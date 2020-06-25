@@ -16,49 +16,49 @@ It is also possible to set native dialog theme (`Light`, `Dark` or `Default`, wh
 
 Native dialogs support callbacks for different events like button click or dialog cancellation. User must provide appropriate event handlers for those callbacks.
 
-#### *Message dialog with positive button*{docsify-ignore}
+### *Message dialog with positive button*{docsify-ignore}
 
 Show this dialog by calling `ShowSingleButtonDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_positiveDlg.png)
 
-#### *Message dialog with positive and negative buttons*{docsify-ignore}
+### *Message dialog with positive and negative buttons*{docsify-ignore}
 
 Show this dialog by calling `ShowTwoButtonsDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_twoBtnDlg.png)
 
-#### *Message dialog with positive, negative and neutral buttons*{docsify-ignore}
+### *Message dialog with positive, negative and neutral buttons*{docsify-ignore}
 
 Show this dialog by calling `ShowThreeButtonsDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_threeBtnDlg.png)
 
-#### *Dialog with simple items chooser*{docsify-ignore}
+### *Dialog with simple items chooser*{docsify-ignore}
 
 Show this dialog by calling `ShowChooserDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_chooserDlg.png)
 
-#### *Dialog with radio buttons items chooser*{docsify-ignore}
+### *Dialog with radio buttons items chooser*{docsify-ignore}
 
 Show this dialog by calling `ShowSingleItemChoiceDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_singleOptDlg.png)
 
-#### *Dialog with checkboxes buttons items chooser*{docsify-ignore}
+### *Dialog with checkboxes buttons items chooser*{docsify-ignore}
 
 Show this dialog by calling `ShowMultipleItemChoiceDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_multiOptDlg.png)
 
-#### *Progress dialog (spinner)*{docsify-ignore}
+### *Progress dialog (spinner)*{docsify-ignore}
 
 To show this dialog it first should be created with `CreateProgressDialog` function (pass `AGProgressDialogData` structure with specified `Spinner` style as a parameter). Then just call `Show` method of the received object interface instance. Call `Dismiss` method to close this dialog.
 
 ![](images/android-goodies/native-ui/Scr_spinnerDlg.png)
 
-#### *Progress dialog (horizontal progress bar)*{docsify-ignore}
+### *Progress dialog (horizontal progress bar)*{docsify-ignore}
 
 To show this dialog it first should be created with `CreateProgressDialog` function (pass `AGProgressDialogData` structure with specified `Progress Bar` style as a parameter). Then just call `Show` method of the received object interface instance. Call `Dismiss` method to close this dialog.
 
@@ -72,7 +72,7 @@ ___
 
 You can show standard Android Date and Time pickers.
 
-#### *Showing Date Picker*{docsify-ignore}
+### *Showing Date Picker*{docsify-ignore}
 
 To show the default Android date picker call `ShowDatePicker` function.
 
@@ -84,7 +84,7 @@ Result:
 
 There is a possibility to limit a range of dates that can be picked by a user. To do that call `ShowDatePickerWithLimits` function instead. The only difference here is that it takes two additional parameters - start and end dates of picking range.
 
-#### *Showing Time Picker*{docsify-ignore}
+### *Showing Time Picker*{docsify-ignore}
 
 To show the default Android time picker call `ShowTimePicker` function.
 
