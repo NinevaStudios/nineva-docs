@@ -16,49 +16,49 @@ It is also possible to set native dialog theme (`Light`, `Dark` or `Default`, wh
 
 Native dialogs support callbacks for different events like button click or dialog cancellation. User must provide appropriate event handlers for those callbacks.
 
-### *Message dialog with positive button*{docsify-ignore}
+### Message dialog with positive button
 
 Show this dialog by calling `ShowSingleButtonDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_positiveDlg.png)
 
-### *Message dialog with positive and negative buttons*{docsify-ignore}
+### Message dialog with positive and negative buttons
 
 Show this dialog by calling `ShowTwoButtonsDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_twoBtnDlg.png)
 
-### *Message dialog with positive, negative and neutral buttons*{docsify-ignore}
+### Message dialog with positive, negative and neutral buttons
 
 Show this dialog by calling `ShowThreeButtonsDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_threeBtnDlg.png)
 
-### *Dialog with simple items chooser*{docsify-ignore}
+### Dialog with simple items chooser
 
 Show this dialog by calling `ShowChooserDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_chooserDlg.png)
 
-### *Dialog with radio buttons items chooser*{docsify-ignore}
+### Dialog with radio buttons items chooser
 
 Show this dialog by calling `ShowSingleItemChoiceDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_singleOptDlg.png)
 
-### *Dialog with checkboxes buttons items chooser*{docsify-ignore}
+### Dialog with checkboxes buttons items chooser
 
 Show this dialog by calling `ShowMultipleItemChoiceDialog` function.
 
 ![](images/android-goodies/native-ui/Scr_multiOptDlg.png)
 
-### *Progress dialog (spinner)*{docsify-ignore}
+### Progress dialog (spinner)
 
 To show this dialog it first should be created with `CreateProgressDialog` function (pass `AGProgressDialogData` structure with specified `Spinner` style as a parameter). Then just call `Show` method of the received object interface instance. Call `Dismiss` method to close this dialog.
 
 ![](images/android-goodies/native-ui/Scr_spinnerDlg.png)
 
-### *Progress dialog (horizontal progress bar)*{docsify-ignore}
+### Progress dialog (horizontal progress bar)
 
 To show this dialog it first should be created with `CreateProgressDialog` function (pass `AGProgressDialogData` structure with specified `Progress Bar` style as a parameter). Then just call `Show` method of the received object interface instance. Call `Dismiss` method to close this dialog.
 
@@ -72,7 +72,7 @@ ___
 
 You can show standard Android Date and Time pickers.
 
-### *Showing Date Picker*{docsify-ignore}
+### Showing Date Picker
 
 To show the default Android date picker call `ShowDatePicker` function.
 
@@ -84,7 +84,7 @@ Result:
 
 There is a possibility to limit a range of dates that can be picked by a user. To do that call `ShowDatePickerWithLimits` function instead. The only difference here is that it takes two additional parameters - start and end dates of picking range.
 
-### *Showing Time Picker*{docsify-ignore}
+### Showing Time Picker
 
 To show the default Android time picker call `ShowTimePicker` function.
 
@@ -124,7 +124,7 @@ Pay attention to 2D-texture settings. `Compression Settings` - must be `VectorDi
 
 ![Texture sharing settings](images/android-goodies/native-sharing/Scr_TextureSettings.png)
 
-### *Share text, image or both*{docsify-ignore}
+### Share text, image or both
 
 You can share text, image or both using default Android intent by calling corresponding functions: `ShareText`, `ShareImage` or `ShareTextWithImage`. A user can specify data that should be shared and choose whether he wants to display chooser window to select a sharing app.
 
@@ -134,7 +134,7 @@ Result:
 
 ![Sharing chooser](images/android-goodies/native-sharing/Scr_ShareIntent.png)
 
-### *Sending SMS*{docsify-ignore}
+### Sending SMS
 
 To send SMS call `SendSmsWithDefaultApp` function.
 
@@ -144,13 +144,13 @@ There is also a possibility to send SMS silently (without showing any prompts or
 
 To be able to send SMS make sure that your app has `SEND_SMS`. Check out this [Setup](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Setup#required-permission-for-certain-features) instruction to make sure that the right permission is granted.
 
-### *Sending Email*{docsify-ignore}
+### Sending Email
 
 To send email call `SendEMail` function. Pass to it initialized `AGShareEmailData` structure as a parameter. This structure includes data fields like subject, email body, image (if any), list of recipients, CC recipients and BCC recipients.
 
 ![Send email](images/android-goodies/native-sharing/Scr_Email.png)
 
-### *Sending Email with multiple images*{docsify-ignore}
+### Sending Email with multiple images
 
 To send email with multiple images call `SendMultipleImagesEmail` function. Pass to it initialized `AGShareEmailData` structure as parameter and array of extra images. The structure includes data fields like subject, image, list of recipients, CC recipients and BCC recipients. **Adding email body is not possible in case of multiple images attached, this is native android limitation that can not be overridden.**
 
@@ -158,7 +158,7 @@ _* this feature is not yet released._
 
 ![Send multiple image email](images/android-goodies/native-sharing/Scr_MultipleImageEmail.png)
 
-### *Sharing via Social Media*{docsify-ignore}
+### Sharing via Social Media
 
 Android Goodies plugin has a set of functions that allow sharing text and images via a number of popular social media.
 
@@ -171,7 +171,7 @@ Android Goodies plugin has a set of functions that allow sharing text and images
 
 ![Tweet](images/android-goodies/native-sharing/Scr_Tweet.png)
 
-### *Share video*{docsify-ignore}
+### Share video
 
 Currently, this functionality is experimental and doesn't provide any high-level API. But you still can share video by calling `ShareVideo` function and pass a string with video file path to it as a parameter. You have to figure out that path on your own.
 
@@ -185,17 +185,17 @@ ___
 * [Notification Channel Groups](#notification-channel-groups)
 * [Notifications](#notifications-1)
 
-### General overview{docsify-ignore}
+### General overview
 
 Official Android documentation on notification essentials can be found [here](https://developer.android.com/guide/topics/ui/notifiers/notifications).
 
 Our plugin includes most of the common features for creating different types of custom notifications.
 
-### Setup{docsify-ignore}
+### Setup
 
 In order to make notifications work properly, you have to tweak settings of the Android Goodies plugin. Go to _Project Settings -> Android Goodies_ and set path to the folder that contains small notification icon which is required by Android API.
 
-### *Notification channels*{docsify-ignore}
+### Notification channels
 
 Starting from Android Oreo (API level 26), all notifications have to be posted to a notification channel.
 
@@ -224,7 +224,7 @@ To delete the notification channel call the `DeleteNotificationChannel` method p
 
 You can also call the `OpenNotificationChannelSettings` to open a system window with the settings for the respective notification channel.
 
-### *Notification Channel Groups*{docsify-ignore}
+### Notification Channel Groups
 
 Notification channel groups can be used to visually categorize and sort the notification channels.
 
@@ -236,7 +236,7 @@ To delete the notification channel group call the `DeleteNotificationChannelGrou
 
 !> ***Note:*** When you delete a group, all of the channels bound to it will be deleted, too.
 
-### *Notifications*{docsify-ignore}
+### Notifications
 
 Helper class `AGNotificationBuilder` is used to construct notifications. Use the `NewNotificationBuilder` method to create a new instance of this type, providing the unique identifier of the previously created [notification channel](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channels). While you can not create notification channels on Android versions less than Oreo, the `NewNotificationBuilder` takes the channel ID parameter anyway to support all of the Android versions. 
 
@@ -270,14 +270,7 @@ ___
 
 ## Setup alarms/timers
 
-Functionality:
-* [Required permissions](#reqiured-permissions)
-* [Showing all alarms and timers](#showing-all-alarms-and-timers)
-* [Setting an alarm](#setting-an-alarm)
-* [Setting timer](#setting-timer)
-* [Snooze alarm](#snooze-alarm)
-
-### *Required permissions*{docsify-ignore}
+### Required permissions
 
 In order to invoke the `SetAlarm` function, your app must have the `SET_ALARM` permission in your `AndroidManifest.xml`:
 
@@ -287,32 +280,32 @@ In order to invoke the `SetAlarm` function, your app must have the `SET_ALARM` p
 
 Check out this [Setup](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Setup#required-permission-for-certain-features) instruction to make sure that the right permission is granted.
 
-### *Showing all alarms and timers*{docsify-ignore}
+### Showing all alarms and timers
 
 To show a list of all alarms or timers calls `ShowAllAlarms` or `ShowAllTimers` function respectively.
 
-### *Setting an alarm*{docsify-ignore}
+### Setting an alarm
 
 You can set an alarm by invoking `SetAlarm` function, optionally specifying whether to vibrate, whether to skip the UI when creating an alarm and days on which alarm has to be invoked (repeating alarm). 
 !> ***Note:*** repeating alarm is available from API level 19 and forth.
 
-![Set alarm](images/android-goodies/alarm-timer/Scr_Alarm.png)
+![](images/android-goodies/alarm-timer/Scr_Alarm.png)
 
 Result:
 
-![Alarm result](images/android-goodies/alarm-timer/Scr_AlarmResult.png)
+![](images/android-goodies/alarm-timer/Scr_AlarmResult.png)
 
-### *Setting timer*{docsify-ignore}
+### Setting timer
 
 To set a timer call `SetTimer` function providing time in seconds, label and whether to skip the UI.
 
-![Set timer](images/android-goodies/alarm-timer/Scr_Timer.png)
+![](images/android-goodies/alarm-timer/Scr_Timer.png)
 
 Result:
 
-![Timer result](images/android-goodies/alarm-timer/Scr_TimerResult.png)
+![](images/android-goodies/alarm-timer/Scr_TimerResult.png)
 
-### *Snooze alarm*{docsify-ignore}
+### Snooze alarm
 
 To snooze ringing alarm call `SnoozeAlarm` function and pass snooze duration (in minutes) as a parameter. If currently there is no ringing alarm function call won't make any impact.
 
@@ -322,35 +315,29 @@ ___
 
 Android Goodies provides a simple and easy interface to [open a map application (providing coordinates or address) using intent](https://developer.android.com/guide/components/intents-common.html#Maps).
 
-Functionality:
-* [Check if user has maps app](#check-if-user-has-maps-app)
-* [Open location with zoom level](#open-location-with-zoom-level)
-* [Open location with label](#open-location-with-label)
-* [Open location with address](#open-location-with-address)
-
-### *Check if a user has a maps app*{docsify-ignore}
+### Check if a user has a maps app
 
 To check whether there is any maps app installed call `UserHasMapsApp` function. You should always call it before trying to work with other map-related functions.
 
-![Has maps app](images/android-goodies/maps/Scr_HasMaps.png)
+![](images/android-goodies/maps/Scr_HasMaps.png)
 
-### *Open location with zoom level*{docsify-ignore}
+### Open location with zoom level
 
 Show the map at the given longitude and latitude at a certain zoom level by calling `OpenMapLocation`. A zoom level of 1 shows the whole Earth, centered at the given latitude and longitude. The highest (closest) zoom level is 23.
 
-![Open map](images/android-goodies/maps/Scr_MapLocation.png)
+![](images/android-goodies/maps/Scr_MapLocation.png)
 
-### *Open location with the label*{docsify-ignore}
+### Open location with the label
 
 Show the map at the given longitude and latitude with a certain label by calling `OpenMapLocationWithLabel` function.
 
-![Open map with label](images/android-goodies/maps/Scr_MapLocationLabel.png)
+![](images/android-goodies/maps/Scr_MapLocationLabel.png)
 
-### *Open location with address*{docsify-ignore}
+### Open location with address
 
 Open the map location with the provided address by calling `OpenMapLocationWithAddress` function.
 
-![Open map with address](images/android-goodies/maps/Scr_MapAddr.png)
+![](images/android-goodies/maps/Scr_MapAddr.png)
 
 ___
 
@@ -358,58 +345,49 @@ ___
 
 Android Goodies plugin contains various functions to open other applications, as well as installing and uninstalling packages.
 
-Functionality:
-* [Open users Facebook profile](#open-users-facebook-profile)
-* [Open users Instagram profile](#open-users-instagram-profile)
-* [Open users Twitter profile](#open-users-twitter-profile)
-* [Open YouTube video](#open-youtube-video)
-* [Open application](#open-application)
-* [Install application](#install-application)
-*[Uninstall application](#uninstall-application)
-
-### *Open users Facebook profile*{docsify-ignore}
+### Open users Facebook profile
 
 To open a specific Facebook profile call `OpenFacebookProfile` function and provide the profile ID parameter. If there is no installed Facebook app on Android device specified profile will be opened in a browser.
 
-![Open Facebook](images/android-goodies/manage-apps/Scr_OpenFb.png)
+![](images/android-goodies/manage-apps/Scr_OpenFb.png)
 
-### *Open users Instagram profile*{docsify-ignore}
+### Open users Instagram profile
 
 To open a specific Instagram profile call `OpenInstagramProfile` function and provide the profile ID parameter (i.e. "taylorswift"). If there is no installed Instagram app on Android device specified profile will be opened in a browser.
 
-![Open Instagram](images/android-goodies/manage-apps/Scr_OpenInsta.png)
+![](images/android-goodies/manage-apps/Scr_OpenInsta.png)
 
-### *Open users Twitter profile*{docsify-ignore}
+### Open users Twitter profile
 
 To open a specific Twitter profile call `OpenTwitterProfile` function and provide the profile ID parameter (i.e. "CNN"). If there is no installed Twitter app on Android device specified profile will be opened in a browser.
 
-![Open twitter](images/android-goodies/manage-apps/Scr_OpenTwitter.png)
+![](images/android-goodies/manage-apps/Scr_OpenTwitter.png)
 
-### *Open YouTube video*{docsify-ignore}
+### Open YouTube video
 
 To open the video in YouTube app call `OpenYoutubeVideo` function and provide video ID parameter (a part that follows after "https://www.youtube.com/watch?v=").
 
-![Open video](images/android-goodies/manage-apps/Scr_OpenYouTubeVideo.png)
+![](images/android-goodies/manage-apps/Scr_OpenYouTubeVideo.png)
 
-### *Open application*{docsify-ignore}
+### Open application
 
 To open a specific application call `OpenAnotherApplication` function and provide its package name parameter. If there is no such application installed on Android device nothing will happen and the corresponding message will be logged.
 
-![Open app](images/android-goodies/manage-apps/Scr_OpenApp.png)
+![](images/android-goodies/manage-apps/Scr_OpenApp.png)
 
-### *Install application*{docsify-ignore}
+### Install application
 
 To install an application on your Android device call `InstallApkFromFile` function and pass APK file path as a parameter. Note that APK file must be located on device's SD card. Always check if this file exists before calling a function.
 
-![Install apk](images/android-goodies/manage-apps/Scr_InstallApk.png)
+![](images/android-goodies/manage-apps/Scr_InstallApk.png)
 
-### *Uninstall application*{docsify-ignore}
+### Uninstall application
 
 To uninstall an application call `UninstallPackage` function and provide its package name parameter. A user then will be prompted to remove the app.
 
-![Uninstall apk](images/android-goodies/manage-apps/Scr_Uninstall.png)
+![](images/android-goodies/manage-apps/Scr_Uninstall.png)
 
-### *Dial/call phone number*{docsify-ignore}
+### Dial/call phone number
 
 To dial/call phone number use `DialPhoneNumber` or `CallPhoneNumber` functions respectively. Also, there is a function allowing to check whether the phone app is installed - `HasPhoneApp`.
 
@@ -422,15 +400,15 @@ ___
 
 Device information functions allow retrieving various information about Android device and OS.
 
-### *Getting device information*{docsify-ignore}
+### Getting device information
 
 To retrieve device information there are functions that allow getting properties of `android.os.Build` and `android.os.Build$VERSION` classes.
 
-### *Check if certain package installed*{docsify-ignore}
+### Check if certain package installed
 
 To check whether package with specified name installed on current device use `IsPackageInstalled` function.
 
-### *Check supported device features*{docsify-ignore}
+### Check supported device features
 
 The plugin includes a series of functions that allow checking whether a certain feature is supported by Android device. 
 
@@ -447,7 +425,7 @@ ___
 
 You can perform various operations with images such as:
 
-### *Take a photo with a camera*{docsify-ignore}
+### Take a photo with a camera
 
 Call the `PickPhotoFromCamera` function to open the native camera view, allowing the user to take a photo. You can state, whether the resulting image should generate thumbnails. You should also provide the callback handlers for successful and unsuccessful outcomes (same as in the `PickImageFromGallery`).
 
@@ -455,13 +433,13 @@ Call the `PickPhotoFromCamera` function to open the native camera view, allowing
 
 Also, make sure that `android.permission.CAMERA` permission was granted to your application before calling this function.
 
-### *Pick an image from the gallery*{docsify-ignore}
+### Pick an image from the gallery
 
 Call the `PickImageFromGallery` function to pick an image from the gallery. You can specify image quality, maximal dimensions (e.g. 256), and a boolean value, indicating, whether the picked image should generate thumbnails. You should also provide callback handlers to process picked image or error message.
 
 ![](images/android-goodies/images/Scr_PickImgFromGallery.png)
 
-### *Save an image to the gallery*{docsify-ignore}
+### Save an image to the gallery
 
 Call the `SaveImageToGallery` function to save a texture to file with a given name to the `Pictures` folder in the external storage directory and make it discoverable in the gallery.
 
@@ -469,7 +447,7 @@ Call the `SaveImageToGallery` function to save a texture to file with a given na
 
 Also, make sure that `android.permission.WRITE_EXTERNAL_STORAGE` permission was granted to your application before calling this function.
 
-### *Capture screenshot*{docsify-ignore}
+### Capture screenshot
 
 Call the `TakeScreenShot` function to capture a screenshot. Screen image is automatically converted to 2D-texture which then can be used with other AndroidGoodies plugin functions. You can specify whether the resulting screenshot should capture app UI by setting `ShowUI` flag.
 
@@ -492,11 +470,11 @@ You can call `EnableFlashlight` function, passing a bool parameter, indicating w
 
 !> ***Note:*** all of the vibration functions require the [VIBRATE](https://developer.android.com/reference/android/Manifest.permission#VIBRATE) permission.
 
-### *Check the vibration availability*{docsify-ignore}
+### Check the vibration availability
 
 You can monitor the device's capability of vibrations using the following functions: `HasVibrator` indicating whether the device has the vibrator engine, `HasAmplitudeControl` indicating whether the device supports vibrations of different amplitudes, and `AreVibrationEffectsSupported` indicating, whether the device (usually with  Android OS version Oreo and higher) supports the vibration effects.
 
-### *Simple vibrations*{docsify-ignore}
+### Simple vibrations
 
 Call the `Vibrate` function for a simple vibration, passing a floating point value, indicating the vibration duration in seconds. 
 
@@ -506,7 +484,7 @@ Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an 
 
 !> ***Note:*** pass the index of the element in the intervals array, from which to repeat the sequence, or -1 for a single playback.
 
-### *Vibration effects*{docsify-ignore}
+### Vibration effects
 
 !> ***Note:*** call `AreVibrationEffectsSupported` to know, whether the vibration effects are supported on the device. Use simple vibrations if it returns false.
 
@@ -533,7 +511,7 @@ ___
 
 ## Fetch, find and add contacts
 
-### *Get SIM number*{docsify-ignore}
+### Get SIM number
 
 Call the 'GetUserPhoneNumber' to get the phone number stored in the SIM card.
 Requires the "android.permission.READ_PHONE_STATE" permission.
@@ -541,13 +519,13 @@ Requires the "android.permission.READ_PHONE_STATE" permission.
 !> ***Note!*** This method only works on devices where the number is stored on the SIM card, which only some carriers do.
 
 
-### *Fetch Contacts*{docsify-ignore}
+### Fetch Contacts
 
 You can find contacts by name, number or just fetch all of them using the 'GetContactsWithName', 'GetContactsWithNumber' and 'GetAllContacts' methods, respectively.
 
 All of these methods require the "android.permission.READ_CONTACTS" permission.
 
-### *Add Contact*{docsify-ignore}
+### Add Contact
 
 Call the `AddContact` method to add a contact to the phone book.
 
