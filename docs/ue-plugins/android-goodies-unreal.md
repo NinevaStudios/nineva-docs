@@ -1,10 +1,13 @@
 ___
+
 # **Native UI**
+
 ___
 
 ## Native dialogs
 
 You can show standard Android AlertDialog with:
+
 * [Only positive button](#message-dialog-with-positive-button)
 * [Positive and negative buttons](#message-dialog-with-positive-and-negative-buttons)
 * [Positive, negative and neutral buttons](#message-dialog-with-positive-negative-and-neutral-buttons)
@@ -14,7 +17,7 @@ You can show standard Android AlertDialog with:
 * [Progress dialog (spinner)](#progress-dialog-spinner)
 * [Progress dialog (progress bar)](#progress-dialog-horizontal-progress-bar)
 
-It is also possible to set native dialog theme (`Light`, `Dark` or `Default`, which will apply global device's dialog theme).
+It is also possible to set native dialog theme ( `Light` , `Dark` or `Default` , which will apply global device's dialog theme).
 
 Native dialogs support callbacks for different events like button click or dialog cancellation. User must provide appropriate event handlers for those callbacks.
 
@@ -116,13 +119,13 @@ You can use native Android sharing functionality.
 
 Image sharing functions take 2D-texture as one of their parameters. Before actual sharing happens this texture is converted and saved in temporary PNG-file which is stored in an external storage Pictures folder (not in the app folder).
 
-Pay attention to 2D-texture settings. `Compression Settings` - must be `VectorDisplacementmap`, `Mip Gen Settings` - must be `NoMipmaps`, `sRGB` - should be unchecked. Otherwise you won't be able to share image!
+Pay attention to 2D-texture settings. `Compression Settings` - must be `VectorDisplacementmap` , `Mip Gen Settings` - must be `NoMipmaps` , `sRGB` - should be unchecked. Otherwise you won't be able to share image!
 
 ![Texture sharing settings](images/android-goodies/native-sharing/Scr_TextureSettings.png)
 
 ### Share text, image or both
 
-You can share text, image or both using default Android intent by calling corresponding functions: `ShareText`, `ShareImage` or `ShareTextWithImage`. A user can specify data that should be shared and choose whether he wants to display chooser window to select a sharing app.
+You can share text, image or both using default Android intent by calling corresponding functions: `ShareText` , `ShareImage` or `ShareTextWithImage` . A user can specify data that should be shared and choose whether he wants to display chooser window to select a sharing app.
 
 ![Sharing](images/android-goodies/native-sharing/Scr_Share.png)
 
@@ -138,7 +141,7 @@ To send SMS call `SendSmsWithDefaultApp` function.
 
 There is also a possibility to send SMS silently (without showing any prompts or messaging app UI) by calling `SendSmsSilently` function. A user can later find the message in the Sent folder.
 
-To be able to send SMS make sure that your app has `SEND_SMS`. Check out this [Setup](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Setup#required-permission-for-certain-features) instruction to make sure that the right permission is granted.
+To be able to send SMS make sure that your app has `SEND_SMS` . Check out this [Setup](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Setup#required-permission-for-certain-features) instruction to make sure that the right permission is granted.
 
 ### Sending Email
 
@@ -159,11 +162,11 @@ _* this feature is not yet released._
 Android Goodies plugin has a set of functions that allow sharing text and images via a number of popular social media.
 
 * `ShareInstagram` - to share image via Instagram
-* `TweetText`, `TweetTextWithImage` - to share text or text+image via Twitter
-* `SendFacebookText`, `SendFacebookImage` - to share text or image via Facebook
-* `SendWhatsAppText`, `SendWhatsAppImage` - to share text or image via WhatsApp
-* `SendTelegramText`, `SendTelegramImage` - to share text or image via Telegram
-* `SendViberText`, `SendViberImage` - to share text or image via Viber
+* `TweetText` , `TweetTextWithImage` - to share text or text+image via Twitter
+* `SendFacebookText` , `SendFacebookImage` - to share text or image via Facebook
+* `SendWhatsAppText` , `SendWhatsAppImage` - to share text or image via WhatsApp
+* `SendTelegramText` , `SendTelegramImage` - to share text or image via Telegram
+* `SendViberText` , `SendViberImage` - to share text or image via Viber
 
 ![Tweet](images/android-goodies/native-sharing/Scr_Tweet.png)
 
@@ -196,16 +199,17 @@ Starting from Android Oreo (API level 26), all notifications have to be posted t
 Call the `AreNotificationChannelsSupported` method to find if the device supports Notification Channels.
 Use the `NewNotificationChannel` function to create a new object representing the notification channel settings, providing a unique identifier, name, and importance of the channel.
 You can then customize it using the following methods: 
-* `SetBypassDnd` - set whether or not notifications posted to this channel can bypass the Do Not Disturb mode;
-* `SetShowBadge` - set whether notifications posted to this channel can appear as badges in a Launcher application;
-* `SetEnableLights` - set whether notifications posted to this channel should display notification lights;
-* `SetEnableVibration` - set whether notification posted to this channel should vibrate. Requires the "VIBRATE" permission;
-* `SetDescription` - set the user-visible description of this channel;
-* `SetImportance` - set the notification importance;
-* `SetLightColor` - set the notification light color for notifications posted to this channel. Works with `SetEnableLights(true)`;
-* `SetLockScreenVisibility` - set whether or not notifications posted to this channel are shown on the lock screen in full or redacted form;
-* `SetVibrationPattern` - set the vibration pattern for notifications posted to this channel. Will be ignored if the vibration is not enabled by `SetEnableVibration(true)`. Requires the "VIBRATE" permission;
-* `SetSound` - set the sound that should be played for notifications posted to this channel and its audio attributes;
+
+* `SetBypassDnd` - set whether or not notifications posted to this channel can bypass the Do Not Disturb mode; 
+* `SetShowBadge` - set whether notifications posted to this channel can appear as badges in a Launcher application; 
+* `SetEnableLights` - set whether notifications posted to this channel should display notification lights; 
+* `SetEnableVibration` - set whether notification posted to this channel should vibrate. Requires the "VIBRATE" permission; 
+* `SetDescription` - set the user-visible description of this channel; 
+* `SetImportance` - set the notification importance; 
+* `SetLightColor` - set the notification light color for notifications posted to this channel. Works with `SetEnableLights(true)` ; 
+* `SetLockScreenVisibility` - set whether or not notifications posted to this channel are shown on the lock screen in full or redacted form; 
+* `SetVibrationPattern` - set the vibration pattern for notifications posted to this channel. Will be ignored if the vibration is not enabled by `SetEnableVibration(true)` . Requires the "VIBRATE" permission; 
+* `SetSound` - set the sound that should be played for notifications posted to this channel and its audio attributes; 
 * `SetGroup` - set what [group](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channel-groups) this channel belongs to.
 
 After the channel settings are modified it can be created in the system using the `CreateNotificationChannel` method.
@@ -236,7 +240,7 @@ Helper class `AGNotificationBuilder` is used to construct notifications. Use the
 
 You can also provide additional data in the format of a Dictionary<key, value> to be later retrieved using the `GetNotificationDataForKey` method if the user opens the application by tapping the notification (call the `WasApplicationOpenViaNotification` method to find out).
 
-After creating a notification builder object, you need to provide the title, text, and icon for notification by calling the `SetTitle`, `SetText`, and `SetSmallIcon` methods. These are the three fields mandatory for any notification.
+After creating a notification builder object, you need to provide the title, text, and icon for notification by calling the `SetTitle` , `SetText` , and `SetSmallIcon` methods. These are the three fields mandatory for any notification.
 
 For the small icon to be set, the respective image has to be in the Android drawable directory in the application folder.
 We designed our plugin to be able to automatically copy the files from the folder, specified in the "Android Drawables Folder" setting in the Project Settings / Android Goodies Settings menu in the Editor to the Android drawable directory during build time. 
@@ -245,9 +249,9 @@ For example, if you provide the path "D:\Projects\Images", all the files from th
 
 !> **_For the sample project to work, please, set the "PROJECT_PATH\Resources\Drawable" directory in the "Android Drawables Folder" setting in the Project Settings / Android Goodies Settings menu in the Editor and make sure that "notification_icon.png" file is there._**
 
-You can look at different examples of custom notifications in the demo project, specifically in the `MenuNotifications_BP.uasset`.
+You can look at different examples of custom notifications in the demo project, specifically in the `MenuNotifications_BP.uasset` .
 
-You can also check the official documentation on the [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder) class to get familiar with its functionality.
+You can also check the official documentation on the [NotificationCompat. Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder) class to get familiar with its functionality.
 
 Call the `Build` method on the AGNotificationBuilder object to obtain the Notification object. It can then be passed to the `Notify` method which actually shows the notification on the screen.
 
@@ -258,16 +262,18 @@ Call the `CancelNotification` method to cancel a specific notification by its ID
 !> Scheduled notifications can not be cancelled using these methods. Use the `CancelScheduledNotification` method, instead.
 
 ___
+
 # **App interaction**
+
 ___
 
 ## Setup alarms/timers
 
 ### Required permissions
 
-In order to invoke the `SetAlarm` function, your app must have the `SET_ALARM` permission in your `AndroidManifest.xml`:
+In order to invoke the `SetAlarm` function, your app must have the `SET_ALARM` permission in your `AndroidManifest.xml` :
 
-```xml
+``` xml
 <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 ```
 
@@ -314,7 +320,7 @@ To check whether there is any maps app installed call `UserHasMapsApp` function.
 
 ### Open location with zoom level
 
-Show the map at the given longitude and latitude at a certain zoom level by calling `OpenMapLocation`. A zoom level of 1 shows the whole Earth, centered at the given latitude and longitude. The highest (closest) zoom level is 23.
+Show the map at the given longitude and latitude at a certain zoom level by calling `OpenMapLocation` . A zoom level of 1 shows the whole Earth, centered at the given latitude and longitude. The highest (closest) zoom level is 23.
 
 ![](images/android-goodies/maps/Scr_MapLocation.png)
 
@@ -378,10 +384,12 @@ To uninstall an application call `UninstallPackage` function and provide its pac
 
 ### Dial/call phone number
 
-To dial/call phone number use `DialPhoneNumber` or `CallPhoneNumber` functions respectively. Also, there is a function allowing to check whether the phone app is installed - `HasPhoneApp`.
+To dial/call phone number use `DialPhoneNumber` or `CallPhoneNumber` functions respectively. Also, there is a function allowing to check whether the phone app is installed - `HasPhoneApp` .
 
 ___
+
 # **Getting info**
+
 ___
 
 ## Get device info and check supported features
@@ -400,12 +408,14 @@ To check whether package with specified name installed on current device use `Is
 
 The plugin includes a series of functions that allow checking whether a certain feature is supported by Android device. 
 
-Patterns for those function names are `Supports<feature name>` or `Has<feature name>`. Right-click in blueprint editor and start typing "Supports" or "Has" to see the full list of available functions.
+Patterns for those function names are `Supports<feature name>` or `Has<feature name>` . Right-click in blueprint editor and start typing "Supports" or "Has" to see the full list of available functions.
 
 Check out a detailed description of all features [here](https://developer.android.com/guide/topics/manifest/uses-feature-element#features-reference).
 
 ___
+
 # **Image tools**
+
 ___
 
 ## Pick images from gallery and camera, save an image to gallery
@@ -414,7 +424,7 @@ You can perform various operations with images such as:
 
 ### Take a photo with a camera
 
-Call the `PickPhotoFromCamera` function to open the native camera view, allowing the user to take a photo. You can state, whether the resulting image should generate thumbnails. You should also provide the callback handlers for successful and unsuccessful outcomes (same as in the `PickImageFromGallery`).
+Call the `PickPhotoFromCamera` function to open the native camera view, allowing the user to take a photo. You can state, whether the resulting image should generate thumbnails. You should also provide the callback handlers for successful and unsuccessful outcomes (same as in the `PickImageFromGallery` ).
 
 ![](images/android-goodies/images/Scr_CapturePhoto.png)
 
@@ -441,7 +451,9 @@ Call the `TakeScreenShot` function to capture a screenshot. Screen image is auto
 ![](images/android-goodies/images/Scr_Screenshot.png)
 
 ___
+
 # **Hardware**
+
 ___
 
 * [Flashlight, vibrations, battery](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Hardware)
@@ -476,13 +488,13 @@ Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an 
 
 Call the `VibrateWithEffect` function to vibrate with one of the following effects: 
 
-* `VibrationEffectOneShot`, creating a single vibration at the specified amplitude (1 for minimal, 255 for maximal);
+* `VibrationEffectOneShot` , creating a single vibration at the specified amplitude (1 for minimal, 255 for maximal); 
 
 ![](images/android-goodies/hardware/Scr_VibrationEffect.png)
 
-* `VibrationEffectWaveForm`, creating a sequence, similar to the `VibrateWithPattern` function;
+* `VibrationEffectWaveForm` , creating a sequence, similar to the `VibrateWithPattern` function; 
 
-* `VibrationEffectWaveFormWithAmplitudes`, creating a sequence with the ability to specify the amplitude for the different fragments.
+* `VibrationEffectWaveFormWithAmplitudes` , creating a sequence with the ability to specify the amplitude for the different fragments.
 
 Call the `VibrateWithEffectAndAttributes` function to provide an additional AudioAttributes parameter for the vibration, that contains the usage, content type and flags, indicating the purpose of vibration.
 
@@ -491,7 +503,9 @@ Call the `VibrateWithEffectAndAttributes` function to provide an additional Audi
 You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions. 
 
 ___
+
 # **Contacts**
+
 ___
 
 ## Fetch, find and add contacts
@@ -499,19 +513,18 @@ ___
 ### Get SIM number
 
 Call the 'GetUserPhoneNumber' to get the phone number stored in the SIM card.
-Requires the "android.permission.READ_PHONE_STATE" permission.
+Requires the "android.permission. READ_PHONE_STATE" permission.
 
 !> This method only works on devices where the number is stored on the SIM card, which only some carriers do.
-
 
 ### Fetch Contacts
 
 You can find contacts by name, number or just fetch all of them using the 'GetContactsWithName', 'GetContactsWithNumber' and 'GetAllContacts' methods, respectively.
 
-All of these methods require the "android.permission.READ_CONTACTS" permission.
+All of these methods require the "android.permission. READ_CONTACTS" permission.
 
 ### Add Contact
 
 Call the `AddContact` method to add a contact to the phone book.
 
-Requires the "android.permission.WRITE_CONTACTS" permission.
+Requires the "android.permission. WRITE_CONTACTS" permission.
