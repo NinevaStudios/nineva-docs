@@ -507,26 +507,3 @@ You can get one of the many battery characteristics, such as capacity, health, p
 ___
 ___
 
-# **Contacts**
-
-## Fetch, find and add contacts
-
-### Get SIM number
-
-Call the 'GetUserPhoneNumber' to get the phone number stored in the SIM card.
-Requires the "android.permission.READ_PHONE_STATE" permission.
-
-!> ***Note!*** This method only works on devices where the number is stored on the SIM card, which only some carriers do.
-
-
-### Fetch Contacts
-
-You can find contacts by name, number or just fetch all of them using the 'GetContactsWithName', 'GetContactsWithNumber' and 'GetAllContacts' methods, respectively.
-
-All of these methods require the "android.permission.READ_CONTACTS" permission.
-
-### Add Contact
-
-Call the `AddContact` method to add a contact to the phone book.
-
-Requires the "android.permission.WRITE_CONTACTS" permission.
