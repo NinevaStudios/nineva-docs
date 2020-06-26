@@ -1,4 +1,6 @@
+___
 # **Native UI**
+___
 
 ## Native dialogs
 
@@ -66,8 +68,6 @@ To show this dialog it first should be created with `CreateProgressDialog` funct
 
 To update progress value use dialog's `SetProgress` method.
 
-___
-
 ## Date and time picker
 
 You can show standard Android Date and Time pickers.
@@ -94,8 +94,6 @@ Result:
 
 ![](images/android-goodies/date-picker/Scr_TimeRes.png)
 
-___
-
 ## Show Toasts
 
 You can show standard Android toast messages.
@@ -105,8 +103,6 @@ To show toast call `ShowToast` function and pass message text and toast duration
 ![](images/android-goodies/toast/Scr_Toast.png)
 
 Duration can be either `Short` or `Long` (corresponds to Android [default values](https://developer.android.com/reference/android/widget/Toast.html#constants)).
-
-___
 
 ## Native sharing text or/and image
 
@@ -175,8 +171,6 @@ Android Goodies plugin has a set of functions that allow sharing text and images
 
 Currently, this functionality is experimental and doesn't provide any high-level API. But you still can share video by calling `ShareVideo` function and pass a string with video file path to it as a parameter. You have to figure out that path on your own.
 
-___
-
 ## Notifications
 
 * [General overview](#general-overview)
@@ -216,7 +210,7 @@ You can then customize it using the following methods:
 
 After the channel settings are modified it can be created in the system using the `CreateNotificationChannel` method.
 
-!> ***Note:*** most of the setters will work only before creating the notification channel.
+!>  Most of the setters will work only before creating the notification channel.
 
 You can later find the notification channel by calling the `GetNotificationChannel` method and providing the unique identifier of the channel, used during its creation. Alternatively, you can call the `GetNotificationChannels` channels to obtain an array of all the notification channels, registered for the calling package. You can then call the `GetXXX` methods to read the respective properties of the notification channels.
 
@@ -234,7 +228,7 @@ You can later find the notification channel group by calling the `GetNotificatio
 
 To delete the notification channel group call the `DeleteNotificationChannelGroup` method providing the unique identifier of the group, used during its creation.
 
-!> ***Note:*** When you delete a group, all of the channels bound to it will be deleted, too.
+!> When you delete a group, all of the channels bound to it will be deleted, too.
 
 ### Notifications
 
@@ -261,12 +255,11 @@ You can also schedule notifications to appear at the needed time using the `Sche
 
 Call the `CancelNotification` method to cancel a specific notification by its ID. You can also use the `CancelAllNotifications` to cancel all of the notifications, posted by the `Notify` function.
 
-!> ***Note:*** scheduled notifications can not be cancelled using these methods. Use the `CancelScheduledNotification` method, instead.
+!> Scheduled notifications can not be cancelled using these methods. Use the `CancelScheduledNotification` method, instead.
 
 ___
-___
-
 # **App interaction**
+___
 
 ## Setup alarms/timers
 
@@ -287,7 +280,7 @@ To show a list of all alarms or timers calls `ShowAllAlarms` or `ShowAllTimers` 
 ### Setting an alarm
 
 You can set an alarm by invoking `SetAlarm` function, optionally specifying whether to vibrate, whether to skip the UI when creating an alarm and days on which alarm has to be invoked (repeating alarm). 
-!> ***Note:*** repeating alarm is available from API level 19 and forth.
+!> Repeating alarm is available from API level 19 and forth.
 
 ![](images/android-goodies/alarm-timer/Scr_Alarm.png)
 
@@ -308,8 +301,6 @@ Result:
 ### Snooze alarm
 
 To snooze ringing alarm call `SnoozeAlarm` function and pass snooze duration (in minutes) as a parameter. If currently there is no ringing alarm function call won't make any impact.
-
-___
 
 ## Open maps app
 
@@ -338,8 +329,6 @@ Show the map at the given longitude and latitude with a certain label by calling
 Open the map location with the provided address by calling `OpenMapLocationWithAddress` function.
 
 ![](images/android-goodies/maps/Scr_MapAddr.png)
-
-___
 
 ## Open, install or uninstall apps
 
@@ -392,9 +381,8 @@ To uninstall an application call `UninstallPackage` function and provide its pac
 To dial/call phone number use `DialPhoneNumber` or `CallPhoneNumber` functions respectively. Also, there is a function allowing to check whether the phone app is installed - `HasPhoneApp`.
 
 ___
-___
-
 # **Getting info**
+___
 
 ## Get device info and check supported features
 
@@ -417,9 +405,8 @@ Patterns for those function names are `Supports<feature name>` or `Has<feature n
 Check out a detailed description of all features [here](https://developer.android.com/guide/topics/manifest/uses-feature-element#features-reference).
 
 ___
-___
-
 # **Image tools**
+___
 
 ## Pick images from gallery and camera, save an image to gallery
 
@@ -454,9 +441,8 @@ Call the `TakeScreenShot` function to capture a screenshot. Screen image is auto
 ![](images/android-goodies/images/Scr_Screenshot.png)
 
 ___
-___
-
 # **Hardware**
+___
 
 * [Flashlight, vibrations, battery](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Hardware)
 
@@ -464,11 +450,11 @@ ___
 
 You can call `EnableFlashlight` function, passing a bool parameter, indicating whether to turn the flashlight on or off.
 
-!> ***Note:*** this function requires the [CAMERA](https://developer.android.com/reference/android/Manifest.permission_group.html#CAMERA) permission.
+!> This function requires the [CAMERA](https://developer.android.com/reference/android/Manifest.permission_group.html#CAMERA) permission.
 
 ## Vibrations
 
-!> ***Note:*** all of the vibration functions require the [VIBRATE](https://developer.android.com/reference/android/Manifest.permission#VIBRATE) permission.
+!> All of the vibration functions require the [VIBRATE](https://developer.android.com/reference/android/Manifest.permission#VIBRATE) permission.
 
 ### Check the vibration availability
 
@@ -482,11 +468,11 @@ Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an 
 
 ![](images/android-goodies/hardware/Scr_VibrationPattern.png)
 
-!> ***Note:*** pass the index of the element in the intervals array, from which to repeat the sequence, or -1 for a single playback.
+!> Pass the index of the element in the intervals array, from which to repeat the sequence, or -1 for a single playback.
 
 ### Vibration effects
 
-!> ***Note:*** call `AreVibrationEffectsSupported` to know, whether the vibration effects are supported on the device. Use simple vibrations if it returns false.
+!> Call `AreVibrationEffectsSupported` to know, whether the vibration effects are supported on the device. Use simple vibrations if it returns false.
 
 Call the `VibrateWithEffect` function to vibrate with one of the following effects: 
 
@@ -505,9 +491,8 @@ Call the `VibrateWithEffectAndAttributes` function to provide an additional Audi
 You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions. 
 
 ___
-___
-
 # **Contacts**
+___
 
 ## Fetch, find and add contacts
 
@@ -516,7 +501,7 @@ ___
 Call the 'GetUserPhoneNumber' to get the phone number stored in the SIM card.
 Requires the "android.permission.READ_PHONE_STATE" permission.
 
-!> ***Note!*** This method only works on devices where the number is stored on the SIM card, which only some carriers do.
+!> This method only works on devices where the number is stored on the SIM card, which only some carriers do.
 
 
 ### Fetch Contacts
