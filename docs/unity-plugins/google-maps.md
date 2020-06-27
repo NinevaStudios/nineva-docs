@@ -315,7 +315,7 @@ Currently supported elements are:
 
 The API is mirrored from [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) and [Marker](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) Google API, please refer it for all the reference and also see the detailed examples in the demo project.
 
-If you want to register click listener for marker please refer to [Listening to map events](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Map-Events-and-Listeners)
+If you want to register click listener for marker please refer to [Listening to map events](#map-events-and-listeners)
 
 Example:
 
@@ -350,7 +350,7 @@ static MarkerOptions CreateInitialMarkerOptions()
 
 The API is mirrored from [CircleOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/CircleOptions) and [Circle](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Circle) Google API, please refer it for all the reference and also see the detailed examples in the demo project.
 
-If you want to register click listener for circle please refer to [Listening to map events](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Map-Events-and-Listeners)
+If you want to register click listener for circle please refer to [Listening to map events](#map-events-and-listeners)
 
 Example:
 
@@ -765,7 +765,7 @@ The plugin also supports styling the map with provided style json.
 
 To create custom style please use [Google Map Styling Wizard](https://mapstyle.withgoogle.com/)
 
-![styling](https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/style_json.png ':size=768')
+![styling](/images/maps/style_json.png ':size=768')
 
 You will download the json file which represents your map style. Now to set the style just read your json to string and pass to `SetMapStyle` method
 
@@ -781,7 +781,7 @@ else
 }
 ```
 
-![styling](https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/style.png ':size=768')
+![styling](/images/maps/style.png ':size=768')
 
 
 # **Taking Map Snapshot**
