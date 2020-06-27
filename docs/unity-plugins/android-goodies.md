@@ -1122,7 +1122,7 @@ private IEnumerator ShowHorizontalForDuration()
 
 Result:
 
-![alt text](/images/ag/progress-bar.png ':size=512'")
+![alt text](/images/ag/progress-bar.png ':size=512')
 
 ---
 

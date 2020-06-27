@@ -1,4 +1,4 @@
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/icon.png" width="256">
+![](/images/maps/icon.png ':size=768')
 
 The plugin allows you to embed **Native [GoogleMapsView](https://developers.google.com/android/reference/com/google/android/gms/maps/MapView)** into your Android-Unity game. Note, this is **NOT** a Web View and **NOT** a Texture, its native interactive Google Map View.
 
@@ -19,7 +19,7 @@ The plugin allows you to embed **Native [GoogleMapsView](https://developers.goog
 
 !> **You can't move the view as a part of scene hierarchy (e.g scroll in Unity view)**. However, you can change the view size and position. 
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/map_demo.png">
+![](/images/maps/map_demo.png ':size=768')
 
 # **Setup (Android)**
 
@@ -27,7 +27,7 @@ The plugin allows you to embed **Native [GoogleMapsView](https://developers.goog
 
 Go to Unity Android Player Settings and set the Bundle Id as your package name, e.g. `gmaps.deadmosquitogames.com.googlemaps` and save it. **This is important as Google API Key in the next step will be restricted to the package you set.**
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/bundle_id.png">
+![](/images/maps/bundle_id.png ':size=768')
 
 ## 2. Obtaining Google API Key
 
@@ -37,31 +37,31 @@ If you don't already have a [Google Console](https://console.developers.google.c
 
 * Go to [https://cloud.google.com/maps-platform/](https://cloud.google.com/maps-platform) and click `GET STARTED` button.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-1.PNG">
+![](/images/maps/get-api-key-1.png ':size=768')
 
 * Select `Maps` product and continue
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-2.PNG">
+![](/images/maps/get-api-key-2.png ':size=768')
 
 * Select an already existing project or create a new one in the dropdown
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-3.PNG">
+![](/images/maps/get-api-key-3.png ':size=768')
 
 * If you do not have the billing account yet, you would be asked to create one, please follow the instructions
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-4.PNG">
+![](/images/maps/get-api-key-4.png ':size=768')
 
 * Click next to finally create an API key
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-5.PNG">
+![](/images/maps/get-api-key-5.png ':size=768')
 
 You will be now presented with the API key, please save it as we will need it later. Click on `API Console` link below the key to go your API key settings.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-6.PNG">
+![](/images/maps/get-api-key-6.png ':size=768')
 
 What we need to do now and its very important that we restrict usage of this key to only our Android application (So other people can't use it if the obtain your key). In `Key restriction section` choose `Android apps` and click on `+ Add package name and fingerprint` button.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/get_key/get_key_5.png">
+![](/images/maps/get_key_5.png ':size=768')
 
 The form that appears maps app package names to SHA-1 certificate fingerprints. Put **Package name** from your unity project that you set up in **Step 1*** into the package field.
 
@@ -75,11 +75,11 @@ For example in my case it is `keytool -list -v -keystore ~tarasleskiv/.android/d
 
 If you use your Windows machine its very similar, in my case I specified full path to keytool: `"C:\Program Files\Java\jdk1.8.0_91\bin\keytool" -list -v -keystore C:\Users\tarasleskiv\.android\debug.keystore` .
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/get_key/get_key_7.png" width = "512">
+![](/images/maps/get_key_7.png ':size=768')
 
 * Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save` . 
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/get_key/get_key_6.png" width = "512">
+![](/images/maps/get_key_6.png ':size=768')
 
 * Repeat adding package-**SHA-1 certificate fingerprint** pairs for all keystores that you sign the app with. For example I usually have two entries - one with my debug keystore to develop locally and another pair for Google Play publishing.
 
@@ -93,13 +93,13 @@ If you are using new Google Play App Signing mechanism you also have to create a
 
 You have to do this because with the new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) Google re-signs your app with another certificate. If you forget this place picker functionality will not work when downloaded from Google Play.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/new-signing.png">
+![](/images/maps/new-signing.png ':size=768')
 
 ## 3. Set the API key in Unity Project settings.
 
 Once you have your key (it starts with "AIza"), go to _Window -> Google Maps View -> Edit Settings_ and replace the value in the corresponding input field with the API key that you recently retrieved.
 
-<img src="https://github.com/NinevaStudios/unity-google-maps-docs/blob/master/images/android_api_key_settings.png">
+![](/images/maps/android_api_key_settings.png ':size=768')
 
 ## 4. Run the Demo Scene
 
@@ -109,7 +109,7 @@ Once you have your key (it starts with "AIza"), go to _Window -> Google Maps Vie
 
 After running the demo you will see the demo scene, now you can play around with settings. Don't forget to click "Refresh" each time you change settings.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/map_demo.png">a
+![](/images/maps/map_demo.png ':size=768')a
 
 # **Setup (iOS**)
 
@@ -117,7 +117,7 @@ After running the demo you will see the demo scene, now you can play around with
 
 Go to Unity Android Player Settings and set the Bundle Id as your package name, e.g. `gmaps.deadmosquitogames.com.googlemaps` and save it. **This is important as Google API Key in the next step will be restricted to the package you set.**
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/bundle_id.png">
+![](/images/maps/bundle_id.png ':size=768')
 
 ## 2. Obtaining Google API Key
 
@@ -127,31 +127,31 @@ If you don't already have a [Google Console](https://console.developers.google.c
 
 * Go to [https://cloud.google.com/maps-platform/](https://cloud.google.com/maps-platform) and click `GET STARTED` button.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-1.PNG">
+![](/images/maps/get-api-key-1.png ':size=768')
 
 * Select `Maps` product and continue
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-2.PNG">
+![](/images/maps/get-api-key-2.png ':size=768')
 
 * Select an already existing project or create a new one in the dropdown
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-3.PNG">
+![](/images/maps/get-api-key-3.png ':size=768')
 
 * If you do not have the billing account yet, you would be asked to create one, please follow the instructions
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-4.PNG">
+![](/images/maps/get-api-key-4.png ':size=768')
 
 * Click next to finally create an API key
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-5.PNG">
+![](/images/maps/get-api-key-5.png ':size=768')
 
 You will be now presented with the API key, please save it as we will need it later. Click on `API Console` link below the key to go your API key settings.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/setup_new/get-api-key-6.PNG">
+![](/images/maps/get-api-key-6.png ':size=768')
 
 What we need to do now and its very important that we restrict usage of this key to only our Android application (So other people can't use it if the obtain your key). In `Key restriction section` choose `Android apps` and click on `+ Add package name and fingerprint` button.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/get_key/get_key_5.png">
+![](/images/maps/get_key_5.png ':size=768')
 
 The form that appears maps app package names to SHA-1 certificate fingerprints. Put **Package name** from your unity project that you set up in **Step 1*** into the package field.
 
@@ -165,11 +165,11 @@ For example in my case it is `keytool -list -v -keystore ~tarasleskiv/.android/d
 
 If you use your Windows machine its very similar, in my case I specified full path to keytool: `"C:\Program Files\Java\jdk1.8.0_91\bin\keytool" -list -v -keystore C:\Users\tarasleskiv\.android\debug.keystore` .
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/get_key/get_key_7.png" width = "512">
+![](/images/maps/get_key_7.png ':size=768')
 
 * Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save` . 
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/get_key/get_key_6.png" width = "512">
+![](/images/maps/get_key_6.png ':size=768')
 
 * Repeat adding package-**SHA-1 certificate fingerprint** pairs for all keystores that you sign the app with. For example I usually have two entries - one with my debug keystore to develop locally and another pair for Google Play publishing.
 
@@ -183,13 +183,13 @@ If you are using new Google Play App Signing mechanism you also have to create a
 
 You have to do this because with the new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) Google re-signs your app with another certificate. If you forget this place picker functionality will not work when downloaded from Google Play.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/new-signing.png">
+![](/images/maps/new-signing.png ':size=768')
 
 ## 3. Set the API key in Unity Project settings.
 
 Once you have your key (it starts with "AIza"), go to _Window -> Google Maps View -> Edit Settings_ and replace the value in the corresponding input field with the API key that you recently retrieved.
 
-<img src="https://github.com/NinevaStudios/unity-google-maps-docs/blob/master/images/android_api_key_settings.png">
+![](/images/maps/android_api_key_settings.png ':size=768')
 
 ## 4. Run the Demo Scene
 
@@ -199,7 +199,7 @@ Once you have your key (it starts with "AIza"), go to _Window -> Google Maps Vie
 
 After running the demo you will see the demo scene, now you can play around with settings. Don't forget to click "Refresh" each time you change settings.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/map_demo.png">
+![](/images/maps/map_demo.png ':size=768')
 
 # **Getting Started**
 
@@ -307,7 +307,7 @@ Currently supported elements are:
 + [Polylines](#polylines)
 + [Polygons](#polygons)
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/draw_on_map.png" width="320">
+![](/images/maps/draw_on_map.png ':size=768')
 
 ## Markers
 
@@ -342,7 +342,7 @@ static MarkerOptions CreateInitialMarkerOptions()
 }
 ```
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/markers.png" width="320">
+![](/images/maps/markers.png ':size=768')
 
 ## Circles
 
@@ -373,7 +373,7 @@ static CircleOptions CreateInitialCircleOptions()
 }
 ```
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/circles.png" width="320">
+![](/images/maps/circles.png ':size=768')
 
 ## Ground Overlay
 
@@ -399,7 +399,7 @@ static GroundOverlayOptions CreateInitialGroundOverlayOptions()
 }
 ```
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/overlay.png" width="320">
+![](/images/maps/overlay.png ':size=768')
 
 ## Polylines
 
@@ -426,7 +426,7 @@ public static PolylineOptions CreateInitialPolylineOptions()
 }
 ```
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/polyline.png" width="320">
+![](/images/maps/polyline.png ':size=768')
 
 ## Polygons
 
@@ -452,11 +452,11 @@ public static PolygonOptions CreateColoradoStatePolygonOptions()
         .ZIndex(1f);
 }
 ```
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/polygon.png" width="320">
+![](/images/maps/polygon.png ':size=768')
 
 # **Marker Clustering**
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/clustering.jpg">
+![](/images/maps/clustering.jpg ':size=768')
 
 This implements the marker clustering functionality from Android iOS and Android utility libraries, for more background information please check out the official Google documentation:
 
@@ -471,8 +471,8 @@ Please read what subset of features is available in the plugin (for now it is on
 * Adding items to the cluster with a location, title and snippet text
 * Adding a single item or a list of items to the cluster is both supported
 * Clearing all the cluster items from the map
-* When marker/cluster is clicked the [OnMarkerClickListener](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Map-Events-and-Listeners#marker-click) would be called if you set it before.
-* When marker info window is clicked the [OnInfoWindowClickListener](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Map-Events-and-Listeners#marker-info-window-click) would be called if you set it before.
+* When marker/cluster is clicked the [OnMarkerClickListener](#marker-click) would be called if you set it before.
+* When marker info window is clicked the [OnInfoWindowClickListener](#marker-info-window-click) would be called if you set it before.
 
 ## Creating marker cluster
 
@@ -505,7 +505,7 @@ This implements the heatmaps functionality from Android iOS and Android utility 
 * **Android**: https://developers.google.com/maps/documentation/android-api/utility/heatmap
 * **iOS**: https://developers.google.com/maps/documentation/ios-sdk/utility/heatmap
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/heatmaps.jpg">
+![](/images/maps/heatmaps.jpg ':size=768')
 
 ## Adding heatmap with default settings
 
@@ -549,12 +549,18 @@ _map.AddTileOverlay(medicareHeatmapOptions);
 
 # **Map Events and Listeners**
 
-You can register listeners for certain map events. Currently supported events:
+You can register listeners for certain map events. Currently supported events (the names should be self-explaining):
 
-+ [Map click](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Map-Events-and-Listeners#map-click-listener)
-+ [Map long click](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Map-Events-and-Listeners#map-long-click-listener)
-+ [Marker click (User clicked on marker)](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Map-Events-and-Listeners#marker-click)
-+ [Circle click (User clicked on circle)](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Map-Events-and-Listeners#circle-click)
++ Map click (`SetOnMapClickListener()`)
++ Map long click (`SetOnLongMapClickListener()`)
++ Marker click (`SetOnMarkerClickListener()`)
++ Marker drag (`SetOnMarkerDragListener()`)
++ Marker info window click (`SetOnInfoWindowClickListener()`)
++ Circle click (`SetOnCircleClickListener()`)
++ Polyline click (`SetOnPolylineClickListener()`)
++ Polygon click (`SetOnPolygonClickListener()`)
++ Ground overlay click (`SetOnGroundOverlayClickListener()`)
++ Map camera events (`SetOnCameraMoveStartedListener()`, `SetOnCameraIdleListener()`)
 
 ## Map Click Listener
 
@@ -625,7 +631,7 @@ _map.SetOnCameraMoveStartedListener(moveReason => Debug.Log("Camera move started
 
 You can show users location on the map view.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/my_location.png">
+![](/images/maps/my_location.png ':size=768')
 
 ## Setup 
 
@@ -757,7 +763,7 @@ The plugin also supports styling the map with provided style json.
 
 To create custom style please use [Google Map Styling Wizard](https://mapstyle.withgoogle.com/)
 
-![styling](https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/style_json.png)
+![styling](https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/style_json.png ':size=768')
 
 You will download the json file which represents your map style. Now to set the style just read your json to string and pass to `SetMapStyle` method
 
@@ -773,7 +779,7 @@ else
 }
 ```
 
-![styling](https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/style.png)
+![styling](https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/style.png ':size=768')
 
 
 # **Taking Map Snapshot**
@@ -969,7 +975,7 @@ This page explains how to troubleshoot problems when you can't build your Androi
 
 When Unity can't build Android project it shows the error with the actual build error in Unity console. The problem is that the error log is very big and you have to scroll and look at it carefully to find the actual cause of build failure.
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/build_error.png">
+![](/images/maps/build_error.png ':size=768')
 
 If you can't figure out what's wrong please send me the **FULL** log to check. **When you are sending me the log please make sure you copy the whole text.**
 
@@ -994,7 +1000,9 @@ Firebase for Unity and a lot of other projects use [Play Services Resolver for U
 
 **Remove all Google Play Services AAR files that come along with my package (everything that has a version in aar file name), you won't need them as resolver will automatically resolve them later!**
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/remove_libs_1.png">
+![](/images/maps/remove_libs_1.png ':size=768')
+
+![alt text](/images/maps/remove_libs_1.png ':size=768')
 
 ### Step 2
 
@@ -1008,28 +1016,28 @@ FirebaseApp iOS and Android Dependencies.
 
 <dependencies>
   <iosPods>
-    <iosPod name="Firebase/Core" version="4.3.0" minTargetSdk="7.0">
+    <iosPod name="Firebase/Core" version="4.3.0" minTargetSdk="7.0)
     </iosPod>
   </iosPods>
   <androidPackages>
-    <androidPackage spec="com.google.android.gms:play-services-base:11.4.2">
+    <androidPackage spec="com.google.android.gms:play-services-base:11.4.2)
       <androidSdkPackageIds>
         <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
       </androidSdkPackageIds>
     </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-common:11.4.2">
-      <androidSdkPackageIds>
-        <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
-        <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
-      </androidSdkPackageIds>
-    </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-core:11.4.2">
+    <androidPackage spec="com.google.firebase:firebase-common:11.4.2)
       <androidSdkPackageIds>
         <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
         <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
       </androidSdkPackageIds>
     </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-app-unity:4.2.1">
+    <androidPackage spec="com.google.firebase:firebase-core:11.4.2)
+      <androidSdkPackageIds>
+        <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
+        <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
+      </androidSdkPackageIds>
+    </androidPackage>
+    <androidPackage spec="com.google.firebase:firebase-app-unity:4.2.1)
       <repositories>
         <repository>Assets/Firebase/m2repository</repository>
       </repositories>
@@ -1049,28 +1057,28 @@ FirebaseApp iOS and Android Dependencies.
 
 <dependencies>
   <iosPods>
-    <iosPod name="Firebase/Core" version="4.3.0" minTargetSdk="7.0">
+    <iosPod name="Firebase/Core" version="4.3.0" minTargetSdk="7.0)
     </iosPod>
   </iosPods>
   <androidPackages>
-    <androidPackage spec="com.google.android.gms:play-services-places:11.4.2">
+    <androidPackage spec="com.google.android.gms:play-services-places:11.4.2)
       <androidSdkPackageIds>
         <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
       </androidSdkPackageIds>
     </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-common:11.4.2">
-      <androidSdkPackageIds>
-        <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
-        <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
-      </androidSdkPackageIds>
-    </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-core:11.4.2">
+    <androidPackage spec="com.google.firebase:firebase-common:11.4.2)
       <androidSdkPackageIds>
         <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
         <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
       </androidSdkPackageIds>
     </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-app-unity:4.2.1">
+    <androidPackage spec="com.google.firebase:firebase-core:11.4.2)
+      <androidSdkPackageIds>
+        <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
+        <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
+      </androidSdkPackageIds>
+    </androidPackage>
+    <androidPackage spec="com.google.firebase:firebase-app-unity:4.2.1)
       <repositories>
         <repository>Assets/Firebase/m2repository</repository>
       </repositories>
@@ -1088,28 +1096,28 @@ FirebaseApp iOS and Android Dependencies.
 
 <dependencies>
   <iosPods>
-    <iosPod name="Firebase/Core" version="4.3.0" minTargetSdk="7.0">
+    <iosPod name="Firebase/Core" version="4.3.0" minTargetSdk="7.0)
     </iosPod>
   </iosPods>
   <androidPackages>
-    <androidPackage spec="com.google.android.gms:play-services-maps:11.4.2">
+    <androidPackage spec="com.google.android.gms:play-services-maps:11.4.2)
       <androidSdkPackageIds>
         <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
       </androidSdkPackageIds>
     </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-common:11.4.2">
-      <androidSdkPackageIds>
-        <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
-        <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
-      </androidSdkPackageIds>
-    </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-core:11.4.2">
+    <androidPackage spec="com.google.firebase:firebase-common:11.4.2)
       <androidSdkPackageIds>
         <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
         <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
       </androidSdkPackageIds>
     </androidPackage>
-    <androidPackage spec="com.google.firebase:firebase-app-unity:4.2.1">
+    <androidPackage spec="com.google.firebase:firebase-core:11.4.2)
+      <androidSdkPackageIds>
+        <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
+        <androidSdkPackageId>extra-android-m2repository</androidSdkPackageId>
+      </androidSdkPackageIds>
+    </androidPackage>
+    <androidPackage spec="com.google.firebase:firebase-app-unity:4.2.1)
       <repositories>
         <repository>Assets/Firebase/m2repository</repository>
       </repositories>
@@ -1120,6 +1128,6 @@ FirebaseApp iOS and Android Dependencies.
 
 Shortly:
 
-<img src="https://github.com/TarasOsiris/unity-google-maps-docs/blob/master/images/firebase_conflicts.png">
+![](/images/maps/firebase_conflicts.png ':size=768')
 
 Now the dependency resolver must resolve all the dependencies automatically. 
