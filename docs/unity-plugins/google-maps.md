@@ -1,4 +1,6 @@
-![](/images/maps/icon.png ':size=768')
+![](/images/maps/icon.png ':size=128')
+
+?> **[PLEASE READ THE FAQS BEFORE CONTACTING SUPPORT!!!](#faq)**
 
 The plugin allows you to embed **Native [GoogleMapsView](https://developers.google.com/android/reference/com/google/android/gms/maps/MapView)** into your Android-Unity game. Note, this is **NOT** a Web View and **NOT** a Texture, its native interactive Google Map View.
 
@@ -934,38 +936,34 @@ public void OnDisplayStreetViewPanaroma()
 
 ***
 
-# **Issues & FAQ**
+# **FAQ**
 
-- **Q:** I am getting these errors after I run the app on device. What is wrong?
+## Can I draw Unity elements on the map?
 
-```
-E/Google Maps Android API: Authorization failure.  Please see https://developers.google.com/maps/documentation/android-api/start for how to correctly set up the map.
-E/Google Maps Android API: In the Google Developer Console (https://console.developers.google.com)
-                                                                                               Ensure that the "Google Maps Android API v2" is enabled.
-                                                                                               Ensure that the following Android Key exists:
-                                                                                               	API Key: YOUR_API_KEY_HERE
-                                                                                               	Android Application (<cert_fingerprint>;<package_name>): 98:82:5B:3A:40:45:02:A6:43:64:16:5D:3E:20:2A:B5:22:4D:01:5E;gmaps.deadmosquitogames.com.googlemaps
-```
+- **Q:** Can I draw Unity elements on the map such as UI or game objects?
+- **A:** No, this is mentioned in the limitations, since this is a native Android and iOS view that is not possible
 
-- **A:** You have missed something when getting/configuring the API key. Please refer to [Setup section](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Setup) and check everything thoroughly.
+## Do I need a Google account?
+
+- **Q:** Do I need a Google account to use this plugin?
+- **A:** Yes, you need a Google account to obtain the API key
+
+## Do I need to pay Google?
+
+- **Q:** Do I need to pay Google for API usage?
+- **A:** No, the Maps SDK usage is [free on Android and iOS](https://cloud.google.com/maps-platform/pricing). Plugin uses Android and iOS SDKs so you can check the pricing by following the link
+
+## Map not showing up
+
+- **Q:** I am getting a white blank canvas with the Google logo on the bottom left, what's happening?
+- **A:** This means you didn't setup your API key correctly. Please follow [Setup Instructions for Android](#setup-android) or [Setup Instructions for iOS](#setup-ios) carefully.
+
+## Can't build the project or my app crashes
+
+- **Q:** I am getting errors when trying to build the project or crashes at runtime, what should I do?
+- **A:** Contact us on [Discord server](https://discord.gg/SuJP9fY) but collect and provide all the useful info that can help us troubleshoot the issue, such as: Logcat logs on Androud, XCode logs from iOS, the code that you use, etc.
 
 ---
-
-- **Q:** Do I need to import `AndroidManifest.xml` that comes with the package into my project? / What manifest edits do I have to do?
-- **A:** No, you only must not forget to put `<meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR_API_KEY_HERE" />` tag **inside** `application` tag
-
----
-
-- **Q:** I am getting these errors? Why?
-
-```
-E/Auth: [GoogleAccountDataServiceImpl] getToken() -> BAD_AUTHENTICATION. Account: <ELLIDED:-1808663892>, App: com.android.chrome, Service: oauth2:https://www.google.com/accounts/OAuthLogin
-
-com.android.chrome W/Auth: [GoogleAuthUtil] GoogleAuthUtil
-com.android.chrome W/GoogleAuthUtil: Error when getting token
-```
-
-- **A:** This means you didn't setup your API key correctly. Please follow [Setup Instructions](https://github.com/TarasOsiris/unity-google-maps-docs/wiki/Setup) carefully.
 
 # **Troubleshooting**
 
