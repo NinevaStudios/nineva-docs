@@ -229,9 +229,255 @@ Result:
 
 ## IGShare.cs
 
+### Requirements
+
+#### Sharing setting for images
+
+!> If you want to share an image (`Texture2D`) from your project assets you have to set **Texture Type** to **Advanced** plus set **Read/Write Enabled** checkbox to true and **Compression Format** to **RGBA 32 bit** otherwise you will get errors.
+
+![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/share-image-settings-read-write.png "Image Settings")
+![alt text](https://github.com/TarasOsiris/android-goodies-docs-PRO/blob/master/images/share-image-settings.png "Image Settings")
+
+#### Frameworks to link
+
+You must link against `MessageUI.framework` in XCode project (used by sending SMS or E-mail via controller). In the latest versions of Unity its handled automatically so you don't have to do anything, otherwise, check [How to link a framework in XCode project?](xxx)
+
+### Sharing Text/Image/Text+Image
+
+Shares text and image using iOS default share. You must provide callback, text and optionally image.
+
+!> Only for iPad you can also select the popover screen position (`iPadScreenPosition` argument)
+
+**Example:**
+
+```csharp
+Texture2D image = GetTexture(); // existing Texture2D to share
+string message = "iOS Native Goodies by Dead Mosquito Games http://u3d.as/zMp #AssetStore";
+var screenPosition = new Vector2(Screen.width / 2, Screen.height / 2);
+
+IGShare.Share(
+    activityType =>
+    {
+        if (string.IsNullOrEmpty(activityType))
+        {
+            Debug.Log("Posting was canceled or unknown result");
+        }
+        else
+        {
+            Debug.Log("DONE sharing, activity: " + activityType);
+        }
+    },
+    error => Debug.LogError("Error happened when sharing activity: " + error),
+    message, image, screenPosition);
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/share.jpg" width="256">
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/twitter.jpg" width="256">
+
+### Sharing Text+Link
+
+Some programs (like Facebook Messenger) do not allow pre-filled text to be shared but allow sharing links. This method is solving this problem allowing to share only link on those apps that do not allow pre-filled text:
+
+```csharp
+var iosGoodiesAreGreat = "iOS Goodies are great!";
+var dmgLink = "http://bit.ly/dmg-asset-store";
+IGShare.ShareTextWithLink(activityType =>
+    {
+        if (string.IsNullOrEmpty(activityType))
+        {
+            Debug.Log("Posting was canceled or unknown result");
+        }
+        else
+        {
+            Debug.Log("DONE sharing, activity: " + activityType);
+        }
+    },
+    error => Debug.LogError("Error happened when sharing activity: " + error), iosGoodiesAreGreat, dmgLink);
+```
+
+### Sending an Email
+
+Send an email using default Mail application providing array of addresses, subject, body, optionally with cc and bcc recipients.
+
+**Example:**
+
+```csharp
+var recipients = new[] {"x@gmail.com", "hello@gmail.com"};
+var ccRecipients = new[] {"cc@gmail.com"};
+var bccRecipients = new[] {"bcc@gmail.com", "bcc-guys@gmail.com"};
+IGShare.SendEmail(recipients, "The Subject", "My email message!\nHello!", ccRecipients, bccRecipients);
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/email.png" width="256">
+
+If you want to send an image attachment in the e-mail or/and receive callbacks about the state of sending use the `IGShare.SendEmailViaController()` method: 
+
+```csharp
+IGShare.SendEmailViaController(recipients, ccRecipients, bccRecipients, Subject, Message,
+	() => {Debug.Log("Success");}, () => {Debug.Log("Cancelled");}, 
+	() => {Debug.Log("Failure");}, () => {Debug.Log("Saved as draft");}, Image);
+```
+
+### Sending SMS using default app
+
+Launches the the Messages app to send SMS with provided phone number and message. You can specify message body but its not guaranteed to work as specified in Apple documentation (However it works on latest iOS versions, test if it works for you).
+
+**Example:**
+
+```csharp
+IGShare.SendSmsViaDefaultApp("123456789", "My message!");
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/message.jpg" width="256">
+
+### Sending SMS using modal controller
+
+Brings up the modal window to send SMS on top of your application (not launching Messages app).
+
+**Example:**
+
+```csharp
+IGShare.SendSmsViaController("123456789", "Hello worksadk wa dwad !!!", () => Debug.Log("Success"),
+    () => Debug.Log("Cancel"), () => Debug.Log("Failure"));
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/message.jpg" width="256">
+
 
 ## IGImagePicker.cs
 
+This class allows you to get a `Texture2D` into Unity by [Taking Photo with Camera](https://github.com/TarasOsiris/iOS-Goodies-Docs/wiki/IGImagePicker.cs#taking-photo-with-camera) / [Choosing Photo from Photo Library](https://github.com/TarasOsiris/iOS-Goodies-Docs/wiki/IGImagePicker.cs#choosing-photo-from-photo-library) / [Choosing Photo from Photos Album](https://github.com/TarasOsiris/iOS-Goodies-Docs/wiki/IGImagePicker.cs#choosing-photo-from-photos-album)
+
+**Please read the Requirements & Setup section below carefully before contacting support.**
+
+## Requirements & Setup
+
+In order to use Camera/Photo Gallery you need to add permission descriptions to your `Info.plist` file because of [iOS 10 Privace Settings](http://useyourloaf.com/blog/privacy-settings-in-ios-10/). 
+
+Currently plugin contains a postprocessing script `IOSGoodies/Editor/Postprocessing/IGProjectPostprocessor.cs` that will add descriptions automatically for you. Modify the file to set descriptions to something meaningful and relevant to your project.
+
+## Important Notes
+
+Each of the methods accepts `compressionQuality` float variable (0 - mins minimum quality, 1 - means maximum quality). Use this to reduce memory pressure on your app, the lower the quality of the image the less memory it takes.
+
+## Taking Photo with Camera
+
+To take photo from camera and get the result as `Texture2D`:
+
+```csharp
+// Settings
+const bool allowEditing = true;
+const float compressionQuality = 0.8f;
+const IGImagePicker.CameraType cameraType = IGImagePicker.CameraType.Front;
+const IGImagePicker.CameraFlashMode flashMode = IGImagePicker.CameraFlashMode.On;
+
+IGImagePicker.PickImageFromCamera(tex =>
+    {
+        Debug.Log("Successfully picked image from camera");
+        image.sprite = SpriteFromTex2D(tex);
+        // IMPORTANT! Call this method to clean memory if you are picking and discarding images
+        Resources.UnloadUnusedAssets();
+    }, 
+    // Cancel callback
+    () => Debug.Log("Picking image from camera cancelled"), 
+    compressionQuality,
+    allowEditing, cameraType, flashMode);
+```
+
+## Choosing Photo from Photo Library
+
+To pick photo from photo library and get the result as `Texture2D`:
+
+```csharp
+const bool allowEditing = false;
+const float compressionQuality = 0.5f;
+var screenPosition = new Vector2(Screen.width, Screen.height); // On iPads ONLY you can choose screen position of popover
+
+IGImagePicker.PickImageFromPhotoLibrary(tex =>
+    {
+        Debug.Log("Successfully picked image from photo library");
+        image.sprite = SpriteFromTex2D(tex);
+        // IMPORTANT! Call this method to clean memory if you are picking and discarding images
+        Resources.UnloadUnusedAssets();
+    },
+    () => Debug.Log("Picking image from photo library cancelled"),
+    compressionQuality,
+    allowEditing, screenPosition);
+```
+
+## Choosing Photo from Photos Album
+
+To pick photo from photos album and get the result as `Texture2D`:
+
+```csharp
+const bool allowEditing = true;
+const float compressionQuality = 0.1f;
+var screenPosition = new Vector2(Screen.width / 2, Screen.height / 2); // On iPads ONLY you can choose screen position of popover
+
+IGImagePicker.PickImageFromPhotosAlbum(tex =>
+    {
+        Debug.Log("Successfully picked image from photos album");
+        image.sprite = SpriteFromTex2D(tex);
+        // IMPORTANT! Call this method to clean memory if you are picking and discarding images
+        Resources.UnloadUnusedAssets();
+    },
+    () => Debug.Log("Picking image from photos album cancelled"),
+    compressionQuality,
+    allowEditing, screenPosition);
+```
+
+## Choosing video from photos album
+
+Use `IGImagePicker.PickVideoFromPhotoLibrary()` method to pick videos from user gallery. You will receive a path to video file on disk as a success callback parameter
+
+Example:
+
+```csharp
+public void PickVideoFromPhotosAlbum()
+{
+    const bool allowEditing = false;
+    var screenPosition = new Vector2(Screen.width / 2, Screen.height / 2);
+
+    IGImagePicker.PickVideoFromPhotoLibrary(path =>
+        {
+            Debug.Log("Successfully picked video from photos album: " + path);
+            if (IGVideoEditor.CanEditVideoAtPath(path))
+            {
+                IGVideoEditor.EditVideo(path);
+            }
+            else
+            {
+                Debug.Log("Can't edit video at path: " + path );
+            }
+        },
+        () => Debug.Log("Picking video from photos album cancelled"),
+        allowEditing, screenPosition);
+}
+```
+
+## Saving image to gallery
+
+You can save the specified image to iOS gallery.
+
+**NOTE!**
+
+If you want to save an image (`Texture2D`) from your project assets you have to set **Texture Type** to **Advanced** plus set **Read/Write Enabled** checkbox to true and **Compression Format** to **RGBA 32 bit** otherwise you will get errors.
+
+```csharp
+public void SaveImageToPhotoLibrary()
+{
+    Texture2D testImage = GetSomeImage();
+    IGImagePicker.SaveImageToGallery(testImage);
+}
+```
 
 ## IGAppStore.cs
 
