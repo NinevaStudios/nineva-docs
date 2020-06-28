@@ -61,6 +61,8 @@ Here is the full list of features that can be enabled/disabled:
 
 # App Interaction
 
+## IGApps.cs
+
 ### Showing a dialer
 
 Sometimes you need to prompt the user to call certain phone number.
@@ -139,11 +141,91 @@ For the example below, the iTunes ID of Facebook app is 284882215:
 
 https://itunes.apple.com/us/app/facebook/id284882215?mt=8
 
-## IGApps.cs
-
-
 ## IGMaps.cs
 
+This class is used to show geographical locations and to generate driving directions between two points. You can read more about [map links in Apple Documentation](https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html#//apple_ref/doc/uid/TP40007899-CH5-SW1)
+
+You can use this class to help the user:
+
+- Perform a search
+- Get directions to a location
+- View a specific location
+
+### Opening a location (coordinates + optional label)
+
+You can open maps location and optionally provide label to be displayed:
+
+**Example:**
+
+```csharp
+const float latitude = 52.3781019f;
+const float longitude = 4.8983588f;
+var amsterdamCentralStation = new IGMaps.Location(latitude, longitude);
+IGMaps.OpenMapLocation(amsterdamCentralStation, "Label-X", IGMaps.MapViewType.Satellite);
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/maps/label.png" width="256">
+
+### Opening address (string address)
+
+
+**Example:**
+
+```csharp
+const string address = "1,Infinite Loop,Cupertino,California";
+IGMaps.OpenMapAddress(address, "Label-Y", IGMaps.MapViewType.Hybrid);
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/maps/address.png" width="256">
+
+### Preforming simple search
+
+**Example:**
+
+```csharp
+const string searchQuery = "Eiffel tower, Paris";
+IGMaps.PerformSearch(searchQuery);
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/maps/location.png" width="256">
+
+### Preforming simple search near location
+
+**Example:**
+
+```csharp
+const float latitude = 50.894967f;
+const float longitude = 4.341626f;
+var atomiumLocation = new IGMaps.Location(latitude, longitude);
+const int zoom = 5;
+IGMaps.PerformSearch("Fish restaurant", atomiumLocation, zoom, IGMaps.MapViewType.Standard);
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/maps/search.png" width="256">
+
+### Getting directions to a location
+
+
+**Example:**
+
+```csharp
+// show route from Baker Street in London to Manchester
+const string sourceAddress = "221B Baker Street, London, Great Britain";
+const string destAddress = "Manchester, Great Britain";
+IGMaps.GetDirections(destAddress, sourceAddress, IGMaps.TransportType.ByCar, IGMaps.MapViewType.Hybrid);
+```
+
+Result:
+
+<img src="https://github.com/TarasOsiris/iOS-Goodies-Docs/blob/master/images/maps/directions.png" width="256">
 
 ## IGShare.cs
 
