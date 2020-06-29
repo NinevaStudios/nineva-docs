@@ -24,21 +24,15 @@ v.1.2.3
 + ADDED Unreal Engine 4.24 support
 + FIXED Added zero-initializer for enumerations to avoid build issues
 
----
-
 v.1.2.2
 
 + ADDED Fetching contacts info
 + UPDATED Improved mechanism for handling iOS native callbacks
 
----
-
 v.1.2.1
 
-ADDED Unreal Engine 4.22 support
-UPDATED Removed some limitations for sharing via default apps
-
----
++ ADDED Unreal Engine 4.22 support
++ UPDATED Removed some limitations for sharing via default apps
 
 v.1.2.0
 
@@ -47,19 +41,13 @@ v.1.2.0
 + ADDED Capturing photos with device camera
 + ADDED Calendar events and reminders
 
----
-
 v.1.1.0
 
 + ADDED Haptic feedback
 
----
-
 v.1.0.0
 
 + Initial release
-
----
 
 # Features
 
@@ -187,7 +175,57 @@ Use `RequestRating` function to produce a dialogue asking the user to rate your 
 <img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppRating.png" width="300">
 
 # [Date and time pickers](#TODO)
+You can show the default iOS date and time picker.
 
+## Showing date picker
+
+To show the default iOS date picker call `ShowDatePicker` function.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_Date.png" width="600">
+
+There is an option to show date picker but with a limited range of dates that can be selected (i.e. only dates between 15-Oct-1991 and 16-Nov-2018). Use `ShowDatePickerWithLimits` function to do that.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_DateLimited.png" width="600">
+
+Result:
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/DatePicker.png" width="400">
+
+## Showing time picker
+
+To show the default iOS time picker call `ShowTimePicker` function. 
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_Time.png" width="600">
+
+There is an option to show time picker but with a limited range of time values that can be selected (i.e. only time within 14:45 and 19:57 interval). Use `ShowTimePickerWithLimits` function to do that.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_TimeLimited.png" width="600">
+
+Result:
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/TimePicker.png" width="400">
+
+## Showing date and time picker
+
+It possible to show picker that allows selecting both date and time. Use `ShowDateTimePicker` function to do that. 
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_DateTime.png" width="600">
+
+Like with pickers described above you can limit the range of date-time values that can be selected with `ShowDateTimePickerWithLimits` function instead.
+
+Result:
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/DateTimePicker.png" width="400">
+
+## Showing timer
+
+To show picker with countdown timer style use `ShowCoundownTimer` function. It allows picking values between 1 minute and 23 hours 59 minutes.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_timer.png" width="600">
+
+Result:
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/TimerPicker.png" width="400">
 # [Device Info](#TODO)
 # [Native Sharing](#TODO)
 # [App Interaction](#TODO)
