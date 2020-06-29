@@ -8,68 +8,68 @@ Welcome to iOS Goodies Documentation for Unreal Engine
 
 v.1.3.1
 
-+ ADDED Unreal Engine 4.25 support
-+ UPDATED Image pickers
+* ADDED Unreal Engine 4.25 support
+* UPDATED Image pickers
 
 v.1.3.0
 
-+ ADDED Added possibility to change size of image picked from gallery
-+ ADDED Status bar show/hide functionality
-+ FIXED Issue with image picker rotation in lanscape mode
-+ FIXED Native UI elements appearence when dark theme is enabled
-+ FIXED Some threading issues on iOS 13
+* ADDED Added possibility to change size of image picked from gallery
+* ADDED Status bar show/hide functionality
+* FIXED Issue with image picker rotation in lanscape mode
+* FIXED Native UI elements appearence when dark theme is enabled
+* FIXED Some threading issues on iOS 13
 
 v.1.2.3
 
-+ ADDED Unreal Engine 4.24 support
-+ FIXED Added zero-initializer for enumerations to avoid build issues
+* ADDED Unreal Engine 4.24 support
+* FIXED Added zero-initializer for enumerations to avoid build issues
 
 v.1.2.2
 
-+ ADDED Fetching contacts info
-+ UPDATED Improved mechanism for handling iOS native callbacks
+* ADDED Fetching contacts info
+* UPDATED Improved mechanism for handling iOS native callbacks
 
 v.1.2.1
 
-+ ADDED Unreal Engine 4.22 support
-+ UPDATED Removed some limitations for sharing via default apps
+* ADDED Unreal Engine 4.22 support
+* UPDATED Removed some limitations for sharing via default apps
 
 v.1.2.0
 
-+ ADDED Screenshot taking
-+ ADDED Picking and deleting images from gallery
-+ ADDED Capturing photos with device camera
-+ ADDED Calendar events and reminders
+* ADDED Screenshot taking
+* ADDED Picking and deleting images from gallery
+* ADDED Capturing photos with device camera
+* ADDED Calendar events and reminders
 
 v.1.1.0
 
-+ ADDED Haptic feedback
+* ADDED Haptic feedback
 
 v.1.0.0
 
-+ Initial release
+* Initial release
 
 # Features
 
 * Native UI
-	* [Native dialogs](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Native-dialogs)
-	* [App Store rate dialog](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/App-Store-rate-dialog)
-	* [Date and time picker](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Date-and-time-picker)
-	* [Native sharing](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Native-Sharing)
+  + [Native dialogs](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Native-dialogs)
+  + [App Store rate dialog](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/App-Store-rate-dialog)
+  + [Date and time picker](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Date-and-time-picker)
+  + [Native sharing](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Native-Sharing)
 
 * Hardware
-	* [Flashlight](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Flashlight)
-	* [Haptic Feedback](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Haptic-Feedbacks)
+  + [Flashlight](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Flashlight)
+  + [Haptic Feedback](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Haptic-Feedbacks)
 
 * App interaction
-	* [App interaction](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Apps)
-	* [Apple Maps interaction](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Apple-Maps-Interaction)
-	* [Camera and Gallery](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Camera-and-Gallery)
-	* [Events](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Events)
-	* [Contacts](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Contacts)
+  + [App interaction](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Apps)
+  + [Apple Maps interaction](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Apple-Maps-Interaction)
+  + [Camera and Gallery](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Camera-and-Gallery)
+  + [Events](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Events)
+  + [Contacts](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Contacts)
 
 *  Getting info
-	* [Get device info and check supported features](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Device-info)
+  + [Get device info and check supported features](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Device-info)
 
 # FAQ
 
@@ -80,12 +80,14 @@ iOS Goodies plugin in order to make all of its features work properly adds extra
 ## Input dialog and date-time picker theming on iOS 13
 
 On iOS 13 native date picker and input field have some appearance issues when using dark theme. To fix this problem please follow these instructions:
-- Go to /[UE4 Root]/Engine/Plugins/ and copy iOSGoodies plugin to /[Project Root]/Plugins/
-- In /[Project Root]/Plugins/iOSGoodies/Source/iOSGoodies/Private/IGDialogBPL.cpp uncomment lines 353-364 and comment line 369
-- In /[Project Root]/Plugins/iOSGoodies/Source/iOSGoodies/Private/IOS/IGDateTimePicker.cpp uncomment lines 68-79 and comment line 84
-- Remove Binaries and Intermediate folders in /[Project Root]/Plugins/iOSGoodies/
-- Remove Binarie, Intermediate, Build and Saved folders in /[Project Root]/
-- Run the engine and rebuild your project
+
+* Go to /[UE4 Root]/Engine/Plugins/ and copy iOSGoodies plugin to /[Project Root]/Plugins/
+* In /[Project Root]/Plugins/iOSGoodies/Source/iOSGoodies/Private/IGDialogBPL.cpp uncomment lines 353-364 and comment line 369
+* In /[Project Root]/Plugins/iOSGoodies/Source/iOSGoodies/Private/IOS/IGDateTimePicker.cpp uncomment lines 68-79 and comment line 84
+* Remove Binaries and Intermediate folders in /[Project Root]/Plugins/iOSGoodies/
+* Remove Binarie, Intermediate, Build and Saved folders in /[Project Root]/
+* Run the engine and rebuild your project
+
 	As a result those native dialogs should have appropriate theming when running on device with iOS 13 installed.
 
 # [Native dialogs](#TODO)
@@ -175,6 +177,7 @@ Use `RequestRating` function to produce a dialogue asking the user to rate your 
 <img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppRating.png" width="300">
 
 # [Date and time pickers](#TODO)
+
 You can show the default iOS date and time picker.
 
 ## Showing date picker
@@ -226,12 +229,160 @@ To show picker with countdown timer style use `ShowCoundownTimer` function. It a
 Result:
 
 <img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/TimerPicker.png" width="400">
+
 # [Device Info](#TODO)
+
+Device information functions allow retrieving various information about iOS device.
+
+## Getting device information
+
+You can retrieve one of the properties, defined in `UIDevice` class, such as `systemName` , `model` , `UUIDString` and others.
+
+## Getting the battery information
+
+The plugin allows you to use functions for getting and setting the battery monitoring status, as well as retrieving current battery level (0-100) and battery state (one of: `Unplugged` , `Charging` or `Full` ).
+
+!> Battery monitoring has to be enabled in order to retrieve battery information.
+
+## Getting proximity information
+
+You can also enable/disable proximity monitoring status and retrieve the proximity state of the device.
+
+More documentation can be found [here](https://developer.apple.com/documentation/uikit/uidevice).
+
 # [Native Sharing](#TODO)
+
+Native sharing allows you to share content using the following ways:
+
+## General sharing
+
+You can use the `ShareText`, `ShareImage`, or `ShareLink` methods to open a selector view, where the user can choose a program to share the object with.
+`ShareTextWithImage` and `ShareTextWithUrl` methods allow you to do the same but include an image or an URL along with the text, and you can use `ShareTextWithImageAndLink` method to share all three types of objects. 
+
+***Note!*** If you plan your application to be run on iPad, pass additional parameters (posX and posY), which represent the position of the popover view on iPads. Default values (0; 0) will cause the view to appear in the top left corner of the screen. These values will be ignored on iPhone.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_ShareTextImgLink.png" width="600">
+
+## Sending an SMS
+
+You can send an SMS via default SMS-app on the device using `SendSMSViaDefaultApp` method. But if you want to be notified about the outcome of the sending, you should use `SendSMS` method instead. You should check if the device can send SMS using `CanSendSMS` method before performing any actions.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_SendSMS.png" width="800">
+
+## Sending an e-mail
+
+You can send an e-mail via default mailing application on the device using `SendEmailViaDefaultApp` method. But if you want to be notified about the outcome of the sending, you should use `SendEmail` method instead. You should check if the device can send e-mails using `CanSendEmail` method before performing any actions.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_SendEmail.png" width="800">
+
 # [App Interaction](#TODO)
+
+You can perform application related actions and interactions between applications using the `UIGApps` class.
+
+## Application Settings
+
+To open application settings use `OpenAppSettings` function.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppSettings.png" width="300">
+
+## Open YouTube video
+
+To open YouTube video in the YouTube application, call `OpenYouTubeVideo` function, passing the ID of the video as a parameter. If the application is not installed, a link to the video will be opened in the browser.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppYouTube.png" width="300">
+
+## Start FaceTime call
+
+To perform a call using FaceTime, use `StartFaceTimeVideoCall` or `StartFaceTimeAudioCall` function, passing the user identifier as a parameter.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppFacetimeAudiocall.png" width="300">
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppFacetimeVideocall.png" width="300">
+
+
+## Dial a phone number
+
+To open dialer dialogue with a specified number, use `OpenDialer` function, passing phone number as a parameter.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppOpenDialer.png" width="300">
+
+## Open AppStore page
+
+To open an application page in the AppStore, use `OpenAppOnAppStore` function, passing application ID as a parameter.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppOpenStore.png" width="300">
+
 # [Apple Maps Interaction](#TODO)
+
+You can send different queries to Apple Maps application using `UIGMaps` class.
+
+## Open map location
+
+Use `OpenMapLocation` function to open a location with given values of latitude(-90 to 90) and longitude(-180 to 180). You can also specify a title of the label, pinned at the location and map view type (standard, satellite, hybrid, or transit).
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapOpenLocation.png" width="400">
+
+## Open map address
+
+To open the map at the specific address, use `OpenMapAddress` function, passing the address string, as well as a title of the label, pinned at the location and map view type (standard, satellite, hybrid, or transit).
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapOpenAddress.png" width="400">
+
+## Get map directions
+
+To open Apple Maps application with directions from point A to point B, use `GetDirections` function. This function takes destination and source addresses as parameters. You can also specify transport type (car, feet or public transport) and map view type (standard, satellite, hybrid, or transit).
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapDirections.png" width="400">
+
+## Perform a search
+
+You can perform a search for a location or a place using `PerformSearch` function. Pass the search query string (for example, "Eiffel Tower, Paris"), as well as map view type (standard, satellite, hybrid, or transit).
+You can also perform the search nearby the specified location, using `PerformSearchNearLocation` function. It takes additional parameters: latitude(-90 to 90) and longitude(-180 to 180) of the location to search nearby, and zoom. Zoom values should lie within range 2-23.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapSearch.png" width="400">
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapSearchNearLocation.png" width="400">
+
 # [Camera and Gallery](#TODO)
+
+This feature set allows taking photos with your device camera and access gallery (save/load images). Images captured with a camera or picked from the gallery are converted to 2D-texture objects.
+
+## Camera
+
+To take a new photo, call `PickPhotoFromCamera` function. You can specify whether it is allowed to edit image, select camera for taking photo and flash mode. Also, function callback handlers must be provided - first for processing captured image and second for handling image taking cancellation.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CameraPick.png" width="600">
+
+## Pick images from the gallery
+
+To pick an image from the gallery, call `PickImageFromGallery` function. You can specify whether it is allowed to edit image and select source type ("Photo Library" or "Photo Album"). Also, function callback handlers must be provided - first for processing the picked image and second for handling image picking cancellation.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_GalleryPick.png" width="600">
+
+Optionally you can pass X and Y coordinates of image picking dialog window to this function that are taken into account on iPad.
+
+## Save an image to the gallery
+
+To save an image to gallery call `SaveImageToGallery` function.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_SaveImgToGallery.png" width="600">
+
+## Delete an image from gallery
+
+You can call `DeleteImageFromGallery` function to show an image picker dialog, allowing the user to choose a picture from the specified source to delete. Also, function callback handlers must be provided - first for processing the picked image and second for handling image picking cancellation.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_DeleteImageFromGallery.png" width="600">
+
+Optionally you can pass X and Y coordinates of image picking dialog window to this function that are taken into account on iPad.
+
+## Take a screenshot
+
+Call the `TakeScreenShot` function to obtain a 2D-texture object with captured screenshot and provide callback handler to specify how it should be processed.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_TakeScreenshot.png" width="500">
+
 # [Flashlight](#TODO)
+
 # [Haptic Feedback](#TODO)
+
 # [Events](#TODO)
+
 # [Contacts](#TODO)
