@@ -1,8 +1,65 @@
-# iOS Goodies Unreal Engine plugin documentation
+**iOS Goodies Unreal Engine plugin documentation**
 
 Welcome to iOS Goodies Documentation for Unreal Engine
 
 **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+
+# Changelog
+
+v.1.3.1
+
++ ADDED Unreal Engine 4.25 support
++ UPDATED Image pickers
+
+v.1.3.0
+
++ ADDED Added possibility to change size of image picked from gallery
++ ADDED Status bar show/hide functionality
++ FIXED Issue with image picker rotation in lanscape mode
++ FIXED Native UI elements appearence when dark theme is enabled
++ FIXED Some threading issues on iOS 13
+
+v.1.2.3
+
++ ADDED Unreal Engine 4.24 support
++ FIXED Added zero-initializer for enumerations to avoid build issues
+
+---
+
+v.1.2.2
+
++ ADDED Fetching contacts info
++ UPDATED Improved mechanism for handling iOS native callbacks
+
+---
+
+v.1.2.1
+
+ADDED Unreal Engine 4.22 support
+UPDATED Removed some limitations for sharing via default apps
+
+---
+
+v.1.2.0
+
++ ADDED Screenshot taking
++ ADDED Picking and deleting images from gallery
++ ADDED Capturing photos with device camera
++ ADDED Calendar events and reminders
+
+---
+
+v.1.1.0
+
++ ADDED Haptic feedback
+
+---
+
+v.1.0.0
+
++ Initial release
+
+---
 
 # Features
 
@@ -119,10 +176,18 @@ Result:
 
 ## Loading dialog
 
-This function fades screen and displays native loading spinner at the middle. Call `ShowLoadingDialog` to begin showing a loading screen. Call `DismissLoadingDialog` to dismiss it after the background work is done. ***Note!*** All user interface iteractions are blocked during the lifetime of the loading screen.n
+This function fades screen and displays native loading spinner at the middle. Call `ShowLoadingDialog` to begin showing a loading screen. Call `DismissLoadingDialog` to dismiss it after the background work is done. 
+
+!> All user interface iteractions are blocked during the lifetime of the loading screen
 
 # [App Store rate dialog](#TODO)
+
+Use `RequestRating` function to produce a dialogue asking the user to rate your app on the AppStore.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppRating.png" width="300">
+
 # [Date and time pickers](#TODO)
+
 # [Device Info](#TODO)
 # [Native Sharing](#TODO)
 # [App Interaction](#TODO)
