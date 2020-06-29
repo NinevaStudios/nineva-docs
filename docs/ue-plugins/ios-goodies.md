@@ -2,7 +2,7 @@
 
 Welcome to iOS Goodies Documentation for Unreal Engine
 
-**Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
 # Changelog
 
@@ -90,7 +90,7 @@ On iOS 13 native date picker and input field have some appearance issues when us
 
 	As a result those native dialogs should have appropriate theming when running on device with iOS 13 installed.
 
-# [Native dialogs](#TODO)
+# Native dialogs
 
 You can show standard iOS native dialogs with:
 
@@ -108,61 +108,61 @@ You can show standard iOS native dialogs with:
 
 Show this dialog by calling `ShowSingleButtonDialog` function.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_SingleButtonDialog.png" width="600">
+![](images/ios-goodies/BP_SingleButtonDialog.png ':size=900')
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/SingleButtonDialog.png" width="300">
+![](images/ios-goodies/SingleButtonDialog.png ':size=300')
 
 ## Dialog with two buttons
 
 Show this dialog by calling `ShowTwoButtonsDialog` function.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_TwoButtonsDialog.png" width="600">
+![](images/ios-goodies/BP_TwoButtonsDialog.png ':size=900')
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/TwoButtonsDialog.png" width="300">
+![](images/ios-goodies/TwoButtonsDialog.png ':size=300')
 
 ## Dialog with three buttons
 
 Show this dialog by calling `ShowThreeButtonsDialog` function.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_ThreeButtonsDialog.png" width="600">
+![](images/ios-goodies/BP_ThreeButtonsDialog.png ':size=900')
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/ThreeButtonsDialog.png" width="300">
+![](images/ios-goodies/ThreeButtonsDialog.png ':size=300')
 
 ## Input dialog
 
 Call `ShowInputFieldDialog` to show a native dialog with an input field. You can customize it by passing title, body text, confirmation and cancellation button titles. After the user confirms input, you will receive a callback with the typed string.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_InputDialog.png" width="600">
+![](images/ios-goodies/BP_InputDialog.png ':size=900')   
 
 ## Action sheet
 
 Show action sheet by calling `ShowActionSheetSimpleDialog` function. It takes an array of strings as a parameter which represents names of action sheet buttons. When some action button is clicked user will receive a callback with the index of clicked button.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_ActionSheet.png" width="600">
+![](images/ios-goodies/BP_ActionSheet.png ':size=900')
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/SimpleActionSheet.png" width="300">
+![](images/ios-goodies/SimpleActionSheet.png ':size=300')
 
-***Note!*** If you plan your application to be run on iPad, pass additional parameters (posX and posY), which represent the position of the popover view on iPads. Default values (0; 0) will cause the view to appear in the top left corner of the screen. These values will be ignored on iPhone.
+!> If you plan your application to be run on iPad, pass additional parameters (posX and posY), which represent the position of the popover view on iPads. Default values (0; 0) will cause the view to appear in the top left corner of the screen. These values will be ignored on iPhone.
 
 ## Action sheet with destructive button
 
 Show action sheet with destructive button by calling `ShowActionSheetComplexDialog` function. It takes an array of strings as a parameter which represents names of action sheet buttons. When some action button is clicked user will receive a callback with the index of clicked button.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_ActionSheetComplex.png" width="600">
+![](images/ios-goodies/BP_ActionSheetComplex.png ':size=900')
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/ComplexActionSheet.png" width="300">
+![](images/ios-goodies/ComplexActionSheet.png ':size=300')
 
-***Note!*** If you plan your application to be run on iPad, pass additional parameters (posX and posY), which represent the position of the popover view on iPads. Default values (0; 0) will cause the view to appear in the top left corner of the screen. These values will be ignored on iPhone.
+!> If you plan your application to be run on iPad, pass additional parameters (posX and posY), which represent the position of the popover view on iPads. Default values (0; 0) will cause the view to appear in the top left corner of the screen. These values will be ignored on iPhone.
 
 ## Loading dialog
 
@@ -170,13 +170,13 @@ This function fades screen and displays native loading spinner at the middle. Ca
 
 !> All user interface iteractions are blocked during the lifetime of the loading screen
 
-# [App Store rate dialog](#TODO)
+# App Store rate dialog
 
 Use `RequestRating` function to produce a dialogue asking the user to rate your app on the AppStore.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppRating.png" width="300">
+![](images/ios-goodies/BP_AppRating.png ':size=300')
 
-# [Date and time pickers](#TODO)
+# Date and time pickers
 
 You can show the default iOS date and time picker.
 
@@ -184,53 +184,53 @@ You can show the default iOS date and time picker.
 
 To show the default iOS date picker call `ShowDatePicker` function.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_Date.png" width="600">
+![](images/ios-goodies/BP_Date.png ':size=900')
 
 There is an option to show date picker but with a limited range of dates that can be selected (i.e. only dates between 15-Oct-1991 and 16-Nov-2018). Use `ShowDatePickerWithLimits` function to do that.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_DateLimited.png" width="600">
+![](images/ios-goodies/BP_DateLimited.png ':size=900')
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/DatePicker.png" width="400">
+![](images/ios-goodies/DatePicker.png ':size=400')
 
 ## Showing time picker
 
 To show the default iOS time picker call `ShowTimePicker` function. 
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_Time.png" width="600">
+![](images/ios-goodies/BP_Time.png ':size=900')
 
 There is an option to show time picker but with a limited range of time values that can be selected (i.e. only time within 14:45 and 19:57 interval). Use `ShowTimePickerWithLimits` function to do that.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_TimeLimited.png" width="600">
+![](images/ios-goodies/BP_TimeLimited.png ':size=900')
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/TimePicker.png" width="400">
+![](images/ios-goodies/TimePicker.png ':size=400')
 
 ## Showing date and time picker
 
 It possible to show picker that allows selecting both date and time. Use `ShowDateTimePicker` function to do that. 
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_DateTime.png" width="600">
+![](images/ios-goodies/BP_DateTime.png ':size=900')
 
 Like with pickers described above you can limit the range of date-time values that can be selected with `ShowDateTimePickerWithLimits` function instead.
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/DateTimePicker.png" width="400">
+![](images/ios-goodies/DateTimePicker.png ':size=400')
 
 ## Showing timer
 
 To show picker with countdown timer style use `ShowCoundownTimer` function. It allows picking values between 1 minute and 23 hours 59 minutes.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_timer.png" width="600">
+![](images/ios-goodies/BP_timer.png ':size=900')
 
 Result:
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/TimerPicker.png" width="400">
+![](images/ios-goodies/TimerPicker.png ':size=400')
 
-# [Device Info](#TODO)
+# Device Info
 
 Device information functions allow retrieving various information about iOS device.
 
@@ -250,7 +250,7 @@ You can also enable/disable proximity monitoring status and retrieve the proximi
 
 More documentation can be found [here](https://developer.apple.com/documentation/uikit/uidevice).
 
-# [Native Sharing](#TODO)
+# Native Sharing
 
 Native sharing allows you to share content using the following ways:
 
@@ -259,23 +259,23 @@ Native sharing allows you to share content using the following ways:
 You can use the `ShareText`, `ShareImage`, or `ShareLink` methods to open a selector view, where the user can choose a program to share the object with.
 `ShareTextWithImage` and `ShareTextWithUrl` methods allow you to do the same but include an image or an URL along with the text, and you can use `ShareTextWithImageAndLink` method to share all three types of objects. 
 
-***Note!*** If you plan your application to be run on iPad, pass additional parameters (posX and posY), which represent the position of the popover view on iPads. Default values (0; 0) will cause the view to appear in the top left corner of the screen. These values will be ignored on iPhone.
+!> If you plan your application to be run on iPad, pass additional parameters (posX and posY), which represent the position of the popover view on iPads. Default values (0; 0) will cause the view to appear in the top left corner of the screen. These values will be ignored on iPhone.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_ShareTextImgLink.png" width="600">
+![](images/ios-goodies/BP_ShareTextImgLink.png ':size=900')
 
 ## Sending an SMS
 
 You can send an SMS via default SMS-app on the device using `SendSMSViaDefaultApp` method. But if you want to be notified about the outcome of the sending, you should use `SendSMS` method instead. You should check if the device can send SMS using `CanSendSMS` method before performing any actions.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_SendSMS.png" width="800">
+![](images/ios-goodies/BP_SendSMS.png ':size=800')
 
 ## Sending an e-mail
 
 You can send an e-mail via default mailing application on the device using `SendEmailViaDefaultApp` method. But if you want to be notified about the outcome of the sending, you should use `SendEmail` method instead. You should check if the device can send e-mails using `CanSendEmail` method before performing any actions.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_SendEmail.png" width="800">
+![](images/ios-goodies/BP_SendEmail.png ':size=800')
 
-# [App Interaction](#TODO)
+# App Interaction
 
 You can perform application related actions and interactions between applications using the `UIGApps` class.
 
@@ -283,35 +283,35 @@ You can perform application related actions and interactions between application
 
 To open application settings use `OpenAppSettings` function.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppSettings.png" width="300">
+![](images/ios-goodies/BP_AppSettings.png ':size=300')
 
 ## Open YouTube video
 
 To open YouTube video in the YouTube application, call `OpenYouTubeVideo` function, passing the ID of the video as a parameter. If the application is not installed, a link to the video will be opened in the browser.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppYouTube.png" width="300">
+![](images/ios-goodies/BP_AppYouTube.png ':size=300')
 
 ## Start FaceTime call
 
 To perform a call using FaceTime, use `StartFaceTimeVideoCall` or `StartFaceTimeAudioCall` function, passing the user identifier as a parameter.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppFacetimeAudiocall.png" width="300">
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppFacetimeVideocall.png" width="300">
+![](images/ios-goodies/BP_AppFacetimeAudiocall.png ':size=300')
+![](images/ios-goodies/BP_AppFacetimeVideocall.png ':size=300')
 
 
 ## Dial a phone number
 
 To open dialer dialogue with a specified number, use `OpenDialer` function, passing phone number as a parameter.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppOpenDialer.png" width="300">
+![](images/ios-goodies/BP_AppOpenDialer.png ':size=300')
 
 ## Open AppStore page
 
 To open an application page in the AppStore, use `OpenAppOnAppStore` function, passing application ID as a parameter.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_AppOpenStore.png" width="300">
+![](images/ios-goodies/BP_AppOpenStore.png ':size=300')
 
-# [Apple Maps Interaction](#TODO)
+# Apple Maps Interaction
 
 You can send different queries to Apple Maps application using `UIGMaps` class.
 
@@ -319,29 +319,29 @@ You can send different queries to Apple Maps application using `UIGMaps` class.
 
 Use `OpenMapLocation` function to open a location with given values of latitude(-90 to 90) and longitude(-180 to 180). You can also specify a title of the label, pinned at the location and map view type (standard, satellite, hybrid, or transit).
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapOpenLocation.png" width="400">
+![](images/ios-goodies/BP_MapOpenLocation.png ':size=400')
 
 ## Open map address
 
 To open the map at the specific address, use `OpenMapAddress` function, passing the address string, as well as a title of the label, pinned at the location and map view type (standard, satellite, hybrid, or transit).
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapOpenAddress.png" width="400">
+![](images/ios-goodies/BP_MapOpenAddress.png ':size=400')
 
 ## Get map directions
 
 To open Apple Maps application with directions from point A to point B, use `GetDirections` function. This function takes destination and source addresses as parameters. You can also specify transport type (car, feet or public transport) and map view type (standard, satellite, hybrid, or transit).
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapDirections.png" width="400">
+![](images/ios-goodies/BP_MapDirections.png ':size=400')
 
 ## Perform a search
 
 You can perform a search for a location or a place using `PerformSearch` function. Pass the search query string (for example, "Eiffel Tower, Paris"), as well as map view type (standard, satellite, hybrid, or transit).
 You can also perform the search nearby the specified location, using `PerformSearchNearLocation` function. It takes additional parameters: latitude(-90 to 90) and longitude(-180 to 180) of the location to search nearby, and zoom. Zoom values should lie within range 2-23.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapSearch.png" width="400">
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_MapSearchNearLocation.png" width="400">
+![](images/ios-goodies/BP_MapSearch.png ':size=400')
+![](images/ios-goodies/BP_MapSearchNearLocation.png ':size=400')
 
-# [Camera and Gallery](#TODO)
+# Camera and Gallery
 
 This feature set allows taking photos with your device camera and access gallery (save/load images). Images captured with a camera or picked from the gallery are converted to 2D-texture objects.
 
@@ -349,13 +349,13 @@ This feature set allows taking photos with your device camera and access gallery
 
 To take a new photo, call `PickPhotoFromCamera` function. You can specify whether it is allowed to edit image, select camera for taking photo and flash mode. Also, function callback handlers must be provided - first for processing captured image and second for handling image taking cancellation.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CameraPick.png" width="600">
+![](images/ios-goodies/BP_CameraPick.png ':size=900')
 
 ## Pick images from the gallery
 
 To pick an image from the gallery, call `PickImageFromGallery` function. You can specify whether it is allowed to edit image and select source type ("Photo Library" or "Photo Album"). Also, function callback handlers must be provided - first for processing the picked image and second for handling image picking cancellation.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_GalleryPick.png" width="600">
+![](images/ios-goodies/BP_GalleryPick.png ':size=900')
 
 Optionally you can pass X and Y coordinates of image picking dialog window to this function that are taken into account on iPad.
 
@@ -363,13 +363,13 @@ Optionally you can pass X and Y coordinates of image picking dialog window to th
 
 To save an image to gallery call `SaveImageToGallery` function.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_SaveImgToGallery.png" width="600">
+![](images/ios-goodies/BP_SaveImgToGallery.png ':size=900')
 
 ## Delete an image from gallery
 
 You can call `DeleteImageFromGallery` function to show an image picker dialog, allowing the user to choose a picture from the specified source to delete. Also, function callback handlers must be provided - first for processing the picked image and second for handling image picking cancellation.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_DeleteImageFromGallery.png" width="600">
+![](images/ios-goodies/BP_DeleteImageFromGallery.png ':size=900')
 
 Optionally you can pass X and Y coordinates of image picking dialog window to this function that are taken into account on iPad.
 
@@ -377,9 +377,9 @@ Optionally you can pass X and Y coordinates of image picking dialog window to th
 
 Call the `TakeScreenShot` function to obtain a 2D-texture object with captured screenshot and provide callback handler to specify how it should be processed.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_TakeScreenshot.png" width="500">
+![](images/ios-goodies/BP_TakeScreenshot.png ':size=500')
 
-# [Flashlight](#TODO)
+# Flashlight
 
 You can use this class to access the flashlight on the device.
 
@@ -395,7 +395,7 @@ Use `EnableFlashlight` function to enable/disable flashlight, passing boolean va
 
 To make flashlight brighter/dimmer, use `SetFlashlightLevel`, passing a float value between 0 and 1 (0 for off, 1 - for maximum brightness).
 
-# [Haptic Feedback](#TODO)
+# Haptic Feedback
 
 This class allows you to send haptic feedbacks and vibrate the device.
 
@@ -417,23 +417,23 @@ There are three types of haptic feedbacks: notification, selection and impact. Y
 To make the device vibrate with the default pattern, use the `Vibrate` function. It can also be used as the fallback from haptic methods if haptic feedbacks are not supported on the device.
 
 
-# [Events](#TODO)
+# Events
 
 ## Open calendar
 
 You can open the calendar app at the current date using `OpenCalendar` function. 
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_OpenCalendar.png" width="200">
+![](images/ios-goodies/BP_OpenCalendar.png ':size=200')
 
 You can also use `OpenCalendarAt` function and pass a `DateTime` parameter to it to open the calendar app at the specified date.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_OpenCalendarAt.png" width="400">
+![](images/ios-goodies/BP_OpenCalendarAt.png ':size=400')
 
 ## Create calendar event
 
 Use `CreateCalendarEvent` function to create a calendar event, specifying actions to be performed after a successful/unsuccessful creation of the event, event title, notes, start and end dates.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CreateCalendarEvent.png" width="600">
+![](images/ios-goodies/BP_CreateCalendarEvent.png ':size=900')
 
 The event identifier you get from successful callback of the event creation can be used later to delete the event from the calendar.
 
@@ -441,7 +441,7 @@ The event identifier you get from successful callback of the event creation can 
 
 Call `CreateRepeatingCalendarEvent` function to create a repeating calendar event. It takes additional parameters such as date to repeat event until, a recurrence rule type (daily, weekly, monthly, or yearly) and repeat interval. For example, if you choose `RecurrenceRuleType.Daily` and pass 5 as interval, the event will be repeated every 5 days.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CreateRepeatingEvent.png" width="600">
+![](images/ios-goodies/BP_CreateRepeatingEvent.png ':size=900')
 
 ## Delete a calendar event
 
@@ -451,21 +451,21 @@ You can use `RemoveCalendarEvent` function to cancel a calendar event. This meth
 
 To create a reminder call `CreateReminder` function and pass title, start and end dates as parameters. Also, function callback handlers must be provided - first for successful reminder creation and second for processing error.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CreateReminder.png" width="600">
+![](images/ios-goodies/BP_CreateReminder.png ':size=900')
 
 ## Mark a reminder as complete/incomplete
 
 Call `CompleteReminder` function to complete a reminder with a specified unique identifier (can be obtained from callback of successful reminder creation), passing a boolean value, indicating whether to mark the reminder as completed/incomplete. Function will return `true` if reminder was successfully marked as completed and `false` otherwise.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CompleteReminder.png" width="600">
+![](images/ios-goodies/BP_CompleteReminder.png ':size=900')
 
 ## Delete a reminder
 
 Use the `RemoveReminder` function to remove a reminder with specified unique identifier (can be obtained from callback of successful reminder creation). Function will return `true` if reminder was successfully deleted and `false` otherwise.
 
-<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_DeleteReminder.png" width="600">
+![](images/ios-goodies/BP_DeleteReminder.png ':size=900')
 
-# [Contacts](#TODO)
+# Contacts
 
 ## Get the list of contacts
 
