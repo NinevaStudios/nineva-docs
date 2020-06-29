@@ -4,7 +4,7 @@
 
 The plugin allows you to embed **Native [GoogleMapsView](https://developers.google.com/android/reference/com/google/android/gms/maps/MapView)** into your Android-Unity game. Note, this is **NOT** a Web View and **NOT** a Texture, its native interactive Google Map View.
 
-* **Join our [Discord server](https://discord.gg/SuJP9fY) and ask us anything!**
+* **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 * **[Download Demo from Play Store](https://play.google.com/store/apps/details?id=com.deadmosquitogames.gmaps.demo)**
 
 # **Limitations**
@@ -961,7 +961,7 @@ public void OnDisplayStreetViewPanaroma()
 ## Can't build the project or my app crashes
 
 - **Q:** I am getting errors when trying to build the project or crashes at runtime, what should I do?
-- **A:** Contact us on [Discord server](https://discord.gg/SuJP9fY) but collect and provide all the useful info that can help us troubleshoot the issue, such as: Logcat logs on Androud, XCode logs from iOS, the code that you use, etc.
+- **A:** Contact us on [Discord server](https://bit.ly/nineva_support_discord) but collect and provide all the useful info that can help us troubleshoot the issue, such as: Logcat logs on Androud, XCode logs from iOS, the code that you use, etc.
 
 ---
 

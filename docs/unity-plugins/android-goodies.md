@@ -1,6 +1,6 @@
 # Android Goodies PRO Documentation
 
-**Join our [Discord server](https://discord.gg/SuJP9fY) and ask us anything!**
+**Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
 ![alt text](/images/ag/logo.png ':size=256')
 
