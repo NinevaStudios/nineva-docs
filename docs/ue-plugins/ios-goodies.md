@@ -381,8 +381,100 @@ Call the `TakeScreenShot` function to obtain a 2D-texture object with captured s
 
 # [Flashlight](#TODO)
 
+You can use this class to access the flashlight on the device.
+
+## Check if the device has a flashlight
+
+Call `DeviceHasFlashlight` function to get a boolean value, indicating whether the device has a flashlight.
+
+## Toggle flashlight on/off
+
+Use `EnableFlashlight` function to enable/disable flashlight, passing boolean value (`true` for enabling, `false` for disabling).
+
+## Change flashlight intensity
+
+To make flashlight brighter/dimmer, use `SetFlashlightLevel`, passing a float value between 0 and 1 (0 for off, 1 - for maximum brightness).
+
 # [Haptic Feedback](#TODO)
+
+This class allows you to send haptic feedbacks and vibrate the device.
+
+Check [this](https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/feedback/) page to find more details about haptic feedback.
+
+## Requirements
+
+Haptic feedbacks do not work on iPads, because they do not have the Taptic engine.
+They can only be used on iPhone 7 and newer, with iOS version 10 and higher.
+
+You can check if the device supports haptic feedbacks using `IsHapticFeedbackSupported`.
+
+## Haptic feedbacks
+
+There are three types of haptic feedbacks: notification, selection and impact. You can generate them using `SendNotificationHapticFeedback`, `SendSelectionHapticFeedback` and `SendImpactHapticFeedback` functions respectively.
+
+## Vibrate
+
+To make the device vibrate with the default pattern, use the `Vibrate` function. It can also be used as the fallback from haptic methods if haptic feedbacks are not supported on the device.
+
 
 # [Events](#TODO)
 
+## Open calendar
+
+You can open the calendar app at the current date using `OpenCalendar` function. 
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_OpenCalendar.png" width="200">
+
+You can also use `OpenCalendarAt` function and pass a `DateTime` parameter to it to open the calendar app at the specified date.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_OpenCalendarAt.png" width="400">
+
+## Create calendar event
+
+Use `CreateCalendarEvent` function to create a calendar event, specifying actions to be performed after a successful/unsuccessful creation of the event, event title, notes, start and end dates.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CreateCalendarEvent.png" width="600">
+
+The event identifier you get from successful callback of the event creation can be used later to delete the event from the calendar.
+
+## Create repeating calendar event
+
+Call `CreateRepeatingCalendarEvent` function to create a repeating calendar event. It takes additional parameters such as date to repeat event until, a recurrence rule type (daily, weekly, monthly, or yearly) and repeat interval. For example, if you choose `RecurrenceRuleType.Daily` and pass 5 as interval, the event will be repeated every 5 days.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CreateRepeatingEvent.png" width="600">
+
+## Delete a calendar event
+
+You can use `RemoveCalendarEvent` function to cancel a calendar event. This method takes the unique event identifier as a parameter (can be obtained from callback of successful calendar event creation).
+
+## Creating a reminder
+
+To create a reminder call `CreateReminder` function and pass title, start and end dates as parameters. Also, function callback handlers must be provided - first for successful reminder creation and second for processing error.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CreateReminder.png" width="600">
+
+## Mark a reminder as complete/incomplete
+
+Call `CompleteReminder` function to complete a reminder with a specified unique identifier (can be obtained from callback of successful reminder creation), passing a boolean value, indicating whether to mark the reminder as completed/incomplete. Function will return `true` if reminder was successfully marked as completed and `false` otherwise.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_CompleteReminder.png" width="600">
+
+## Delete a reminder
+
+Use the `RemoveReminder` function to remove a reminder with specified unique identifier (can be obtained from callback of successful reminder creation). Function will return `true` if reminder was successfully deleted and `false` otherwise.
+
+<img src="https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/blob/master/Resources/BP_DeleteReminder.png" width="600">
+
 # [Contacts](#TODO)
+
+## Get the list of contacts
+
+You can obtain a list of all contacts from device phonebook using `GetAllContacts` function. Provide callback handler for the function that will receive an array of contacts.
+
+## Search for specific contacts
+
+There are two options for searching contacts: by name and by number. To do that, call `GetContactsWithName` and `GetContactsWithNumber` functions respectively. Provide callback handler for the function that will receive an array of contacts matching search criteria.
+
+## Create new contact
+
+To create a new contact call `AddContact` function.  Provide initialized `Contact` structure as a parameter. Also, provide callback handler for the function that will receive a flag indicating whether the operation was successful.
