@@ -52,24 +52,24 @@ v.1.0.0
 # Features
 
 * Native UI
-  + [Native dialogs](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Native-dialogs)
-  + [App Store rate dialog](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/App-Store-rate-dialog)
-  + [Date and time picker](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Date-and-time-picker)
-  + [Native sharing](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Native-Sharing)
+  + [Native dialogs](#native-dialogs)
+  + [App Store rate dialog](#app-store-rate-dialog)
+  + [Date and time picker](#date-and-time-picker)
+  + [Native sharing](#native-sharing)
 
 * Hardware
-  + [Flashlight](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Flashlight)
-  + [Haptic Feedback](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Haptic-Feedbacks)
+  + [Flashlight](#flashlight)
+  + [Haptic Feedback](#haptic-feedbacks)
 
 * App interaction
-  + [App interaction](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Apps)
-  + [Apple Maps interaction](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Apple-Maps-Interaction)
-  + [Camera and Gallery](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Camera-and-Gallery)
-  + [Events](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Events)
-  + [Contacts](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Contacts)
+  + [App interaction](#apps)
+  + [Apple Maps interaction](#apple-maps-interaction)
+  + [Camera and Gallery](#camera-and-gallery)
+  + [Events](#events)
+  + [Contacts](#contacts)
 
 *  Getting info
-  + [Get device info and check supported features](https://github.com/NinevaStudios/iOSGoodiesUnreal-SampleProject/wiki/Device-info)
+  + [Get device info and check supported features](#device-info)
 
 # FAQ
 
