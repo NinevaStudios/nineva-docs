@@ -4,6 +4,7 @@
     * [Android Goodies](ue-plugins/android-goodies-unreal)
     * [iOS Goodies](ue-plugins/ios-goodies)
     * [BLE Utilities](ue-plugins/ble-utilities)
+    * [Google maps](ue-plugins/google-maps-unreal)
 
 - **Unity Plugins**
     * [Google Maps unity](unity-plugins/google-maps)
