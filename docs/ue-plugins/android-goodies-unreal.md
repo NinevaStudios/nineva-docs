@@ -1,8 +1,5 @@
-___
 
 # **Native UI**
-
-___
 
 ## Native dialogs
 
@@ -265,8 +262,6 @@ ___
 
 # **App interaction**
 
-___
-
 ## Setup alarms/timers
 
 ### Required permissions
@@ -390,8 +385,6 @@ ___
 
 # **Getting info**
 
-___
-
 ## Get device info and check supported features
 
 Device information functions allow retrieving various information about Android device and OS.
@@ -415,8 +408,6 @@ Check out a detailed description of all features [here](https://developer.androi
 ___
 
 # **Image tools**
-
-___
 
 ## Pick images from gallery and camera, save an image to gallery
 
@@ -453,8 +444,6 @@ Call the `TakeScreenShot` function to capture a screenshot. Screen image is auto
 ___
 
 # **Hardware**
-
-___
 
 * [Flashlight, vibrations, battery](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Hardware)
 
@@ -505,8 +494,6 @@ You can get one of the many battery characteristics, such as capacity, health, p
 ___
 
 # **Contacts**
-
-___
 
 ## Fetch, find and add contacts
 

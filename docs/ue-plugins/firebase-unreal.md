@@ -10,7 +10,7 @@ After the project is created, you can go to the Authentication section on the le
 
 ![](images/firebase/auth/AuthSetup.png)
 
-!> **NOTE!** Some of the providers may require additional setup. Please, check the official Firebase documentation on how to enable the different sign in methods if you are having any problems with it.
+!> Some of the providers may require additional setup. Please, check the official Firebase documentation on how to enable the different sign in methods if you are having any problems with it.
 
 In the Project Settings in the Firebase console, create an Android/iOS app providing the required information.
 You will have to provide the SHA1 fingerprints for the keystores that will be used to sign the application on Android. The information on how to generate a keystore and read its fingerprint can be found [here](https://stackoverflow.com/questions/15727912/sha-1-fingerprint-of-keystore-certificate).
@@ -26,7 +26,7 @@ You should also provide a Client ID for Android. It can be found in the google-s
 
 ![](images/firebase/auth/AuthConfigGoogleServices3.png)
 
-!> **NOTE!** On Mac, the file picker is somehow broken in the UE4, so you will have to manually paste the path to the files. In order to get the full path to the file, right click it in Finder and hold the Option key. After the menu changes, select the Copy as Pathname option and paste it into the corresponding field in the Project Settings.
+!> On Mac, the file picker is somehow broken in the UE4, so you will have to manually paste the path to the files. In order to get the full path to the file, right click it in Finder and hold the Option key. After the menu changes, select the Copy as Pathname option and paste it into the corresponding field in the Project Settings.
 
 ## Functions
 
@@ -49,7 +49,7 @@ We have integrated the Google Sign In SDK as a part of the plugin in order to sh
 
 You can also use the anonymous sign in by calling the `SignInAnonymously` method.
 
-!> **NOTE!** All sign in methods return the FirebaseUser object when successful, that can be used later to read and modify the user's data.
+!> All sign in methods return the FirebaseUser object when successful, that can be used later to read and modify the user's data.
 
 You can also obtain a reference to the current user object at any time by calling the `CreateUser` method.
 
@@ -57,7 +57,7 @@ You can also link a phone number to the existing user. You have to call the `Ver
 
 ![](images/firebase/auth/AuthVerifyPhoneNum.png)
 
-!> **NOTE!** You have to add the test phone numbers in the Firebase console in order to test the phone verification functionality during development.
+!> You have to add the test phone numbers in the Firebase console in order to test the phone verification functionality during development.
 
 Call `SignOut` function to sign the current user out.
 
@@ -68,7 +68,7 @@ Whenever you get access to the FirebaseUser object, you should check if it is va
 You can get some of the user data, for example unique user ID, display name, email, phone number, avatar URL, etc.
 You can also update this information by calling the respective methods, for example, `UpdateEmail`.
 
-!> **NOTE!** You can only update the user's phone number after successful phone verification with the obtained AuthCredentials object.
+!> You can only update the user's phone number after successful phone verification with the obtained AuthCredentials object.
 
 You can also link additional credentials to the user, for example, Google and Facebook credentials. You can also get a list of all providers for user (`FetchProvidersForEmail`) and unlink them (`UnlinkProvider`). 
 
@@ -92,7 +92,7 @@ After the project is created you can go to the Cloud Storage Section on the left
 
 Cloud Storage library of the plugin allows manipulating files. The official documentation can be found here for [Android](https://firebase.google.com/docs/storage/android/start) and [IOS](https://firebase.google.com/docs/storage/ios/start).
 
-!> **NOTE!** In order to work with cloud storage user needs to be signed in to firebase. Please refer to [Auth page](https://github.com/NinevaStudios/FirebaseGoodiesDocumentation/wiki/Auth) for setup of authentication.
+!> In order to work with cloud storage user needs to be signed in to firebase. Please refer to [Auth page](#Authentication) for setup of authentication.
 
 ### Upload files
 
@@ -112,7 +112,7 @@ For downloading files from cloud storage to the device use `DownloadToLocalFile`
 
 ![](images/firebase/cloud-storage/CloudStorageDownloadToLocal.png)
 
-You can choose the directory to download a file to by selecting the corresponding environment from the dropdown list.
+For android you can choose the directory to download a file to by selecting the corresponding environment from the dropdown list.
 
 ![](images/firebase/cloud-storage/CloudStorageDownloadToLocalEnv.png)
 
@@ -140,7 +140,7 @@ You can update file metadata at any time after the file is uploaded by using `Up
 
 First you need to create a `NewStorageMetadataValues` object, and after that set all the metadata properties needed. For the list of all the properties that can be set you can refer to [this section](https://firebase.google.com/docs/reference/android/com/google/firebase/storage/StorageMetadata.Builder#public-method-summary).
 
-!> **NOTE!** method `SetContentLanguage` accepts language abbreviations consisting of two letters, we weren't able to find the exact list, but most of [ISO 639-1 Language Codes](http://www.mathguide.de/info/tools/languagecode.html) work.
+!> Method `SetContentLanguage` accepts language abbreviations consisting of two letters, we weren't able to find the exact list, but most of [ISO 639-1 Language Codes](http://www.mathguide.de/info/tools/languagecode.html) work.
 
 ### Delete files
 

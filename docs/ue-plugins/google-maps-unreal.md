@@ -5,6 +5,7 @@ Join our [Discord server](https://discord.gg/SuJP9fY) and ask us anything!
 
 ---
 
+[Download Demo from playstore](https://play.google.com/store/apps/details?id=com.ninevastudios.unrealmaps)
 
 The plugin allows you to embed **Native [GoogleMapsView](https://developers.google.com/android/reference/com/google/android/gms/maps/MapView)** into your Unreal Engine 4 game on Android. Note, this is **NOT** a Web View and **NOT** a Texture, its native interactive Google Map View.
 
@@ -174,3 +175,174 @@ if (Target.Platform == UnrealTargetPlatform.IOS)
 
 Otherwise, you might experience app crashes when creating map view followed by error messages like "attemping to free pointer we didn't allocate".
 More info about this issue can be found [here](https://www.artstation.com/alyamkin/blog/9VEQ/ue4-ios-and-pointer-being-freed-was-not-allocated).
+
+# Getting started
+
+## Creating, Showing and Dismissing GoogleMapView
+
+To create GoogleMapView simply call `CreateMapView` function. After this call `Show` method passing position, dimensions and options as parameters. You can create and show multiple map view instances at the same time.
+
+Displaying GoogleMapView via blueprint:
+
+![](images/google-maps/CreateAndShow.png)
+
+or in C++:
+
+```cpp
+TScriptInterface<IUnrealMapsViewInterface> MapView = UUnrealMapsBlueprintLibrary::CreateMapsView();
+
+MapView->Show(100.0f, 150.0f, 300.0f, 300.0f, GoogleMapOtions);
+```
+
+Dismissing GoogleMapView via blueprint:
+
+![](images/google-maps/Dismiss.png)
+
+or in C++:
+
+```cpp
+MapView->Dismiss();
+```
+
+Be aware that you won't be able to work with map after dismissing it.
+
+## Google Map Options
+
+ To customize what location is shown on the map and many many more settings, set all the configurations on the options object that you pass to view `Show` method. For more information on each option please refer to [GoogleMapOptions Documentation](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) where they are explained in detail.
+
+Example of creating map view configuration via blueprint:
+
+![](images/google-maps/GoogleMapOptionsInit.png)
+
+or in C++:
+
+```cpp
+FGoogleMapOptions InitMapOtions()
+{
+	FGoogleMapOptions GoogleMapOtions;
+
+	GoogleMapOtions.AmbientEnabled = false;
+
+	// Camera position
+	GoogleMapOtions.CameraPosition.Target = FLatLng{ 52.49f, 13.39f };
+	GoogleMapOtions.CameraPosition.Tilt = 1.0f;
+	GoogleMapOtions.CameraPosition.Zoom = 10.0f;
+
+	// Specifies a FLatLngBounds to constrain the camera target so that when users
+	// scroll and pan the map, the camera target does not move outside these bounds
+	GoogleMapOtions.LatLngBounds = FLatLngBounds { FLatLng{ 53.0f, 14.0f } , FLatLng{ 47.0f, 6.0f } }
+
+	GoogleMapOtions.LiteMode = false;
+
+	GoogleMapOtions.MapType = GoogleMapType::Normal;
+
+	GoogleMapOtions.MaxZoomPreference = 16.0f;
+	GoogleMapOtions.MinZoomPreference = 1.0f;
+
+	return GoogleMapOtions;
+}
+```
+
+# Map Callbacks
+
+## Using Map Callbacks
+
+To handle map callbacks bind custom events to delegates exposed by GoogleMapsView plugin API.
+
+Get `Map View Callback Proxy` reference from the map view and bind your handler to one of its delegates.
+
+Add map callback handler via blueprint:
+
+![](images/google-maps/Binding.png)
+
+or in C++:
+
+```cpp
+
+// Declare your callback handler function in *.h file
+// NOTE that it has to be UFUNCTION!
+
+UFUNCTION()
+void OnMapViewReady();
+
+// Bind your function to map view delegate in *.cpp file
+MapView->GetCallbackProxy()->OnMapReadyDynamicDelegate.AddDynamic(this, &UMyTestClass::OnMapViewReady);
+```
+
+## Available Callbacks
+
+* **OnMapReadyDynamicDelegate** - Fires when Map View is fully initialized. Ensure that your application uses Map View only after this event is received.
+* **OnMapClickDynamicDelegate** - Fires when user taps on Map View. Receives latitude and longitude of clicked location point.
+* **OnMarkerClickDelegate** - Fires when user taps on the Marker. Receives clicked marker reference.
+
+# Markers
+
+To get more details about markers check [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) and [Marker](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) Google API.
+
+![](images/google-maps/Markers.png)
+
+## Adding markers
+
+To add marker to map call `AddMarker` method on GoogleMapView and pass marker options as a parameter. 
+
+Adding marker via blueprint:
+
+![](images/google-maps/AddMarker.png)
+
+or in C++:
+
+```cpp
+FMarkerOptions MarkerOptions;
+
+// Currently all MarkerOptions fields should be initialized explicitly (will be fixed if future releases)
+
+MarkerOptions.Alpha = 1.0f;
+MarkerOptions.AnchorU = 0.5f;
+MarkerOptions.AnchorV = 1.0f;
+MarkerOptions.InfoWindowAnchorU = 0.5f;
+MarkerOptions.InfoWindowAnchorV = 0.0f;
+MarkerOptions.Draggable = false;
+MarkerOptions.Flat = false;
+MarkerOptions.Position = latLng;
+MarkerOptions.Rotation = 0.0f;
+MarkerOptions.Title = "Title";
+MarkerOptions.Snippet = "Description";
+MarkerOptions.Visible = true;
+MarkerOptions.ZIndex = 0.0f;
+
+TScriptInterface<IMarkerInterface> NewMarker = MapView->AddMarker(MarkerOptions);
+```
+
+## Removing markers
+
+To remove marker simply call its `Remove` method.
+
+Removing marker via blueprint:
+
+![](images/google-maps/RemoveMarker.png)
+
+or in C++:
+
+```cpp
+Marker->Remove();
+```
+
+Note that you won't be able to use marker after it was removed.
+
+## Reading and modifying marker options
+
+You can read and modify marker properties by calling corresponding getters and setters.
+
+For more details check out the Google Maps view markers documentation for [Android](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) and [iOS](https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker)
+
+Usage of some marker properties is limited depending on the mobile platform:
+* `GetAnchor` function not supported on Android
+* `GetWindowAnchor` not supported on Android
+* `GetIsVisible` function not supported on iOS
+* `SetIsVisible` function not supported on iOS
+
+## Setting marker icon
+
+You can change the marker icon by calling the `SetIcon()` function and specifying the Texture2D to use as a new icon and scale factor (used for iOS). Leaving the Texture2D field empty will result in setting the default red marker icon. The scale factor for iOS is useful when you are using big textures. Providing the value of 10 will result in the marker image being ten times smaller, the value of 0.1 will make it ten times bigger.
+
+***Note!*** Textures used for marker icons should have the following settings: Compression Settings - VectorDisplacementMap, MipGenSettings - NoMipMaps, sRGB - false. Textures can sometimes display some artifacts when applied as marker icons. This can often be removed if you convert the image to .tga format before importing it in your Unreal project.
