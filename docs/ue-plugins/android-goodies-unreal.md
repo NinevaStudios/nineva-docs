@@ -1,3 +1,101 @@
+**Android Goodies Unreal Engine plugin documentation**
+
+Welcome to Android Goodies Documentation for Unreal Engine
+
+?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+___
+
+# CHANGELOG
+
+v.1.3.1
+
+* ADDED Unreal Engine 4.25 support
+* ADDED Sharing of multiple images via email app
+* ADDED Permissions setup via plugin settings
+* FIXED Issues with date and time picker initialization
+* FIXED Texture to image conversion
+
+v.1.3.0
+
+* ADDED Check for notification channels support
+* FIXED Some method categories
+
+v.1.2.3
+
+* ADDED Unreal Engine 4.24 support
+* FIXED Issues with native callbacks
+
+v.1.2.3
+
+* ADDED Fetching contacts info
+
+v.1.2.2
+
+* ADDED Toggle flashlight
+* ADDED Vibrations
+* ADDED Device battery information
+* ADDED Basic telephony operations (dial/call number)
+* FIXED Issue with image color format while sharing
+
+v.1.2.1
+
+* ADDED Capture screenshot
+* FIXED Performace issue with picking image from gallery
+* FIXED Image functions callback handling in game thread
+
+v.1.2.0
+
+* ADDED Capture photo
+* ADDED Pick image from gallery
+* ADDED Save image to gallery
+
+v.1.1.2
+
+* ADDED Unreal Engine 4.22 support
+* REMOVED Redundant parameters in Java callback functions
+
+v.1.1.1
+
+* FIXED Crash for release application builds with enabled IAP
+
+v.1.1.0
+
+* ADDED Unreal Engine 4.21 support
+* UPDATED Image sharing functionality
+
+v.1.0.0
+
+* Initial release
+___
+
+# **Features**
+
+* [Native UI](#native-ui)
+ + [Native dialogs](#native-dialogs)
+ + [Date and time picker](#date-and-time-picker)
+ + [Show Toasts](#toasts)
+ + [Native sharing text or/and image](#native-sharing)
+ + [Notifications](#notifications)
+
+* [App interaction](#app-interaction)
+ + [Setup alarms/timers](#alarms-and-timer)
+ + [Open maps app](#opening-maps)
+ + [Open, install or uninstall apps](#open-install-or-uninstall-apps)
+
+* [Getting info](#getting-info)
+ + [Get device info and check supported features](#device-information)
+
+* [Image tools](#image-tools)
+ + [Pick images from gallery and camera, save an image to gallery](#image-tools)
+
+* [Hardware](#hardware)
+ + [Flashlight](#flashlight)
+ + [Vibrations](#vibrations)
+ + [Battery](#battery)
+
+* [Contacts](#contacts)
+ + [Fetch, find and add contacts](#fetch-find-and-add-contacts)
+___
 
 # **Native UI**
 
