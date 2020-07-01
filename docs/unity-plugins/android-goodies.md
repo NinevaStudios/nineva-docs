@@ -69,7 +69,7 @@ You will see the menu like this on device where you can start testing:
 
 ![alt text](/images/ag/demo-home.png ':size=512')
 
----
+___
 
 # **App Interaction**
 
@@ -125,8 +125,6 @@ Result:
 
 Please check [article about common Android intents](https://developer.android.com/guide/components/intents-common.html#Clock) for more information.
 
----
-
 ## AGApps.cs
 
 Contains various methods to open other applications.
@@ -179,8 +177,6 @@ var package = "com.twitter.android";
 AGApps.OpenOtherAppOnDevice(package, () => AGUIMisc.ShowToast("Could not launch " + package));
 ```
 
----
-
 ## AGCalendar.cs
 
 ### Checking if any calendar app is installed on device
@@ -231,8 +227,6 @@ Result:
 
 Please check [article about common Android intents](https://developer.android.com/guide/components/intents-common.html#Calendar) for more information.
 
----
-
 ## AGDialer.cs
 
 ### Required permissions
@@ -267,8 +261,6 @@ string PhoneNumber = "123456789";
 AGDialer.PlacePhoneCall(PhoneNumber);
 ```
 
----
-
 ## AGMaps.cs
 
 Android Goodies provides simple and easy interface to [open a map application (providing coordinates or address) using intent](https://developer.android.com/guide/components/intents-common.html#Maps). If there is no application to handle the intent it will log an exception.
@@ -279,8 +271,6 @@ Functionality:
 * [Open location with zoom level](#open-location-with-zoom-level)
 * [Open location with label](#open-location-with-label)
 * [Open location with address](#open-location-with-address)
-
----
 
 ### Check if user has maps app
 
@@ -300,8 +290,6 @@ Result:
 
 ![alt text](/images/ag/map_location_zoom.png ':size=512')
 
----
-
 ### Open location with label
 
 Show the map at the given longitude and latitude with a certain label.
@@ -316,8 +304,6 @@ Result:
 
 ![alt text](/images/ag/map_address.png ':size=512')
 
----
-
 ### Open location with address
 
 Opens the map location with the provided address.
@@ -331,8 +317,6 @@ AGMaps.OpenMapLocation("1st & Pike, Seattle");
 Result:
 
 ![alt text](/images/ag/map_label.png ':size=512')
-
----
 
 ## AGSettings.cs
 
@@ -411,8 +395,6 @@ On some device to open bluetooth settings you need to add the following permissi
 ```
 
 Add the permission above if you see the relevant message when trying to open bluetooth settings.
-
----
 
 ## AGShare.cs
 
@@ -567,8 +549,6 @@ Debug.Log("Sharing video: " + filePath + ", file exists?: " + File.Exists(filePa
 AGShare.ShareVideo(filePath, "My Video Title", "Upload Video");
 ```
 
----
-
 ## AGGallery.cs
 
 Class to interact with Android gallery.
@@ -619,8 +599,6 @@ You can also refresh some other file to become noticed by gallery apps. Imagine 
 ``` csharp
 AGGallery.RefreshFile(absoluteFilePath);
 ```
-
----
 
 ## AGContacts.cs
 
@@ -673,8 +651,6 @@ public void OnPickContactFromAddressBook()
         });
 }
 ```
-
----
 
 ## AGFilePicker.cs
 
@@ -754,8 +730,6 @@ AGFilePicker.PickFile(file =>
 }, error => AGUIMisc.ShowToast("Picking file: " + error), mimeType);
 ```
 
----
-
 ## AGMediaRecorder.cs
 
 ### Required permissions
@@ -794,8 +768,7 @@ Otherwise, you will get an `java.lang.illegalStateException` exception.
 var recordingWasStopped = AGMediaRecorder.StopRecording();
 AGUIMisc.ShowToast(recordingWasStopped ? "Stopped recording" : "Failed to stop recording");
 ```
-
----
+___
 
 # **UI**
 
@@ -985,8 +958,6 @@ AGAlertDialog.ShowMessageDialog("Single Button", "This dialog has only positive 
     AndroidDialogTheme.Dark);
 ```
 
----
-
 ## AGDateTimePicker.cs
 
 Android goodies allows you to show default Android [TimePickerDialog](https://developer.android.com/reference/android/app/TimePickerDialog.html) and [DatePickerDialog](https://developer.android.com/reference/android/app/DatePickerDialog.html).
@@ -1050,8 +1021,6 @@ private void OnDatePickCancel()
 Result:
 
 ![alt text](/images/ag/date_picker.png ':size=512')
-
----
 
 ## AGProgressDialog.cs
 
@@ -1123,8 +1092,6 @@ private IEnumerator ShowHorizontalForDuration()
 Result:
 
 ![alt text](/images/ag/progress-bar.png ':size=512')
-
----
 
 ## AGLocalNotifications.cs
 
@@ -1209,8 +1176,6 @@ AGLocalNotifications.CancelNotification(NotificationId);
 ```
 
 I suggest persisting the scheduled notification id in the app so you could cancel and reschedule them any time.
-
----
 
 ## AGNotificationManager.cs
 
@@ -1532,8 +1497,6 @@ AGNotificationManager.Cancel(notificationId);
 AGNotificationManager.CancelAll();
 ```
 
----
-
 ## AGWallpaperManager.cs
 
 This class allows you to change device wallpaper image
@@ -1608,8 +1571,6 @@ You can show the screen where user can change his live wallpaper by calling `AGW
 
 To reset the wallpaper to default call `AGWallpaperManager.Clear()` method.
 
----
-
 ## AGUIMisc.cs
 
 Other methods relevant to UI
@@ -1654,15 +1615,12 @@ AndroidGoodiesMisc.EnableImmersiveMode();
 
 ?> Unity 5 has immersive mode enabled by default, so if your using Unity 5 or higher, this method is redundant.
 
----
-
 ## AGShortcutManager.cs
 
 This class allows you to create and manage shortcuts in your app. For guidance about using shortcuts, see [App shortcuts](https://developer.android.com/guide/topics/ui/shortcuts/).
 
 This class exposes the API of https://developer.android.com/reference/android/content/pm/ShortcutManager
-
----
+___
 
 # **Retrieving Info**
 
@@ -1678,8 +1636,6 @@ Class provides various information about device, os.
   + Getting application package - `AGDeviceInfo.GetApplicationPackage()` 
   + Checking if package is installed on device `AGDeviceInfo.IsPackageInstalled(string package)` 
   + Getting the list of installed packages on device `AGDeviceInfo.GetInstalledPackages()` - returns a list of `PackageInfo` objects that contain `PackageName` , `VersionCode` , `VersionName` 
-
----
 
 ## AGEnvironment.cs
 
@@ -1706,8 +1662,6 @@ You can also check if `AGEnvironment.IsExternalStorageEmulated` or if `AGEnviron
 
 You can get a top-level shared/external storage directory for placing files of a particular type by invoking `AGEnvironment.GetExternalStoragePublicDirectoryPath(string type)` .
 
----
-
 ## AGNetwork.cs
 
 This class allows to retrieve information about device network connectivity.
@@ -1731,8 +1685,6 @@ The following permissions are required in `AndroidManifest.xml` for the class me
   + Getting wi-fi connection info ( `AGNetwork.GetWifiConnectionInfo()` - `BSSID, SSID, MacAddress, LinkSpeed, IpAddress, NetworkId, Rssi` )
   + Getting Ethernet MAC address if available (useful for Android TV) `AGNetwork.EthernetMacAddress` 
 
----
-
 ## AGTelephony.cs
 
 Contains method connected with [Telephony Manager](https://developer.android.com/reference/android/telephony/TelephonyManager.html)
@@ -1754,8 +1706,7 @@ Currently available functionality:
   + Getting the telephony device identifier. ( `AGTelephony.TelephonyDeviceId` )
   + Getting the telephony sim serial number. ( `AGTelephony.TelephonySimSerialNumber` )
   + Getting the ISO country code. ( `AGTelephony.NetworkCountryIso` )
-
----
+___
 
 # **Hardware**
 
@@ -1792,8 +1743,6 @@ Here are the properties that you can get about battery state:
 * `AGBattery.Temperature` - The current battery temperature.
 * `AGBattery.Voltage` - The current battery voltage level in mV.
 
----
-
 ## AGFlashLight.cs
 
 Turns on camera flashlight in a torch mode.
@@ -1828,8 +1777,6 @@ AGFlashLight.Enable();
 // Disable
 AGFlashLight.Disable();
 ```
-
----
 
 ## AGGPS.cs
 
@@ -1914,8 +1861,6 @@ AGGPS.DistanceBetween(AmsterdamLatitude, AmsterdamLongitude,
 gpsInfoText.text = string.Format("DistanceBetween results: {0}, Initial bearing: {1}, Final bearing: {2}",
     results[0], results[1], results[2]);
 ```
-
----
 
 ## AGVibrator.cs
 
@@ -2036,8 +1981,6 @@ Cancels current vibration.
 AGVibrator.Cancel();
 ```
 
----
-
 ## AGCamera.cs
 
 This class allows you to check if device has camera and its certain features and to take pictures (big and thumbnail) receiving them as `Texture2D` and record video.
@@ -2125,8 +2068,6 @@ AGCamera.RecordVideo(videoFile =>
     },
     error => AGUIMisc.ShowToast("Cancelled recording video file: " + error), generatePreviewImages);
 ```
-
----
 
 ## AGFingerprintScanner.cs
 
@@ -2234,8 +2175,7 @@ AGFingerprintScanner.Decrypt(Key, _encryptedValue /* Encrypted value that you sa
 ```
 
 If you want to cancel continuous scanning you have to call `AGFingerprintScanner.Cancel()` method.
-
----
+___
 
 # **Storage**
 
@@ -2284,8 +2224,6 @@ public void OnPickContactFromAddressBook()
         });
 }
 ```
-
----
 
 ## AGSharedPrefs.cs
 
@@ -2350,8 +2288,7 @@ To clear all the saved values:
 _sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
 AGSharedPrefs.Clear(_sharedPrefsFileKey);
 ```
-
----
+___
 
 # **Other**
 
@@ -2446,8 +2383,6 @@ public void OnRequestPermissions()
 }
 ```
 
----
-
 ## AGPrintHelper.cs
 
 This class allows printing images and/or HTML pages.
@@ -2468,10 +2403,11 @@ Use `AGPrintHelper.PrintHtmlPage` to print an HTML page from the source HTML-for
 
 Call `AGPrintHelper.PrintHtmlPageFromUrl` method to print an HTML page from the respective URL.
 ***Note:*** This method takes time to load the page from the internet.
-
----
+___
 
  # **FAQ**
+
+---
 
  ## Can't Build my project after importing Android Goodies
 

@@ -3,6 +3,7 @@
 Welcome to iOS Goodies Documentation for Unreal Engine
 
 ?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+___
 
 # Changelog
 
@@ -48,6 +49,7 @@ v.1.1.0
 v.1.0.0
 
 * Initial release
+___
 
 # Features
 
@@ -70,6 +72,7 @@ v.1.0.0
 
 *  Getting info
   + [Get device info and check supported features](#device-info)
+___
 
 # FAQ
 
@@ -89,6 +92,7 @@ On iOS 13 native date picker and input field have some appearance issues when us
 * Run the engine and rebuild your project
 
 	As a result those native dialogs should have appropriate theming when running on device with iOS 13 installed.
+___
 
 # Native dialogs
 
@@ -169,12 +173,14 @@ Result:
 This function fades screen and displays native loading spinner at the middle. Call `ShowLoadingDialog` to begin showing a loading screen. Call `DismissLoadingDialog` to dismiss it after the background work is done. 
 
 !> All user interface iteractions are blocked during the lifetime of the loading screen
+___
 
 # App Store rate dialog
 
 Use `RequestRating` function to produce a dialogue asking the user to rate your app on the AppStore.
 
 ![](images/ios-goodies/BP_AppRating.png ':size=300')
+___
 
 # Date and time pickers
 
@@ -229,6 +235,7 @@ To show picker with countdown timer style use `ShowCoundownTimer` function. It a
 Result:
 
 ![](images/ios-goodies/TimerPicker.png ':size=400')
+___
 
 # Device Info
 
@@ -249,6 +256,7 @@ The plugin allows you to use functions for getting and setting the battery monit
 You can also enable/disable proximity monitoring status and retrieve the proximity state of the device.
 
 More documentation can be found [here](https://developer.apple.com/documentation/uikit/uidevice).
+___
 
 # Native Sharing
 
@@ -274,6 +282,7 @@ You can send an SMS via default SMS-app on the device using `SendSMSViaDefaultAp
 You can send an e-mail via default mailing application on the device using `SendEmailViaDefaultApp` method. But if you want to be notified about the outcome of the sending, you should use `SendEmail` method instead. You should check if the device can send e-mails using `CanSendEmail` method before performing any actions.
 
 ![](images/ios-goodies/BP_SendEmail.png ':size=800')
+___
 
 # App Interaction
 
@@ -298,7 +307,6 @@ To perform a call using FaceTime, use `StartFaceTimeVideoCall` or `StartFaceTime
 ![](images/ios-goodies/BP_AppFacetimeAudiocall.png ':size=300')
 ![](images/ios-goodies/BP_AppFacetimeVideocall.png ':size=300')
 
-
 ## Dial a phone number
 
 To open dialer dialogue with a specified number, use `OpenDialer` function, passing phone number as a parameter.
@@ -310,6 +318,7 @@ To open dialer dialogue with a specified number, use `OpenDialer` function, pass
 To open an application page in the AppStore, use `OpenAppOnAppStore` function, passing application ID as a parameter.
 
 ![](images/ios-goodies/BP_AppOpenStore.png ':size=300')
+___
 
 # Apple Maps Interaction
 
@@ -340,6 +349,7 @@ You can also perform the search nearby the specified location, using `PerformSea
 
 ![](images/ios-goodies/BP_MapSearch.png ':size=400')
 ![](images/ios-goodies/BP_MapSearchNearLocation.png ':size=400')
+___
 
 # Camera and Gallery
 
@@ -378,6 +388,7 @@ Optionally you can pass X and Y coordinates of image picking dialog window to th
 Call the `TakeScreenShot` function to obtain a 2D-texture object with captured screenshot and provide callback handler to specify how it should be processed.
 
 ![](images/ios-goodies/BP_TakeScreenshot.png ':size=500')
+___
 
 # Flashlight
 
@@ -415,7 +426,7 @@ There are three types of haptic feedbacks: notification, selection and impact. Y
 ## Vibrate
 
 To make the device vibrate with the default pattern, use the `Vibrate` function. It can also be used as the fallback from haptic methods if haptic feedbacks are not supported on the device.
-
+___
 
 # Events
 
@@ -464,6 +475,7 @@ Call `CompleteReminder` function to complete a reminder with a specified unique 
 Use the `RemoveReminder` function to remove a reminder with specified unique identifier (can be obtained from callback of successful reminder creation). Function will return `true` if reminder was successfully deleted and `false` otherwise.
 
 ![](images/ios-goodies/BP_DeleteReminder.png ':size=900')
+___
 
 # Contacts
 
