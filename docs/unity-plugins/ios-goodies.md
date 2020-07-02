@@ -1,5 +1,4 @@
-# **iOS Goodies Documentation**
-___
+﻿# **iOS Goodies Documentation**
 
 # Features
 
@@ -35,7 +34,6 @@ This section is a brief overview of the functionality provided by API. Click on 
 
 
 **[Troubleshooting & FAQ](#/Troubleshooting-&-FAQ)**
-___
 
 # Getting started
 
@@ -44,7 +42,6 @@ After importing the unitypackage add the demo scene `IOSGoodies/Example/ExampleS
 ![](/images/ig/build_settings.png ':size=512')
 
 Open the XCode project afterwards and run it on your device.
-___
 
 # Configure settings
 
@@ -59,7 +56,6 @@ Here is the full list of features that can be enabled/disabled:
 * Contact picker (`ContactsUI.framework`)
 * Fingerprint / Face ID authentication (`LocalAuthentication.framework`)
 * Calendar / Reminder access (`EventKit.framework`)
-___
 
 # **App Interaction**
 
@@ -669,7 +665,6 @@ if (_filePaths.Count == 0)
 IGFilePicker.ExportToService(list => { IGDialogs.ShowOneBtnDialog("Success", "File was exported", "Ok", () => { }); },
 () => { IGDialogs.ShowOneBtnDialog("Cancelled", "File pick was cancelled", "Ok", () => { }); }, _lastPaths);
 ```
-___
 
 # **UI**
 
@@ -897,7 +892,6 @@ public void OnShowActionSheetWithDestructiveButton()
 Result:
 
 ![](/images/ig/action_sheet_complex.png ':size=512')
-___
 
 # **Hardware**
 
@@ -977,7 +971,6 @@ else
     Debug.Log("Device does not support biometric authentication.");
 }
 ```
-___
 
 # **Other**
 

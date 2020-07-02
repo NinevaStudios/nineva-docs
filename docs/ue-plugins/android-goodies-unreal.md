@@ -3,7 +3,8 @@
 Welcome to Android Goodies Documentation for Unreal Engine
 
 ?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
-___
+
+---
 
 # CHANGELOG
 

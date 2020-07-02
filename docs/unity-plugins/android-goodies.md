@@ -1,6 +1,8 @@
-# Android Goodies PRO Documentation
+﻿# Android Goodies PRO Documentation
 
 **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+
+---
 
 ![alt text](/images/ag/logo.png ':size=256')
 
@@ -68,8 +70,6 @@ To build and run the demo scene just connect your Android device switch target p
 You will see the menu like this on device where you can start testing:
 
 ![alt text](/images/ag/demo-home.png ':size=512')
-
-___
 
 # **App Interaction**
 
@@ -768,7 +768,6 @@ Otherwise, you will get an `java.lang.illegalStateException` exception.
 var recordingWasStopped = AGMediaRecorder.StopRecording();
 AGUIMisc.ShowToast(recordingWasStopped ? "Stopped recording" : "Failed to stop recording");
 ```
-___
 
 # **UI**
 
@@ -1620,7 +1619,6 @@ AndroidGoodiesMisc.EnableImmersiveMode();
 This class allows you to create and manage shortcuts in your app. For guidance about using shortcuts, see [App shortcuts](https://developer.android.com/guide/topics/ui/shortcuts/).
 
 This class exposes the API of https://developer.android.com/reference/android/content/pm/ShortcutManager
-___
 
 # **Retrieving Info**
 
@@ -1706,7 +1704,6 @@ Currently available functionality:
   + Getting the telephony device identifier. ( `AGTelephony.TelephonyDeviceId` )
   + Getting the telephony sim serial number. ( `AGTelephony.TelephonySimSerialNumber` )
   + Getting the ISO country code. ( `AGTelephony.NetworkCountryIso` )
-___
 
 # **Hardware**
 
@@ -2175,7 +2172,6 @@ AGFingerprintScanner.Decrypt(Key, _encryptedValue /* Encrypted value that you sa
 ```
 
 If you want to cancel continuous scanning you have to call `AGFingerprintScanner.Cancel()` method.
-___
 
 # **Storage**
 
@@ -2288,7 +2284,6 @@ To clear all the saved values:
 _sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
 AGSharedPrefs.Clear(_sharedPrefsFileKey);
 ```
-___
 
 # **Other**
 
@@ -2403,11 +2398,8 @@ Use `AGPrintHelper.PrintHtmlPage` to print an HTML page from the source HTML-for
 
 Call `AGPrintHelper.PrintHtmlPageFromUrl` method to print an HTML page from the respective URL.
 ***Note:*** This method takes time to load the page from the internet.
-___
 
  # **FAQ**
-
----
 
  ## Can't Build my project after importing Android Goodies
 
@@ -2419,15 +2411,11 @@ When your build fails, please check the console, it will have a very long error 
 
 **A #2:** The error is *java.lang. UnsupportedClassVersionError: com/android/dx/command/Main : Unsupported major.minor version 52.0* - this means you need to update your Java to the latest JDK8 ([Download here and install](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)). **Don't forget to set the JDK inside Unity -> Preferences -> External Tools -> JDK to newly downloaded version**
 
----
-
 ## I click buttons in the demo but nothing happens
 
 **Q:** I click buttons in the demo but nothing happens, why?
 
 **A:** 1) Make sure you switch to Android Build Target in Build Settings. If this doesn't work please right-click on `AndroidGoodies` folder and click "Reimport" from context menu so it could recompile.
-
----
 
 ## AndroidManifest.xml
 
@@ -2435,15 +2423,11 @@ When your build fails, please check the console, it will have a very long error 
 
 **A:** Yes, if you intend to build the demo app. Although, when you import the package it will override your `AndroidManifest.xml` in `Plugins/Android` folder. Make sure to backup your existing manifest or uncheck `AndroidManifest.xml` in `Plugins/Android` when importing the package.
 
----
-
 ## Permissions
 
 **Q:** How do I found out what permissions I have to put in my `AndroidManifest.xml` file?
 
 **A:** Every class has permissions listed in xml reference docs, also check the documenation for specific class in the right column of this documentation. Also check the permissions provided in `AndroidManifest.xml` in `Plugins/Android` folder - it contains all the required permissions for all the functions.
-
----
 
 ## Overriding `UnityPlayerActivity` 
 

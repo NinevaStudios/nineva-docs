@@ -963,8 +963,6 @@ public void OnDisplayStreetViewPanaroma()
 - **Q:** I am getting errors when trying to build the project or crashes at runtime, what should I do?
 - **A:** Contact us on [Discord server](https://bit.ly/nineva_support_discord) but collect and provide all the useful info that can help us troubleshoot the issue, such as: Logcat logs on Androud, XCode logs from iOS, the code that you use, etc.
 
----
-
 # **Troubleshooting**
 
 This page explains how to troubleshoot problems when you can't build your Android project.

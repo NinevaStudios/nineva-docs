@@ -1,6 +1,8 @@
-# **Admob Goodies Documentation for Unreal Engine**
+﻿# **Admob Goodies Documentation for Unreal Engine**
 
 Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!
+
+---
 
 This plugin gives you the ability to load and show banner, interstitial, and rewarded video ads.
 Note that this plugin wraps official AdMob API and requires a valid AdMob account. Please follow the [instructions](#getting-started) on how to setup your AdMob account and project settings for this plugin to function properly.

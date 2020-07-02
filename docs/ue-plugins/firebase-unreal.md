@@ -76,8 +76,6 @@ If there is a need, you can reauthenticate or reload the current user by calling
 
 Call `Delete` on the FirebaseUser object to delete the user from your user database.
 
-___
-
 # **Cloud Storage**
 
 ## Initial Setup
@@ -147,7 +145,6 @@ First you need to create a `NewStorageMetadataValues` object, and after that set
 To remove files from cloud storage use `DeleteFile` method.
 
 ![](images/firebase/cloud-storage/CloudStorageDeleteFile.png)
-___
 
 # **Remote Config**
 
@@ -198,5 +195,3 @@ You can set in-app default parameter values in Remote Config, so that your app b
 Prior to setting default values, you first need to make a map of parameter names and default parameter values, then call the `SetDefaults` with passing  afterwards.
 
 ![](images/firebase/remote-config/FirebaseRCSetup.png)
-
-___
