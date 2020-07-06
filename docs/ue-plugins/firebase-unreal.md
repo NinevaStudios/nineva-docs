@@ -205,6 +205,301 @@ To remove files from cloud storage use `DeleteFile` method.
 
 ![](images/firebase/cloud-storage/CloudStorageDeleteFile.png)
 
+# **Realtime Database**
+
+## Initial Setup
+
+Firebase supports two types of databases: realtime database and firestore. This plugin, currently, only supports the realtime database. You can find the differences between these databases and which one will suit you better on the [official site](https://firebase.google.com/docs/database/rtdb-vs-firestore).
+
+If you are set on using the realtime database you will need to fitst create it in your Firebase console:
+
+![](images/firebase/db/DbCreate.png)
+
+?> This plugin can connect only to the default realtime database. Multiple databases are not supported.
+
+Setup rules to be able to read/write data from your database by following the official [instructions](https://firebase.google.com/docs/database/security).
+
+!> If you decide to setup rules that anyone can read/write data do not forget to modify them when releasing your app.
+
+## Settings
+
+* Enable data persistence
+
+  If enabled clients will cache synchronized data and keep track of all writes you've initiated while your application is running.
+
+* Cache size
+
+  Size of the cache used for persistence storage (default is 10 MB).
+
+![](images/firebase/db/DbSettings.png)
+
+## Functions
+
+!> The plugin demo contains examples on how to use most of these nodes. The demo will write to your database and some examples require specific data to be already present in the database. Please examine the blueprints before executing any demo functionality.
+
+### Database Reference
+
+The database reference is the entry point from where you modify data.
+
+* Create database root ref
+
+  Get a reference to the root of your database.
+
+* Create database ref from path
+
+  Get a reference to a specific node in your database. Path can be a name or an actual path seperated by **/**.
+
+* Root
+
+  Get a reference to the root of your database.
+
+* Child
+
+  Get a reference to a specific child node in your database.
+
+* Parent
+
+  Get a reference to the parent node.
+
+![](images/firebase/db/DbMakeRef.png)
+
+### Read/Write Data
+
+All data is written and read as a database variants. This is a special type that can be transformed into a primitive type (integet, float, bool, string) or into a container of other variants. You can convert supported data types to a variant by simply dragging the value out pin to the variant in pin. You will be notified that a conversions is possible, you will see an error otherwise.
+
+#### Write
+
+* Set value
+
+![](images/firebase/db/DbSetVal.png)
+
+* Set array of values
+
+![](images/firebase/db/DbSetArray.png)
+
+* Set map of values
+
+![](images/firebase/db/DbSetMap.png)
+
+* Composite containers
+
+  A variant can be a container that can also contain other containers (e. g. a map where one of it's values ia an array). Try to avoid deep nesting of containers as the more complicated data you are trying to write the more room for error you introduce.
+
+![](images/firebase/db/DbCompositeContainer.png)
+
+!> UE4 does not support automatic conversion of collections to collection items. When trying to do this you will see the following error:
+
+![](images/firebase/db/DbCompositeContainerError.png)
+
+?> At any point where automatic conversion to a variant does not work you can invoke the variant conversion node manually. Siimply search the node by name *variant* and you should see it.
+
+![](images/firebase/db/DbManualVariantConv.png)
+
+* Set priority
+
+  Sets the priority for the current database node.
+
+![](images/firebase/db/DbSetPriority.png)
+
+* Update children
+
+  Update the specific child keys to the specified values.
+
+![](images/firebase/db/DbUpdateChildren.png)
+
+* Push
+
+  Create a new child at the current location. The name is auto generated.
+
+![](images/firebase/db/DbPush.png)
+
+#### Read
+
+* Get value
+
+  You can request the value once.
+
+![](images/firebase/db/DbGetValue.png)
+
+If the value was retrieved properly you will receive it in a callback in the form of a Data Snapshot object. You can get the following data from this object:
+
+* Get value
+* Get key
+* Get priority
+
+![](images/firebase/db/DbSnapshotGetters.png)
+
+Value and priority are variant objects. You can find out what type of value the variant holds by breaking it and checking the Type field.
+
+![](images/firebase/db/DbVariantTypeEnum.png)
+
+There are two ways to get the actual values.
+
+* Direct access by type
+  These nodes return the value if the provided type is the same as the variant or a default value for the type requested. This never fails.
+* Try get type nodes
+  These nodes try to get the value of a specified type and will fail if the variant does not hold this type.
+
+![](images/firebase/db/DbVariantRead.png)
+
+Data snapshots support navigation and these checks:
+
+* Exists
+
+  Returns true if the snapshot contains data.
+
+* Has children
+
+  Returns true if the snapshot contains any children,
+
+* Has child
+
+  Return true if the snapshot contains a specific child.
+
+* Child
+
+  Get a snapshot of a specific child node.
+
+* Get children count
+
+  Get the count of children of this node.
+
+* Get childdren
+
+  Get all child snapshots as an array.
+
+![](images/firebase/db/DbSnapshotNav.png)
+
+If an error occurs during value retrieval you can react to it in the error callback.
+
+![](images/firebase/db/DbErrorCallback.png)
+
+#### Subscribe
+
+* Value listener
+
+  Subscribe/unsubscribe to receive events when a value changes at the current path.
+
+![](images/firebase/db/DbSubValueChange.png)
+
+* Child listener
+
+  Subscribe/unsubscribe to receive events when a child node changes at the current path.
+
+![](images/firebase/db/DbSubChildChange.png)
+
+* Child event
+
+  When subscribed to child events you may receive the following event types:
+  - Added
+  - Changed
+  - Removed
+  - Moved
+
+![](images/firebase/db/DbChildChangeEventType.png)
+
+!> If you subscribe to the same database location multiple times you will receive multiple callbacks when values change at that locations. If this happens unintentionally double check if your are not subscribing from a database object that was created by a Make function directly as pure blueprint nodes can execute multiple times. In these cases always store the database reference as avariable.
+
+### Queries
+
+!> Some sort and filtering options cannot be combined. These combinations are checked during runtime so you will spot errors when your app launched or executed a query. On Android you should see an error message in the device console. On IOS your app will crash if an invalid query is found, refer to the XCode debug console to find the reason.
+
+#### Sort data
+
+* Order By Child
+* Order By Value
+* Order By Key
+* Order By Priority
+
+![](images/firebase/db/DbOrderBy.png)
+
+#### Filter data
+
+* StartAt
+
+  Return items greater than or equal to the specified key or value.
+
+![](images/firebase/db/DbStartAt.png)
+
+* EndAt
+
+  Return items less than or equal to the specified key or value.
+
+![](images/firebase/db/DbEndAt.png)
+
+* EqualTo
+
+  Return items equal to the specified key or value.
+
+![](images/firebase/db/DbEqualTo.png)
+
+* Limit
+
+  Sets the maximum number of items to return from the beginning/end of the ordered list of results.
+
+![](images/firebase/db/DbLimitQuery.png)
+
+### Transactions
+
+When working with data that could be corrupted by concurrent modifications, such as incremental counters, you can use a transaction.
+
+* Run transaction
+
+  This will execute a transaction handler.
+
+![](images/firebase/db/DbRunTransaction.png)
+
+#### Transaction Handler
+
+To create a transaction handler follow the steps:
+
+1. Create a blueprint and inherit from FGTransactionHandler
+
+![](images/firebase/db/DbTransactionInherit.png)
+
+2. Override the DoTransaction method
+
+![](images/firebase/db/DbTransactionOverride.png)
+
+3. Implement the handler
+
+![](images/firebase/db/DbTransactionHandlerExample.png)
+
+The handler operates on a MutableData object. After all of the operations are done you need to return Success for the transaction operation to take effect.
+
+Mutable data supports the following operations:
+
+* Get value
+* Get key
+* Get priority
+
+![](images/firebase/db/DbMutableDataGet.png)
+
+* Set value
+* Set priority
+
+![](images/firebase/db/DbMutableDataSet.png)
+
+* Has children
+* Has child
+* Child
+* Get children count
+* Get childdren
+
+![](images/firebase/db/DbMutableDataNav.png)
+
+### Connection state
+
+Manually disconnect/connect the Firebase Database client from/to the server.
+
+![](images/firebase/db/DbConnState.png)
+
+### Keep synced
+
+By executing this node on a location, the data for that location will be automatically downloaded and kept in sync, even when no listeners are attached for that location.
+
+![](images/firebase/db/DbKeepSynced.png)
+
 # **Remote Config**
 
 ## Initial Setup
