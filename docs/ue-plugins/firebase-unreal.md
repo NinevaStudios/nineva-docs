@@ -1,3 +1,21 @@
+# **Firebase Goodies**
+
+Create a Firebase project, follow the instructions in this [video](https://www.youtube.com/watch?v=6juww5Lmvgo).
+
+In the Project Settings of your Firebase console, create an Android/iOS app providing the required information.
+You will have to provide the SHA1 fingerprints for the keystores that will be used to sign the application on Android. The information on how to generate a keystore and read its fingerprint can be found [here](https://stackoverflow.com/questions/15727912/sha-1-fingerprint-of-keystore-certificate).
+After this, you should download the *google-services.json* (for Android) and/or *GoogleService-info.plist* files.
+
+![](images/firebase/auth/AuthConfigGoogleServices.png)
+
+After the setup is complete in the Firebase console, you can open your UE4 project and go to Project Settings -> Firebase Goodies. You should provide the path to previously downloaded *google-services.json* (for Android) and/or *GoogleService-info.plist* files for them to be parsed by the plugin.
+
+![](images/firebase/Settings.png)
+
+!> On MacOS, the UE4 file picker is returning a relative path when the plugin requires an absolute path, because of this using the file picker will not initialize the plugin correctly. Please copy the absolute path to the *GoogleService-info.plist* file manually. In order to get the full path to the file, right click on it in Finder and hold the Option key. After the menu changes, select the *Copy as Pathname* option and paste it into the corresponding field in the Project Settings.
+
+?> Most of the API tries to be as close as possible to the official Firebase API, because of this we advise to look at the [official documentation](https://firebase.google.com/docs) from Google as this might help you understand some concepts better with the examples they provide.
+
 # **Analytics**
 
 ## Initial Setup
@@ -62,35 +80,19 @@ After enabling analytics in your Firebase console you're all set to start loggin
 
 ## Initial Setup
 
-You have to setup the user authentication feature in the firebase console for your firebase project to be able to use the auth functionality of the plugin.
-
-If you have not created the Firebase project yet, please, follow the instructions in this [video](https://www.youtube.com/watch?v=6juww5Lmvgo).
-
-After the project is created, you can go to the Authentication section on the left, and there you can enable all the required sign in providers for your application.
+You have to setup the user authentication feature in the firebase console for your firebase project to be able to use the auth functionality of the plugin. Go to the Authentication section on your Firebase console, and there you can enable all the required sign in providers for your application.
 
 ![](images/firebase/auth/AuthSetup.png)
 
 !> Some of the providers may require additional setup. Please, check the official Firebase documentation on how to enable the different sign in methods if you are having any problems with it.
 
-In the Project Settings in the Firebase console, create an Android/iOS app providing the required information.
-You will have to provide the SHA1 fingerprints for the keystores that will be used to sign the application on Android. The information on how to generate a keystore and read its fingerprint can be found [here](https://stackoverflow.com/questions/15727912/sha-1-fingerprint-of-keystore-certificate).
-After this, you should download the google-services.json (for Android) and/or GoogleService-info.plist files, you will need them later.
-
-![](images/firebase/auth/AuthConfigGoogleServices.png)
-
-After the setup is complete in the Firebase console, you can open your UE4 project and go to Project Settings -> Firebase Goodies. You should provide the path to previously downloaded google-services.json (for Android) and/or GoogleService-info.plist files for them to be parsed by the plugin.
-
-![](images/firebase/auth/AuthConfigGoogleServices2.png)
-
-You should also provide a Client ID for Android. It can be found in the google-services.json file under the `oauth_client` section - the one with the `client_type` value of `3`.
+You have to provide a Client ID for Android in the plugin settings. It can be found in the *google-services.json* file under the `oauth_client` section - the one with the `client_type` value of `3`.
 
 ![](images/firebase/auth/AuthConfigGoogleServices3.png)
 
-!> On Mac, the file picker is somehow broken in the UE4, so you will have to manually paste the path to the files. In order to get the full path to the file, right click it in Finder and hold the Option key. After the menu changes, select the Copy as Pathname option and paste it into the corresponding field in the Project Settings.
-
 ## Functions
 
-Auth library of the plugin allows manipulating users and sessions. The official documentation can be found here for [Android](https://firebase.google.com/docs/auth/android/start) and [iOS](https://firebase.google.com/docs/auth/ios/start).
+Auth library of the plugin allows manipulating users and sessions.
 
 First of all, you should activate the listeners that will be triggered whenever user or token authentication state changes, by calling the `InitListeners` method. This will allow you to react to these changes accordingly during the lifetime of the application.
 
@@ -148,7 +150,7 @@ After the project is created you can go to the Cloud Storage Section on the left
 
 ## Functions
 
-Cloud Storage library of the plugin allows manipulating files. The official documentation can be found here for [Android](https://firebase.google.com/docs/storage/android/start) and [IOS](https://firebase.google.com/docs/storage/ios/start).
+Cloud Storage library of the plugin allows manipulating files.
 
 !> In order to work with cloud storage you need to be signed in to firebase. Please refer to [Auth page](#Authentication) for setup of authentication.
 
