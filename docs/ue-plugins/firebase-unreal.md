@@ -1,3 +1,62 @@
+# **Analytics**
+
+## Initial Setup
+
+Analytics collects usage and behavior data for your app. There are two types of information you can log:
+* Events - any event that is happenning in you app with or without parameters
+* User properties - attributes you asign to a certain group of your users (e. g. language preference)
+
+After enabling analytics in your Firebase console you're all set to start logging events.
+
+?> Events usually take up to an hour to appear on the Firebase console dashboard. For testing you can tell your device to send debug analytics events. Please follow the official instruction [here](https://support.google.com/firebase/answer/7201382) to activate this feature.
+
+## Functions
+
+### State control
+
+* Enable/Disable analytics collection
+* Reset analytics data
+* Specify session timeout duration (default is 30 minutes)
+
+![](images/firebase/analytics/AnalyticsStateControl.png)
+
+### User properties
+
+* Set user ID
+
+  Sets the user ID property
+
+* Set user property
+
+  Sets a user property to a given value
+
+![](images/firebase/analytics/AnalyticsUserProp.png)
+
+### Screen tracking
+
+* Set current screen
+
+![](images/firebase/analytics/AnalyticsScreenTracking.png)
+
+### Event loging
+
+* Log event with parameter
+
+  You can log an event with one of the following parameter types: Integer, Float, String. Use a respective CreateParameter node to get the desired type.
+
+![](images/firebase/analytics/AnalyticsCreateEventParams.png)
+
+* Parameter value
+
+  You can change the parameter's value.
+
+![](images/firebase/analytics/AnalyticsSetParamValue.png)
+
+* Log event with parameters
+
+  You can log an event with multiple parameters by putting them in an array.
+
+![](images/firebase/analytics/AnalyticsParamArray.png)
 # **Authentication**
 
 ## Initial Setup
