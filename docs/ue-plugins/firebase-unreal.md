@@ -3,12 +3,12 @@
 ## Initial Setup
 
 Analytics collects usage and behavior data for your app. There are two types of information you can log:
-* Events - any event that is happenning in you app with or without parameters
-* User properties - attributes you asign to a certain group of your users (e. g. language preference)
+* Events - any event that is happening in your app with or without parameters
+* User properties - attributes you assign to a certain group of your users (e. g. language preference)
 
 After enabling analytics in your Firebase console you're all set to start logging events.
 
-?> Events usually take up to an hour to appear on the Firebase console dashboard. For testing you can tell your device to send debug analytics events. Please follow the official instruction [here](https://support.google.com/firebase/answer/7201382) to activate this feature.
+?> Events usually take up to an hour to appear on the Firebase console dashboard. For testing, you can tell your device to send debug analytics events. Please follow the official instruction [here](https://support.google.com/firebase/answer/7201382) to activate this feature.
 
 ## Functions
 
@@ -57,15 +57,16 @@ After enabling analytics in your Firebase console you're all set to start loggin
   You can log an event with multiple parameters by putting them in an array.
 
 ![](images/firebase/analytics/AnalyticsParamArray.png)
+
 # **Authentication**
 
 ## Initial Setup
 
-You have to setup the user authentication feature in the firebase console for your firebase project to be able to use the auth functionality of the plugin. 
+You have to setup the user authentication feature in the firebase console for your firebase project to be able to use the auth functionality of the plugin.
 
 If you have not created the Firebase project yet, please, follow the instructions in this [video](https://www.youtube.com/watch?v=6juww5Lmvgo).
 
-After the project is created, you can go to the Authentication section on the left and there you can enable all the required sign in providers for your application.
+After the project is created, you can go to the Authentication section on the left, and there you can enable all the required sign in providers for your application.
 
 ![](images/firebase/auth/AuthSetup.png)
 
@@ -77,7 +78,7 @@ After this, you should download the google-services.json (for Android) and/or Go
 
 ![](images/firebase/auth/AuthConfigGoogleServices.png)
 
-After the setup is complete in the Firebase console, you can open your UE4 project and go to Project Settings -> Firebase Goodies. You should provide the path to previously downloaded google-services.json (for Android) and/or GoogleService-info.plist files in order for them to be parsed by the plugin. 
+After the setup is complete in the Firebase console, you can open your UE4 project and go to Project Settings -> Firebase Goodies. You should provide the path to previously downloaded google-services.json (for Android) and/or GoogleService-info.plist files for them to be parsed by the plugin.
 
 ![](images/firebase/auth/AuthConfigGoogleServices2.png)
 
@@ -96,7 +97,7 @@ First of all, you should activate the listeners that will be triggered whenever 
 ![](images/firebase/auth/AuthInit.png)
 
 ### User registration and login
-You can create a new user with an email and password by calling the `CreateUser` method. 
+You can create a new user with an email and password by calling the `CreateUser` method.
 
 ![](images/firebase/auth/AuthCreateUser.png)
 
@@ -112,7 +113,7 @@ You can also use the anonymous sign in by calling the `SignInAnonymously` method
 
 You can also obtain a reference to the current user object at any time by calling the `CreateUser` method.
 
-You can also link a phone number to the existing user. You have to call the `VerifyPhoneNumber` function to start the phone number verification process. On most devices the user experience is the following: when you call this method after obtaining the user's phone number, they will either receive an SMS or a push notification with the code, while the application will receive OnSmsSent callback with the Verification ID needed for creating the AuthCredentials object along with the verification code, obtained by the user. Sometimes on Android devices the operation will be performed silently by the operating system, allowing you to use the AuthCredentials object from the OnSuccess callback. Your application should always be able to handle both cases.
+You can also link a phone number to the existing user. You have to call the `VerifyPhoneNumber` function to start the phone number verification process. On most devices the user experience is the following: when you call this method after obtaining the user's phone number, they will either receive an SMS or a push notification with the code, while the application will receive OnSmsSent callback with the Verification ID needed for creating the AuthCredentials object along with the verification code, obtained by the user. Sometimes on Android devices, the operation will be performed silently by the operating system, allowing you to use the AuthCredentials object from the OnSuccess callback. Your application should always be able to handle both cases.
 
 ![](images/firebase/auth/AuthVerifyPhoneNum.png)
 
@@ -122,14 +123,14 @@ Call `SignOut` function to sign the current user out.
 
 ### User management
 
-Whenever you get access to the FirebaseUser object, you should check if it is valid by calling the `IsNotNull` function on it. If the function returns false, you should not perform any operations with it. By calling this function on the `GetCurrentUser` object, you can check whether there is a user signed into your application and prompt the user to sign in otherwise.
+Whenever you get access to the FirebaseUser object, you should check if it is valid by calling the `IsNotNull` function on it. If the function returns false, you should not perform any operations with it. By calling this function on the `GetCurrentUser` object, you can check whether there is a user signed in to your application and prompt the user to sign in otherwise.
 
-You can get some of the user data, for example unique user ID, display name, email, phone number, avatar URL, etc.
+You can get some of the user data, for example, unique user ID, display name, email, phone number, avatar URL, etc.
 You can also update this information by calling the respective methods, for example, `UpdateEmail`.
 
 !> You can only update the user's phone number after successful phone verification with the obtained AuthCredentials object.
 
-You can also link additional credentials to the user, for example, Google and Facebook credentials. You can also get a list of all providers for user (`FetchProvidersForEmail`) and unlink them (`UnlinkProvider`). 
+You can also link additional credentials to the user, for example, Google and Facebook credentials. You can also get a list of all providers for user (`FetchProvidersForEmail`) and unlink them (`UnlinkProvider`).
 
 If there is a need, you can reauthenticate or reload the current user by calling the respective methods.
 
@@ -149,7 +150,7 @@ After the project is created you can go to the Cloud Storage Section on the left
 
 Cloud Storage library of the plugin allows manipulating files. The official documentation can be found here for [Android](https://firebase.google.com/docs/storage/android/start) and [IOS](https://firebase.google.com/docs/storage/ios/start).
 
-!> In order to work with cloud storage user needs to be signed in to firebase. Please refer to [Auth page](#Authentication) for setup of authentication.
+!> In order to work with cloud storage you need to be signed in to firebase. Please refer to [Auth page](#Authentication) for setup of authentication.
 
 ### Upload files
 
@@ -161,7 +162,7 @@ Or upload from memory buffer by calling `UploadFromDataInMemory` method.
 
 ![](images/firebase/cloud-storage/CloudStorageUploadFromMemory.png)
 
-Both methods return progress of uploading in % during the whole process. 
+Both methods return progress of uploading in % during the whole process.
 
 ### Download files
 
@@ -169,11 +170,11 @@ For downloading files from cloud storage to the device use `DownloadToLocalFile`
 
 ![](images/firebase/cloud-storage/CloudStorageDownloadToLocal.png)
 
-For android you can choose the directory to download a file to by selecting the corresponding environment from the dropdown list.
+For Android, you can choose the directory to download a file to by selecting the corresponding environment from the dropdown list.
 
 ![](images/firebase/cloud-storage/CloudStorageDownloadToLocalEnv.png)
 
-For downloading file into a memory buffer use `DownloadInMemory` method.
+For downloading a file into a memory buffer use `DownloadInMemory` method.
 
 ![](images/firebase/cloud-storage/CloudStorageDownloadToMemory.png)
 
@@ -185,17 +186,17 @@ In case you need to get Url for downloading the file call `GetDownloadUrl` metho
 
 ### File metadata
 
-After uploading a file to cloud storage, you can obtain file's metadata by calling `GetFileMetadata` method.
+After uploading a file to cloud storage, you can obtain the file's metadata by calling `GetFileMetadata` method.
 
 ![](images/firebase/cloud-storage/CloudStorageGetFileMetadata.png)
 
-Successful callback returns metadata object reference, which you can use to retrieve metadata properties, for a full list of properties refer to [this section](https://firebase.google.com/docs/storage/android/file-metadata#file_metadata_properties).
+Successful callback returns metadata object reference, which you can use to retrieve metadata properties, for a full list of properties, refer to [this section](https://firebase.google.com/docs/storage/android/file-metadata#file_metadata_properties).
 
 You can update file metadata at any time after the file is uploaded by using `UpdateFileMetadata` method.
 
 ![](images/firebase/cloud-storage/CloudStorageUpdateFileMetadata.png)
 
-First you need to create a `NewStorageMetadataValues` object, and after that set all the metadata properties needed. For the list of all the properties that can be set you can refer to [this section](https://firebase.google.com/docs/reference/android/com/google/firebase/storage/StorageMetadata.Builder#public-method-summary).
+First, you need to create a `NewStorageMetadataValues` object, and after that set all the metadata properties needed. For the list of all the properties that can be set, you can refer to [this section](https://firebase.google.com/docs/reference/android/com/google/firebase/storage/StorageMetadata.Builder#public-method-summary).
 
 !> Method `SetContentLanguage` accepts language abbreviations consisting of two letters, we weren't able to find the exact list, but most of [ISO 639-1 Language Codes](http://www.mathguide.de/info/tools/languagecode.html) work.
 
@@ -211,7 +212,7 @@ To remove files from cloud storage use `DeleteFile` method.
 
 Firebase supports two types of databases: realtime database and firestore. This plugin, currently, only supports the realtime database. You can find the differences between these databases and which one will suit you better on the [official site](https://firebase.google.com/docs/database/rtdb-vs-firestore).
 
-If you are set on using the realtime database you will need to fitst create it in your Firebase console:
+If you are set on using the realtime database you will need to first create it in your Firebase console:
 
 ![](images/firebase/db/DbCreate.png)
 
@@ -247,7 +248,7 @@ The database reference is the entry point from where you modify data.
 
 * Create database ref from path
 
-  Get a reference to a specific node in your database. Path can be a name or an actual path seperated by **/**.
+  Get a reference to a specific node in your database. Path can be a name or an actual path separated by **/**.
 
 * Root
 
@@ -265,7 +266,7 @@ The database reference is the entry point from where you modify data.
 
 ### Read/Write Data
 
-All data is written and read as a database variants. This is a special type that can be transformed into a primitive type (integet, float, bool, string) or into a container of other variants. You can convert supported data types to a variant by simply dragging the value out pin to the variant in pin. You will be notified that a conversions is possible, you will see an error otherwise.
+All data is written and read as database variants. This is a special type that can be transformed into a primitive type (integer, float, bool, string) or a container of other variants. You can convert supported data types to a variant by simply dragging the value out pin to the variant in pin. You will be notified that a conversions is possible, you will see an error otherwise.
 
 #### Write
 
@@ -283,7 +284,7 @@ All data is written and read as a database variants. This is a special type that
 
 * Composite containers
 
-  A variant can be a container that can also contain other containers (e. g. a map where one of it's values ia an array). Try to avoid deep nesting of containers as the more complicated data you are trying to write the more room for error you introduce.
+  A variant can be a container that can also contain other containers (e. g. a map where one of its values in an array). Try to avoid deep nesting of containers as the more complicated data you are trying to write the more room for error you introduce.
 
 ![](images/firebase/db/DbCompositeContainer.png)
 
@@ -291,7 +292,7 @@ All data is written and read as a database variants. This is a special type that
 
 ![](images/firebase/db/DbCompositeContainerError.png)
 
-?> At any point where automatic conversion to a variant does not work you can invoke the variant conversion node manually. Siimply search the node by name *variant* and you should see it.
+?> At any point where automatic conversion to a variant does not work you can invoke the variant conversion node manually. Simply search the node by name *variant* and you should see it.
 
 ![](images/firebase/db/DbManualVariantConv.png)
 
@@ -309,7 +310,7 @@ All data is written and read as a database variants. This is a special type that
 
 * Push
 
-  Create a new child at the current location. The name is auto generated.
+  Create a new child at the current location. The name is auto-generated.
 
 ![](images/firebase/db/DbPush.png)
 
@@ -364,7 +365,7 @@ Data snapshots support navigation and these checks:
 
   Get the count of children of this node.
 
-* Get childdren
+* Get children
 
   Get all child snapshots as an array.
 
@@ -398,11 +399,11 @@ If an error occurs during value retrieval you can react to it in the error callb
 
 ![](images/firebase/db/DbChildChangeEventType.png)
 
-!> If you subscribe to the same database location multiple times you will receive multiple callbacks when values change at that locations. If this happens unintentionally double check if your are not subscribing from a database object that was created by a Make function directly as pure blueprint nodes can execute multiple times. In these cases always store the database reference as avariable.
+!> If you subscribe to the same database location multiple times you will receive multiple callbacks when values change at that locations. If this happens unintentionally double check if you are not subscribing from a database object that was created by a Make function directly as pure blueprint nodes can execute multiple times. In these cases always store the database reference as available.
 
 ### Queries
 
-!> Some sort and filtering options cannot be combined. These combinations are checked during runtime so you will spot errors when your app launched or executed a query. On Android you should see an error message in the device console. On IOS your app will crash if an invalid query is found, refer to the XCode debug console to find the reason.
+!> Some sort and filtering options cannot be combined. These combinations are checked during runtime so you will spot errors when your app launched or executed a query. On Android, you should see an error message in the device console. On IOS your app will crash if an invalid query is found, refer to the XCode debug console to find the reason.
 
 #### Sort data
 
@@ -484,7 +485,7 @@ Mutable data supports the following operations:
 * Has child
 * Child
 * Get children count
-* Get childdren
+* Get children
 
 ![](images/firebase/db/DbMutableDataNav.png)
 
@@ -504,7 +505,7 @@ By executing this node on a location, the data for that location will be automat
 
 ## Initial Setup
 
-To use Firebase Remote Config in you application you need to login to firebase console and add parameters you need, in Remote Config tab. This plugin can be used in many different ways, for more details refer to [Remote Config use cases](https://firebase.google.com/docs/remote-config/use-cases).  
+To use Firebase Remote Config in your application you need to login to firebase console and add parameters you need, in Remote Config tab. This plugin can be used in many different ways, for more details refer to [Remote Config use cases](https://firebase.google.com/docs/remote-config/use-cases).
 
 ![](images/firebase/remote-config/FirebaseRCSetup.png)
 
@@ -518,21 +519,21 @@ First of all you should set the minimum fetch interval and fetch timeout of conf
 
 ### Fetch remote config values
 
-To fetch parameter values from the Remote Config backend, call `Fetch` method. Any values that that you set in the backend are fetched, adhering to the default minimum fetch interval
+To fetch parameter values from the Remote Config backend, call `Fetch` method. Any values that you set in the backend are fetched, adhering to the default minimum fetch interval
 
-![](images/firebase/remote-config/FirebaseRCFetch.png) 
+![](images/firebase/remote-config/FirebaseRCFetch.png)
 
-In case you need to set custom interval for fetching, call `FetchWithInteval` method. It will start fetching configs, adhering to the specified minimum fetch interval. 
+In case you need to set a custom interval for fetching, call `FetchWithInteval` method. It will start fetching configs, adhering to the specified minimum fetch interval.
 
 ![](images/firebase/remote-config/FirebaseRCFetchWithInterval.png)
 
-Ta make fetched parameter values available to youd app, call `Activate` method.
+Ta make fetched parameter values available to your app, call `Activate` method.
 
 ![](images/firebase/remote-config/FirebaseRCActivate.png)
 
-If you want to fetch and activate values in one call, use `FetchAndActivate` method. 
+If you want to fetch and activate values in one call, use `FetchAndActivate` method.
 
-![](images/firebase/remote-config/FirebaseRCFetchAndActivate.png) 
+![](images/firebase/remote-config/FirebaseRCFetchAndActivate.png)
 
 ### Read config values
 
@@ -546,6 +547,6 @@ If you set values in the backend, fetch them, and then activate them, those valu
 
 You can set in-app default parameter values in Remote Config, so that your app behaves as intended before it connects to the Remote Config backend, and so that default values are available if none are set in the backend.
 
-Prior to setting default values, you first need to make a map of parameter names and default parameter values, then call the `SetDefaults` with passing  afterwards.
+Before setting the default values, you first need to make a map of parameter names and default parameter values, then call the `SetDefaults` methods with this map.
 
 ![](images/firebase/remote-config/FirebaseRCSetup.png)
