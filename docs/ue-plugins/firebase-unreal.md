@@ -152,7 +152,7 @@ After the project is created you can go to the Cloud Storage Section on the left
 
 Cloud Storage library of the plugin allows manipulating files.
 
-!> In order to work with cloud storage you need to be signed in to firebase. Please refer to [Auth page](#Authentication) for setup of authentication.
+!> In order to work with cloud storage user needs to be signed in to firebase. Please refer to [Auth page](#Authentication) for setup of authentication.
 
 ### Upload files
 
