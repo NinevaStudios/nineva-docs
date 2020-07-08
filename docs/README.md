@@ -27,3 +27,7 @@ Useful links:
 ## Hire us!
 
 We often do custom contract work, so feel free to reach us on our [Discord](https://bit.ly/nineva_support_discord) or drop a line to info at ninevastudios.com
+
+---
+
+Powered by Docsify, for setup refer: https://docsify.js.org/#/quickstart
