@@ -12,6 +12,8 @@ After the setup is complete in the Firebase console, you can open your UE4 proje
 
 ![](images/firebase/Settings.png)
 
+!> If you do not provide a valid path to the *google-services.json* and/or *GoogleService-info.plist* file your application will crash on start. A descriptive error message in the device logs will indicate that it was not able to find these files.
+
 !> On MacOS, the UE4 file picker is returning a relative path when the plugin requires an absolute path, because of this using the file picker will not initialize the plugin correctly. Please copy the absolute path to the *GoogleService-info.plist* file manually. In order to get the full path to the file, right click on it in Finder and hold the Option key. After the menu changes, select the *Copy as Pathname* option and paste it into the corresponding field in the Project Settings.
 
 ?> Most of the API tries to be as close as possible to the official Firebase API, because of this we advise to look at the [official documentation](https://firebase.google.com/docs) from Google as this might help you understand some concepts better with the examples they provide.
