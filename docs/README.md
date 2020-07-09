@@ -15,6 +15,7 @@ Useful links:
 * [Firebase Goodies](ue-plugins/firebase-unreal)
 * [Android Goodies](ue-plugins/android-goodies-unreal)
 * [iOS Goodies](ue-plugins/ios-goodies)
+* [Facebook Goodies](ue-plugins/facebook-goodies)
 * [BLE Utilities](ue-plugins/ble-utilities)
 * [Google maps](ue-plugins/google-maps-unreal)
 
