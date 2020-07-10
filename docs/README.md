@@ -32,5 +32,3 @@ We often do custom contract work, so feel free to reach us on our [Discord](http
 ---
 
 Powered by Docsify, for setup refer: https://docsify.js.org/#/quickstart
-
----
