@@ -1,5 +1,17 @@
 # **Facebook Goodies**
 
+To start using Facebook in your application you will need to log in on the [Facebook Developer portal](https://developers.facebook.com/) and create an app. In your app, you will need to setup Login and Analytics. Follow the instructions there and provide the necessary info (e. g. iOS Bundle ID, Android Package Name, etc.).
+
+?> This plugin will do all the necessary changes to the Android manifest and iOS plist, so you can skip those steps.
+
+If properly configured your app should have green checkboxes for Login and Analytics in the products section. The last step is to copy the App ID to your UE4 project settings.
+
+![](images/facebook/FbConfiguredApp.png)
+
+When you add the App ID to your settings a file *FacebookGoodies.xml* will be created in the root folder of your project. This file is required for Android builds to work so do **not** delete it.
+
+?> In case you don't have the default folder structure for your project there might be an issue when copying this file to the Android APK. If you experience crashes when your Android app is launching please verify that this file is present in the built APK located at *Project\Intermediate\Android\APK\res\values\*. If there is absent, integrate the copy process into your build pipeline.
+
 # **Login**
 
 There are 3 blueprint nodes that you can use to login via Facebook:
