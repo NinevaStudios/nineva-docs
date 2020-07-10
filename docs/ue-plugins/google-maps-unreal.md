@@ -1,3 +1,5 @@
+# **Google Maps View**
+
 ---
 !> **Please read the [limitations](#limitations) before purchasing**
 
@@ -9,7 +11,7 @@ Join our [Discord server](https://discord.gg/SuJP9fY) and ask us anything!
 
 The plugin allows you to embed **Native [GoogleMapsView](https://developers.google.com/android/reference/com/google/android/gms/maps/MapView)** into your Unreal Engine 4 game on Android. Note, this is **NOT** a Web View and **NOT** a Texture, its native interactive Google Map View.
 
-# Limitations
+# **Limitations**
 
 **Please read the limitations carefully before purchasing**
 
@@ -23,7 +25,7 @@ The plugin allows you to embed **Native [GoogleMapsView](https://developers.goog
 
 * **You can't move the view (e.g scroll in Unreal view)**. The view for now is static and can't be moved around. Repositioning might be implemented in the future. Please submit an issue to this repo to request this.
 
-# Setup (Plugin)
+# **Setup (Plugin)**
 
 Follow these steps to use GoogleMapsView plugin in your project.
 
@@ -47,9 +49,9 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", ... , "GoogleMapsVie
 * [Android](#setupandroid)
 * [iOS](#setupios)
 
-# Setup(Android)
+# **Setup (Android)**
 
-## Enable **Maps SDK for Android** API in Gooogle Console
+## Enable *Maps SDK for Android* API in Gooogle Console
 
 Go to [Google Console dashboard](https://console.developers.google.com/apis/dashboard) and click on `ENABLE APIS AND SERVICES` button, then find **Maps SDK for Android** and make sure it is enabled.
 
@@ -82,7 +84,7 @@ This part is a bit tricky so please follow instructions carefully.
 
 * The form that appears maps app package names to SHA-1 certificate fingerprints. Put **Package name** from your project that you set up in [Step 1](#change-the-default-bundle-id-to-your-bundle-id-package-name) into the package field.
 
-### Obtaining **SHA-1 certificate fingerprint**
+### Obtaining *SHA-1 certificate fingerprint*
 
 To obtain **SHA-1 certificate fingerprint** run this command in your terminal pointing to your keystore that application is signed with:
 
@@ -94,7 +96,7 @@ If you use your Windows machine its very similar, in my case I specified full pa
 
 ![](images/google-maps/get_key_7.png)
 
-* Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save`. 
+* Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save`.
 
 ![](images/google-maps/get_key_6.png)
 
@@ -102,9 +104,9 @@ If you use your Windows machine its very similar, in my case I specified full pa
 
 !> It may take up to 5 minutes for settings to take effect after you save them
 
-### Adding Google Play **SHA-1 certificate fingerprint** if you use Google Play App Signing
+### Adding Google Play *SHA-1 certificate fingerprint* if you use Google Play App Signing
 
-If you are not using new [ Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) mechanism please skip this part.
+?> If you are not using new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) mechanism please skip this part.
 
 If you are using new Google Play App Signing mechanism you also have to create another entry that maps your package name to app signing certificate that Google generates for you. You can find your app signing certificate and **SHA-1 certificate fingerprint** under Release Management -> App Signing. This is the **SHA-1 certificate fingerprint** that you have to use.
 
@@ -132,7 +134,7 @@ After running the application on your device you will see the demo scene, now yo
 ![](images/google-maps/AppScreen1.png)
 
 
-# Setup(iOS)
+# **Setup (iOS)**
 
 ## What's different on iOS?
 
@@ -176,7 +178,7 @@ if (Target.Platform == UnrealTargetPlatform.IOS)
 Otherwise, you might experience app crashes when creating map view followed by error messages like "attemping to free pointer we didn't allocate".
 More info about this issue can be found [here](https://www.artstation.com/alyamkin/blog/9VEQ/ue4-ios-and-pointer-being-freed-was-not-allocated).
 
-# Getting started
+# **Getting started**
 
 ## Creating, Showing and Dismissing GoogleMapView
 
@@ -243,7 +245,7 @@ FGoogleMapOptions InitMapOtions()
 }
 ```
 
-# Map Callbacks
+# **Map Callbacks**
 
 ## Using Map Callbacks
 
@@ -275,7 +277,7 @@ MapView->GetCallbackProxy()->OnMapReadyDynamicDelegate.AddDynamic(this, &UMyTest
 * **OnMapClickDynamicDelegate** - Fires when user taps on Map View. Receives latitude and longitude of clicked location point.
 * **OnMarkerClickDelegate** - Fires when user taps on the Marker. Receives clicked marker reference.
 
-# Markers
+# **Markers**
 
 To get more details about markers check [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) and [Marker](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) Google API.
 
@@ -283,7 +285,7 @@ To get more details about markers check [MarkerOptions](https://developers.googl
 
 ## Adding markers
 
-To add marker to map call `AddMarker` method on GoogleMapView and pass marker options as a parameter. 
+To add marker to map call `AddMarker` method on GoogleMapView and pass marker options as a parameter.
 
 Adding marker via blueprint:
 

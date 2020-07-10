@@ -1,4 +1,4 @@
-﻿# **Admob Goodies Documentation for Unreal Engine**
+﻿# **Admob Goodies**
 
 Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!
 
@@ -83,10 +83,10 @@ You can use real ad units and click ads on test devices. These ads will have a "
 To find out your device ID you need to launch the application on an actual device and load an ad. In the device log you should see a message containing your device ID.
 
 For **Android** you can view this message in logcat (UE device log or via Android Studio) and it will have the following format:
-`RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("YOUR_DEVICE_ID")` 
+`RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("YOUR_DEVICE_ID")`
 
 For **IOS** device first build and deploy your project using UE. After deploying your application to a device you can launch it via a generated XCode project located at *[Path_to_UE_Project]/Intermidiate/ProjectFilesIOS/[Project_Name].xcodeproj*. Now you can view your device logs in the XCode debug console. Search for a message of this format:
-`GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"YOUR_DEVICE_ID" ]` 
+`GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"YOUR_DEVICE_ID" ]`
 
 # **Error codes**
 
@@ -169,7 +169,7 @@ Show On Load - Show the ad when it finishes loading
 
 Show banner ad
 
-	
+
 
 * Hide
 
@@ -206,7 +206,7 @@ Create an interstitial ad
 Parameters:
 AdUnitId - Ad unit id (provided by Admob)
 
-	
+
 
 * Load Ad
 
@@ -219,8 +219,6 @@ Load the ad
 ![](images/admob/InterstitialAdIsLoadedBP.jpg)
 
 Check if the ad has loaded. Return true if ad loaded successfully, false otherwise
-
-	
 
 * Show
 
@@ -243,7 +241,7 @@ You can bind to the following events:
 * Ad Loaded - fires when an ad finishes loading
 * Ad Failed to Load - fires when an ad request fails (it is not recommended to load ads from this event's callback)
 * Ad Opened - fires when an ad opens an overlay that covers the screen.
-* Ad Left Application - fires when the user clicks on an ad	
+* Ad Left Application - fires when the user clicks on an ad
 * Ad Closed - fires when the user is about to return to the app after tapping on an ad
 
 ## Rewarded Ads

@@ -1,4 +1,4 @@
-**Android Goodies Unreal Engine plugin documentation**
+# **Android Goodies**
 
 Welcome to Android Goodies Documentation for Unreal Engine
 
@@ -6,7 +6,7 @@ Welcome to Android Goodies Documentation for Unreal Engine
 
 ---
 
-# CHANGELOG
+# Changelog
 
 v.1.3.1
 
@@ -294,18 +294,18 @@ Starting from Android Oreo (API level 26), all notifications have to be posted t
 
 Call the `AreNotificationChannelsSupported` method to find if the device supports Notification Channels.
 Use the `NewNotificationChannel` function to create a new object representing the notification channel settings, providing a unique identifier, name, and importance of the channel.
-You can then customize it using the following methods: 
+You can then customize it using the following methods:
 
-* `SetBypassDnd` - set whether or not notifications posted to this channel can bypass the Do Not Disturb mode; 
-* `SetShowBadge` - set whether notifications posted to this channel can appear as badges in a Launcher application; 
-* `SetEnableLights` - set whether notifications posted to this channel should display notification lights; 
-* `SetEnableVibration` - set whether notification posted to this channel should vibrate. Requires the "VIBRATE" permission; 
-* `SetDescription` - set the user-visible description of this channel; 
-* `SetImportance` - set the notification importance; 
-* `SetLightColor` - set the notification light color for notifications posted to this channel. Works with `SetEnableLights(true)` ; 
-* `SetLockScreenVisibility` - set whether or not notifications posted to this channel are shown on the lock screen in full or redacted form; 
-* `SetVibrationPattern` - set the vibration pattern for notifications posted to this channel. Will be ignored if the vibration is not enabled by `SetEnableVibration(true)` . Requires the "VIBRATE" permission; 
-* `SetSound` - set the sound that should be played for notifications posted to this channel and its audio attributes; 
+* `SetBypassDnd` - set whether or not notifications posted to this channel can bypass the Do Not Disturb mode;
+* `SetShowBadge` - set whether notifications posted to this channel can appear as badges in a Launcher application;
+* `SetEnableLights` - set whether notifications posted to this channel should display notification lights;
+* `SetEnableVibration` - set whether notification posted to this channel should vibrate. Requires the "VIBRATE" permission;
+* `SetDescription` - set the user-visible description of this channel;
+* `SetImportance` - set the notification importance;
+* `SetLightColor` - set the notification light color for notifications posted to this channel. Works with `SetEnableLights(true)` ;
+* `SetLockScreenVisibility` - set whether or not notifications posted to this channel are shown on the lock screen in full or redacted form;
+* `SetVibrationPattern` - set the vibration pattern for notifications posted to this channel. Will be ignored if the vibration is not enabled by `SetEnableVibration(true)` . Requires the "VIBRATE" permission;
+* `SetSound` - set the sound that should be played for notifications posted to this channel and its audio attributes;
 * `SetGroup` - set what [group](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channel-groups) this channel belongs to.
 
 After the channel settings are modified it can be created in the system using the `CreateNotificationChannel` method.
@@ -332,14 +332,14 @@ To delete the notification channel group call the `DeleteNotificationChannelGrou
 
 ### Notifications
 
-Helper class `AGNotificationBuilder` is used to construct notifications. Use the `NewNotificationBuilder` method to create a new instance of this type, providing the unique identifier of the previously created [notification channel](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channels). While you can not create notification channels on Android versions less than Oreo, the `NewNotificationBuilder` takes the channel ID parameter anyway to support all of the Android versions. 
+Helper class `AGNotificationBuilder` is used to construct notifications. Use the `NewNotificationBuilder` method to create a new instance of this type, providing the unique identifier of the previously created [notification channel](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channels). While you can not create notification channels on Android versions less than Oreo, the `NewNotificationBuilder` takes the channel ID parameter anyway to support all of the Android versions.
 
 You can also provide additional data in the format of a Dictionary<key, value> to be later retrieved using the `GetNotificationDataForKey` method if the user opens the application by tapping the notification (call the `WasApplicationOpenViaNotification` method to find out).
 
 After creating a notification builder object, you need to provide the title, text, and icon for notification by calling the `SetTitle` , `SetText` , and `SetSmallIcon` methods. These are the three fields mandatory for any notification.
 
 For the small icon to be set, the respective image has to be in the Android drawable directory in the application folder.
-We designed our plugin to be able to automatically copy the files from the folder, specified in the "Android Drawables Folder" setting in the Project Settings / Android Goodies Settings menu in the Editor to the Android drawable directory during build time. 
+We designed our plugin to be able to automatically copy the files from the folder, specified in the "Android Drawables Folder" setting in the Project Settings / Android Goodies Settings menu in the Editor to the Android drawable directory during build time.
 
 For example, if you provide the path "D:\Projects\Images", all the files from this directory will be copied to the "PROJECT_PATH\Intermediate\Android\APK\res\drawable" folder during build time. If there is a file "Icon.png" in the "D:\Projects\Images" folder, you will then be able to call the `SetSmallIcon` method and provide "Icon" as the file name.
 
@@ -379,7 +379,7 @@ To show a list of all alarms or timers calls `ShowAllAlarms` or `ShowAllTimers` 
 
 ### Setting an alarm
 
-You can set an alarm by invoking `SetAlarm` function, optionally specifying whether to vibrate, whether to skip the UI when creating an alarm and days on which alarm has to be invoked (repeating alarm). 
+You can set an alarm by invoking `SetAlarm` function, optionally specifying whether to vibrate, whether to skip the UI when creating an alarm and days on which alarm has to be invoked (repeating alarm).
 !> Repeating alarm is available from API level 19 and forth.
 
 ![](images/android-goodies/alarm-timer/Scr_Alarm.png)
@@ -498,7 +498,7 @@ To check whether package with specified name installed on current device use `Is
 
 ### Check supported device features
 
-The plugin includes a series of functions that allow checking whether a certain feature is supported by Android device. 
+The plugin includes a series of functions that allow checking whether a certain feature is supported by Android device.
 
 Patterns for those function names are `Supports<feature name>` or `Has<feature name>` . Right-click in blueprint editor and start typing "Supports" or "Has" to see the full list of available functions.
 
@@ -562,9 +562,9 @@ You can monitor the device's capability of vibrations using the following functi
 
 ### Simple vibrations
 
-Call the `Vibrate` function for a simple vibration, passing a floating point value, indicating the vibration duration in seconds. 
+Call the `Vibrate` function for a simple vibration, passing a floating point value, indicating the vibration duration in seconds.
 
-Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an array of the floating point values that are the durations for which to turn on or off the vibrator in seconds. The first value indicates the number of seconds to wait before turning the vibrator on. The next value indicates the number of seconds for which to keep the vibrator on before turning it off. Subsequent values alternate between durations in seconds to turn the vibrator off or to turn the vibrator on. You can also specify if the pattern is to be repeated. 
+Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an array of the floating point values that are the durations for which to turn on or off the vibrator in seconds. The first value indicates the number of seconds to wait before turning the vibrator on. The next value indicates the number of seconds for which to keep the vibrator on before turning it off. Subsequent values alternate between durations in seconds to turn the vibrator off or to turn the vibrator on. You can also specify if the pattern is to be repeated.
 
 ![](images/android-goodies/hardware/Scr_VibrationPattern.png)
 
@@ -574,13 +574,13 @@ Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an 
 
 !> Call `AreVibrationEffectsSupported` to know, whether the vibration effects are supported on the device. Use simple vibrations if it returns false.
 
-Call the `VibrateWithEffect` function to vibrate with one of the following effects: 
+Call the `VibrateWithEffect` function to vibrate with one of the following effects:
 
-* `VibrationEffectOneShot` , creating a single vibration at the specified amplitude (1 for minimal, 255 for maximal); 
+* `VibrationEffectOneShot` , creating a single vibration at the specified amplitude (1 for minimal, 255 for maximal);
 
 ![](images/android-goodies/hardware/Scr_VibrationEffect.png)
 
-* `VibrationEffectWaveForm` , creating a sequence, similar to the `VibrateWithPattern` function; 
+* `VibrationEffectWaveForm` , creating a sequence, similar to the `VibrateWithPattern` function;
 
 * `VibrationEffectWaveFormWithAmplitudes` , creating a sequence with the ability to specify the amplitude for the different fragments.
 
@@ -588,7 +588,7 @@ Call the `VibrateWithEffectAndAttributes` function to provide an additional Audi
 
 ## Battery
 
-You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions. 
+You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions.
 
 ___
 

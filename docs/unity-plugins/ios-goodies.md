@@ -1,6 +1,6 @@
-﻿# **iOS Goodies Documentation**
+﻿# **iOS Goodies**
 
-# Features
+# **Features**
 
 This section is a brief overview of the functionality provided by API. Click on a class name to visit full class documentation.
 
@@ -25,7 +25,7 @@ This section is a brief overview of the functionality provided by API. Click on 
 	* [IGLocalAuthentication.cs](#iglocalauthenticationcs) - using Face Id/Touch Id
 
 * Other
-	* [IGDevice.cs](#igdevicecs) - The functionality of iOS [UIDevice](https://developer.apple.com/reference/uikit/uidevice) class: 
+	* [IGDevice.cs](#igdevicecs) - The functionality of iOS [UIDevice](https://developer.apple.com/reference/uikit/uidevice) class:
 	+ Battery State and Level
 	+ Proximity sensor
 	+ Device UUID
@@ -35,7 +35,7 @@ This section is a brief overview of the functionality provided by API. Click on 
 
 **[Troubleshooting & FAQ](#/Troubleshooting-&-FAQ)**
 
-# Getting started
+# **Getting started**
 
 After importing the unitypackage add the demo scene `IOSGoodies/Example/ExampleScene.unity` to your Build Settings, switch platform to iOS and export the XCode project.
 
@@ -43,7 +43,7 @@ After importing the unitypackage add the demo scene `IOSGoodies/Example/ExampleS
 
 Open the XCode project afterwards and run it on your device.
 
-# Configure settings
+# **Configure settings**
 
 You can use new editor window to disable unused features to avoid unneeded dependencies in the XCode project. Please go to `Window -> iOS Goodies -> Edit Settings`.
 
@@ -312,11 +312,11 @@ Result:
 
 ![](/images/ig/email.png ':size=512')
 
-If you want to send an image attachment in the e-mail or/and receive callbacks about the state of sending use the `IGShare.SendEmailViaController()` method: 
+If you want to send an image attachment in the e-mail or/and receive callbacks about the state of sending use the `IGShare.SendEmailViaController()` method:
 
 ```csharp
 IGShare.SendEmailViaController(recipients, ccRecipients, bccRecipients, Subject, Message,
-() => {Debug.Log("Success");}, () => {Debug.Log("Cancelled");}, 
+() => {Debug.Log("Success");}, () => {Debug.Log("Cancelled");},
 () => {Debug.Log("Failure");}, () => {Debug.Log("Saved as draft");}, Image);
 ```
 
@@ -358,7 +358,7 @@ This class allows you to get a `Texture2D` into Unity by [Taking Photo with Came
 
 ### Requirements & Setup
 
-In order to use Camera/Photo Gallery you need to add permission descriptions to your `Info.plist` file because of [iOS 10 Privace Settings](http://useyourloaf.com/blog/privacy-settings-in-ios-10/). 
+In order to use Camera/Photo Gallery you need to add permission descriptions to your `Info.plist` file because of [iOS 10 Privace Settings](http://useyourloaf.com/blog/privacy-settings-in-ios-10/).
 
 Currently plugin contains a postprocessing script `IOSGoodies/Editor/Postprocessing/IGProjectPostprocessor.cs` that will add descriptions automatically for you. Modify the file to set descriptions to something meaningful and relevant to your project.
 
@@ -383,9 +383,9 @@ IGImagePicker.PickImageFromCamera(tex =>
     image.sprite = SpriteFromTex2D(tex);
     // IMPORTANT! Call this method to clean memory if you are picking and discarding images
     Resources.UnloadUnusedAssets();
-}, 
+},
 // Cancel callback
-() => Debug.Log("Picking image from camera cancelled"), 
+() => Debug.Log("Picking image from camera cancelled"),
 compressionQuality, allowEditing, cameraType, flashMode);
 ```
 
@@ -602,12 +602,12 @@ Class for manipulating documents on the file system.
 ### Import files
 
 You can import files from other applications into your application's sandbox using `IGFilePicker.Import()` method.
-You can specify the types of files you wish the user is able to pick, providing the array of [Uniform Type Identifiers](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html#//apple_ref/doc/uid/TP40001319-CH202-BCGJGJGA) and whether the selection of multiple files is allowed. 
-You should also specify the action to do with the list of obtained files' URLs. 
+You can specify the types of files you wish the user is able to pick, providing the array of [Uniform Type Identifiers](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html#//apple_ref/doc/uid/TP40001319-CH202-BCGJGJGA) and whether the selection of multiple files is allowed.
+You should also specify the action to do with the list of obtained files' URLs.
 You must also provide an action to perform if the user cancels file picking.
 
 
-!> These files are temporary. They remain available only until your application terminates. To keep a permanent copy, move these files to a permanent location inside your sandbox. 
+!> These files are temporary. They remain available only until your application terminates. To keep a permanent copy, move these files to a permanent location inside your sandbox.
 
 ```csharp
     IGFilePicker.Import(new[] { "public.data" },
@@ -629,8 +629,8 @@ You must also provide an action to perform if the user cancels file picking.
 ### Open files
 
 You can get the security-scoped URLs for the external documents using the `IGFilePicker.Open()` method.
-You can specify the types of files you wish the user is able to pick, providing the array of [Uniform Type Identifiers](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html#//apple_ref/doc/uid/TP40001319-CH202-BCGJGJGA) and whether the selection of multiple files is allowed. 
-You should also specify the action to do with the list of the files' URLs. 
+You can specify the types of files you wish the user is able to pick, providing the array of [Uniform Type Identifiers](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html#//apple_ref/doc/uid/TP40001319-CH202-BCGJGJGA) and whether the selection of multiple files is allowed.
+You should also specify the action to do with the list of the files' URLs.
 You must also provide an action to perform if the user cancels file picking.
 
 ```csharp
@@ -650,7 +650,7 @@ list =>
 ```
 ### Export/Move files
 
-Use the `IGFilePicker.ExportToService()` method to export a copy of the file to an external service. Use the `IGFilePicker.MoveToService()` to move the original file without creating a copy. 
+Use the `IGFilePicker.ExportToService()` method to export a copy of the file to an external service. Use the `IGFilePicker.MoveToService()` to move the original file without creating a copy.
 Specify the list of full file paths, as well as the actions to perform with the resulting file URLs and if the user cancels the exporting/moving of the file.
 
 The methods will not be executed if none of the paths in the list is valid.
@@ -752,7 +752,7 @@ public void OnShowDatePicker()
 
 void OnDateSelected(DateTime date)
 {
-    Debug.Log(string.Format("Date selected: year: {0}, month: {1}, day {2}", 
+    Debug.Log(string.Format("Date selected: year: {0}, month: {1}, day {2}",
     date.Year, date.Month, date.Day));
     var pickedDate = date.ToString("yyyy MMMMM dd");
     dateText.text = string.Format("Date Picker\n{0}", pickedDate);
@@ -779,7 +779,7 @@ public void OnShowTimePicker()
 
 void OnTimeSelected(DateTime time)
 {
-    Debug.Log(string.Format("Time selected: hour: {0}, minute: {1}", 
+    Debug.Log(string.Format("Time selected: hour: {0}, minute: {1}",
     time.Hour, time.Minute));
     var pickedTime = time.ToString("hh:mm");
     timeText.text = string.Format("Time Picker\n{0}", pickedTime);
@@ -836,7 +836,7 @@ public void OnShowCountdownTimer()
 
 void OnCountDownTimeSelected(DateTime countdownTime)
 {
-    Debug.Log(string.Format("Countdown time selected: hour: {0}, minute: {1}", 
+    Debug.Log(string.Format("Countdown time selected: hour: {0}, minute: {1}",
     countdownTime.Hour, countdownTime.Minute));
     var pickedTime = string.Format("{0}:{1}", countdownTime.Hour, countdownTime.Minute);
     countdownTimeText.text = string.Format("Time Picker\n{0}", pickedTime);
@@ -862,7 +862,7 @@ static readonly string[] ActionSheetOptions = { "Option 1", "Option 2", "Option 
 
 public void OnShowActionSheet()
 {
-    IGActionSheet.ShowActionSheet("Title", "Cancel", () => Debug.Log("Cancel Clicked"), 
+    IGActionSheet.ShowActionSheet("Title", "Cancel", () => Debug.Log("Cancel Clicked"),
     ActionSheetOptions, index => Debug.Log(ActionSheetOptions[index] + " Clicked"));
 }
 ```
@@ -882,9 +882,9 @@ static readonly string[] ActionSheetMoreOptions = { "Option 1", "Option 2", "Opt
 
 public void OnShowActionSheetWithDestructiveButton()
 {
-    IGActionSheet.ShowActionSheet("Title", 
-    "Cancel", () => Debug.Log("Cancel Clicked"), 
-    "Destroy All!", () => Debug.Log("Destroy All Clicked"), 
+    IGActionSheet.ShowActionSheet("Title",
+    "Cancel", () => Debug.Log("Cancel Clicked"),
+    "Destroy All!", () => Debug.Log("Destroy All Clicked"),
     ActionSheetMoreOptions, index => Debug.Log(ActionSheetMoreOptions[index] + " Clicked"));
 }
 ```
@@ -963,7 +963,7 @@ if (IGLocalAuthentication.IsLocalAuthenticationAvailable)
 {
     const IGLocalAuthentication.Policy policy = IGLocalAuthentication.Policy.DeviceOwnerAuthenticationWithBiometrics;
     IGLocalAuthentication.AuthenticateWithBiometrics("Please, confirm your identity", policy,
-        () => { Debug.Log("Authentication was successful"); }, 
+        () => { Debug.Log("Authentication was successful"); },
         error => Debug.Log("Authentication failed: " + error));
 }
 else

@@ -1,3 +1,5 @@
+# **BLE Utilities**
+
 This plugin enables you to do the following:
 
 - Scan for available BLE devices
@@ -17,7 +19,7 @@ android.permission.ACCESS_COARSE_LOCATION
 
 These permissions are added to the manifest by default.
 
-# Examples
+# **Examples**
 
 ## Working with BLE devices
 
