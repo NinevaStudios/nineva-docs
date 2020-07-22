@@ -64,7 +64,7 @@ The plugin allows users to share different types of content (photos, videos, lin
 
 To share content simply call the following function, providing the content to share, share dialog type, and the respective callbacks:
 
-![](images/facebook/FBShare1.jpeg)
+![](images/facebook/FBShare1.png)
 
 ## Share modes
 
@@ -80,7 +80,7 @@ Most common cases for sharing are the photo and video sharing.
 
 You can create a Share Photo or Share Video objects using the following nodes:
 
-![](images/facebook/FBShare2.png) 
+![](images/facebook/FBShare2.png)
 
 You can provide either a UTexture2D object or a full path to the image on the device for the Share Photo.
 
@@ -88,7 +88,7 @@ You can provide either a UTexture2D object or a full path to the image on the de
 
 ![](images/facebook/FBShare3.png)
 
-The Share Video object is initialized with a full path to a video on the user's device. 
+The Share Video object is initialized with a full path to a video on the user's device.
 
 ?> Unfortunately, Share Video creation does not work on iOS due to mysterious sharing errors in the Facebook SDK itself.
 
@@ -101,13 +101,13 @@ There are common functions for all of the types of content:
 
 ### Share Link Content
 
-You can share a link with an optional quote using the Share Link Content: 
+You can share a link with an optional quote using the Share Link Content:
 
 ![](images/facebook/FBShare5.png)
 
 ### Share Media Content
 
-You can share multiple photos and videos using the Share Media Content: 
+You can share multiple photos and videos using the Share Media Content:
 
 ![](images/facebook/FBShare6.png)
 
@@ -115,13 +115,13 @@ You can share multiple photos and videos using the Share Media Content:
 
 ### Share Photo Content
 
-You can share single or multiple photos using the Share Photo Content: 
+You can share single or multiple photos using the Share Photo Content:
 
 ![](images/facebook/FBShare7.png)
 
 ### Share Story Content
 
-You can share content to story using the Share Story Content and providing a sticker asset and either a background asset or background colors: 
+You can share content to story using the Share Story Content and providing a sticker asset and either a background asset or background colors:
 
 ![](images/facebook/FBShare8.png)
 
@@ -129,6 +129,6 @@ You can share content to story using the Share Story Content and providing a sti
 
 ### Share Video Content
 
-You can share video using the Share Video Content, providing a previously created Share Video object: 
+You can share video using the Share Video Content, providing a previously created Share Video object:
 
 ![](images/facebook/FBShare9.png)
