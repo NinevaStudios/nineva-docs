@@ -55,3 +55,80 @@ To access certain data the user needs to grant specific permissions. You can che
 # **Analytics**
 
 # **Sharing**
+
+Official documentation on sharing can be found [here](https://developers.facebook.com/docs/sharing/).
+
+The plugin allows users to share different types of content (photos, videos, links, stories).
+
+?>  Your app should not pre-fill any content to be shared. This is inconsistent with Facebook Platform Policy, see [Facebook Platform Policy, 2.3](https://developers.facebook.com/policy/#control).
+
+To share content simply call the following function, providing the content to share, share dialog type, and the respective callbacks:
+
+![](images/facebook/FBShare1.jpeg)
+
+## Share modes
+
+!> Automatic, Native, Web and FeedWeb sharing modes are supported on both Android and iOS, while ShareSheet, Browser and FeedBrowser modes are supported only for iOS.
+
+In most cases it is best to use the automatic mode and let the SDK select the best mode for you.
+
+## Create share content assets
+
+Most common cases for sharing are the photo and video sharing.
+
+### Share Photo
+
+You can create a Share Photo or Share Video objects using the following nodes:
+
+![](images/facebook/FBShare2.jpeg) 
+
+You can provide either a UTexture2D object or a full path to the image on the device for the Share Photo.
+
+### Share Video
+
+![](images/facebook/FBShare3.jpeg)
+
+The Share Video object is initialized with a full path to a video on the user's device. 
+
+?> Unfortunately, Share Video creation does not work on iOS due to mysterious sharing errors in the Facebook SDK itself.
+
+## Create share content
+
+There are different types of contents available for sharing: photos, video, media, link, and story.
+There are common functions for all of the types of content:
+
+![](images/facebook/FBShare4.jpeg)
+
+### Share Link Content
+
+You can share a link with an optional quote using the Share Link Content: 
+
+![](images/facebook/FBShare5.jpeg)
+
+### Share Media Content
+
+You can share multiple photos and videos using the Share Media Content: 
+
+![](images/facebook/FBShare6.jpeg)
+
+?> The maximum allowed amount of images and videos shared at the same time can be found in the official Facebook documentation for [Android](https://developers.facebook.com/docs/sharing/android#multimedia) and [iOS](https://developers.facebook.com/docs/sharing/ios#multimedia).
+
+### Share Photo Content
+
+You can share single or multiple photos using the Share Photo Content: 
+
+![](images/facebook/FBShare7.jpeg)
+
+### Share Story Content
+
+You can share content to story using the Share Story Content and providing a sticker asset and either a background asset or background colors: 
+
+![](images/facebook/FBShare8.jpeg)
+
+?> On iOS sharing to stories works different under the hood, therefore, the callbacks are not received during it.
+
+### Share Video Content
+
+You can share video using the Share Video Content, providing a previously created Share Video object: 
+
+![](images/facebook/FBShare9.jpeg)
