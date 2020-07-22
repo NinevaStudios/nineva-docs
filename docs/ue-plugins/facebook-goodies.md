@@ -80,13 +80,13 @@ Most common cases for sharing are the photo and video sharing.
 
 You can create a Share Photo or Share Video objects using the following nodes:
 
-![](images/facebook/FBShare2.jpeg) 
+![](images/facebook/FBShare2.png) 
 
 You can provide either a UTexture2D object or a full path to the image on the device for the Share Photo.
 
 ### Share Video
 
-![](images/facebook/FBShare3.jpeg)
+![](images/facebook/FBShare3.png)
 
 The Share Video object is initialized with a full path to a video on the user's device. 
 
@@ -97,19 +97,19 @@ The Share Video object is initialized with a full path to a video on the user's 
 There are different types of contents available for sharing: photos, video, media, link, and story.
 There are common functions for all of the types of content:
 
-![](images/facebook/FBShare4.jpeg)
+![](images/facebook/FBShare4.png)
 
 ### Share Link Content
 
 You can share a link with an optional quote using the Share Link Content: 
 
-![](images/facebook/FBShare5.jpeg)
+![](images/facebook/FBShare5.png)
 
 ### Share Media Content
 
 You can share multiple photos and videos using the Share Media Content: 
 
-![](images/facebook/FBShare6.jpeg)
+![](images/facebook/FBShare6.png)
 
 ?> The maximum allowed amount of images and videos shared at the same time can be found in the official Facebook documentation for [Android](https://developers.facebook.com/docs/sharing/android#multimedia) and [iOS](https://developers.facebook.com/docs/sharing/ios#multimedia).
 
@@ -117,13 +117,13 @@ You can share multiple photos and videos using the Share Media Content:
 
 You can share single or multiple photos using the Share Photo Content: 
 
-![](images/facebook/FBShare7.jpeg)
+![](images/facebook/FBShare7.png)
 
 ### Share Story Content
 
 You can share content to story using the Share Story Content and providing a sticker asset and either a background asset or background colors: 
 
-![](images/facebook/FBShare8.jpeg)
+![](images/facebook/FBShare8.png)
 
 ?> On iOS sharing to stories works different under the hood, therefore, the callbacks are not received during it.
 
@@ -131,4 +131,4 @@ You can share content to story using the Share Story Content and providing a sti
 
 You can share video using the Share Video Content, providing a previously created Share Video object: 
 
-![](images/facebook/FBShare9.jpeg)
+![](images/facebook/FBShare9.png)
