@@ -38,11 +38,12 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 ## Project Settings
 
-![](images/admob/ProjectSettings.jpg)
+![](images/admob/ProjectSettings.png)
 
 * Delay app measurement - delays app measurement until the Ad Subsystem is explicitly initialized. Use this option if you need to collect any kind of consent before gathering user-level event data. By default event data is being sent to Google as soon as the app launches.
 * Admob AppID - unique AdMob app ID. If this field is empty your application will crash when launched on an actual device.
 * Test Device ID - this option specifies the ID of a device that will receive test ads for real ad units. Refer to the test ads section for more information.
+* Mediation - specify which mediation network providers should be enabled.
 
 ## Loading and showing ads
 
@@ -114,6 +115,29 @@ In case you encounter an error you will receive an error code and message in you
 | 6          | Interstitial ad already used Error. This happens when you try to show the same interstitial ad more than once. |
 | 11         | Internal Error. Something happened internally; for instance, an invalid response was received from the ad server. |
 | 14         | Rewarded ad already used Error. This happens when you try to show the same rewarded ad more than once. |
+
+# **Mediation**
+
+This plugin supports the following mediation providers:
+* AdColony
+* Chartboost
+* Facebook Audience Network
+* Tapjoy
+* Unity Ads
+* Vungle
+
+For mediation to work you will need to properly setup an application on the provider's website and setup mediation groups for your unit IDs on the AdMob website. Please follow the official instructions provided by Google for specific providers: [AdColony](https://developers.google.com/admob/android/mediation/adcolony#step_1_set_up_adcolony), [Chartboost](https://developers.google.com/admob/android/mediation/chartboost#step_1_set_up_chartboost), [Facebook](https://developers.google.com/admob/android/mediation/facebook#step_1_set_up_facebook_audience_network), [Tapjoy](https://developers.google.com/admob/android/mediation/tapjoy#step_1_set_up_tapjoy), [Unity Ads](https://developers.google.com/admob/android/mediation/unity#step_1_set_up_unity_ads), [Vungle](https://developers.google.com/admob/android/mediation/vungle#step_1_set_up_vungle). All the necessary information is specified in steps 1 and 2, all other steps can be skipped.
+
+## Select mediation providers for your app
+
+You are not required to setup all available mediation providers. If you only use some of them or none at all you can disable them so that your app does not ship with additional libraries that are not used. You can select which providers are enabled in the plugin's settings. These settings only work for Android. Unfortunately, the only way to modify which providers are enabled on iOS is to rebuild the plugin. To rebuild the plugin follow these steps:
+- Copy the plugin from your engine folder (*[path_to_engine]/Engine/Plugins/Marketplace/AdmobGoodies*) to your project's plugin folder;
+- Delete the *Binaries* and *Intermediate* folders;
+- Modify the plugin's Build.cs file to select which networks are enabled
+- Launch the project, during start up you will be asked to build the plugin
+- Confirm build
+
+The plugin's Build.cs file (*Source/AdmobGoodies/AdmobGoodies.Build.cs*) has commented blocks for each provider - if you wish to disable a provider simply comment out the lines with `PublicAdditionalFrameworks`.
 
 # **Blueprint nodes**
 
