@@ -90,9 +90,7 @@ You can provide either a UTexture2D object or a full path to the image on the de
 
 The Share Video object is initialized with a full path to a video on the user's device.
 
-?> Unfortunately, Share Video creation does not work on iOS due to mysterious sharing errors in the Facebook SDK itself.
-
-## Create share content
+?> On iOS it has to be in specific format:  "assets-library://asset/asset.[FILE_EXTENSION]?id=[FILE_ID]&ext=[FILE_EXTENSION]" where FILE_EXTENSION is mov, or mp4, etc., and FILE_ID is the asset ID from PhotoLibrary. Example: assets-library://asset/asset.mp4?id=225640F8-597C-4E71-A1E9-490C7737B0E4&ext=mp4Create share content. Can be obtained as a result of the native image picker - under the deprecated UIImagePickerControllerReferenceURL key.
 
 There are different types of contents available for sharing: photos, video, media, link, and story.
 There are common functions for all of the types of content:
