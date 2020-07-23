@@ -506,7 +506,7 @@ Check out a detailed description of all features [here](https://developer.androi
 
 ___
 
-# **Image tools**
+# **Image & File tools**
 
 ## Pick images from gallery and camera, save an image to gallery
 
@@ -539,6 +539,45 @@ Also, make sure that `android.permission.WRITE_EXTERNAL_STORAGE` permission was 
 Call the `TakeScreenShot` function to capture a screenshot. Screen image is automatically converted to 2D-texture which then can be used with other AndroidGoodies plugin functions. You can specify whether the resulting screenshot should capture app UI by setting `ShowUI` flag.
 
 ![](images/android-goodies/images/Scr_Screenshot.png)
+
+## Retrieve picked files and images data
+
+### Pick files from local storage
+
+Call the `PickFilesFromLocalStorage` function to pick files from local storage. You can allow multiple files pick by setting `Allow Multiple` flag. Upon successful callback array of [`ChosenFile`](#chosenfile-methods) objects is received, which can be used to retrieve available information about files picked.
+
+![](images/android-goodies/images/Scr_PickFilesFromLocalStorage.png)
+
+### Get chosen images data
+
+Call the `GetChosenImagesData` function to pick images from gallery. You can allow multiple images pick by setting `Allow Multiple` flag. You can specify image quality, maximal dimensions (e.g. 256), and a boolean value, indicating, whether the picked image should generate thumbnails. Upon successful callback array of [`ChosenImage`](#chosenimage-methods) objects is received, which can be used to retrieve available information about images picked.
+
+![](images/android-goodies/images/Scr_GetChosenImagesData.png)
+
+!> [`ChosenImage`](#chosenimage-methods) inherits [`ChosenFile`](#chosenfile-methods), so you can call all the methods available for [`ChosenFile`](#chosenfile-methods) objects too.
+
+### Get photo data from camera
+
+Call the `GetPhotoDataFromCamera` function to open the native camera view, allowing the user to take a photo. You can state, whether the resulting image should generate thumbnails. Upon successful callback array of [`ChosenImage`](#chosenimage-methods) objects is received, which can be used to retrieve available information about photo taken.
+
+![](images/android-goodies/images/Scr_GetPhotoDataFromCamera.png)
+
+!> Even though successful callback returns an array of [`ChosenImage`](#chosenimage-methods) objects it contains single picture.
+
+### Get texture from path
+
+To obtain a texture from given path call `GetTextureFromPath` method. You should also provide callback handlers to process texture or error message.
+
+![](images/android-goodies/images/Scr_GetTextureFromPath.png)
+
+### Chosen objects functionality
+#### ChosenFile methods
+
+![](images/android-goodies/images/Scr_ChosenFile.png)
+
+#### ChosenImage methods
+
+![](images/android-goodies/images/Scr_ChosenImage.png)
 
 ___
 
