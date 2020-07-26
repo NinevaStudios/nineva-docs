@@ -108,7 +108,7 @@ AGAlarmClock.SetAlarm(1, 1, "My morning alarm", weekdays, vibrate, skipUI);
 
 Result:
 
-![](/images/ag/set-alarm.png ':size=512')
+![/images/ag/set-alarm.png"]()
 
 ### Setting timer
 
