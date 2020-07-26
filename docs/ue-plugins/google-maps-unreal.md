@@ -35,7 +35,7 @@ Follow these steps to use GoogleMapsView plugin in your project.
 
 2. Go to Unreal _Editor Edit -> Plugins -> Code Plugins_ screen and make sure that GoogleMapsView is enabled.
 
-![](images/google-maps/PlugindEditor.PNG)
+![](images/google-maps/PluginEditor.png)
 
 Now you should be able to use plugin functionality in blueprints.
 
