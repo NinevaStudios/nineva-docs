@@ -12,18 +12,25 @@ Useful links:
 ## Unreal Engine 4 Plugins
 
 * [Admob Goodies](ue-plugins/admob-unreal)
-* [Firebase Goodies](ue-plugins/firebase-unreal)
 * [Android Goodies](ue-plugins/android-goodies-unreal)
-* [iOS Goodies](ue-plugins/ios-goodies)
 * [BLE Utilities](ue-plugins/ble-utilities)
-* [MQTT](ue-plugins/mqtt)
+* [Facebook Goodies](ue-plugins/facebook-goodies)
+* [Firebase Goodies](ue-plugins/firebase-unreal)
+* [Google Maps View](ue-plugins/google-maps-unreal)
+* [iOS Goodies](ue-plugins/ios-goodies)
 
 ## Unity Plugins
 
 * [Android Goodies](unity-plugins/android-goodies)
-* [iOS Goodies](unity-plugins/ios-goodies)
 * [Google Maps View](unity-plugins/google-maps)
-  
+* [iOS Goodies](unity-plugins/ios-goodies)
+
 ## Hire us!
 
 We often do custom contract work, so feel free to reach us on our [Discord](https://bit.ly/nineva_support_discord) or drop a line to info at ninevastudios.com
+
+---
+
+Powered by Docsify, for setup refer: https://docsify.js.org/#/quickstart
+
+---

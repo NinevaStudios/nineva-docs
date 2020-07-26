@@ -1,8 +1,10 @@
-**iOS Goodies Unreal Engine plugin documentation**
+# **iOS Goodies**
 
 Welcome to iOS Goodies Documentation for Unreal Engine
 
 ?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+
+---
 
 # Changelog
 
@@ -49,7 +51,7 @@ v.1.0.0
 
 * Initial release
 
-# Features
+# **Features**
 
 * Native UI
   + [Native dialogs](#native-dialogs)
@@ -71,7 +73,7 @@ v.1.0.0
 *  Getting info
   + [Get device info and check supported features](#device-info)
 
-# FAQ
+# **FAQ**
 
 ## .plist
 
@@ -90,7 +92,7 @@ On iOS 13 native date picker and input field have some appearance issues when us
 
 	As a result those native dialogs should have appropriate theming when running on device with iOS 13 installed.
 
-# Native dialogs
+# **Native dialogs**
 
 You can show standard iOS native dialogs with:
 
@@ -138,7 +140,7 @@ Result:
 
 Call `ShowInputFieldDialog` to show a native dialog with an input field. You can customize it by passing title, body text, confirmation and cancellation button titles. After the user confirms input, you will receive a callback with the typed string.
 
-![](images/ios-goodies/BP_InputDialog.png ':size=900')   
+![](images/ios-goodies/BP_InputDialog.png ':size=900')
 
 ## Action sheet
 
@@ -166,17 +168,17 @@ Result:
 
 ## Loading dialog
 
-This function fades screen and displays native loading spinner at the middle. Call `ShowLoadingDialog` to begin showing a loading screen. Call `DismissLoadingDialog` to dismiss it after the background work is done. 
+This function fades screen and displays native loading spinner at the middle. Call `ShowLoadingDialog` to begin showing a loading screen. Call `DismissLoadingDialog` to dismiss it after the background work is done.
 
 !> All user interface iteractions are blocked during the lifetime of the loading screen
 
-# App Store rate dialog
+# **App Store rate dialog**
 
 Use `RequestRating` function to produce a dialogue asking the user to rate your app on the AppStore.
 
 ![](images/ios-goodies/BP_AppRating.png ':size=300')
 
-# Date and time pickers
+# **Date and time pickers**
 
 You can show the default iOS date and time picker.
 
@@ -196,7 +198,7 @@ Result:
 
 ## Showing time picker
 
-To show the default iOS time picker call `ShowTimePicker` function. 
+To show the default iOS time picker call `ShowTimePicker` function.
 
 ![](images/ios-goodies/BP_Time.png ':size=900')
 
@@ -210,7 +212,7 @@ Result:
 
 ## Showing date and time picker
 
-It possible to show picker that allows selecting both date and time. Use `ShowDateTimePicker` function to do that. 
+It possible to show picker that allows selecting both date and time. Use `ShowDateTimePicker` function to do that.
 
 ![](images/ios-goodies/BP_DateTime.png ':size=900')
 
@@ -230,7 +232,7 @@ Result:
 
 ![](images/ios-goodies/TimerPicker.png ':size=400')
 
-# Device Info
+# **Device Info**
 
 Device information functions allow retrieving various information about iOS device.
 
@@ -250,14 +252,14 @@ You can also enable/disable proximity monitoring status and retrieve the proximi
 
 More documentation can be found [here](https://developer.apple.com/documentation/uikit/uidevice).
 
-# Native Sharing
+# **Native Sharing**
 
 Native sharing allows you to share content using the following ways:
 
 ## General sharing
 
 You can use the `ShareText`, `ShareImage`, or `ShareLink` methods to open a selector view, where the user can choose a program to share the object with.
-`ShareTextWithImage` and `ShareTextWithUrl` methods allow you to do the same but include an image or an URL along with the text, and you can use `ShareTextWithImageAndLink` method to share all three types of objects. 
+`ShareTextWithImage` and `ShareTextWithUrl` methods allow you to do the same but include an image or an URL along with the text, and you can use `ShareTextWithImageAndLink` method to share all three types of objects.
 
 !> If you plan your application to be run on iPad, pass additional parameters (posX and posY), which represent the position of the popover view on iPads. Default values (0; 0) will cause the view to appear in the top left corner of the screen. These values will be ignored on iPhone.
 
@@ -275,7 +277,7 @@ You can send an e-mail via default mailing application on the device using `Send
 
 ![](images/ios-goodies/BP_SendEmail.png ':size=800')
 
-# App Interaction
+# **App Interaction**
 
 You can perform application related actions and interactions between applications using the `UIGApps` class.
 
@@ -298,7 +300,6 @@ To perform a call using FaceTime, use `StartFaceTimeVideoCall` or `StartFaceTime
 ![](images/ios-goodies/BP_AppFacetimeAudiocall.png ':size=300')
 ![](images/ios-goodies/BP_AppFacetimeVideocall.png ':size=300')
 
-
 ## Dial a phone number
 
 To open dialer dialogue with a specified number, use `OpenDialer` function, passing phone number as a parameter.
@@ -311,7 +312,7 @@ To open an application page in the AppStore, use `OpenAppOnAppStore` function, p
 
 ![](images/ios-goodies/BP_AppOpenStore.png ':size=300')
 
-# Apple Maps Interaction
+# **Apple Maps Interaction**
 
 You can send different queries to Apple Maps application using `UIGMaps` class.
 
@@ -341,7 +342,7 @@ You can also perform the search nearby the specified location, using `PerformSea
 ![](images/ios-goodies/BP_MapSearch.png ':size=400')
 ![](images/ios-goodies/BP_MapSearchNearLocation.png ':size=400')
 
-# Camera and Gallery
+# **Camera and Gallery**
 
 This feature set allows taking photos with your device camera and access gallery (save/load images). Images captured with a camera or picked from the gallery are converted to 2D-texture objects.
 
@@ -379,7 +380,7 @@ Call the `TakeScreenShot` function to obtain a 2D-texture object with captured s
 
 ![](images/ios-goodies/BP_TakeScreenshot.png ':size=500')
 
-# Flashlight
+# **Flashlight**
 
 You can use this class to access the flashlight on the device.
 
@@ -395,7 +396,7 @@ Use `EnableFlashlight` function to enable/disable flashlight, passing boolean va
 
 To make flashlight brighter/dimmer, use `SetFlashlightLevel`, passing a float value between 0 and 1 (0 for off, 1 - for maximum brightness).
 
-# Haptic Feedback
+# **Haptic Feedback**
 
 This class allows you to send haptic feedbacks and vibrate the device.
 
@@ -416,12 +417,11 @@ There are three types of haptic feedbacks: notification, selection and impact. Y
 
 To make the device vibrate with the default pattern, use the `Vibrate` function. It can also be used as the fallback from haptic methods if haptic feedbacks are not supported on the device.
 
-
-# Events
+# **Events**
 
 ## Open calendar
 
-You can open the calendar app at the current date using `OpenCalendar` function. 
+You can open the calendar app at the current date using `OpenCalendar` function.
 
 ![](images/ios-goodies/BP_OpenCalendar.png ':size=200')
 
@@ -465,7 +465,7 @@ Use the `RemoveReminder` function to remove a reminder with specified unique ide
 
 ![](images/ios-goodies/BP_DeleteReminder.png ':size=900')
 
-# Contacts
+# **Contacts**
 
 ## Get the list of contacts
 

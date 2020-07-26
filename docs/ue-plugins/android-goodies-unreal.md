@@ -1,8 +1,104 @@
+# **Android Goodies**
+
+Welcome to Android Goodies Documentation for Unreal Engine
+
+?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+
+---
+
+# Changelog
+
+v.1.3.1
+
+* ADDED Unreal Engine 4.25 support
+* ADDED Sharing of multiple images via email app
+* ADDED Permissions setup via plugin settings
+* FIXED Issues with date and time picker initialization
+* FIXED Texture to image conversion
+
+v.1.3.0
+
+* ADDED Check for notification channels support
+* FIXED Some method categories
+
+v.1.2.3
+
+* ADDED Unreal Engine 4.24 support
+* FIXED Issues with native callbacks
+
+v.1.2.3
+
+* ADDED Fetching contacts info
+
+v.1.2.2
+
+* ADDED Toggle flashlight
+* ADDED Vibrations
+* ADDED Device battery information
+* ADDED Basic telephony operations (dial/call number)
+* FIXED Issue with image color format while sharing
+
+v.1.2.1
+
+* ADDED Capture screenshot
+* FIXED Performace issue with picking image from gallery
+* FIXED Image functions callback handling in game thread
+
+v.1.2.0
+
+* ADDED Capture photo
+* ADDED Pick image from gallery
+* ADDED Save image to gallery
+
+v.1.1.2
+
+* ADDED Unreal Engine 4.22 support
+* REMOVED Redundant parameters in Java callback functions
+
+v.1.1.1
+
+* FIXED Crash for release application builds with enabled IAP
+
+v.1.1.0
+
+* ADDED Unreal Engine 4.21 support
+* UPDATED Image sharing functionality
+
+v.1.0.0
+
+* Initial release
+___
+
+# **Features**
+
+* [Native UI](#native-ui)
+ + [Native dialogs](#native-dialogs)
+ + [Date and time picker](#date-and-time-picker)
+ + [Show Toasts](#toasts)
+ + [Native sharing text or/and image](#native-sharing)
+ + [Notifications](#notifications)
+
+* [App interaction](#app-interaction)
+ + [Setup alarms/timers](#alarms-and-timer)
+ + [Open maps app](#opening-maps)
+ + [Open, install or uninstall apps](#open-install-or-uninstall-apps)
+
+* [Getting info](#getting-info)
+ + [Get device info and check supported features](#device-information)
+
+* [Image tools](#image-tools)
+ + [Pick images from gallery and camera, save an image to gallery](#image-tools)
+
+* [Hardware](#hardware)
+ + [Flashlight](#flashlight)
+ + [Vibrations](#vibrations)
+ + [Battery](#battery)
+
+* [Contacts](#contacts)
+ + [Fetch, find and add contacts](#fetch-find-and-add-contacts)
 ___
 
 # **Native UI**
-
-___
 
 ## Native dialogs
 
@@ -198,18 +294,18 @@ Starting from Android Oreo (API level 26), all notifications have to be posted t
 
 Call the `AreNotificationChannelsSupported` method to find if the device supports Notification Channels.
 Use the `NewNotificationChannel` function to create a new object representing the notification channel settings, providing a unique identifier, name, and importance of the channel.
-You can then customize it using the following methods: 
+You can then customize it using the following methods:
 
-* `SetBypassDnd` - set whether or not notifications posted to this channel can bypass the Do Not Disturb mode; 
-* `SetShowBadge` - set whether notifications posted to this channel can appear as badges in a Launcher application; 
-* `SetEnableLights` - set whether notifications posted to this channel should display notification lights; 
-* `SetEnableVibration` - set whether notification posted to this channel should vibrate. Requires the "VIBRATE" permission; 
-* `SetDescription` - set the user-visible description of this channel; 
-* `SetImportance` - set the notification importance; 
-* `SetLightColor` - set the notification light color for notifications posted to this channel. Works with `SetEnableLights(true)` ; 
-* `SetLockScreenVisibility` - set whether or not notifications posted to this channel are shown on the lock screen in full or redacted form; 
-* `SetVibrationPattern` - set the vibration pattern for notifications posted to this channel. Will be ignored if the vibration is not enabled by `SetEnableVibration(true)` . Requires the "VIBRATE" permission; 
-* `SetSound` - set the sound that should be played for notifications posted to this channel and its audio attributes; 
+* `SetBypassDnd` - set whether or not notifications posted to this channel can bypass the Do Not Disturb mode;
+* `SetShowBadge` - set whether notifications posted to this channel can appear as badges in a Launcher application;
+* `SetEnableLights` - set whether notifications posted to this channel should display notification lights;
+* `SetEnableVibration` - set whether notification posted to this channel should vibrate. Requires the "VIBRATE" permission;
+* `SetDescription` - set the user-visible description of this channel;
+* `SetImportance` - set the notification importance;
+* `SetLightColor` - set the notification light color for notifications posted to this channel. Works with `SetEnableLights(true)` ;
+* `SetLockScreenVisibility` - set whether or not notifications posted to this channel are shown on the lock screen in full or redacted form;
+* `SetVibrationPattern` - set the vibration pattern for notifications posted to this channel. Will be ignored if the vibration is not enabled by `SetEnableVibration(true)` . Requires the "VIBRATE" permission;
+* `SetSound` - set the sound that should be played for notifications posted to this channel and its audio attributes;
 * `SetGroup` - set what [group](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channel-groups) this channel belongs to.
 
 After the channel settings are modified it can be created in the system using the `CreateNotificationChannel` method.
@@ -236,14 +332,14 @@ To delete the notification channel group call the `DeleteNotificationChannelGrou
 
 ### Notifications
 
-Helper class `AGNotificationBuilder` is used to construct notifications. Use the `NewNotificationBuilder` method to create a new instance of this type, providing the unique identifier of the previously created [notification channel](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channels). While you can not create notification channels on Android versions less than Oreo, the `NewNotificationBuilder` takes the channel ID parameter anyway to support all of the Android versions. 
+Helper class `AGNotificationBuilder` is used to construct notifications. Use the `NewNotificationBuilder` method to create a new instance of this type, providing the unique identifier of the previously created [notification channel](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channels). While you can not create notification channels on Android versions less than Oreo, the `NewNotificationBuilder` takes the channel ID parameter anyway to support all of the Android versions.
 
 You can also provide additional data in the format of a Dictionary<key, value> to be later retrieved using the `GetNotificationDataForKey` method if the user opens the application by tapping the notification (call the `WasApplicationOpenViaNotification` method to find out).
 
 After creating a notification builder object, you need to provide the title, text, and icon for notification by calling the `SetTitle` , `SetText` , and `SetSmallIcon` methods. These are the three fields mandatory for any notification.
 
 For the small icon to be set, the respective image has to be in the Android drawable directory in the application folder.
-We designed our plugin to be able to automatically copy the files from the folder, specified in the "Android Drawables Folder" setting in the Project Settings / Android Goodies Settings menu in the Editor to the Android drawable directory during build time. 
+We designed our plugin to be able to automatically copy the files from the folder, specified in the "Android Drawables Folder" setting in the Project Settings / Android Goodies Settings menu in the Editor to the Android drawable directory during build time.
 
 For example, if you provide the path "D:\Projects\Images", all the files from this directory will be copied to the "PROJECT_PATH\Intermediate\Android\APK\res\drawable" folder during build time. If there is a file "Icon.png" in the "D:\Projects\Images" folder, you will then be able to call the `SetSmallIcon` method and provide "Icon" as the file name.
 
@@ -265,8 +361,6 @@ ___
 
 # **App interaction**
 
-___
-
 ## Setup alarms/timers
 
 ### Required permissions
@@ -285,7 +379,7 @@ To show a list of all alarms or timers calls `ShowAllAlarms` or `ShowAllTimers` 
 
 ### Setting an alarm
 
-You can set an alarm by invoking `SetAlarm` function, optionally specifying whether to vibrate, whether to skip the UI when creating an alarm and days on which alarm has to be invoked (repeating alarm). 
+You can set an alarm by invoking `SetAlarm` function, optionally specifying whether to vibrate, whether to skip the UI when creating an alarm and days on which alarm has to be invoked (repeating alarm).
 !> Repeating alarm is available from API level 19 and forth.
 
 ![](images/android-goodies/alarm-timer/Scr_Alarm.png)
@@ -390,8 +484,6 @@ ___
 
 # **Getting info**
 
-___
-
 ## Get device info and check supported features
 
 Device information functions allow retrieving various information about Android device and OS.
@@ -406,7 +498,7 @@ To check whether package with specified name installed on current device use `Is
 
 ### Check supported device features
 
-The plugin includes a series of functions that allow checking whether a certain feature is supported by Android device. 
+The plugin includes a series of functions that allow checking whether a certain feature is supported by Android device.
 
 Patterns for those function names are `Supports<feature name>` or `Has<feature name>` . Right-click in blueprint editor and start typing "Supports" or "Has" to see the full list of available functions.
 
@@ -414,9 +506,7 @@ Check out a detailed description of all features [here](https://developer.androi
 
 ___
 
-# **Image tools**
-
-___
+# **Image & File tools**
 
 ## Pick images from gallery and camera, save an image to gallery
 
@@ -450,11 +540,48 @@ Call the `TakeScreenShot` function to capture a screenshot. Screen image is auto
 
 ![](images/android-goodies/images/Scr_Screenshot.png)
 
+## Retrieve picked files and images data
+
+### Pick files from local storage
+
+Call the `PickFilesFromLocalStorage` function to pick files from local storage. You can allow multiple files pick by setting `Allow Multiple` flag. Upon successful callback array of [`ChosenFile`](#chosenfile-methods) objects is received, which can be used to retrieve available information about files picked.
+
+![](images/android-goodies/images/Scr_PickFilesFromLocalStorage.png)
+
+### Get chosen images data
+
+Call the `GetChosenImagesData` function to pick images from gallery. You can allow multiple images pick by setting `Allow Multiple` flag. You can specify image quality, maximal dimensions (e.g. 256), and a boolean value, indicating, whether the picked image should generate thumbnails. Upon successful callback array of [`ChosenImage`](#chosenimage-methods) objects is received, which can be used to retrieve available information about images picked.
+
+![](images/android-goodies/images/Scr_GetChosenImagesData.png)
+
+!> [`ChosenImage`](#chosenimage-methods) inherits [`ChosenFile`](#chosenfile-methods), so you can call all the methods available for [`ChosenFile`](#chosenfile-methods) objects too.
+
+### Get photo data from camera
+
+Call the `GetPhotoDataFromCamera` function to open the native camera view, allowing the user to take a photo. You can state, whether the resulting image should generate thumbnails. Upon successful callback array of [`ChosenImage`](#chosenimage-methods) objects is received, which can be used to retrieve available information about photo taken.
+
+![](images/android-goodies/images/Scr_GetPhotoDataFromCamera.png)
+
+!> Even though successful callback returns an array of [`ChosenImage`](#chosenimage-methods) objects it contains single picture.
+
+### Get texture from path
+
+To obtain a texture from given path call `GetTextureFromPath` method. You should also provide callback handlers to process texture or error message.
+
+![](images/android-goodies/images/Scr_GetTextureFromPath.png)
+
+### Chosen objects functionality
+#### ChosenFile methods
+
+![](images/android-goodies/images/Scr_ChosenFile.png)
+
+#### ChosenImage methods
+
+![](images/android-goodies/images/Scr_ChosenImage.png)
+
 ___
 
 # **Hardware**
-
-___
 
 * [Flashlight, vibrations, battery](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Hardware)
 
@@ -474,9 +601,9 @@ You can monitor the device's capability of vibrations using the following functi
 
 ### Simple vibrations
 
-Call the `Vibrate` function for a simple vibration, passing a floating point value, indicating the vibration duration in seconds. 
+Call the `Vibrate` function for a simple vibration, passing a floating point value, indicating the vibration duration in seconds.
 
-Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an array of the floating point values that are the durations for which to turn on or off the vibrator in seconds. The first value indicates the number of seconds to wait before turning the vibrator on. The next value indicates the number of seconds for which to keep the vibrator on before turning it off. Subsequent values alternate between durations in seconds to turn the vibrator off or to turn the vibrator on. You can also specify if the pattern is to be repeated. 
+Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an array of the floating point values that are the durations for which to turn on or off the vibrator in seconds. The first value indicates the number of seconds to wait before turning the vibrator on. The next value indicates the number of seconds for which to keep the vibrator on before turning it off. Subsequent values alternate between durations in seconds to turn the vibrator off or to turn the vibrator on. You can also specify if the pattern is to be repeated.
 
 ![](images/android-goodies/hardware/Scr_VibrationPattern.png)
 
@@ -486,13 +613,13 @@ Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an 
 
 !> Call `AreVibrationEffectsSupported` to know, whether the vibration effects are supported on the device. Use simple vibrations if it returns false.
 
-Call the `VibrateWithEffect` function to vibrate with one of the following effects: 
+Call the `VibrateWithEffect` function to vibrate with one of the following effects:
 
-* `VibrationEffectOneShot` , creating a single vibration at the specified amplitude (1 for minimal, 255 for maximal); 
+* `VibrationEffectOneShot` , creating a single vibration at the specified amplitude (1 for minimal, 255 for maximal);
 
 ![](images/android-goodies/hardware/Scr_VibrationEffect.png)
 
-* `VibrationEffectWaveForm` , creating a sequence, similar to the `VibrateWithPattern` function; 
+* `VibrationEffectWaveForm` , creating a sequence, similar to the `VibrateWithPattern` function;
 
 * `VibrationEffectWaveFormWithAmplitudes` , creating a sequence with the ability to specify the amplitude for the different fragments.
 
@@ -500,13 +627,11 @@ Call the `VibrateWithEffectAndAttributes` function to provide an additional Audi
 
 ## Battery
 
-You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions. 
+You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions.
 
 ___
 
 # **Contacts**
-
-___
 
 ## Fetch, find and add contacts
 

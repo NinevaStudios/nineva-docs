@@ -1,6 +1,8 @@
-# **Admob Goodies Documentation for Unreal Engine**
+﻿# **Admob Goodies**
 
 Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!
+
+---
 
 This plugin gives you the ability to load and show banner, interstitial, and rewarded video ads.
 Note that this plugin wraps official AdMob API and requires a valid AdMob account. Please follow the [instructions](#getting-started) on how to setup your AdMob account and project settings for this plugin to function properly.
@@ -36,11 +38,12 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 ## Project Settings
 
-![](images/admob/ProjectSettings.jpg)
+![](images/admob/ProjectSettings.png)
 
 * Delay app measurement - delays app measurement until the Ad Subsystem is explicitly initialized. Use this option if you need to collect any kind of consent before gathering user-level event data. By default event data is being sent to Google as soon as the app launches.
 * Admob AppID - unique AdMob app ID. If this field is empty your application will crash when launched on an actual device.
 * Test Device ID - this option specifies the ID of a device that will receive test ads for real ad units. Refer to the test ads section for more information.
+* Mediation - specify which mediation network providers should be enabled.
 
 ## Loading and showing ads
 
@@ -81,10 +84,10 @@ You can use real ad units and click ads on test devices. These ads will have a "
 To find out your device ID you need to launch the application on an actual device and load an ad. In the device log you should see a message containing your device ID.
 
 For **Android** you can view this message in logcat (UE device log or via Android Studio) and it will have the following format:
-`RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("YOUR_DEVICE_ID")` 
+`RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("YOUR_DEVICE_ID")`
 
 For **IOS** device first build and deploy your project using UE. After deploying your application to a device you can launch it via a generated XCode project located at *[Path_to_UE_Project]/Intermidiate/ProjectFilesIOS/[Project_Name].xcodeproj*. Now you can view your device logs in the XCode debug console. Search for a message of this format:
-`GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"YOUR_DEVICE_ID" ]` 
+`GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"YOUR_DEVICE_ID" ]`
 
 # **Error codes**
 
@@ -112,6 +115,29 @@ In case you encounter an error you will receive an error code and message in you
 | 6          | Interstitial ad already used Error. This happens when you try to show the same interstitial ad more than once. |
 | 11         | Internal Error. Something happened internally; for instance, an invalid response was received from the ad server. |
 | 14         | Rewarded ad already used Error. This happens when you try to show the same rewarded ad more than once. |
+
+# **Mediation**
+
+This plugin supports the following mediation providers:
+* AdColony
+* Chartboost
+* Facebook Audience Network
+* Tapjoy
+* Unity Ads
+* Vungle
+
+For mediation to work you will need to properly setup an application on the provider's website and setup mediation groups for your unit IDs on the AdMob website. Please follow the official instructions provided by Google for specific providers: [AdColony](https://developers.google.com/admob/android/mediation/adcolony#step_1_set_up_adcolony), [Chartboost](https://developers.google.com/admob/android/mediation/chartboost#step_1_set_up_chartboost), [Facebook](https://developers.google.com/admob/android/mediation/facebook#step_1_set_up_facebook_audience_network), [Tapjoy](https://developers.google.com/admob/android/mediation/tapjoy#step_1_set_up_tapjoy), [Unity Ads](https://developers.google.com/admob/android/mediation/unity#step_1_set_up_unity_ads), [Vungle](https://developers.google.com/admob/android/mediation/vungle#step_1_set_up_vungle). All the necessary information is specified in steps 1 and 2, all other steps can be skipped.
+
+## Select mediation providers for your app
+
+You are not required to setup all available mediation providers. If you only use some of them or none at all you can disable them so that your app does not ship with additional libraries that are not used. You can select which providers are enabled in the plugin's settings. These settings only work for Android. Unfortunately, the only way to modify which providers are enabled on iOS is to rebuild the plugin. To rebuild the plugin follow these steps:
+- Copy the plugin from your engine folder (*[path_to_engine]/Engine/Plugins/Marketplace/AdmobGoodies*) to your project's plugin folder;
+- Delete the *Binaries* and *Intermediate* folders;
+- Modify the plugin's Build.cs file to select which networks are enabled
+- Launch the project, during start up you will be asked to build the plugin
+- Confirm build
+
+The plugin's Build.cs file (*Source/AdmobGoodies/AdmobGoodies.Build.cs*) has commented blocks for each provider - if you wish to disable a provider simply comment out the lines with `PublicAdditionalFrameworks`.
 
 # **Blueprint nodes**
 
@@ -167,7 +193,7 @@ Show On Load - Show the ad when it finishes loading
 
 Show banner ad
 
-	
+
 
 * Hide
 
@@ -204,7 +230,7 @@ Create an interstitial ad
 Parameters:
 AdUnitId - Ad unit id (provided by Admob)
 
-	
+
 
 * Load Ad
 
@@ -217,8 +243,6 @@ Load the ad
 ![](images/admob/InterstitialAdIsLoadedBP.jpg)
 
 Check if the ad has loaded. Return true if ad loaded successfully, false otherwise
-
-	
 
 * Show
 
@@ -241,7 +265,7 @@ You can bind to the following events:
 * Ad Loaded - fires when an ad finishes loading
 * Ad Failed to Load - fires when an ad request fails (it is not recommended to load ads from this event's callback)
 * Ad Opened - fires when an ad opens an overlay that covers the screen.
-* Ad Left Application - fires when the user clicks on an ad	
+* Ad Left Application - fires when the user clicks on an ad
 * Ad Closed - fires when the user is about to return to the app after tapping on an ad
 
 ## Rewarded Ads

@@ -1,3 +1,5 @@
+# **Google Maps View**
+
 ![](/images/maps/icon.png ':size=128')
 
 ?> **[PLEASE READ THE FAQS BEFORE CONTACTING SUPPORT!!!](#faq)**
@@ -15,11 +17,11 @@ The plugin allows you to embed **Native [GoogleMapsView](https://developers.goog
 
 !> Minimum supported Android version is **API level 16 (Jelly Bean)**
 
-!> Minimum supported iOS version is **9.0**. 
+!> Minimum supported iOS version is **9.0**.
 
 !> **The plugin does NOT work in Editor! Only on iOS and Android** It is a native Android/iOS view (not a web view) so performance is awesome but there is no way to get native Android/iOS view working in Unity Editor.
 
-!> **You can't move the view as a part of scene hierarchy (e.g scroll in Unity view)**. However, you can change the view size and position. 
+!> **You can't move the view as a part of scene hierarchy (e.g scroll in Unity view)**. However, you can change the view size and position.
 
 ![](/images/maps/map_demo.png ':size=768')
 
@@ -71,7 +73,7 @@ The form that appears maps app package names to SHA-1 certificate fingerprints. 
 
 To obtain **SHA-1 certificate fingerprint** run this command in your terminal pointing to your keystore that application is signed with:
 
-`keytool -list -v -keystore mystore.keystore` 
+`keytool -list -v -keystore mystore.keystore`
 
 For example in my case it is `keytool -list -v -keystore ~tarasleskiv/.android/debug.keystore` as I am using default debug keystore. (Default option in Unity).
 
@@ -79,7 +81,7 @@ If you use your Windows machine its very similar, in my case I specified full pa
 
 ![](/images/maps/get_key_7.png ':size=768')
 
-* Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save` . 
+* Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save` .
 
 ![](/images/maps/get_key_6.png ':size=768')
 
@@ -87,11 +89,11 @@ If you use your Windows machine its very similar, in my case I specified full pa
 
 !> **Note: It may take up to 5 minutes for settings to take effect after you save them**
 
-### Adding Google Play **SHA-1 certificate fingerprint** if you use [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423)
+### Adding Google Play *SHA-1 certificate fingerprint* if you use Google Play App Signing
 
-If you are not using new Google Play App Signing mechanism please skip this part.
+?> If you are not using new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) mechanism please skip this part.
 
-If you are using new Google Play App Signing mechanism you also have to create another entry that mps your package name to app signing certificate that Google generates for you. You can find your app signing certificate and **SHA-1 certificate fingerprint** under Release Management -> App Signing. This is the **SHA-1 certificate fingerprint** that you have to use.
+If you are using new Google Play App Signing mechanism you also have to create another entry that maps your package name to app signing certificate that Google generates for you. You can find your app signing certificate and **SHA-1 certificate fingerprint** under Release Management -> App Signing. This is the **SHA-1 certificate fingerprint** that you have to use.
 
 You have to do this because with the new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) Google re-signs your app with another certificate. If you forget this place picker functionality will not work when downloaded from Google Play.
 
@@ -106,14 +108,14 @@ Once you have your key (it starts with "AIza"), go to _Window -> Google Maps Vie
 ## 4. Run the Demo Scene
 
 * Open Unity Build Settings and switch Platform to Android
-* Add `GoogleMapsView/Example/ExampleScene.unity` to `Scenes in Build` 
+* Add `GoogleMapsView/Example/ExampleScene.unity` to `Scenes in Build`
 * Connect Android device and run the scene (Device must have Google Play Services installed)
 
 After running the demo you will see the demo scene, now you can play around with settings. Don't forget to click "Refresh" each time you change settings.
 
 ![](/images/maps/map_demo.png ':size=768')a
 
-# **Setup (iOS**)
+# **Setup (iOS)**
 
 ## 1. Change the default Bundle id to your Bundle Id (package name)
 
@@ -161,7 +163,7 @@ The form that appears maps app package names to SHA-1 certificate fingerprints. 
 
 To obtain **SHA-1 certificate fingerprint** run this command in your terminal pointing to your keystore that application is signed with:
 
-`keytool -list -v -keystore mystore.keystore` 
+`keytool -list -v -keystore mystore.keystore`
 
 For example in my case it is `keytool -list -v -keystore ~tarasleskiv/.android/debug.keystore` as I am using default debug keystore. (Default option in Unity).
 
@@ -169,17 +171,17 @@ If you use your Windows machine its very similar, in my case I specified full pa
 
 ![](/images/maps/get_key_7.png ':size=768')
 
-* Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save` . 
+* Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save` .
 
 ![](/images/maps/get_key_6.png ':size=768')
 
 * Repeat adding package-**SHA-1 certificate fingerprint** pairs for all keystores that you sign the app with. For example I usually have two entries - one with my debug keystore to develop locally and another pair for Google Play publishing.
 
-> **Note: It may take up to 5 minutes for settings to take effect after you save them**
+!> **Note: It may take up to 5 minutes for settings to take effect after you save them**
 
-### Adding Google Play **SHA-1 certificate fingerprint** if you use [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423)
+### Adding Google Play *SHA-1 certificate fingerprint* if you use Google Play App Signing
 
-If you are not using new Google Play App Signing mechanism please skip this part.
+?> If you are not using new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) mechanism please skip this part.
 
 If you are using new Google Play App Signing mechanism you also have to create another entry that maps your package name to app signing certificate that Google generates for you. You can find your app signing certificate and **SHA-1 certificate fingerprint** under Release Management -> App Signing. This is the **SHA-1 certificate fingerprint** that you have to use.
 
@@ -196,7 +198,7 @@ Once you have your key (it starts with "AIza"), go to _Window -> Google Maps Vie
 ## 4. Run the Demo Scene
 
 * Open Unity Build Settings and switch Platform to Android
-* Add `GoogleMapsView/Example/ExampleScene.unity` to `Scenes in Build` 
+* Add `GoogleMapsView/Example/ExampleScene.unity` to `Scenes in Build`
 * Connect Android device and run the scene (Device must have Google Play Services installed)
 
 After running the demo you will see the demo scene, now you can play around with settings. Don't forget to click "Refresh" each time you change settings.
@@ -207,7 +209,7 @@ After running the demo you will see the demo scene, now you can play around with
 
 For reference see the Example folder inside unitypackage. It must provide exhaustive overview of plugin functionality.
 
-## **Creating, Showing and Dismissing GoogleMapView**
+## Creating, Showing and Dismissing GoogleMapView
 
 To create the google map view simply create an object and pass the created options to the constructor. After this call `Show` method passing rectangle that represents the position on the screen as a parameter. You can create and show multiple map view instances at the same time.
 
@@ -241,9 +243,9 @@ GoogleMapsOptions CreateMapViewOptions()
 
     // Camera position
     options.Camera(new CameraPosition(
-            new LatLng(camPosLat.value, camPosLng.value), 
-            camPosZoom.value, 
-            camPosTilt.value, 
+            new LatLng(camPosLat.value, camPosLng.value),
+            camPosZoom.value,
+            camPosTilt.value,
             camPosBearing.value));
 
     // Specifies a LatLngBounds to constrain the camera target
@@ -272,7 +274,7 @@ GoogleMapsOptions CreateMapViewOptions()
 
 ## Showing and Hiding GoogleMapView
 
-To show/hide the map without losing state call `_map.IsVisible = true;` or `_map.IsVisible = false;` 
+To show/hide the map without losing state call `_map.IsVisible = true;` or `_map.IsVisible = false;`
 
 ## Handling orientation changes
 
@@ -635,7 +637,7 @@ You can show users location on the map view.
 
 ![](/images/maps/my_location.png ':size=768')
 
-## Setup 
+## Setup
 
 1. Add **ACCESS_FINE_LOCATION** permission to your `AndroidManifest.xml` file under under `Plugins/Android` folder. See [Android Permissions](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms) for more details.
 
@@ -808,12 +810,12 @@ Example:
 
 ```csharp
 public void OnOpenMapDefault()
-{		
+{
     OpenGoogleMapHelper.DisplayMapDefault();
 }
 
 public void OnOpenMapCustom()
-{		
+{
     OpenGoogleMapHelper.DisplayMap(new LatLng(-33.8569, 151.2152), 10, OpenGoogleMapHelper.MapType.Satellite, OpenGoogleMapHelper.MapLayer.Bicycling);
 }
 ```
@@ -963,13 +965,11 @@ public void OnDisplayStreetViewPanaroma()
 - **Q:** I am getting errors when trying to build the project or crashes at runtime, what should I do?
 - **A:** Contact us on [Discord server](https://bit.ly/nineva_support_discord) but collect and provide all the useful info that can help us troubleshoot the issue, such as: Logcat logs on Androud, XCode logs from iOS, the code that you use, etc.
 
----
-
 # **Troubleshooting**
 
 This page explains how to troubleshoot problems when you can't build your Android project.
 
-## How to find the actual error why I can't build the project 
+## How to find the actual error why I can't build the project
 
 When Unity can't build Android project it shows the error with the actual build error in Unity console. The problem is that the error log is very big and you have to scroll and look at it carefully to find the actual cause of build failure.
 
@@ -1128,4 +1128,4 @@ Shortly:
 
 ![](/images/maps/firebase_conflicts.png ':size=768')
 
-Now the dependency resolver must resolve all the dependencies automatically. 
+Now the dependency resolver must resolve all the dependencies automatically.
