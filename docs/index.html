@@ -16,6 +16,19 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
+      plugins: [
+        function (hook) {
+          var footer = [
+            '<footer>',
+            '<a href="https://www.patreon.com/bePatron?u=168010"><img src="/icons/patreon.png" style="height:46px;vertical-align: bottom"></a>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        }
+      ],
       loadNavbar: true,
       logo: '/icons/logo-icon.png',
       name: 'Nineva Docs',
@@ -32,7 +45,7 @@
       },
       search: {
         paths: [
-          '/', 
+          '/',
           '/ue-plugins/admob-unreal',
           '/ue-plugins/firebase-unreal',
           '/unity-plugins/android-goodies',
