@@ -579,6 +579,15 @@ To obtain a texture from given path call `GetTextureFromPath` method. You should
 
 ![](images/android-goodies/images/Scr_ChosenImage.png)
 
+## Image utility Methods
+### Clear texture
+
+Utility method for clearing memory dedicated to UTexture2D object to prevent memory leaks.
+
+Use this method in case UTxeture2D object is no longer needed, as Unreal doesn't seem to automatically GC objects of this type for some reason.
+
+![](images/android-goodies/images/Scr_ClearTexture.png)
+
 ___
 
 # **Hardware**
