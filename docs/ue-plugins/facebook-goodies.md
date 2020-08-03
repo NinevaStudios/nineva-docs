@@ -54,7 +54,9 @@ To access certain data the user needs to grant specific permissions. You can che
 
 # **Analytics**
 
-# **Sharing**
+TODO
+
+# **Share**
 
 Official documentation on sharing can be found [here](https://developers.facebook.com/docs/sharing/).
 
