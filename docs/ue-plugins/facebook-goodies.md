@@ -131,6 +131,8 @@ You can share a link with an optional quote using the Share Link Content:
 
 ### Share Media Content
 
+!> Currently, only works on iOS due to Android SDK issues!
+
 You can share multiple photos and videos using the Share Media Content:
 
 ![](images/facebook/FBShare6.png)
