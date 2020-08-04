@@ -54,7 +54,31 @@ To access certain data the user needs to grant specific permissions. You can che
 
 # **Analytics**
 
-TODO
+## Log events
+
+There are three convenience methods for event logging: 
+
+![](images/facebook/FBAnal1.png)
+
+You can either just log event with a name, with name and parameters or with name, parameters and a sum value, that will be added for the events with this name.
+
+## Set event flush behaviour
+
+By default, the logged events are flushed automatically by the SDK, but if you want, you can change it to manual and flush them whenever it's convenient for you.
+
+![](images/facebook/FBAnal3.png)
+
+## Use user data
+
+You can also set, get and clear the personal user information:
+
+![](images/facebook/FBAnal2.png)
+
+## Application identifiers
+
+You can get the Facebook Application ID and the unique identifier for the application installation on the current device for your needs:
+
+![](images/facebook/FBAnal4.png)
 
 # **Share**
 
