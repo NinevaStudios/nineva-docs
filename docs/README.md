@@ -11,13 +11,9 @@ Useful links:
 
 ## Unreal Engine 4 Plugins
 
-* [Admob Goodies](ue-plugins/admob-unreal)
-* [Android Goodies](ue-plugins/android-goodies-unreal)
-* [BLE Utilities](ue-plugins/ble-utilities)
-* [Facebook Goodies](ue-plugins/facebook-goodies)
-* [Firebase Goodies](ue-plugins/firebase-unreal)
-* [Google Maps View](ue-plugins/google-maps-unreal)
-* [iOS Goodies](ue-plugins/ios-goodies)
+| [<img src="icons/admob-ue.png">](ue-plugins/admob-unreal) <br> [Admob Goodies](ue-plugins/admob-unreal)                 | [<img src="icons/ag-ue.png">](ue-plugins/android-goodies-unreal) <br> [Android Goodies](ue-plugins/android-goodies-unreal) | [<img src="icons/ig-ue.png">](ue-plugins/ios-goodies) <br> [iOS Goodies](ue-plugins/ios-goodies)            | [<img src="icons/facebook-ue.png">](ue-plugins/facebook-ue) <br> [Facebook Goodies](ue-plugins/facebook-goodies) |                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [<img src="icons/firebase-ue.png">](ue-plugins/firebase-unreal) <br> **[Firebase Goodies](ue-plugins/firebase-unreal)** | [<img src="icons/maps-ue.png">](ue-plugins/google-maps-unreal) <br> **[Google Maps View](ue-plugins/google-maps-unreal)**  | [<img src="icons/ble-ue.png">](ue-plugins/ble-utilities) <br> **[BLE Utilities](ue-plugins/ble-utilities)** | [<img src="icons/play-games-ue.png">]() <br> GP Game Services <br> _(coming soon)_                               | [<img src="icons/game-center-ios.png">]() <br>Game Center <br> _(coming soon)_ |
 
 ## Unity Plugins
 
