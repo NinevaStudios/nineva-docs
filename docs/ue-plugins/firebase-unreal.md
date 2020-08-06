@@ -86,10 +86,6 @@ You have to setup the user authentication feature in the firebase console for yo
 
 !> Some of the providers may require additional setup. Please, check the official Firebase documentation on how to enable the different sign in methods if you are having any problems with it.
 
-You have to provide a Client ID for Android in the plugin settings. It can be found in the *google-services.json* file under the `oauth_client` section - the one with the `client_type` value of `3`.
-
-![](images/firebase/auth/AuthConfigGoogleServices3.png)
-
 ## Functions
 
 Auth library of the plugin allows manipulating users and sessions.
@@ -233,8 +229,6 @@ Setup rules to be able to read/write data from your database by following the of
 * Cache size
 
   Size of the cache used for persistence storage (default is 10 MB).
-
-![](images/firebase/db/DbSettings.png)
 
 ## Functions
 
