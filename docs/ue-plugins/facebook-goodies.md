@@ -1,5 +1,11 @@
 # **Facebook Goodies**
 
+Welcome to Facebook Goodies Documentation for Unreal Engine
+
+?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+
+---
+
 To start using Facebook in your application you will need to log in on the [Facebook Developer portal](https://developers.facebook.com/) and create an app. In your app, you will need to setup Login and Analytics. Follow the instructions there and provide the necessary info (e. g. iOS Bundle ID, Android Package Name, etc.).
 
 ?> This plugin will do all the necessary changes to the Android manifest and iOS plist, so you can skip those steps.
@@ -158,3 +164,13 @@ You can share content to story using the Share Story Content and providing a sti
 You can share video using the Share Video Content, providing a previously created Share Video object:
 
 ![](images/facebook/FBShare9.png)
+
+___
+
+# Changelog
+
+v.1.0.0
+
+* Initial release
+
+___

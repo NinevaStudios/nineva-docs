@@ -1,5 +1,10 @@
 # **Firebase Goodies**
 
+Welcome to Firebase Goodies Documentation for Unreal Engine
+
+?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
+
+---
 Create a Firebase project, follow the instructions in this [video](https://www.youtube.com/watch?v=6juww5Lmvgo).
 
 In the Project Settings of your Firebase console, create an Android/iOS app providing the required information.
@@ -546,3 +551,18 @@ You can set in-app default parameter values in Remote Config, so that your app b
 Before setting the default values, you first need to make a map of parameter names and default parameter values, then call the `SetDefaults` methods with this map.
 
 ![](images/firebase/remote-config/FirebaseRCSetup.png)
+
+___
+
+# Changelog
+
+v.1.0.2
+
+* UPDATE Settings screen
+
+v.1.0.0
+
+* Initial release
+
+___
+

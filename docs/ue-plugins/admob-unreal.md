@@ -1,6 +1,8 @@
 ﻿# **Admob Goodies**
 
-Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!
+Welcome to Admob Goodies Documentation for Unreal Engine
+
+?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
 ---
 
@@ -313,10 +315,27 @@ You can bind to the following events:
 
 The plugin content contains a demo that shows how to create all the different ad formats. To show plugin content tick the options `Show Engine Content` and `Show Plugin Content` in your content browser and load the `AdmobGoodies Content/Maps/Demo.umap` map.
 
-***
-
 * I can show ads with test unit IDs but when I use real unit IDs no ads are shown.
 
 If you see test ads using Google provided test unit IDs then you are all set for showing ads in your release application. If no ads are shown with real unit IDs after this the problem is most likely with your Admob account. Either it is not set up fully or it just does not send any ads because your app is not generating enough traffic. To further investigate this issue we recommend to directly contact the Admob support team.
 
-***
+___
+
+# Changelog
+
+v.1.1.2
+
+* ADDED Ability to specify an array of test device IDs
+* FIXED Screen orientation change when exiting a full screen ad on iOS
+* FIXED Compatibility with FirebaseGoodies
+* FIXED Compatibility with FacebookGoodies
+
+v.1.1.0
+
+* NEW FEATURE Mediation support (AdColony, Chartboost, Facebook Ads, Tapjoy, Unity Ads, Vungle)
+
+v.1.0.0
+
+* Initial release
+
+___

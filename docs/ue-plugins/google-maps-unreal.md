@@ -1,9 +1,8 @@
 # **Google Maps View**
 
----
 !> **Please read the [limitations](#limitations) before purchasing**
 
-Join our [Discord server](https://discord.gg/SuJP9fY) and ask us anything!
+Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!
 
 ---
 
