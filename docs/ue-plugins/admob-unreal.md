@@ -44,7 +44,7 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 * Delay app measurement - delays app measurement until the Ad Subsystem is explicitly initialized. Use this option if you need to collect any kind of consent before gathering user-level event data. By default event data is being sent to Google as soon as the app launches.
 * Admob AppID - unique AdMob app ID. If this field is empty your application will crash when launched on an actual device.
-* Test Device IDs - this option specifies the IDs of devices that will receive test ads for real ad units. Refer to the test ads section for more information.
+* Test Device IDs - this option specifies the IDs of devices that will receive test ads for real ad units. Refer to the [testing ads section](#testing-ads) for more information.
 * Mediation - specify which mediation network providers should be enabled.
 
 ## Loading and showing ads
@@ -53,7 +53,7 @@ To actually display ads you will also need to setup ad units in your AdMob accou
 
 ![](images/admob/AdmobAdUnits.jpg)
 
-?> During development you can use special Google provided test ad unit IDs. Please refer to [this](#testing-ads) page for more information.
+?> During development you can use special Google provided test ad unit IDs. Please refer to [testing ads section](#testing-ads) page for more information.
 
 To present an ad to your users you will need to perform these actions:
 
