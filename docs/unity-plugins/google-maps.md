@@ -117,83 +117,21 @@ After running the demo you will see the demo scene, now you can play around with
 
 # **Setup (iOS)**
 
-## 1. Change the default Bundle id to your Bundle Id (package name)
+## 1. Make sure that Google Maps is enabled for iOS SDK
 
-Go to Unity Android Player Settings and set the Bundle Id as your package name, e.g. `gmaps.deadmosquitogames.com.googlemaps` and save it. **This is important as Google API Key in the next step will be restricted to the package you set.**
+![](images/maps/enabled_ios_1.png)
+![](images/maps/enabled_ios_2.png)
+![](images/maps/enabled_ios_3.png)
 
-![](/images/maps/bundle_id.png ':size=768')
+## 2 Getting Google Maps API Key from Google Developer Console
 
-## 2. Obtaining Google API Key
-
-This part is a bit tricky so please follow instructions carefully.
-
-If you don't already have a [Google Console](https://console.developers.google.com) account create one and login.
-
-* Go to [https://cloud.google.com/maps-platform/](https://cloud.google.com/maps-platform) and click `GET STARTED` button.
-
-![](/images/maps/get-api-key-1.png ':size=768')
-
-* Select `Maps` product and continue
-
-![](/images/maps/get-api-key-2.png ':size=768')
-
-* Select an already existing project or create a new one in the dropdown
-
-![](/images/maps/get-api-key-3.png ':size=768')
-
-* If you do not have the billing account yet, you would be asked to create one, please follow the instructions
-
-![](/images/maps/get-api-key-4.png ':size=768')
-
-* Click next to finally create an API key
-
-![](/images/maps/get-api-key-5.png ':size=768')
-
-You will be now presented with the API key, please save it as we will need it later. Click on `API Console` link below the key to go your API key settings.
-
-![](/images/maps/get-api-key-6.png ':size=768')
-
-What we need to do now and its very important that we restrict usage of this key to only our Android application (So other people can't use it if the obtain your key). In `Key restriction section` choose `Android apps` and click on `+ Add package name and fingerprint` button.
-
-![](/images/maps/get_key_5.png ':size=768')
-
-The form that appears maps app package names to SHA-1 certificate fingerprints. Put **Package name** from your unity project that you set up in **Step 1*** into the package field.
-
-### Obtaining SHA-1 certificate fingerprint
-
-To obtain **SHA-1 certificate fingerprint** run this command in your terminal pointing to your keystore that application is signed with:
-
-`keytool -list -v -keystore mystore.keystore`
-
-For example in my case it is `keytool -list -v -keystore ~tarasleskiv/.android/debug.keystore` as I am using default debug keystore. (Default option in Unity).
-
-If you use your Windows machine its very similar, in my case I specified full path to keytool: `"C:\Program Files\Java\jdk1.8.0_91\bin\keytool" -list -v -keystore C:\Users\tarasleskiv\.android\debug.keystore` .
-
-![](/images/maps/get_key_7.png ':size=768')
-
-* Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save` .
-
-![](/images/maps/get_key_6.png ':size=768')
-
-* Repeat adding package-**SHA-1 certificate fingerprint** pairs for all keystores that you sign the app with. For example I usually have two entries - one with my debug keystore to develop locally and another pair for Google Play publishing.
-
-!> **Note: It may take up to 5 minutes for settings to take effect after you save them**
-
-### Adding Google Play *SHA-1 certificate fingerprint* if you use Google Play App Signing
-
-?> If you are not using new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) mechanism please skip this part.
-
-If you are using new Google Play App Signing mechanism you also have to create another entry that maps your package name to app signing certificate that Google generates for you. You can find your app signing certificate and **SHA-1 certificate fingerprint** under Release Management -> App Signing. This is the **SHA-1 certificate fingerprint** that you have to use.
-
-You have to do this because with the new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) Google re-signs your app with another certificate. If you forget this place picker functionality will not work when downloaded from Google Play.
-
-![](/images/maps/new-signing.png ':size=768')
+Please [follow the same steps from Android setup](#setup-android) but choose `iOS Apps` when you get to the **Credentials** screen. Here you can optionally restrict key usage to certain application packages.
 
 ## 3. Set the API key in Unity Project settings.
 
 Once you have your key (it starts with "AIza"), go to _Window -> Google Maps View -> Edit Settings_ and replace the value in the corresponding input field with the API key that you recently retrieved.
 
-![](/images/maps/android_api_key_settings.png ':size=768')
+![](/images/maps/ios_api_key_settings.png ':size=768')
 
 ## 4. Run the Demo Scene
 
