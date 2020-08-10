@@ -315,9 +315,9 @@ You can bind to the following events:
 
 The plugin content contains a demo that shows how to create all the different ad formats. To show plugin content tick the options `Show Engine Content` and `Show Plugin Content` in your content browser and load the `AdmobGoodies Content/Maps/Demo.umap` map.
 
-* I can show ads with test unit IDs but when I use real unit IDs no ads are shown.
+* I can show ads with test unit IDs but when I use real unit IDs no ads are shown (e. g. no fill errors).
 
-If you see test ads using Google provided test unit IDs then you are all set for showing ads in your release application. If no ads are shown with real unit IDs after this the problem is most likely with your Admob account. Either it is not set up fully or it just does not send any ads because your app is not generating enough traffic. To further investigate this issue we recommend to directly contact the Admob support team.
+If you see test ads using Google provided test unit IDs then you are all set for showing ads in your release application. If no ads are shown with real unit IDs after this the problem is most likely with Admob itself and not the plugin. Either your account is not set up fully or it just does not send any ads because your app is not generating enough traffic. To further investigate this issue we recommend to directly contact the Admob support team.
 
 ___
 
