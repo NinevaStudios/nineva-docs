@@ -20,6 +20,8 @@ When you add the App ID to your settings a file *FacebookGoodies.xml* will be cr
 
 ## Android setup
 
+![](images/facebook/FbAndroidSetup.png)
+
 In the Android section of your app you need to setup a few things
 
 1. Put your application package name in this field
