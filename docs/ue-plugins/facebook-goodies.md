@@ -12,30 +12,53 @@ Welcome to Facebook Goodies Documentation for Unreal Engine
 
 Log in on the [Facebook Developer portal](https://developers.facebook.com/apps/) and create an app.
 
-![](images/facebook/FbCreateApp.jpg)
-![](images/facebook/FbCreateApp_2.jpg)
+![](images/facebook/FbCreateApp.jpg ':size=900')
+![](images/facebook/FbCreateApp_2.jpg ':size=900')
 
-To start using Facebook in your application you will need to log in on the [Facebook Developer portal](https://developers.facebook.com/) and create an app. In your app, you will need to setup Login and Analytics. Follow the instructions there and provide the necessary info (e. g. iOS Bundle ID, Android Package Name, etc.).
+## Copy your App ID to UE Project settings
 
-?> This plugin will do all the necessary changes to the Android manifest and iOS plist, so you can skip those steps.
+After you create your app you will see a screen of your app. Your App ID will be displayed at the top. Now go to your UE project `Edit -> Project Settings` and find the Facebook Goodies section in settings and paste your App ID there.
 
-If properly configured your app should have green checkboxes for Login and Analytics in the products section. The last step is to copy the App ID to your UE4 project settings.
+![](images/facebook/FbCreatedApp.jpg ':size=900')
+![](images/facebook/FBPasteAppIdIntoSettings.jpg ':size=900')
 
-![](images/facebook/FbConfiguredApp.png)
-
-When you add the App ID to your settings a file *FacebookGoodies.xml* will be created in the root folder of your project. This file is required for Android builds to work so do **not** delete it.
+When you add the App ID to your settings `FacebookGoodies.xml` file will be created in the root folder of your project. This file is required for Android builds to work so do **not** delete it.
 
 ?> In case you don't have the default folder structure for your project there might be an issue when copying this file to the Android APK. If you experience crashes when your Android app is launching please verify that this file is present in the built APK located at *Project\Intermediate\Android\APK\res\values\*. If there is absent, integrate the copy process into your build pipeline.
 
+## Fill in settings and add Android and iOS platforms
+
+Go to `Settings -> Basic` and fill in all the information you need there. Now scroll down to the bottom of the page and add Android and iOS platforms to your app. You will see new sections for Android and iOS after you do this.
+
+![](images/facebook/FBAppSettingsBasic.jpg ':size=900')
+![](images/facebook/FbSettingsAddAndroidAndIos.jpg ':size=900')
+
+## iOS Setup
+
+Fill in the Bundle id that you are using for your app
+
+![](images/facebook/FbSetupIos.jpg ':size=900')
+
 ## Android setup
 
-![](images/facebook/FbAndroidSetup.png)
+![](images/facebook/FbAndroidSetup.png ':size=900')
 
 In the Android section of your app you need to setup a few things
 
 1. Put your application package name in this field
 2. As a class name put `com.epicgames.ue4.GameActivity` which is the default name of the main activity
 3. You need to find your keystore hashes which you are signing your app with. Please follow the [instructions on Facebook developers](https://developers.facebook.com/docs/android/getting-started/#release-key-hash).
+
+## Products setup
+
+Add all the products you need and follow the setup instructions for each product on the portal. Please ignore the Plist file modifications, the plugin will do them for you automatically.
+
+![](images/facebook/FbAddProducts.jpg ':size=900')
+
+If properly configured your app should have green checkboxes for Login and Analytics in the products section.
+
+![](images/facebook/FbConfiguredApp.png)
+
 
 # **Login**
 
@@ -78,6 +101,17 @@ To access certain data the user needs to grant specific permissions. You can che
 ![](images/facebook/FbPermissionOps.png)
 
 # **Analytics**
+
+To test the events please use the [Event Manager](https://www.facebook.com/events_manager)
+
+![](images/facebook/FbEventManager.jpg)
+
+
+## Permissions
+
+These are the methods to get permissions
+
+![](images/facebook/FbPermissionOps.png)
 
 ## Log events
 
