@@ -11,8 +11,8 @@ Welcome to Android Goodies Documentation for Unreal Engine
 * [Native UI](#native-ui)
  + [Native dialogs](#native-dialogs)
  + [Date and time picker](#date-and-time-picker)
- + [Show Toasts](#toasts)
- + [Native sharing text or/and image](#native-sharing)
+ + [Show Toasts](#show-toasts)
+ + [Native sharing text or/and image](#native-sharing-text-orand-image)
  + [Notifications](#notifications)
 
 * [App interaction](#app-interaction)
