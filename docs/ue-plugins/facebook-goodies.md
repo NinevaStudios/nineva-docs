@@ -6,6 +6,15 @@ Welcome to Facebook Goodies Documentation for Unreal Engine
 
 ---
 
+# Setup
+
+## Create an app on the Facebook Developer portal
+
+Log in on the [Facebook Developer portal](https://developers.facebook.com/apps/) and create an app.
+
+![](images/facebook/FbCreateApp.jpg)
+![](images/facebook/FbCreateApp_2.jpg)
+
 To start using Facebook in your application you will need to log in on the [Facebook Developer portal](https://developers.facebook.com/) and create an app. In your app, you will need to setup Login and Analytics. Follow the instructions there and provide the necessary info (e. g. iOS Bundle ID, Android Package Name, etc.).
 
 ?> This plugin will do all the necessary changes to the Android manifest and iOS plist, so you can skip those steps.
