@@ -85,11 +85,13 @@ You can use real ad units and click ads on test devices. These ads will have a "
 
 To find out your device ID you need to launch the application on an actual device and load an ad. In the device log you should see a message containing your device ID.
 
-For **Android** you can view this message in logcat (UE device log or via Android Studio) and it will have the following format:
+For **Android** you can view this message in logcat (via Android Studio) and it will have the following format:
 `RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("YOUR_DEVICE_ID")`
 
 For **IOS** device first build and deploy your project using UE. After deploying your application to a device you can launch it via a generated XCode project located at *[Path_to_UE_Project]/Intermidiate/ProjectFilesIOS/[Project_Name].xcodeproj*. Now you can view your device logs in the XCode debug console. Search for a message of this format:
 `GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"YOUR_DEVICE_ID" ]`
+
+?> View the logs in an IDE, UE device output log window may filter out the message and you won't see it.
 
 # **Error codes**
 
@@ -315,9 +317,9 @@ You can bind to the following events:
 
 The plugin content contains a demo that shows how to create all the different ad formats. To show plugin content tick the options `Show Engine Content` and `Show Plugin Content` in your content browser and load the `AdmobGoodies Content/Maps/Demo.umap` map.
 
-* I can show ads with test unit IDs but when I use real unit IDs no ads are shown.
+* I can show ads with test unit IDs but when I use real unit IDs no ads are shown (e. g. no fill errors).
 
-If you see test ads using Google provided test unit IDs then you are all set for showing ads in your release application. If no ads are shown with real unit IDs after this the problem is most likely with your Admob account. Either it is not set up fully or it just does not send any ads because your app is not generating enough traffic. To further investigate this issue we recommend to directly contact the Admob support team.
+If you see test ads using Google provided test unit IDs then you are all set for showing ads in your release application. If no ads are shown with real unit IDs after this the problem is most likely with Admob itself and not the plugin. Either your account is not set up fully or it just does not send any ads because your app is not generating enough traffic. To further investigate this issue we recommend to directly contact the Admob support team.
 
 ___
 

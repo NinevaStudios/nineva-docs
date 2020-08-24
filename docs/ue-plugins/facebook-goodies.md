@@ -27,6 +27,16 @@ When you add the App ID to your settings a file *FacebookGoodies.xml* will be cr
 
 ?> In case you don't have the default folder structure for your project there might be an issue when copying this file to the Android APK. If you experience crashes when your Android app is launching please verify that this file is present in the built APK located at *Project\Intermediate\Android\APK\res\values\*. If there is absent, integrate the copy process into your build pipeline.
 
+## Android setup
+
+![](images/facebook/FbAndroidSetup.png)
+
+In the Android section of your app you need to setup a few things
+
+1. Put your application package name in this field
+2. As a class name put `com.epicgames.ue4.GameActivity` which is the default name of the main activity
+3. You need to find your keystore hashes which you are signing your app with. Please follow the [instructions on Facebook developers](https://developers.facebook.com/docs/android/getting-started/#release-key-hash).
+
 # **Login**
 
 There are 3 blueprint nodes that you can use to login via Facebook:
