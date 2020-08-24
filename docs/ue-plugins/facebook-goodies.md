@@ -8,6 +8,8 @@ Welcome to Facebook Goodies Documentation for Unreal Engine
 
 # Setup
 
+?> When dealing with setup we highly encourage you to also read/explore Facebook docs because it's the original source
+
 ## Create an app on the Facebook Developer portal
 
 Log in on the [Facebook Developer portal](https://developers.facebook.com/apps/) and create an app.
