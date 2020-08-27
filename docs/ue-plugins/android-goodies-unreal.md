@@ -604,9 +604,15 @@ ___
 
 # Changelog
 
+v.1.5.0
+
+* FIXED Proguard errors in shipping builds
+
+?> This release uses AndroidX libraries and may cause conflicts with other Android plugins
+
 v.1.4.0
 
-- ADDED PickedFile and PickedImage abstractions to expose more properties for the media and files, picked by Image and File pickers
+* ADDED PickedFile and PickedImage abstractions to expose more properties for the media and files, picked by Image and File pickers
 
 v.1.3.1
 

@@ -556,6 +556,14 @@ ___
 
 # Changelog
 
+v.1.1.0
+
+* UPDATE Android SDK to version 17.5.0
+* FIXED Proguard errors in shipping builds
+* FIXED Various crashes
+
+?> This release uses AndroidX libraries and may cause conflicts with other Android plugins
+
 v.1.0.2
 
 * UPDATE Settings screen

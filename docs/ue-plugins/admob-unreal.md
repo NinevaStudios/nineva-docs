@@ -325,6 +325,15 @@ ___
 
 # Changelog
 
+v.1.2.0
+
+* UPDATE iOS SDK to version 7.64 (compatible with iOS 14)
+* UPDATE Android SDK to version 19.3.0
+* UPDATE Mediation libraries and adapters
+* FIXED Proguard errors in shipping builds
+
+?> This release uses AndroidX libraries and may cause conflicts with other Android plugins
+
 v.1.1.2
 
 * ADDED Ability to specify an array of test device IDs

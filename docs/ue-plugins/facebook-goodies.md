@@ -224,6 +224,12 @@ ___
 
 # Changelog
 
+v.1.1.0
+
+* UPDATE Android SDK to version 7.1.0
+
+?> This release uses AndroidX libraries and may cause conflicts with other Android plugins
+
 v.1.0.0
 
 * Initial release
