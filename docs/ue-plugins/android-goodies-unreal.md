@@ -148,7 +148,7 @@ You can use native Android sharing functionality.
 * [Sending SMS](#sending-sms)
 * [Sending Email](#sending-email)
 * [Sharing via Social Media](#sharing-via-social-media)
-* [Share video](#share-video)
+* [Share video](#sharing-video)
 
 !> **Warning:** if your target SDK is 29 or higher, you have to add `android:requestLegacyExternalStorage = "true"` line to the `Extra Tags for the <application> node` in the Project Settings -> Android -> Advanced APK packaging.
 
@@ -207,7 +207,7 @@ Android Goodies plugin has a set of functions that allow sharing text and images
 
 ![Tweet](images/android-goodies/native-sharing/Scr_Tweet.png)
 
-### Share video
+### Sharing video
 
 Currently, this functionality is experimental and doesn't provide any high-level API. But you still can share video by calling `ShareVideo` function and pass a string with video file path to it as a parameter. You have to figure out that path on your own.
 
