@@ -150,7 +150,9 @@ You can use native Android sharing functionality.
 * [Sharing via Social Media](#sharing-via-social-media)
 * [Share video](#share-video)
 
-!> **Warning:** if your target SDK is 29 or higher, you have to add `android:requestLegacyExternalStorage = "true"` line to the `Extra Settings for the <application> section` in the Project Settings -> Android -> Advanced APK packaging.
+!> **Warning:** if your target SDK is 29 or higher, you have to add `android:requestLegacyExternalStorage = "true"` line to the `Extra Tags for the <application> node` in the Project Settings -> Android -> Advanced APK packaging.
+
+![Additional tag](images/android-goodies/native-sharing/ShareAddTag.png)
 
 Image sharing functions take 2D-texture as one of their parameters. Before actual sharing happens this texture is converted and saved in temporary PNG-file which is stored in an external storage Pictures folder (not in the app folder).
 
