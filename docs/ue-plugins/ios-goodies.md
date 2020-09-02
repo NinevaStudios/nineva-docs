@@ -24,6 +24,7 @@ Welcome to iOS Goodies Documentation for Unreal Engine
   + [Camera and Gallery](#camera-and-gallery)
   + [Events](#events)
   + [Contacts](#contacts)
+  + [Sign in with Apple](#sign-in-with-apple)
 
 *  Getting info
   + [Get device info and check supported features](#device-info)
@@ -434,9 +435,23 @@ There are two options for searching contacts: by name and by number. To do that,
 
 To create a new contact call `AddContact` function.  Provide initialized `Contact` structure as a parameter. Also, provide callback handler for the function that will receive a flag indicating whether the operation was successful.
 
+# **Sign in with Apple**
+
+If you target devices with iOS 13 and later, you can implement the sign in with Apple logic.
+
+Official documentation on the application flow and best practices can be found [here](https://developer.apple.com/sign-in-with-apple/get-started/). 
+
+There are two methods that you can use: `GetCredentialState` to retrieve the status for the given user ID that allows you to check whether the user is already authenticated, and `SignInWithApple` to perform the sign in, if there is no current user. It is up to the developer to save the user credentials after the successful sign in. In the demo level we have used the built-in UE4 FSaveGame class to save the user data and retrieve it on the next application launch.
+
+![](images/ios-goodies/SignInWithApple1.png)
+![](images/ios-goodies/SignInWithApple2.png)
 ___
 
 # Changelog
+
+v.1.5.0
+
+* ADDED [Sign in with Apple](https://developer.apple.com/sign-in-with-apple/get-started/)
 
 v.1.4.0
 
