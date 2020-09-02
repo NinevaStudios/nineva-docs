@@ -77,6 +77,7 @@ ___
  + [Show Toasts](#toasts)
  + [Native sharing text or/and image](#native-sharing)
  + [Notifications](#notifications)
+ + [In-app review dialog](#in-app-review-dialog)
 
 * [App interaction](#app-interaction)
  + [Setup alarms/timers](#alarms-and-timer)
@@ -356,6 +357,14 @@ You can also schedule notifications to appear at the needed time using the `Sche
 Call the `CancelNotification` method to cancel a specific notification by its ID. You can also use the `CancelAllNotifications` to cancel all of the notifications, posted by the `Notify` function.
 
 !> Scheduled notifications can not be cancelled using these methods. Use the `CancelScheduledNotification` method, instead.
+
+## In-app review dialog
+
+![](images/android-goodies/manage-apps/InAppReview.jpg ':size=900')
+
+This functionality allows to request the review of the app right from the app. You can read more about it in the [documentation](https://developer.android.com/guide/playcore/in-app-review).
+
+?> In order to test it your app MUST be published on Google Play! [Learn more about testing in-app reviews](https://developer.android.com/guide/playcore/in-app-review/test)
 
 ___
 
