@@ -4,35 +4,7 @@ Welcome to Android Goodies Documentation for Unreal Engine
 
 ?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
----
 
-# **Features**
-
-* [Native UI](#native-ui)
- + [Native dialogs](#native-dialogs)
- + [Date and time picker](#date-and-time-picker)
- + [Show Toasts](#show-toasts)
- + [Native sharing text or/and image](#native-sharing-text-orand-image)
- + [Notifications](#notifications)
-
-* [App interaction](#app-interaction)
- + [Setup alarms/timers](#alarms-and-timer)
- + [Open maps app](#opening-maps)
- + [Open, install or uninstall apps](#open-install-or-uninstall-apps)
-
-* [Getting info](#getting-info)
- + [Get device info and check supported features](#device-information)
-
-* [Image tools](#image-tools)
- + [Pick images from gallery and camera, save an image to gallery](#image-tools)
-
-* [Hardware](#hardware)
- + [Flashlight](#flashlight)
- + [Vibrations](#vibrations)
- + [Battery](#battery)
-
-* [Contacts](#contacts)
- + [Fetch, find and add contacts](#fetch-find-and-add-contacts)
 ___
 
 # **Native UI**
