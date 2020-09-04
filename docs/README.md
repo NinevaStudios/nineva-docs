@@ -8,6 +8,7 @@ Useful links:
 
 * [Our web site](https://ninevastudios.com)
 * [Talk to us on discord](https://bit.ly/nineva_support_discord)
+* [Read our blog on Medium](https://medium.com/nineva)
 * [Explore our Unity plugins](https://assetstore.unity.com/publishers/5296)
 * [Explore our Unreal Engine 4 plugins](https://www.unrealengine.com/marketplace/profile/Nineva+Studios)
 
