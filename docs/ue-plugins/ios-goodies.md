@@ -6,29 +6,6 @@ Welcome to iOS Goodies Documentation for Unreal Engine
 
 ---
 
-# **Features**
-
-* Native UI
-  + [Native dialogs](#native-dialogs)
-  + [App Store rate dialog](#app-store-rate-dialog)
-  + [Date and time picker](#date-and-time-picker)
-  + [Native sharing](#native-sharing)
-
-* Hardware
-  + [Flashlight](#flashlight)
-  + [Haptic Feedback](#haptic-feedbacks)
-
-* App interaction
-  + [App interaction](#apps)
-  + [Apple Maps interaction](#apple-maps-interaction)
-  + [Camera and Gallery](#camera-and-gallery)
-  + [Events](#events)
-  + [Contacts](#contacts)
-  + [Sign in with Apple](#sign-in-with-apple)
-
-*  Getting info
-  + [Get device info and check supported features](#device-info)
-
 # **FAQ**
 
 ## .plist
