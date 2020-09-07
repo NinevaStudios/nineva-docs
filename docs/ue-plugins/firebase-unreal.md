@@ -556,7 +556,7 @@ Before setting the default values, you first need to make a map of parameter nam
 
 Official documentation regarding the Firebase Cloud Messaging can be found [here](https://firebase.google.com/docs/cloud-messaging).
 
-!> Note!!! The iOS setup is quite complex and it easy to miss a step. Please, follow the instructions very carefully.
+!> Note!!! The iOS setup is quite complex and it's easy to miss a step. Please, follow the instructions very carefully.
 
 ## Manage device ID
 
