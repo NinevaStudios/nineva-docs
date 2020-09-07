@@ -552,6 +552,50 @@ Before setting the default values, you first need to make a map of parameter nam
 
 ![](images/firebase/remote-config/FirebaseRCSetup.png)
 
+# **Cloud Messaging**
+
+Official documentation regarding the Firebase Cloud Messaging can be found [here](https://firebase.google.com/docs/cloud-messaging).
+
+!> Note!!! The iOS setup is quite complex and it easy to miss a step. Please, follow the instructions very carefully.
+
+## Manage device ID
+
+Call `GetInstanceIdData` to receive Firebase Cloud Messaging (FCM) token and Instance ID.
+Those values are used to target specific devices.
+
+![](images/firebase/cloud-messaging/CloudMessagingGetInstanceId.png)
+
+To generate another instance ID and token, call the `DeleteInstanceId` function.
+
+?> This will also delete all unsent upstream messages.
+
+## Set up the callbacks
+
+Once you have set up the firebase console part of the application, you can start implementing the Cloud Messaging features by binding the important callbacks.
+
+Call the `BindEventToOnMessageReceived` function to handle the remote messages on Android devices, and the `BindEventToOnRemoteNotificationReceived` for iOS. 
+
+?> The remote message on iOS is received as a JSON payload that you will need to parse yourself.
+
+!> The above-mentioned callbacks are only invoked when the message is received by the application in foreground. On both Android and iOS the system notification is shown to user, if the application is in the background or killed.
+
+You can setup additional callbacks to handle the upstream message sending from the application: `BindEventToOnMessagesDeleted, BindEventToOnMessageSent, BindEventToOnMessageSendError`.
+
+?> These callbacks are only invoked on Android devices.
+
+You can also subscribe to the token change events (`BindEventToOnNewToken`). This event is fired when the application is firstly opened on the device and after every `DeleteInstanceId` call.
+
+## Send and receive messages
+
+You can send upstream messages using the `SendMessage` method. You need to call the `NewRemoteMessageBuilder` to create a message builder object, set the necessary fields before sending it.
+
+?> Note!!! Sending upstream messages only works if  your app server implements the XMPP Connection Server protocol.
+
+![](images/firebase/cloud-messaging/CloudMessagingSendMessage.png)
+
+You can also subscribe to and unsubscribe from specific topics for the downstream messages:
+
+![](images/firebase/cloud-messaging/CloudMessagingSubscribeToTopic.png)
 ___
 
 # Changelog
