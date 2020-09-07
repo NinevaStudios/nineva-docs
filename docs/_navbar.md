@@ -3,7 +3,7 @@
 - **Unreal Engine Plugins**
 	* [Admob Goodies](ue-plugins/admob-unreal)
 	* [Android Goodies](ue-plugins/android-goodies-unreal)
-	* [BLE Utilities](ue-plugins/ble-utilities)
+	* [BLE Goodies](ue-plugins/ble-goodies)
 	* [Facebook Goodies](ue-plugins/facebook-goodies)
 	* [Firebase Goodies](ue-plugins/firebase-unreal)
 	* [Google Maps View](ue-plugins/google-maps-unreal)
