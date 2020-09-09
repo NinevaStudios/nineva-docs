@@ -270,6 +270,14 @@ Call the `CancelNotification` method to cancel a specific notification by its ID
 
 !> Scheduled notifications can not be cancelled using these methods. Use the `CancelScheduledNotification` method, instead.
 
+## In-app review dialog
+
+![](images/android-goodies/manage-apps/InAppReview.jpg ':size=900')
+
+This functionality allows to request the review of the app right from the app. You can read more about it in the [documentation](https://developer.android.com/guide/playcore/in-app-review).
+
+?> In order to test it your app MUST be published on Google Play! [Learn more about testing in-app reviews](https://developer.android.com/guide/playcore/in-app-review/test)
+
 ___
 
 # **App interaction**
@@ -579,6 +587,10 @@ Requires the "android.permission. WRITE_CONTACTS" permission.
 ___
 
 # Changelog
+
+v.1.6.0
+
+* Added in-app review dialog feature
 
 v.1.5.0
 
