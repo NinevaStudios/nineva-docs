@@ -596,6 +596,38 @@ You can send upstream messages using the `SendMessage` method. You need to call 
 You can also subscribe to and unsubscribe from specific topics for the downstream messages:
 
 ![](images/firebase/cloud-messaging/CloudMessagingSubscribeToTopic.png)
+
+# **Crashlytics**
+
+Official documentation regarding the Firebase Crashlytics can be found [here](https://firebase.google.com/docs/crashlytics).
+
+## Initial Setup
+
+The crashes of the application are automatically uploaded to Firebase once you have setup the Crashlytics in the Firebase console.
+
+!> Note: you will have to upload the Debug Symbols for your iOS application in order to see the reports. 
+
+You can download the required tool [here](https://drive.google.com/file/d/1L4O7wdkCatOQx_mgyJesw2TLYdk0cxIR/view?usp=sharing) or find it in the Plugin's Resources folder (`upload-symbols`). 
+In order for UE4 to generate these files during build, you have to go to Project Settings -> iOS -> Build and enable the following options:
+
+![](images/firebase/crashlytics/CrashlyticsSettings.png)
+
+Then you should run the following command in Terminal: `<PATH-TO-UPLOAD-SYMBOLS> -gsp <PATH-TO-GoogleService-Info.plist> -p ios <PATH-TO-PROJECT/Binaries/IOS/PROJECT_NAME.dSYM>` to upload the Debug Symbols to Firebase (for example, `/Users/Borsch/Downloads/Firebase/FirebaseCrashlytics/upload-symbols -gsp /Users/Borsch/Downloads/GoogleService-Info.plist -p ios /Users/Borsch/Projects/playground-unreal/Binaries/IOS/NinevaPlayground.dSYM`).
+
+## Configuring session parameters
+
+You can add custom parameters to add to the crashlytics reports, for example, User ID (`SetUserId`), and/or other custom parameters (`SetCustomBoolKey, SetCustomFloatKey, SetCustomIntKey, SetCustomLongKey, SetCustomStringKey`).
+
+## Reporting errors
+
+Use the `LogMessage` and `RecordException` functions to send error and exception reports.
+
+?> On iOS `RecordException` is the same as `LogMessage`
+
+You can toggle automatic data collection by calling `SetCrashlyticsCollectionEnabled`.
+If it is disabled, you can use the `CheckForUnsentReports`, `SendUnsentReports` and `DeleteUnsentReports` functions to control the flow.
+
+You can also check if the application crashed on previous launch using the `DidCrashOnPreviousExecution` function.
 ___
 
 # Changelog
