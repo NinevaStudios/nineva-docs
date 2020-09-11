@@ -13,9 +13,10 @@ Android Bluetooth requires the following permissions:
 android.permission.BLUETOOTH
 android.permission.BLUETOOTH_ADMIN
 android.permission.ACCESS_COARSE_LOCATION
+android.permission.ACCESS_FINE_LOCATION
 ```
 
-These permissions are added to the manifest by default but `ACCESS_COARSE_LOCATION` is considered a dangerous permission so on Android version 10 and above you will need to explicitly ask for this permission using a built-in UE4 `Request Android Permissions` function.
+These permissions are added to the manifest by default but `ACCESS_FINE_LOCATION` is considered a dangerous permission so on Android version 10 and above you will need to explicitly ask for this permission using a built-in UE4 `Request Android Permissions` function.
 
 ![](images/ble-goodies/ble_android_permission.png)
 
