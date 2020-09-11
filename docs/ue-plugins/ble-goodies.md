@@ -81,6 +81,16 @@ After you finish working with a device you should disconnect from it. The `On Di
 
 All operations will report the result to the specific operations handler. All of these handlers will contain the exact service and characteristic UUID of the operation. Use these UUIDs to determine which operation status you are handling. For proper event propagation make sure you bind to an event before invoking a characteristic operation.
 
+### Get services
+
+You can get all available service UUIDs from a connected device by using the `Get Services` node. The `Filter UUIDs` pin allows you to specify which services you are interested in so that the resulting array will contain only available services that are specified in that list.
+
+![](images/ble-goodies/ble_device_get_services.png)
+
+If you simply want to check is a certain service is available - you can use the `Is Service Available` function.
+
+![](images/ble-goodies/ble_device_has_service.png)
+
 ### Read
 
 ![](images/ble-goodies/ble_device_read.png)
