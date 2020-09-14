@@ -590,7 +590,7 @@ ___
 
 v.1.6.0
 
-* Added in-app review dialog feature
+* ADDED in-app review dialog feature
 
 v.1.5.0
 

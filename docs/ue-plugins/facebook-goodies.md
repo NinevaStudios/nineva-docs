@@ -224,6 +224,11 @@ ___
 
 # Changelog
 
+v.1.2.0
+
+* UPDATE iOS SDK to version 7.1.1
+* FIXED iOS plist generation duplicates
+
 v.1.1.0
 
 * UPDATE Android SDK to version 7.1.0

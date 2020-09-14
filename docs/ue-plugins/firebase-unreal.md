@@ -573,7 +573,7 @@ To generate another instance ID and token, call the `DeleteInstanceId` function.
 
 Once you have set up the firebase console part of the application, you can start implementing the Cloud Messaging features by binding the important callbacks.
 
-Call the `BindEventToOnMessageReceived` function to handle the remote messages on Android devices, and the `BindEventToOnRemoteNotificationReceived` for iOS. 
+Call the `BindEventToOnMessageReceived` function to handle the remote messages on Android devices, and the `BindEventToOnRemoteNotificationReceived` for iOS.
 
 ?> The remote message on iOS is received as a JSON payload that you will need to parse yourself.
 
@@ -605,9 +605,9 @@ Official documentation regarding the Firebase Crashlytics can be found [here](ht
 
 The crashes of the application are automatically uploaded to Firebase once you have setup the Crashlytics in the Firebase console.
 
-!> Note: you will have to upload the Debug Symbols for your iOS application in order to see the reports. 
+!> Note: you will have to upload the Debug Symbols for your iOS application in order to see the reports.
 
-You can download the required tool [here](https://drive.google.com/file/d/1L4O7wdkCatOQx_mgyJesw2TLYdk0cxIR/view?usp=sharing) or find it in the Plugin's Resources folder (`upload-symbols`). 
+You can download the required tool [here](https://drive.google.com/file/d/1L4O7wdkCatOQx_mgyJesw2TLYdk0cxIR/view?usp=sharing) or find it in the Plugin's Resources folder (`upload-symbols`).
 In order for UE4 to generate these files during build, you have to go to Project Settings -> iOS -> Build and enable the following options:
 
 ![](images/firebase/crashlytics/CrashlyticsSettings.png)
@@ -631,6 +631,11 @@ You can also check if the application crashed on previous launch using the `DidC
 ___
 
 # Changelog
+
+v.1.2.0
+
+* ADDED Crashlytics
+* ADDED Cloud messaging
 
 v.1.1.0
 
