@@ -21,7 +21,11 @@ The main field to configure is the *Game App ID*. Navigate to Project Settings -
 
 ?> If *Enable Google Play Support* is checked then Unreal Engine will pull in its own Google Play Games Services dependencies. This might lead to undefined behavior if these dependencies  collide with our own. We cannot test every scenario so if you encounter any problems contact us on our Discord server.
 
-If you need an access token from the login operation (e. g. required for integration with Firebase Auth) you will need to setup a Client ID in the plugin's settings.
+## Integration with Firebase Goodies Auth
+
+When logging in with Google Play Games you can also request an access token that can be used to authenticate the user in our Firebase Goodies plugin.
+
+To receive an access token as the part of account details you must fill in a **Web Client ID** in the plugin's settings. TODO - explain where to get it.
 
 ![](images/play-goodies/setup/plugin_settings.png)
 
