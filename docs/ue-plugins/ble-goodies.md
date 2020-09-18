@@ -20,11 +20,15 @@ These permissions are added to the manifest by default but `ACCESS_FINE_LOCATION
 
 ![](images/ble-goodies/ble_android_permission.png)
 
+?> If your app targets API level 28 or lower you can request either `ACCESS_COARSE_LOCATION` or `ACCESS_FINE_LOCATION` permissions. If the API target is 29 and above only `ACCESS_FINE_LOCATION` permission will work.
+
 iOS does not require any action from you - the plugin handles plist modification so that the app has access to Bluetooth.
 
-# BLE Subsystem
+# BLE Manager
 
-The centerpiece of the plugin is the BLE Subsystem. It is created automatically and you can access it from anywhere in your blueprints. This subsystem can check and control Bluetooth state and perform scans to find nearby BLE devices.
+The BLE Manager can check and control Bluetooth state and perform scans to find nearby BLE devices. You can create a BLE Manager using the `Create Ble Manager` node and storing the output in a variable.
+
+![](images/ble-goodies/ble_create_manager.png)
 
 ?> The service and characteristic UUIDs need be in the 128 bit fully qualified format e. g. XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX. Any other format will not work. For converting and checking the validity of UUIDs check the [BLE Utils](#ble-utils) section.
 
@@ -35,7 +39,7 @@ The centerpiece of the plugin is the BLE Subsystem. It is created automatically 
 - `Is BLE Supported` - Check if the device supports Bluetooth low energy mode.
 - `Is Bluetooth Enabled` - Check if Bluetooth is enabled on the device.
 - `Set Bluetooth State` - Enable/disable Bluetooth on the device (Android only).
-- `Is Scanning` - Check if the subsystem is currently performing a scan.
+- `Is Scanning` - Check if the manager is currently performing a scan.
 
 ## Scan for devices
 
@@ -55,7 +59,7 @@ If you do not need to connect to a BLE Device but require the device's manufactu
 
 # BLE Device
 
-You discover BLE devices by running a device scan from the BLE Subsystem and listening for the `On Device Found` callback.
+You discover BLE devices by running a device scan from a BLE Manager and listening for the `On Device Found` callback.
 
 By storing a reference to a device you can access its functionality:
 
