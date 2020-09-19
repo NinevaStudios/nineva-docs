@@ -58,7 +58,7 @@ Also check the properties screen by clicking **Edit properties** on the **Config
 
 ### Add Android Credentials
 
-?> When setting up the project that is linked to an existing Firebase project you should be able to select the Android OAuth client that was created by the Firebase project. (Assuming you added your Android app to your Firebase project settings)
+?> When setting up the project that is linked to an existing Firebase project you should be able to select the Android OAuth client that was created by the Firebase project. (Assuming you added your Android app to your Firebase project settings). After selecting the project check the details carefully if everything matches (app package, fingerprint SHA)
 
 To use Google Play Games services in your Android app you must create Android Credentials in the **Configuration** tab.
 
@@ -70,7 +70,7 @@ Choose **Android** option and scroll down to **Authorization** section. Here you
 
 ![](images/play-goodies/setup/add_credential_2.png ':size=900')
 
-Follow the link and create the Android OAuth client in the Google Cloud Platform. When setting up the keystore fingerprint refer to [this page](https://developers.google.com/games/services/console/enabling#c_specify_client_id_settings).
+Follow the link and create the Android OAuth client in the Google Cloud Platform. When setting up the keystore fingerprint refer to [this page](https://developers.google.com/games/services/console/enabling#c_specify_client_id_settings)
 
 ![](images/play-goodies/setup/add_credential_3.png ':size=900')
 ![](images/play-goodies/setup/add_credential_4.png ':size=900')
@@ -93,12 +93,29 @@ The main field to configure is the *Game App ID*. Navigate to `Project Settings 
 
 When logging in with Google Play Games you can also request an access token that can be used to authenticate the user in our [Firebase Goodies](ue-plugins/firebase-unreal) plugin.
 
-To receive an access token as the part of account details you must fill in a **Web Client ID** in the plugin's settings.
+To receive an access token as the part of account details you must fill in a **Web Client ID** in the plugin's settings. To do so go to your project in Google Cloud Console and find the credential with name `Web client (auto created by Google Service)`
 
+!> Make sure you find the correct OAuth Client ID of the type WEB, not the Android one that you have created previously
 
+![](images/play-goodies/setup/web_client_id_console.png ':size=900')
 
-![](images/play-goodies/setup/web_client_id_console.png)
-![](images/play-goodies/setup/plugin_settings.png)
+Copy your **Client ID** and **Client secret** values
+
+![](images/play-goodies/setup/web_client_id_and_secret.png ':size=900')
+
+Paste your client id into the plugin settings in UE
+
+![](images/play-goodies/setup/plugin_settings.png ':size=900')
+
+!> Note that there can be issues if you use Google Login and Google Play Games login at the same time. You should disable Google login if you use Google Play Games login or vice versa.
+
+Open the **Authentication** section of your Firebase project, in the **Sign-in method** tab Choose **Play Games**, enable it and paste your **Client ID** and **Client secret** values.
+
+![](images/play-goodies/setup/firebase_play_auth.png ':size=900')
+
+After [logging in](#login) your account should contain a token that you can use to [login with a credential in Firebase Goodies](ue-plugins/firebase-unreal?id=user-registration-and-login) or link a Google Play Games account.
+
+![](images/play-goodies/setup/account_token.png)
 
 # **Auth**
 
