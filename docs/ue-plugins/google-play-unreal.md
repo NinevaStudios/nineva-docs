@@ -10,7 +10,20 @@ Welcome to Google Play Goodies Documentation for Unreal Engine
 
 ## Google Play Console
 
-TODO
+First of all create a new app on Google Play Console or you can use the existing one.
+
+![](images/play-goodies/setup/create_app_1.png)
+![](images/play-goodies/setup/create_app_2.png)
+
+After this you need to create a new game. A game is like a project for using Google Play Games services. To do this go to your [Google Play Console](https://play.google.com/apps/publish), click *ADD NEW GAME* (You might need to switch to old console to do this).
+
+?> Note that Google is rolling out new console design so your UI may be somewhat different.
+
+![](images/play-goodies/setup/create_game.png)
+
+You can either create and new project or link to existing one if you already have a Firebase project or have previously created a project on Google Developers Console.
+
+![](images/play-goodies/setup/create_game_start.png)
 
 ## UE Project Settings
 
