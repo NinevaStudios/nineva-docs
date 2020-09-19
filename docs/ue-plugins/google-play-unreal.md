@@ -8,7 +8,7 @@ Welcome to Google Play Goodies Documentation for Unreal Engine
 
 # **Setup**
 
-!> It is better to follow the official [Google Documentation for Setting Up Google Play Games Services](https://developers.google.com/games/services/console/enabling#android). You can also follow the guide below but please refer to the official docs if something is not clear regarding the project setup.
+!> It is recommended to follow the official [Google Documentation for Setting Up Google Play Games Services](https://developers.google.com/games/services/console/enabling#android) instead of this guide. You can also follow the guide below but please refer to the official docs if something is not clear regarding the project setup.
 
 !> If you encounter issues please check the [list of the most common problems](https://developers.google.com/games/services/console/enabling#avoiding_common_setup_problems) and double-check everything
 
@@ -52,20 +52,40 @@ Now go through all the warnings on the configuration page and resolve them if an
 
 ![](images/play-goodies/setup/configure_1.png ':size=900')
 
-Also check the properties screen by clicking **Edit properties** on the **Cofiguration** page and resolve issues there.
+Also check the properties screen by clicking **Edit properties** on the **Configuration** page and resolve issues there.
 
 ![](images/play-goodies/setup/configure_2.png ':size=900')
 
 ### Add Android Credentials
 
+?> When setting up the project that is linked to an existing Firebase project you should be able to select the Android OAuth client that was created by the Firebase project. (Assuming you added your Android app to your Firebase project settings)
+
 To use Google Play Games services in your Android app you must create Android Credentials in the **Configuration** tab.
+
+Click on **Add credential** button
+
+![](images/play-goodies/setup/add_credential_1.png ':size=900')
+
+Choose **Android** option and scroll down to **Authorization** section. Here you can select the existing OAuth client or create a new one required for your Android app.
+
+![](images/play-goodies/setup/add_credential_2.png ':size=900')
+
+Follow the link and create the Android OAuth client in the Google Cloud Platform. When setting up the keystore fingerprint refer to [this page](https://developers.google.com/games/services/console/enabling#c_specify_client_id_settings).
+
+![](images/play-goodies/setup/add_credential_3.png ':size=900')
+![](images/play-goodies/setup/add_credential_4.png ':size=900')
+
+When done it should display your settings. 
+
+![](images/play-goodies/setup/add_credential_5.png ':size=900')
 
 ## UE Project Settings
 
 Unreal Engine already has built-in support for some Google Play Games features but they are limited and rely on old library versions. Because of this, some settings are in the platform settings section instead of the plugin settings.
 The main field to configure is the *Game App ID*. Navigate to `Project Settings -> Platforms -> Android -> Google Play Services` section and input your *Game App ID* in the respective field.
 
-![](images/play-goodies/setup/platform_settings.png)
+![](images/play-goodies/setup/app_id.png ':size=900')
+![](images/play-goodies/setup/platform_settings.png ':size=900')
 
 ?> If *Enable Google Play Support* is checked then Unreal Engine will pull in its own Google Play Games Services dependencies. This might lead to undefined behavior if these dependencies  collide with our own. We cannot test every scenario so if you encounter any problems contact us on our Discord server.
 
