@@ -10,10 +10,14 @@ Welcome to Google Play Goodies Documentation for Unreal Engine
 
 ## Google Play Console
 
+### Create an app in Google Play Console
+
 First of all create a new app on Google Play Console or you can use the existing one.
 
 ![](images/play-goodies/setup/create_app_1.png)
 ![](images/play-goodies/setup/create_app_2.png)
+
+### Create a game in Google Play Console
 
 After this you need to create a new game. A game is like a project for using Google Play Games services. To do this go to your [Google Play Console](https://play.google.com/apps/publish), click *ADD NEW GAME* (You might need to switch to old console to do this).
 
@@ -25,10 +29,29 @@ You can either create and new project or link to existing one if you already hav
 
 ![](images/play-goodies/setup/create_game_start.png)
 
+### Add your game to your app
+
+In the list of games select your newly created game and add it to the app you need. To do this go to the **Manage game projects** tab in [Google Play Console](https://play.google.com/apps/publish) and click on your game project. Afterwards select the app to add it.
+
+![](images/play-goodies/setup/add_game_to_app_1.png)
+![](images/play-goodies/setup/add_game_to_app_2.png)
+
+In the process it will ask whether your game already uses Google APIs. For example, if your game already uses firebase you can link it to the already existing project. If so, choose to use the existing Play Game Services project and choose the project. Otherwise choose the option to create a new project.
+
+![](images/play-goodies/setup/add_game_to_app_3.png)
+
+When finished, you can open your app and you will see the section called **Play Games Services**. Now we need to continue the setup under the **Configuration** section.
+
+![](images/play-goodies/setup/add_game_to_app_4.png)
+
+### Add Android Credentials
+
+To use Google Play Games services in your Android app you must create Android Credentials in the **Configuration** tab.
+
 ## UE Project Settings
 
 Unreal Engine already has built-in support for some Google Play Games features but they are limited and rely on old library versions. Because of this, some settings are in the platform settings section instead of the plugin settings.
-The main field to configure is the *Game App ID*. Navigate to Project Settings -> Platforms -> Android -> Google Play Services section and input your *Game App ID* in the respective field.
+The main field to configure is the *Game App ID*. Navigate to `Project Settings -> Platforms -> Android -> Google Play Services` section and input your *Game App ID* in the respective field.
 
 ![](images/play-goodies/setup/platform_settings.png)
 
@@ -36,10 +59,13 @@ The main field to configure is the *Game App ID*. Navigate to Project Settings -
 
 ## Integration with Firebase Goodies Auth
 
-When logging in with Google Play Games you can also request an access token that can be used to authenticate the user in our Firebase Goodies plugin.
+When logging in with Google Play Games you can also request an access token that can be used to authenticate the user in our [Firebase Goodies](ue-plugins/firebase-unreal) plugin.
 
-To receive an access token as the part of account details you must fill in a **Web Client ID** in the plugin's settings. TODO - explain where to get it.
+To receive an access token as the part of account details you must fill in a **Web Client ID** in the plugin's settings.
 
+
+
+![](images/play-goodies/setup/web_client_id_console.png)
 ![](images/play-goodies/setup/plugin_settings.png)
 
 # **Auth**
