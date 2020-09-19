@@ -8,14 +8,18 @@ Welcome to Google Play Goodies Documentation for Unreal Engine
 
 # **Setup**
 
+!> It is better to follow the official [Google Documentation for Setting Up Google Play Games Services](https://developers.google.com/games/services/console/enabling#android). You can also follow the guide below but please refer to the official docs if something is not clear regarding the project setup.
+
+!> If you encounter issues please check the [list of the most common problems](https://developers.google.com/games/services/console/enabling#avoiding_common_setup_problems) and double-check everything
+
 ## Google Play Console
 
 ### Create an app in Google Play Console
 
 First of all create a new app on Google Play Console or you can use the existing one.
 
-![](images/play-goodies/setup/create_app_1.png)
-![](images/play-goodies/setup/create_app_2.png)
+![](images/play-goodies/setup/create_app_1.png ':size=900')
+![](images/play-goodies/setup/create_app_2.png ':size=900')
 
 ### Create a game in Google Play Console
 
@@ -23,26 +27,34 @@ After this you need to create a new game. A game is like a project for using Goo
 
 ?> Note that Google is rolling out new console design so your UI may be somewhat different.
 
-![](images/play-goodies/setup/create_game.png)
+![](images/play-goodies/setup/create_game.png ':size=900')
 
 You can either create and new project or link to existing one if you already have a Firebase project or have previously created a project on Google Developers Console.
 
-![](images/play-goodies/setup/create_game_start.png)
+![](images/play-goodies/setup/create_game_start.png ':size=900')
 
 ### Add your game to your app
 
 In the list of games select your newly created game and add it to the app you need. To do this go to the **Manage game projects** tab in [Google Play Console](https://play.google.com/apps/publish) and click on your game project. Afterwards select the app to add it.
 
-![](images/play-goodies/setup/add_game_to_app_1.png)
-![](images/play-goodies/setup/add_game_to_app_2.png)
+![](images/play-goodies/setup/add_game_to_app_1.png ':size=900')
+![](images/play-goodies/setup/add_game_to_app_2.png ':size=900')
 
 In the process it will ask whether your game already uses Google APIs. For example, if your game already uses firebase you can link it to the already existing project. If so, choose to use the existing Play Game Services project and choose the project. Otherwise choose the option to create a new project.
 
-![](images/play-goodies/setup/add_game_to_app_3.png)
+![](images/play-goodies/setup/add_game_to_app_3.png ':size=900')
 
 When finished, you can open your app and you will see the section called **Play Games Services**. Now we need to continue the setup under the **Configuration** section.
 
-![](images/play-goodies/setup/add_game_to_app_4.png)
+![](images/play-goodies/setup/add_game_to_app_4.png ':size=900')
+
+Now go through all the warnings on the configuration page and resolve them if any appear.
+
+![](images/play-goodies/setup/configure_1.png ':size=900')
+
+Also check the properties screen by clicking **Edit properties** on the **Cofiguration** page and resolve issues there.
+
+![](images/play-goodies/setup/configure_2.png ':size=900')
 
 ### Add Android Credentials
 
