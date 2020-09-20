@@ -91,7 +91,24 @@ The main field to configure is the *Game App ID*. Navigate to `Project Settings 
 
 ## Integration with Firebase Goodies Auth
 
-When logging in with Google Play Games you can also request an access token that can be used to authenticate the user in our [Firebase Goodies](ue-plugins/firebase-unreal) plugin.
+When logging in with Google Play Games you can also request an access token that can be used to authenticate the user in our [Firebase Goodies](ue-plugins/firebase-unreal) plugin. This section describes how to setup the integration.
+
+### Linking Firebase project
+
+?> Please check the [official guide](https://firebase.google.com/docs/auth/android/play-games) how to integrate Google Play Games Login with Firebase Auth to get a better idea how it works.
+
+First of all you need to link your Google Play Games project with the Firebase project. The easiest way to do it is to select existing Firebase project when creating the Game. 
+
+![](images/play-goodies/setup/create_game_start.png ':size=900')
+
+### Setting Android Credential
+
+After this, when you create the Android App in Firebase project settings you would be able to select it as OAuth client in you play games project.
+
+![](images/play-goodies/setup/firebase_add_app.png ':size=900')
+![](images/play-goodies/setup/android_oauth_client_firebase.png ':size=900')
+
+### Obtaining and filling WEB Client ID and Client secret
 
 To receive an access token as the part of account details you must fill in a **Web Client ID** in the plugin's settings. To do so go to your project in Google Cloud Console and find the credential with name `Web client (auto created by Google Service)`
 
@@ -112,6 +129,8 @@ Paste your client id into the plugin settings in UE
 Open the **Authentication** section of your Firebase project, in the **Sign-in method** tab Choose **Play Games**, enable it and paste your **Client ID** and **Client secret** values.
 
 ![](images/play-goodies/setup/firebase_play_auth.png ':size=900')
+
+### How to use the token
 
 After [logging in](#login) your account should contain a token that you can use to [login with a credential in Firebase Goodies](ue-plugins/firebase-unreal?id=user-registration-and-login) or link a Google Play Games account.
 
