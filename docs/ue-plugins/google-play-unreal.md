@@ -87,6 +87,8 @@ The main field to configure is the *Game App ID*. Navigate to `Project Settings 
 ![](images/play-goodies/setup/app_id.png ':size=900')
 ![](images/play-goodies/setup/platform_settings.png ':size=900')
 
+Now you can build your game and test the demo level provided with the plugin. **Note that the Android package name in your UE project must match the package name from your Android OAuth Credential and that the build must be signed with the same keystore that you took SHA1 from to put into Android OAuth Client setup** 
+
 ?> If *Enable Google Play Support* is checked then Unreal Engine will pull in its own Google Play Games Services dependencies. This might lead to undefined behavior if these dependencies  collide with our own. We cannot test every scenario so if you encounter any problems contact us on our Discord server.
 
 ## Integration with Firebase Goodies Auth
