@@ -7,6 +7,7 @@
 	* [Facebook Goodies](ue-plugins/facebook-goodies)
 	* [Firebase Goodies](ue-plugins/firebase-unreal)
 	* [Google Maps View](ue-plugins/google-maps-unreal)
+	* [Google Play Goodies](ue-plugins/google-play-unreal)
 	* [iOS Goodies](ue-plugins/ios-goodies)
 
 - **Unity Plugins**
