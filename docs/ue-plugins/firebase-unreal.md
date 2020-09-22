@@ -632,6 +632,11 @@ ___
 
 # Changelog
 
+v.1.2.1
+
+* FIXED Crash on startup when JNI modules were not initialized
+* FIXED Deprecation warning in Auth module
+
 v.1.2.0
 
 * ADDED Crashlytics
