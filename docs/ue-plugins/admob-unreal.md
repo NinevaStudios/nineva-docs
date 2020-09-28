@@ -186,6 +186,10 @@ Initializes the ad subsystem. You should only call this method when the `Delay a
 
 Enable/disable personalized ads (enabled by default).
 
+?> If you are not using the Funding Choices service to manage user consent you can create your own consent form and use this node to disable personalized ads if the user does not grant his consent (required to be GDPR compliant).
+
+!> This only works for admob itself and not for mediation partners. If you are using mediation please use the Funding Choices consent management platform.
+
 ## Consent Library
 
 * Request Consent Info
