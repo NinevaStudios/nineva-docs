@@ -75,7 +75,7 @@ Follow the link and create the Android OAuth client in the Google Cloud Platform
 ![](images/play-goodies/setup/add_credential_3.png ':size=900')
 ![](images/play-goodies/setup/add_credential_4.png ':size=900')
 
-When done it should display your settings. 
+When done it should display your settings.
 
 ![](images/play-goodies/setup/add_credential_5.png ':size=900')
 
@@ -87,7 +87,7 @@ The main field to configure is the *Game App ID*. Navigate to `Project Settings 
 ![](images/play-goodies/setup/app_id.png ':size=900')
 ![](images/play-goodies/setup/platform_settings.png ':size=900')
 
-Now you can build your game and test the demo level provided with the plugin. **Note that the Android package name in your UE project must match the package name from your Android OAuth Credential and that the build must be signed with the same keystore that you took SHA1 from to put into Android OAuth Client setup** 
+Now you can build your game and test the demo level provided with the plugin. **Note that the Android package name in your UE project must match the package name from your Android OAuth Credential and that the build must be signed with the same keystore that you took SHA1 from to put into Android OAuth Client setup**
 
 ?> If *Enable Google Play Support* is checked then Unreal Engine will pull in its own Google Play Games Services dependencies. This might lead to undefined behavior if these dependencies  collide with our own. We cannot test every scenario so if you encounter any problems contact us on our Discord server.
 
@@ -99,7 +99,7 @@ When logging in with Google Play Games you can also request an access token that
 
 ?> Please check the [official guide](https://firebase.google.com/docs/auth/android/play-games) how to integrate Google Play Games Login with Firebase Auth to get a better idea how it works.
 
-First of all you need to link your Google Play Games project with the Firebase project. The easiest way to do it is to select existing Firebase project when creating the Game. 
+First of all you need to link your Google Play Games project with the Firebase project. The easiest way to do it is to select existing Firebase project when creating the Game.
 
 ![](images/play-goodies/setup/create_game_start.png ':size=900')
 
@@ -202,7 +202,7 @@ To show an external UI with all of the achievements use the `Show Achievement UI
 
 ## Leaderboards
 
-Read about how to configure and use *Achievements* [here](https://developers.google.com/games/services/common/concepts/leaderboards).
+Read about how to configure and use *Leaderboards* [here](https://developers.google.com/games/services/common/concepts/leaderboards).
 
 ![](images/play-goodies/social/leaderboards.png)
 
