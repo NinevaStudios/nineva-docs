@@ -7,7 +7,6 @@ This section is a brief overview of the functionality provided by API. Click on 
 * App Interaction
 	+ [IGApps.cs](#igappscs) - Opening various installed app, currently contains YouTube and FaceTime
 	+ [IGMaps.cs](#igmapscs) - Opening Apple Maps application on specified address, location, performing search on map or displaying directions
-	+ [IGShare.cs](#igsharecs) - Social sharing text+image, sending SMS or E-mail etc.
 	+ [IGShare.cs](#igsharecs) - Social sharing text+image, sending SMS, E-mail, Facebook & Twitter sharing.
 	+ [IGImagePicker.cs](#igimagepickercs) - Picking image from Camera/Photo Library/Photos Album and getting `Texture2D` as a result.
 	+ [IGCalendar.cs](#igcalendarcs) - Creating, modifying and deleting calendar events and reminders.
@@ -15,7 +14,7 @@ This section is a brief overview of the functionality provided by API. Click on 
 	+ [IGFilePicker.cs](#igfilepickercs) - Interact with files in other applications (Files, OneDrive, etc.)
 
 * UI
-	+ [IGDialogs.cs](#igdialogsccs) - Opening standard 1-2-or-3 button dialogs and getting a callback which button has been clicked
+	+ [IGDialogs.cs](#igdialogscs) - Opening standard 1-2-or-3 button dialogs and getting a callback which button has been clicked
 	+ [IGActionSheet.cs](#igactionsheetcs) - Displays UIActionSheet to the user and allows to receive callbacks for clicked buttons.
 	+ [IGDateTimePicker.cs](#igdatetimepickercs) - Showing native date, time, date-time, countdown timer pickers and getting callbacks
 
@@ -31,9 +30,6 @@ This section is a brief overview of the functionality provided by API. Click on 
 	+ Device UUID
 	+ Device name, localized name, system name, os version
 	+ More...
-
-
-**[Troubleshooting & FAQ](#/Troubleshooting-&-FAQ)**
 
 # **Getting started**
 
@@ -235,10 +231,6 @@ Result:
 
 ![](/images/ag/share-image-settings-read-write.png ':size=512')
 ![](/images/ag/share-image-settings.png ':size=512')
-
-#### Frameworks to link
-
-You must link against `MessageUI.framework` in XCode project (used by sending SMS or E-mail via controller). In the latest versions of Unity its handled automatically so you don't have to do anything, otherwise, check [How to link a framework in XCode project?](xxx)
 
 ### Sharing Text/Image/Text+Image
 
@@ -728,10 +720,10 @@ Result:
 
 This class allows you to show Date & Time Picker in these forms:
 
-* [Date Picker](#/IGDateTimePicker.cs#date-picker)
-* [Time Picker](#/IGDateTimePicker.cs#time-picker)
-* [Date & Time Picker](#/IGDateTimePicker.cs#date--time-picker)
-* [Countdown Timer](#/IGDateTimePicker.cs#countdown-timer)
+* [Date Picker](#date-picker)
+* [Time Picker](#time-picker)
+* [Date & Time Picker](#date-amp-time-picker)
+* [Countdown Timer](#countdown-timer)
 
 	To each of this methods you must pass a callback which passes a `System.DateTime` object as a parameter and a cancel callback which is invoked when user cancelled picking. **If you want to nothing happen on cancel callback just pass and empty lambda as a callback: `() => {}`**
 
