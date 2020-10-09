@@ -45,6 +45,7 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 * Delay app measurement - delays app measurement until the Ad Subsystem is explicitly initialized. Use this option if you need to collect any kind of consent before gathering user-level event data. By default event data is being sent to Google as soon as the app launches.
 * Admob AppID - unique AdMob app ID. If this field is empty your application will crash when launched on an actual device.
 * Test Device IDs - this option specifies the IDs of devices that will receive test ads for real ad units. Refer to the [testing ads section](#testing-ads) for more information.
+* Enable App Tracking Transparency - add the App Tracking Transparency framework to show the *App Tracking Transparency* (ATT) dialog.
 * User Tracking Usage Description - this field is required for iOS14. This message will be shown to the user when presenting the *App Tracking Transparency* (ATT) dialog.
 * Mediation - specify which mediation network providers should be enabled.
 
@@ -236,6 +237,12 @@ Gets the current consent type. Possible values are:
 ![](images/admob/ConsentReset.png)
 
 This resets the state of the consent SDK so that you can simulate a user's first install experience.
+
+### iOS14 App Transparency Tracking Dialog
+
+If you are using Funding Choices as your consent management solution you can trigger the ATT dialog when using the *Load And Show Consent Form* node. If you are not using any consent managers use the following nodes to display the ATT dialog and get the authorization status from the user.
+
+![](images/admob/ConsentATT.png)
 
 ## Banner Ads
 
