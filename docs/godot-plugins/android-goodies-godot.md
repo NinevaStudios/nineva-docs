@@ -6,6 +6,16 @@ Welcome to Android Goodies Documentation for Godot
 
 ___
 
+# **Initial Setup**
+
+Extract the .zip file with the plugin to `[Project]/android/plugins` directory (create, if needed).
+
+Open your project in Godot editor. Go to Project->Export and create an export [preset](https://docs.godotengine.org/en/stable/development/compiling/compiling_for_android.html#using-the-export-templates) for Android build.
+
+Select the custom build option and make sure the plugin is selected, as well.
+
+![](images/android-goodies/initial-setup.jpeg)
+
 # **Native UI**
 
 Get a reference to a AGNativeUi object:
