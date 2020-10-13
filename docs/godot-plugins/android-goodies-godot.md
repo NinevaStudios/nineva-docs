@@ -22,7 +22,7 @@ Select the custom build option and make sure the plugin is selected, as well.
 
 Some of the plugin's features require additional permissions. They have to be added manually to the build template:
 
-![](images/android-goodies/permissions.png)
+![](images/android-goodies/permissions.PNG)
 
 - vibrate, stop vibration: **Vibrate**;
 - file pickers: **Read External Storage**;
