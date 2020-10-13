@@ -24,6 +24,10 @@ Useful links:
 * [Google Maps View](unity-plugins/google-maps)
 * [iOS Goodies](unity-plugins/ios-goodies)
 
+## Godot Plugins
+
+* [Android Goodies](godot-plugins/android-goodies-godot)
+
 ## Hire us!
 
 We often do custom contract work, so feel free to reach us on our [Discord](https://bit.ly/nineva_support_discord) or drop a line to info at ninevastudios.com

@@ -15,4 +15,5 @@
 	* [Google Maps View](unity-plugins/google-maps)
 	* [iOS Goodies](unity-plugins/ios-goodies)
 
-
+- **Godot Plugins**
+	* [Android Goodies](godot-plugins/android-goodies-godot)
