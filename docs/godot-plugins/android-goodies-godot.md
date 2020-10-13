@@ -10,11 +10,25 @@ ___
 
 Extract the .zip file with the plugin to `[Project]/android/plugins` directory (create, if needed).
 
+## Create build template
+
 Open your project in Godot editor. Go to Project->Export and create an export [preset](https://docs.godotengine.org/en/stable/development/compiling/compiling_for_android.html#using-the-export-templates) for Android build.
 
 Select the custom build option and make sure the plugin is selected, as well.
 
 ![](images/android-goodies/initial-setup.jpeg)
+
+## Add permissions
+
+Some of the plugin's features require additional permissions. They have to be added manually to the build template:
+
+![](images/android-goodies/permissions.png)
+
+- vibrate, stop vibration: **Vibrate**;
+- file pickers: **Read External Storage**;
+- take photo, record video, flashlight: **Camera**;
+- save image to gallery: **Write External Storage**;
+- send SMS directly: **Send SMS**.
 
 # **Native UI**
 
