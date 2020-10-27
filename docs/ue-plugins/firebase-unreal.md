@@ -601,6 +601,8 @@ You can also subscribe to and unsubscribe from specific topics for the downstrea
 
 Official documentation regarding the Firebase Crashlytics can be found [here](https://firebase.google.com/docs/crashlytics).
 
+!> Note: right now C++ stack traces are not working as expected on Android. We are working on fixing this issue.
+
 ## Initial Setup
 
 The crashes of the application are automatically uploaded to Firebase once you have setup the Crashlytics in the Firebase console.
