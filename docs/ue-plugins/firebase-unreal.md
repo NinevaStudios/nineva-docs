@@ -143,9 +143,7 @@ Call `Delete` on the FirebaseUser object to delete the user from your user datab
 
 ## Initial Setup
 
-If you have not created the Firebase project yet, please, follow the instructions in this [video](https://www.youtube.com/watch?v=6juww5Lmvgo).
-
-After the project is created you can go to the Cloud Storage Section on the left and setup the storage security rules. Refer to this [page](https://firebase.google.com/docs/storage/security/start) for more info.
+After the project is created you can go to the Cloud Storage Section in console, and setup the storage security rules. Refer to this [page](https://firebase.google.com/docs/storage/security/start) for more info.
 
 ![](images/firebase/cloud-storage/CloudStorageSetup.png)
 
@@ -630,6 +628,30 @@ You can toggle automatic data collection by calling `SetCrashlyticsCollectionEna
 If it is disabled, you can use the `CheckForUnsentReports`, `SendUnsentReports` and `DeleteUnsentReports` functions to control the flow.
 
 You can also check if the application crashed on previous launch using the `DidCrashOnPreviousExecution` function.
+
+# **Cloud Functions**
+
+In order to write and deploy cloud functions you need to set up Node.js and Firebase CLI, for more details refer to [functions setup guide](https://firebase.google.com/docs/functions/get-started#set-up-node.js-and-the-firebase-cli) and [project initialization](https://firebase.google.com/docs/functions/get-started#initialize-your-project).
+
+!> Note: Use only the [functions.https](https://firebase.google.com/docs/reference/functions/providers_https_) backend API to write callable functions. The [HTTP trigger API](https://firebase.google.com/docs/reference/functions/cloud_functions_#httpsfunction) is entirely separate and not interoperable with callable functions.
+
+After cloud functions are deployed you can view them in **Functions** tab in Firebase console.
+
+![](images/firebase/cloud-functions/Scr_CloudFunctionsFunctionsConsoleTab.png)
+
+In order to call them from your app use Cloud Function method of respective return type.
+
+![](images/firebase/cloud-functions/Scr_CloudFunctions.png)
+
+!> Note: If you don't specify region functions run in the ```us-central1``` region by default.
+
+You can pass any amount of parameters of different types inside the ```Parameters``` map, including arrays and maps. To pass them use Value Variant convertor.
+
+![](images/firebase/cloud-functions/Scr_CloudFunctionsValueVariantConv.png)
+
+In case cloud function returns map in a callback use ```Break MapWrapper``` to extract map from incoming ```MapWrapper``` struct.
+
+![](images/firebase/cloud-functions/Scr_CloudFunctionsBreakMapWrapper.png)
 ___
 
 # Changelog
