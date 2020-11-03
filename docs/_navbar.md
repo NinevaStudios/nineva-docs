@@ -10,6 +10,7 @@
 	* [Google Maps View](ue-plugins/google-maps-unreal)
 	* [Google Play Goodies](ue-plugins/google-play-unreal)
 	* [iOS Game Center Goodies](ue-plugins/game-center-unreal)
+	* [Flurry Goodies](ue-plugins/flurry-unreal)
 
 
 - **Unity Plugins**
