@@ -599,13 +599,17 @@ You can also subscribe to and unsubscribe from specific topics for the downstrea
 
 Official documentation regarding the Firebase Crashlytics can be found [here](https://firebase.google.com/docs/crashlytics).
 
-!> Note: right now C++ stack traces are not working as expected on Android. We are working on fixing this issue.
-
-## Initial Setup
-
 The crashes of the application are automatically uploaded to Firebase once you have setup the Crashlytics in the Firebase console.
 
-!> Note: you will have to upload the Debug Symbols for your iOS application in order to see the reports.
+## Android Setup
+
+If you are using Android NDK version 14 (UE4.24 and earlier) everything should work. For Android NDK version 21 (UE4.25 and newer) you will have to pass an additional linker flag `-Wl,--no-rosegment` for proper crash stack trace symbolication. Unfortunately it is impossible to pass this flag in the binary release of Unreal Engine. If you do not want to build the whole engine it is possible to only build the *Unreal Built Tool* and update the linker flags in *AndroidToolchain.cs*. For further instructions on building Unreal Engine from source please refer to the official documentation.
+
+!> Right now the crashlytics stack trace will correctly report the file name and function where the crash happened but the rest of the stack will report unrelated UE source files. We are monitoring this issue and looking for a valid fix.
+
+## iOS Setup
+
+You will have to upload the Debug Symbols for your iOS application in order to see the reports.
 
 You can download the required tool [here](https://drive.google.com/file/d/1L4O7wdkCatOQx_mgyJesw2TLYdk0cxIR/view?usp=sharing) or find it in the Plugin's Resources folder (`upload-symbols`).
 In order for UE4 to generate these files during build, you have to go to Project Settings -> iOS -> Build and enable the following options:
