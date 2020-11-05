@@ -660,6 +660,11 @@ ___
 
 # Changelog
 
+v.1.3.0
+
+* ADDED Cloud functions
+* FIXED Crashlytics did not report crashes for native code on Android
+
 v.1.2.1
 
 * FIXED Crash on startup when JNI modules were not initialized
