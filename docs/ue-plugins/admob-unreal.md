@@ -45,7 +45,22 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 * Delay app measurement - delays app measurement until the Ad Subsystem is explicitly initialized. Use this option if you need to collect any kind of consent before gathering user-level event data. By default event data is being sent to Google as soon as the app launches.
 * Admob AppID - unique AdMob app ID. If this field is empty your application will crash when launched on an actual device.
 * Test Device IDs - this option specifies the IDs of devices that will receive test ads for real ad units. Refer to the [testing ads section](#testing-ads) for more information.
+* Enable App Tracking Transparency - add the App Tracking Transparency framework to show the *App Tracking Transparency* (ATT) dialog.
+* User Tracking Usage Description - this field is required for iOS14. This message will be shown to the user when presenting the *App Tracking Transparency* (ATT) dialog.
 * Mediation - specify which mediation network providers should be enabled.
+
+## Gathering consent
+
+This plugin wraps the official Google User Messaging Platform SDK. To start make sure you meet the prerequisites on the [official guide](https://developers.google.com/admob/ump/ios/quick-start). You can also read the official guide to understand better how the SDK works. Once everything is setup in your AdMob and Funding Choices accounts you can follow this simple workflow to get user consent.
+
+1. Request the consent info to determine if you need to show a consent form.
+2. After a successful request the Get Consent Status node can be used to check if consent is required.
+3. If it is required - load and show the consent form.
+4. If no error occurred during form loading and it was dismissed by the user you will receive a callback and can proceed with your app's workflow.
+
+!> If an error occurs during form loading and consent is required the SDK treats this the same as if the user did not grant consent.
+
+![](images/admob/ConsentWorkflowBP.png)
 
 ## Loading and showing ads
 
@@ -97,7 +112,9 @@ For **IOS** device first build and deploy your project using UE. After deploying
 
 In case you encounter an error you will receive an error code and message in your callback. The message is useful to quickly identify the problem and the code can be used to react to certain errors (e. g. in case of a no fill error you can cross advertise your other applications yourself). Android and IOS have different error codes - keep this in mind when checking them.
 
-* Android error codes
+## Ad error codes
+
+* Android
 
 | Error Code | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
@@ -106,7 +123,7 @@ In case you encounter an error you will receive an error code and message in you
 | 2          | Network Error. The ad request was unsuccessful due to network connectivity. |
 | 3          | No Fill. The ad request was successful, but no ad was returned due to lack of ad inventory. |
 
-* IOS error codes
+* IOS
 
 | Error Code | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
@@ -120,6 +137,26 @@ In case you encounter an error you will receive an error code and message in you
 | 11         | Internal Error. Something happened internally; for instance, an invalid response was received from the ad server. |
 | 14         | Rewarded ad already used Error. This happens when you try to show the same rewarded ad more than once. |
 
+## Consent form error codes
+
+* Android
+
+| Error Code | Description                                                  |
+| ---------- | ------------------------------------------------------------ |
+| 1          | Internal Error. |
+| 2          | Internet Error. here was an error loading data from the network. |
+| 3          | Invalid Operations. The SDK is being invoked incorrectly. |
+| 4          | Time Out. The operation has timed out. |
+
+* IOS
+
+| Error Code | Description                                                  |
+| ---------- | ------------------------------------------------------------ |
+| 5          | Internal Error. |
+| 6          | Form was already used. |
+| 7          | Form is unavailable. |
+| 8          | Time Out. The operation has timed out. |
+
 # **Mediation**
 
 This plugin supports the following mediation providers:
@@ -129,6 +166,8 @@ This plugin supports the following mediation providers:
 * Tapjoy
 * Unity Ads
 * Vungle
+
+!> The Chartboost Android SDK requires minimum Android SDK level to be set to at least 26
 
 For mediation to work you will need to properly setup an application on the provider's website and setup mediation groups for your unit IDs on the AdMob website. Please follow the official instructions provided by Google for specific providers: [AdColony](https://developers.google.com/admob/android/mediation/adcolony#step_1_set_up_adcolony), [Chartboost](https://developers.google.com/admob/android/mediation/chartboost#step_1_set_up_chartboost), [Facebook](https://developers.google.com/admob/android/mediation/facebook#step_1_set_up_facebook_audience_network), [Tapjoy](https://developers.google.com/admob/android/mediation/tapjoy#step_1_set_up_tapjoy), [Unity Ads](https://developers.google.com/admob/android/mediation/unity#step_1_set_up_unity_ads), [Vungle](https://developers.google.com/admob/android/mediation/vungle#step_1_set_up_vungle). All the necessary information is specified in steps 1 and 2, all other steps can be skipped.
 
@@ -149,6 +188,63 @@ Initializes the ad subsystem. You should only call this method when the `Delay a
 ![](images/admob/AdSubsystemPersonalizedAdsBP.jpg)
 
 Enable/disable personalized ads (enabled by default).
+
+?> If you are not using the Funding Choices service to manage user consent you can create your own consent form and use this node to disable personalized ads if the user does not grant his consent (required to be GDPR compliant).
+
+!> This only works for admob itself and not for mediation partners. If you are using mediation please use the Funding Choices consent management platform.
+
+## Consent Library
+
+* Request Consent Info
+
+![](images/admob/ConsentRequest.png)
+
+Request the latest consent information. This will allow you to determine if your user needs to provide consent.
+
+* Request Consent Info Debug
+
+![](images/admob/ConsentRequestDebug.png)
+
+This node allows you to easily test your app's behaviour by simulating your location. This method requires a valid test device ID. Refer to this (section)[#test-evices] on how to get your device's test ID.
+
+* Load And Show Consent Form
+
+![](images/admob/ConsentLoadAndShow.png)
+
+* Get Consent Status
+
+![](images/admob/ConsentGetStatus.png)
+
+Gets the current consent status. Possible values are:
+- Unknown
+- Required
+- Not Required
+- Obtained
+
+?> Obtained status does not mean that the user gave your app consent. This only indicates that the user made a choice on the consent form.
+
+* Get Consent Type
+
+![](images/admob/ConsentGetType.png)
+
+Gets the current consent type. Possible values are:
+- Unknown
+- Personalized
+- Non Personalized
+
+!> Currently always returns *Unknown*. Possible bug in the underlying SDK.
+
+* Reset Consent Info
+
+![](images/admob/ConsentReset.png)
+
+This resets the state of the consent SDK so that you can simulate a user's first install experience.
+
+### iOS14 App Transparency Tracking Dialog
+
+If you are using Funding Choices as your consent management solution you can trigger the ATT dialog when using the *Load And Show Consent Form* node. If you are not using any consent managers use the following nodes to display the ATT dialog and get the authorization status from the user.
+
+![](images/admob/ConsentATT.png)
 
 ## Banner Ads
 
@@ -188,8 +284,6 @@ Show On Load - Show the ad when it finishes loading
 
 Show banner ad
 
-
-
 * Hide
 
 ![](images/admob/BannerAdHideBP.jpg)
@@ -224,8 +318,6 @@ Create an interstitial ad
 
 Parameters:
 AdUnitId - Ad unit id (provided by Admob)
-
-
 
 * Load Ad
 
@@ -324,6 +416,13 @@ If you see test ads using Google provided test unit IDs then you are all set for
 ___
 
 # Changelog
+
+v.1.3.0
+
+* ADDED Google User Messaging Platform SDK
+* ADDED iOS14 App Transparency Tracking Dialog
+* UPDATE Mediation libraries and adapters
+* FIXED iOS build when certain mediation providers were disabled
 
 v.1.2.0
 
