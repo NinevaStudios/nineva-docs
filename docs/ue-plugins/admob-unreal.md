@@ -167,6 +167,8 @@ This plugin supports the following mediation providers:
 * Unity Ads
 * Vungle
 
+!> The Chartboost Android SDK requires minimum Android SDK level to be set to at least 26
+
 For mediation to work you will need to properly setup an application on the provider's website and setup mediation groups for your unit IDs on the AdMob website. Please follow the official instructions provided by Google for specific providers: [AdColony](https://developers.google.com/admob/android/mediation/adcolony#step_1_set_up_adcolony), [Chartboost](https://developers.google.com/admob/android/mediation/chartboost#step_1_set_up_chartboost), [Facebook](https://developers.google.com/admob/android/mediation/facebook#step_1_set_up_facebook_audience_network), [Tapjoy](https://developers.google.com/admob/android/mediation/tapjoy#step_1_set_up_tapjoy), [Unity Ads](https://developers.google.com/admob/android/mediation/unity#step_1_set_up_unity_ads), [Vungle](https://developers.google.com/admob/android/mediation/vungle#step_1_set_up_vungle). All the necessary information is specified in steps 1 and 2, all other steps can be skipped.
 
 You are not required to setup all available mediation providers. If you only use some of them or none at all you can disable them so that your app does not ship with additional libraries that are not used. You can select which providers are enabled in the plugin's settings.
