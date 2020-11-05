@@ -417,6 +417,13 @@ ___
 
 # Changelog
 
+v.1.3.0
+
+* ADDED Google User Messaging Platform SDK
+* ADDED iOS14 App Transparency Tracking Dialog
+* UPDATE Mediation libraries and adapters
+* FIXED iOS build when certain mediation providers were disabled
+
 v.1.2.0
 
 * UPDATE iOS SDK to version 7.64 (compatible with iOS 14)
