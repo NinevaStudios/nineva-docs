@@ -11,6 +11,7 @@
 	* [Google Play Goodies](ue-plugins/google-play-unreal)
 	* [iOS Game Center Goodies](ue-plugins/game-center-unreal)
 	* [Flurry Goodies](ue-plugins/flurry-unreal)
+	* [Deep Link Goodies](ue-plugins/deep-link-unreal)
 
 
 - **Unity Plugins**
