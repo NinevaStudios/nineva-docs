@@ -29,6 +29,8 @@ You have to add a specific `JSON` file to your domain at the following address: 
 
 Its content is more thoroughly described [here](https://developer.android.com/training/app-links/verify-site-associations).
 
+You can take a look at our example [here](https://ninevastudios.com/.well-known/assetlinks.json).
+
 Example:
 ```
 [{
@@ -48,6 +50,8 @@ You have to add a specific file to your domain at the following address: `https:
 ?> Note: the file has to be without the `.json` resolution in the end.
 
 Official documentation on this topic can be found [here](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html).
+
+You can take a look at our example [here](https://ninevastudios.com/.well-known/apple-app-site-association).
 
 ?> There is a newer approach to form this file (should work only on iOS 13 and higher), described [here](https://developer.apple.com/documentation/safariservices/supporting_associated_domains?language=objc), but it hasn't worked for us.
 
