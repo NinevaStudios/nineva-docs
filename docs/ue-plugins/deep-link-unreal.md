@@ -19,6 +19,8 @@ Go to plugin settings (Project Settings -> Deep Link Goodies) and set the respec
 
 ![](images/deep-link/deep-link-settings.png)
 
+?> Note: you have to enable deep linking for iOS manually in the project settings.
+
 ## Verify ownership of the domains
 
 Both iOS and Android require domain ownership verification for your application to be allowed to handle the specified URL's.
