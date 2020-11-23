@@ -40,7 +40,7 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 !> **Warning:** For the real ads to be shown in your application you have to fill in the Funding Choices section.
 
-![](images/admob/FundingChoices.jpg)
+![](images/admob/FundingChoices.png)
 
 ## Project Settings
 
