@@ -554,7 +554,9 @@ Before setting the default values, you first need to make a map of parameter nam
 
 Official documentation regarding the Firebase Cloud Messaging can be found [here](https://firebase.google.com/docs/cloud-messaging).
 
-!> Note!!! The iOS setup is quite complex and it's easy to miss a step. Please, follow the instructions very carefully.
+?> The iOS setup is quite complex and it's easy to miss a step. Please, follow the instructions very carefully.
+
+!> If you are using UE 4.23 or 4.24, you will have to manually add the `Push Notifications` capability for the resulting XCode project of your iOS build.
 
 ## Manage device ID
 
