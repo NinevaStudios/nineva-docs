@@ -407,6 +407,10 @@ You can bind to the following events:
 * Ad Closed - fires when a rewarded ad is closed
 * User earned reward - fires when a rewarded ad triggers a reward. The app is responsible for crediting the user with the reward.
 
+# **Known issues**
+
+* When Vungle mediation is enabled the `SaveGameToSlot`/`LoadGameFromSlot` functions do not work on Android for some reason. We unfortunately still cannot figure out why is this happening. If you are using this functionality please disable Vungle mediation in plugin settings.
+
 # **FAQ**
 
 * Is there an example showing how to use this plugin?
