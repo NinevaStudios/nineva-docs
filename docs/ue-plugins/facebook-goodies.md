@@ -220,9 +220,42 @@ You can share video using the Share Video Content, providing a previously create
 
 ![](images/facebook/FacebookShare9.png)
 
+# **Friends**
+
+?> Only users with granted ```user_friends``` permission are displayed in fetched friends list.
+
+![](images/facebook/FacebookUser_FriendsPermoission.png)
+
+## User's Friends
+
+To retrieve user's friends data use ```GetUserFriendsData``` method. Callback returns ```FFBFetchedFriendsData``` object that contains fetched data.
+
+?> Note that facebook limits page to **25** friends in a single response.
+
+![](images/facebook/FacebookFetchFriends1.png)
+![](images/facebook/FacebookFetchedFriendsData.png)
+
+?> If there are more friends to display ```FFBFetchedFriendsData``` response will contain string data in ```Next``` and/or ```Previous``` fields in ```Paging``` subobject. Otherwise those fields are empty strings. 
+
+### Paged Friends
+
+In order to get another page of friends use ```GetFriendsPagingData``` method. It returns ```FFBFetchedFriendsData``` object in callback with updated friends list and new data for further paging requests.
+
+?> ```GetFriendsPagingData``` method requires ```UserId``` parameter only for iOS!
+
+
+# **Profile Picture**
+
+To get user's profile picture call ```GetProfilePicture``` method. Callback returns image's url.
+
+![](images/facebook/FacebookGetProfilePic.png)
 ___
 
 # Changelog
+
+v 1.2.1
+
+* ADD Fetch Friends functionality
 
 v.1.2.0
 
