@@ -52,6 +52,7 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 * Enable App Tracking Transparency - add the App Tracking Transparency framework to show the *App Tracking Transparency* (ATT) dialog.
 * User Tracking Usage Description - this field is required for iOS14. This message will be shown to the user when presenting the *App Tracking Transparency* (ATT) dialog.
 * Mediation - specify which mediation network providers should be enabled.
+* Test Sute - allows you to test whether you have correctly configured your app and ad units to be able to display ads from third-party networks through mediation. Refer to the [Test Suite](#test-suite) section for more information. 
 
 ## Gathering consent
 
@@ -90,7 +91,7 @@ All blueprint nodes are described in the [here](#blueprint-nodes) section.
 
 # **Testing Ads**
 
-There are two ways to verify that your application will display ads:
+There are few ways to verify that your application will display ads:
 
 ## Google provided test ad units
 
@@ -111,6 +112,14 @@ For **IOS** device first build and deploy your project using UE. After deploying
 `GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"YOUR_DEVICE_ID" ]`
 
 ?> View the logs in an IDE, UE device output log window may filter out the message and you won't see it.
+
+## Test Suite
+
+!> This feature is available only for Android devices for now.
+
+To open Test Suite on the device call ```LaunchTestSuite``` method (Make sure it's enabled in Project Settings).  For detailed information on how to use Test Suite, please, refer to the [official documentation](https://developers.google.com/admob/android/mediation-test-suite#navigating_the_test_suite).
+
+![](images/admob/AdmobTestSuite.png)
 
 # **Error codes**
 
