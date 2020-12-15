@@ -47,6 +47,8 @@ Example:
 
 ### iOS
 
+!> Due to some limitations, for iOS to work properly the plugin must be copied to the project `Plugins` folder.
+
 You have to add a specific file to your domain at the following address: `https://YOUR_HOST_NAME/.well-known/apple-app-site-association`
 
 ?> Note: the file has to be without the `.json` resolution in the end.
