@@ -56,8 +56,14 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 ## Gathering consent
 
-This plugin wraps the official Google User Messaging Platform SDK. To start make sure you meet the prerequisites on the [official guide](https://developers.google.com/admob/ump/ios/quick-start). You can also read the official guide to understand better how the SDK works. Once everything is setup in your AdMob and Funding Choices accounts you can follow this simple workflow to get user consent.
+This plugin wraps the official Google User Messaging Platform SDK. To start make sure you meet the prerequisites on the [official guide](https://developers.google.com/admob/ump/ios/quick-start). You can also read the official guide to understand better how the SDK works. 
 
+!> **Warning:** After you finish your setup in Funding choices portal, make sure your app is published and active as displayed in the images below.
+
+![](images/admob/FundingChoices1.png)
+![](images/admob/FundingChoices2.png)
+
+Once everything is setup in your AdMob and [Funding Choices](https://fundingchoices.google.com) accounts you can follow this simple workflow to get user consent:
 1. Request the consent info to determine if you need to show a consent form.
 2. After a successful request the Get Consent Status node can be used to check if consent is required.
 3. If it is required - load and show the consent form.
