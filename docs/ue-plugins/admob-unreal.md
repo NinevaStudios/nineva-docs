@@ -440,12 +440,20 @@ ___
 
 # Changelog
 
-v.1.3.1
+v.1.3.3
+
+*ADDED Plugin version logging
+*UPDATED Mediation versions for Android & iOS
+
+v.1.3.2
 
 * ADDED Mediation test suite for Android
-* FIXED an issue with Chartboost mediation on Android
 * UPDATED some library version
 * ADDED support for UE 4.26
+
+v.1.3.1
+
+* FIXED an issue with Chartboost mediation on Android
 
 v.1.3.0
 
