@@ -253,6 +253,12 @@ ___
 
 # Changelog
 
+v 1.2.2
+
+* ADD Friends permission check for fething friends demo blueprint
+* FIXED FBShareLibrary packaging issue
+* FIXED Fetch Friends use of removed refference
+
 v 1.2.1
 
 * ADD Fetch Friends functionality
