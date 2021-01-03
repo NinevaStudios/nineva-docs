@@ -9,6 +9,7 @@
 	* [Google Maps View](ue-plugins/google-maps-unreal)
 	* [Google Play Goodies](ue-plugins/google-play-unreal)
 	* [iOS Goodies](ue-plugins/ios-goodies)
+	* **[Common issues](ue-plugins/common-issues)**
 
 - **Unity Plugins**
 	* [Android Goodies](unity-plugins/android-goodies)
