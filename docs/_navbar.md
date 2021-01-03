@@ -12,7 +12,8 @@
 	* [iOS Game Center Goodies](ue-plugins/game-center-unreal)
 	* [Flurry Goodies](ue-plugins/flurry-unreal)
 	* [Deep Link Goodies](ue-plugins/deep-link-unreal)
-
+	* [iOS Goodies](ue-plugins/ios-goodies)
+	* **[Common issues](ue-plugins/common-issues)**
 
 - **Unity Plugins**
 	* [Android Goodies](unity-plugins/android-goodies)
