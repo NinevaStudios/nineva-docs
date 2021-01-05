@@ -24,6 +24,5 @@ Get Android Studio and [follow these instructions](https://developer.android.com
 ## How do I get an XCode log from an iOS device when running my UE project?
 
 * Run your project from the Editor at least once
-* Open your project folder in Finder and go to TODO
-
-TODO
+* Open your project folder in Finder and go to `Intermediate/ProjectFilesIOS` and open the project by double-clicking the `YourProject.xcodeproj` file.
+* Run the project on your iOS device and get the logs in the log window
