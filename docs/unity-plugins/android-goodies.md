@@ -2215,8 +2215,6 @@ Read more about requesting permissions on [Android Documentation](https://develo
 
 ### Requirements
 
-* In order to use this class `android-support-v4.jar` and `androidgoodieslib-release.aar` must be inside your `Plugins/Android` folder.
-
 ### Disabling Unity asking all the permissions on app start
 
 And the way Unity works with runtime permissions now is it requests all the runtime permissions when you application starts, all in a row. Sometimes it is not what you want so you can disable this behaviour by putting these lines into manifest:
