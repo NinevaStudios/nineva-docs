@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'hello...!'
+                echo 'Deploying new version of the docs...'
                 sh 'firebase deploy --token $FIREBASE_TOKEN'
             }
         }
@@ -26,7 +26,7 @@ pipeline {
 
     post {
         always {
-            discordSend description: "Documentation deployment", footer: "Nineva Docs", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: env.DISCORD_WEB_HOOK_URL
+            discordSend description: "Documentation deployment", footer: "Nineva Docs", link: 'https://docs.ninevastudios.com', result: currentBuild.currentResult, title: JOB_NAME, webhookURL: env.DISCORD_WEB_HOOK_URL
         }
     }
 }
