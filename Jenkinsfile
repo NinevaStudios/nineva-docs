@@ -13,17 +13,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-
-            }
-        }
-
-        stage('Update version') {
-            steps {
-                echo 'Updating version...'
-                script {
-                    def versionCode = calculateVersionCode(VERSION)
-                    // TODO update versions in .uplugin file, commit, push and tag
-                }
+                echo 'hello...'
             }
         }
     }
