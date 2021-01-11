@@ -31,7 +31,7 @@ The plugin is in active development and new things will be added. Please [contac
   + [AGAlertDialog.cs](#agalertdialogcs) - Showing native alert dialogs with buttons/radiobuttons/checkboxes
   + [AGDateTimePicker.cs](#agdatetimepickercs) - Showing date/time picker
   + [AGProgressDialog.cs](#agprogressdialogcs) - Show spinner/horizontal progress bar
-  + [AGLocalNotifications.cs](#aglocalnotificationscs) - Showing local notifications with info provided. Requires **android-support-v4.jar** in Android/Plugins folder.
+  + [AGLocalNotifications.cs](#aglocalnotificationscs) - Showing local notifications with info provided.
   + [AGUIMisc.cs](#aguimisccs) - Showing toasts and immersive mode methods.
 * Retrieving Info
 
@@ -1091,90 +1091,6 @@ private IEnumerator ShowHorizontalForDuration()
 Result:
 
 ![alt text](/images/ag/progress-bar.png ':size=512')
-
-## AGLocalNotifications.cs
-
-***Note!*** This class is now deprecated. Please, use [AGNotificationManager](#agnotificationmanagercs) instead.
-
-This class is used to show local notifications. When clicked on push notification it will open your game if it is not in foreground even if it is not running. If the app is in foreground nothing will happen when clicked.
-
-### Setup
-
-1. **`android-support-v4.jar`** must be present in `Plugins/Android` folder.
-2. **`androidgoodieslib-release.aar`** must be present in `Plugins/Android` folder.
-
-3. Receiver must be added into you `AndroidManifest.xml` under `application tag` (see manifest inside package for reference):
-
-``` xml
-<receiver android:name="com.deadmosquitogames.notifications.GoodiesNotificationManager"/>
-```
-
-4. Setup small icon
-
-Use the Android Asset Studio notification icons generator (https://romannurik.github.io/AndroidAssetStudio/icons-notification.html) to prepare small icons pack and replace temporary icons named **notify_icon_small.png** with the new ones in *\UnityProject\Assets\Plugins\Android\res\*
-
-5. Setup large icon
-
-Same as small icon, but use launcher icons generator (https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html)
-Just put the result into drawable directories *\UnityProject\Assets\Plugins\Android\res\* with name *notify_icon_big.png*. And in the SendNotification method set bigIcon to **"notify_icon_big"**.
-
-If you want to use app icon just set bigIcon = **"app_icon"**.
-
-![alt text](/images/ag/notifications.png ':size=512')
-
-### Scheduling the notification
-
-To schedule local notification:
-
-``` csharp
-const int NotificationId = 42;
-DateTime when = DateTime.Now.AddSeconds(3);
-var title = "Title";
-var message = "Awesome message";
-var sound = true;
-var vibrate = true;
-var lights = true;
-var bigIcon = "app_icon";
-AGLocalNotifications.ShowNotification(NotificationId, when, title, message, Color.red,
-    sound, vibrate, lights, bigIcon);
-```
-
-Result:
-
-![alt text](/images/ag/notification.png ':size=512')
-
-You can also provide a string icon name but you have to make sure the image is available in `res/drawable` folder of your Android app. By default the application launcher icon will be shown.
-
-### Scheduling repeating notification
-
-!> As of API 19, all repeating alarms are inexact.  If your application needs precise delivery times then it must use one-time exact alarms, rescheduling each time. Legacy applications whose SDK version is earlier than API 19 will continue to have all of their alarms, including repeating alarms, treated as exact.
-
-To schedule the repeating notification:
-
-``` csharp
-const int NotificationId = 42;
-DateTime when = DateTime.Now.AddSeconds(3);
-var intervalMillis = 10 * 1000L;
-var title = "Title";
-var message = "Awesome message";
-var sound = true;
-var vibrate = true;
-var lights = true;
-var bigIcon = "app_icon";
-AGLocalNotifications.ShowNotificationRepeating(NotificationId, when, intervalMillis, title, message, Color.red,
-    sound, vibrate, lights, bigIcon);
-```
-
-### Cancelling scheduled notifications
-
-To cancel scheduled notification you have to provide its id:
-
-``` csharp
-const int NotificationId = 42;
-AGLocalNotifications.CancelNotification(NotificationId);
-```
-
-I suggest persisting the scheduled notification id in the app so you could cancel and reschedule them any time.
 
 ## AGNotificationManager.cs
 
@@ -2298,8 +2214,6 @@ Beginning in Android 6.0 (API level 23), users grant permissions to apps while t
 Read more about requesting permissions on [Android Documentation](https://developer.android.com/training/permissions/requesting.html).
 
 ### Requirements
-
-* In order to use this class `android-support-v4.jar` and `androidgoodieslib-release.aar` must be inside your `Plugins/Android` folder.
 
 ### Disabling Unity asking all the permissions on app start
 

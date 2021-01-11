@@ -272,11 +272,15 @@ Call the `CancelNotification` method to cancel a specific notification by its ID
 
 ## In-app review dialog
 
+?> Please [read the official docs about this feature](https://developer.android.com/guide/playcore/in-app-review) thoroughly before contacting support!
+
 ![](images/android-goodies/manage-apps/InAppReview.jpg ':size=900')
 
 This functionality allows to request the review of the app right from the app. You can read more about it in the [documentation](https://developer.android.com/guide/playcore/in-app-review).
 
-?> In order to test it your app MUST be published on Google Play! [Learn more about testing in-app reviews](https://developer.android.com/guide/playcore/in-app-review/test)
+?> In order to test it your app MUST be published on Google Play! [Learn more about testing in-app reviews](https://developer.android.com/guide/playcore/in-app-review/test).
+
+?> The dialog will NOT be shown every time you request it to prevent you from spamming the user. Also, there is NO way to find out if the user actually rated your app.
 
 ___
 

@@ -293,6 +293,14 @@ To pick an image from the gallery, call `PickImageFromGallery` function. You can
 
 Optionally you can pass X and Y coordinates of image picking dialog window to this function that are taken into account on iPad.
 
+## Pick media
+
+You can alternatively call the `PickMediaFromGallery` and `PickMediaFromCamera` to pick a file (picture or video, for example) and obtain some useful data, as well. You can provide the media types you wish to be able to pick from (`public.image` for images and `public.movie` for videos). In successful callback you will receive an `IGPickedMedia` structure with a texture field (if it was an image), a picked file type string (`public.image`, for example), a full path to the picked file, as well as a reference URL (can be used by other libraries, for example, to share a video via [Facebook Plugin](https://docs.ninevastudios.com/#/ue-plugins/facebook-goodies?id=share-video)).
+
+?> Not all of the fields in the picked media struct will be set, depending on the type of media picked. For example, you will not get a full path to the image by taking a photo.
+
+![](images/ios-goodies/PickMedia.png ':size=900')
+
 ## Save an image to the gallery
 
 To save an image to gallery call `SaveImageToGallery` function.

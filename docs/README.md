@@ -14,15 +14,19 @@ Useful links:
 
 ## Unreal Engine 4 Plugins
 
-| [<img src="icons/admob-ue.png">](ue-plugins/admob-unreal) <br> [Admob Goodies](ue-plugins/admob-unreal)                 | [<img src="icons/ag-ue.png">](ue-plugins/android-goodies-unreal) <br> [Android Goodies](ue-plugins/android-goodies-unreal) | [<img src="icons/ig-ue.png">](ue-plugins/ios-goodies) <br> [iOS Goodies](ue-plugins/ios-goodies)            | [<img src="icons/facebook-ue.png">](ue-plugins/facebook-goodies) <br> [Facebook Goodies](ue-plugins/facebook-goodies) |                                                                                |
+| [<img src="icons/admob-ue.png">](ue-plugins/admob-unreal) <br> [Admob Goodies](ue-plugins/admob-unreal)                 | [<img src="icons/ag-ue.png">](ue-plugins/android-goodies-unreal) <br> [Android Goodies](ue-plugins/android-goodies-unreal) | [<img src="icons/ig-ue.png">](ue-plugins/ios-goodies) <br> [iOS Goodies](ue-plugins/ios-goodies)            | [<img src="icons/facebook-ue.png">](ue-plugins/facebook-goodies) <br> [Facebook Goodies](ue-plugins/facebook-goodies) | [<img src="icons/firebase-ue.png">](ue-plugins/firebase-unreal) <br> **[Firebase Goodies](ue-plugins/firebase-unreal)**                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [<img src="icons/firebase-ue.png">](ue-plugins/firebase-unreal) <br> **[Firebase Goodies](ue-plugins/firebase-unreal)** | [<img src="icons/maps-ue.png">](ue-plugins/google-maps-unreal) <br> **[Google Maps View](ue-plugins/google-maps-unreal)**  | [<img src="icons/ble-ue.png">](ue-plugins/ble-utilities) <br> **[BLE Utilities](ue-plugins/ble-utilities)** | [<img src="icons/play-games-ue.png">]() <br> GP Game Services <br> _(coming soon)_                               | [<img src="icons/game-center-ios.png">]() <br>Game Center <br> _(coming soon)_ |
+| [<img src="icons/maps-ue.png">](ue-plugins/google-maps-unreal) <br> **[Google Maps View](ue-plugins/google-maps-unreal)**  | [<img src="icons/ble-ue.png">](ue-plugins/ble-goodies) <br> **[BLE Goodies](ue-plugins/ble-goodies)** | [<img src="icons/play-games-ue.png">](ue-plugins/google-play-unreal) <br> [Google Play Goodies](ue-plugins/google-play-unreal) <br>                                | [<img src="icons/game-center-ios.png">]() <br>[Game Center Goodies](ue-plugins/game-center-unreal)<br> | [<img src="icons/flurry-ue.png">]() <br>[Flurry Goodies](ue-plugins/flurry-unreal)<br> |
 
 ## Unity Plugins
 
 * [Android Goodies](unity-plugins/android-goodies)
 * [Google Maps View](unity-plugins/google-maps)
 * [iOS Goodies](unity-plugins/ios-goodies)
+
+## Godot Plugins
+
+* [Android Goodies](godot-plugins/android-goodies-godot)
 
 ## Hire us!
 
