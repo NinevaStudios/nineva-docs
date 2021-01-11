@@ -1,8 +1,13 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs "node"
+    }
+
     environment {
         DISCORD_WEB_HOOK_URL = credentials('DISCORD_WEB_HOOK_URL')
+        FIREBASE_TOKEN = credentials('FIREBASE_TOKEN')
     }
 
     options {
@@ -14,6 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'hello...!'
+                sh 'npm config ls'
             }
         }
     }
