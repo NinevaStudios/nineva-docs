@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'hello...!'
-                sh 'npm config ls'
+                sh 'firebase deploy --token $FIREBASE_TOKEN'
             }
         }
     }
