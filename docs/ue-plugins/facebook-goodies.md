@@ -260,11 +260,16 @@ ___
 
 # Changelog
 
+v 1.3.5
+
+* UPDATE iOS SDK to version 8.2.2
+* ADD Advertiser Tracking for iOS
+
 v 1.2.2
 
-* ADD Friends permission check for fething friends demo blueprint
+* ADD Friends permission check for fetching friends demo blueprint
 * FIXED FBShareLibrary packaging issue
-* FIXED Fetch Friends use of removed refference
+* FIXED Fetch Friends use of removed reference
 
 v 1.2.1
 
