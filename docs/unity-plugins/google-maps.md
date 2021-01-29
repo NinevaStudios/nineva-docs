@@ -17,9 +17,13 @@ The plugin allows you to embed **Native [GoogleMapsView](https://developers.goog
 
 !> Minimum supported Android version is **API level 16 (Jelly Bean)**
 
+!> UI elements of the map (zoom buttons, compass, etc.) are not displayed on Android 7.0 and older. It is the most annoying limitation, but after some internal changes in Unity 2020 I can't find the fix for this. If you are still using Unity 2019, please drop me a line, and I will send you the package without this issue.
+
+![](/images/maps/ui_elements_bug.png ':size=512')
+
 !> Minimum supported iOS version is **9.0**.
 
-!> **The plugin does NOT work in Editor! Only on iOS and Android** It is a native Android/iOS view (not a web view) so performance is awesome but there is no way to get native Android/iOS view working in Unity Editor.
+!> **The plugin does NOT work in Editor! Only on iOS and Android** It is a native Android/iOS view (not a web view), so performance is awesome, but there is no way to get native Android/iOS view working in Unity Editor.
 
 !> **You can't move the view as a part of scene hierarchy (e.g scroll in Unity view)**. However, you can change the view size and position.
 
