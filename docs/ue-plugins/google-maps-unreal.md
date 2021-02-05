@@ -22,7 +22,7 @@ The plugin allows you to embed **Native [GoogleMapsView](https://developers.goog
 
 * You have to handle device orientation changes.
 
-* **You can't move the view (e.g scroll in Unreal view)**. The view for now is static and can't be moved around. Repositioning might be implemented in the future. Please submit an issue to this repo to request this.
+* **You can't move the view (e.g scroll in Unreal view)**. The view for now is static and can't be moved around.
 
 # **Setup (Plugin)**
 
