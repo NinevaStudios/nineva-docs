@@ -664,6 +664,14 @@ ___
 
 # Changelog
 
+v.1.3.3
+
+* FIXED iOS crash when no realtime database was created
+* ADDED Separate settings for Crashlytics debug/release symbols upload for Android
+* FIXED Crashes related to `OnNewToken` method on Cloud Messaging for Android
+* IMPROVED Better CFBundleURLTypes plist handling in iOS UPL file
+* IMPROVED Added logging to UPL files for easier debugging
+
 v.1.3.0
 
 * ADDED Cloud functions
