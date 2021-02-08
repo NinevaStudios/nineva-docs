@@ -621,6 +621,7 @@ In order for UE4 to generate these files during build, you have to go to Project
 ![](images/firebase/crashlytics/CrashlyticsSettings.png)
 
 Then you should run the following command in Terminal: `<PATH-TO-UPLOAD-SYMBOLS> -gsp <PATH-TO-GoogleService-Info.plist> -p ios <PATH-TO-PROJECT/Binaries/IOS/PROJECT_NAME.dSYM>` to upload the Debug Symbols to Firebase (for example, `/Users/Borsch/Downloads/Firebase/FirebaseCrashlytics/upload-symbols -gsp /Users/Borsch/Downloads/GoogleService-Info.plist -p ios /Users/Borsch/Projects/playground-unreal/Binaries/IOS/NinevaPlayground.dSYM`).
+On some machines you will have to add permission using the `chmod +x` argument before the filepath (`chmod +x <command>`).
 
 ## Configuring session parameters
 
