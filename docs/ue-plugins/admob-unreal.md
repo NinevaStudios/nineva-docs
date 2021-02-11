@@ -111,7 +111,7 @@ You can use real ad units and click ads on test devices. These ads will have a "
 
 To find out your device ID you need to launch the application on an actual device and load an ad. In the device log you should see a message containing your device ID.
 
-For **Android** you can view this message in logcat (via Android Studio) and it will have the following format:
+For **Android** you can view this message in logcat ([via Android Studio - learn how to do this](https://developer.android.com/studio/debug/am-logcat)) and it will have the following format:
 `RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("YOUR_DEVICE_ID")`
 
 For **IOS** device first build and deploy your project using UE. After deploying your application to a device you can launch it via a generated XCode project located at *[Path_to_UE_Project]/Intermidiate/ProjectFilesIOS/[Project_Name].xcodeproj*. Now you can view your device logs in the XCode debug console. Search for a message of this format:
