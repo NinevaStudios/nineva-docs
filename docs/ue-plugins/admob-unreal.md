@@ -119,6 +119,8 @@ For **IOS** device first build and deploy your project using UE. After deploying
 
 ?> View the logs in an IDE, UE device output log window may filter out the message and you won't see it.
 
+Video from Google about this: https://www.youtube.com/watch?v=Gsd26EuSg4g&feature=emb_logo
+
 ## Test Suite
 
 !> This feature is available only for Android devices for now.
