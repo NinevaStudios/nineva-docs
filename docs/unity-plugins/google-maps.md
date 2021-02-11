@@ -109,6 +109,18 @@ Once you have your key (it starts with "AIza"), go to _Window -> Google Maps Vie
 
 ![](/images/maps/android_api_key_settings.png ':size=768')
 
+## 3.1 Set the proguard file for the release build
+
+There is a file included in the asset in `Assets/Plugins/Android/proguard-user.txt` or you can copt this configuration to your proguard file:
+
+```text
+-keep public class com.deadmosquitogames.gmaps.** { *; }
+-keep public class com.google.android.gms.maps.** { *; }
+-keep public class com.google.maps.** { *; }
+```
+
+![](/images/maps/proguard_settings.png ':size=768')
+
 ## 4. Run the Demo Scene
 
 * Open Unity Build Settings and switch Platform to Android
