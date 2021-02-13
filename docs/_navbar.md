@@ -19,6 +19,7 @@
 	* [Android Goodies](unity-plugins/android-goodies)
 	* [Google Maps View](unity-plugins/google-maps)
 	* [iOS Goodies](unity-plugins/ios-goodies)
+	* [Mobile Places SDK](unity-plugins/places-sdk)
 
 - **Godot Plugins**
 	* [Android Goodies](godot-plugins/android-goodies-godot)
