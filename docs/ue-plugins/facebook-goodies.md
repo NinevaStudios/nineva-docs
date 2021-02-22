@@ -257,15 +257,19 @@ To get user's profile picture call ```GetProfilePicture``` method. Callback retu
 
 ![](images/facebook/FacebookGetProfilePic.png)
 
-# **Audience Network setup for iOS 14**
+# **Audience Network setup and changes for iOS 14.5**
 
-You can change the Advertising Tracking status using the plugin.
+First of all you should learn what changes with iOS 14.5 and how this impacts your app: https://www.facebook.com/business/help/2750680505215705?id=428636648170202
 
-First, you will need to enable the Audience Network SDK inclusion in the Project Settings -> Facebook Goodies.
+You can enable enable the Audience Network SDK inclusion in the Project Settings -> Facebook Goodies.
 
 ![](images/facebook/FacebookAudience.png)
 
-Enabling Audience Network SDK will automatically add the `-lxml2` flag to the linker flags for iOS (both development and shipping builds).
+This will:
+* Add and link `FBAudienceNetwork.framework`to your project - see https://developers.facebook.com/docs/audience-network/get-started/ios
+* Automatically add Facebook's SKAdNetwork IDs to your Xcode project’s `Info.plist`, see https://developers.facebook.com/docs/SKAdNetwork
+
+?> Enabling Audience Network SDK will automatically add the `-lxml2` flag to the linker flags for iOS (both development and shipping builds).
 
 Then you can call the `SetAudienceNetworkAdvertiserTrackingEnabled` function to enable or disable the Advertiser Tracking.
 ___
