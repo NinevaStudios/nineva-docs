@@ -266,7 +266,7 @@ You can enable enable the Audience Network SDK inclusion in the Project Settings
 ![](images/facebook/FacebookAudience.png)
 
 This will:
-* Add and link `FBAudienceNetwork.framework`to your project - see https://developers.facebook.com/docs/audience-network/get-started/ios
+* Add and link `FBAudienceNetwork.framework` to your project - see https://developers.facebook.com/docs/audience-network/get-started/ios
 * Automatically add Facebook's SKAdNetwork IDs to your Xcode project’s `Info.plist`, see https://developers.facebook.com/docs/SKAdNetwork
 
 ?> Enabling Audience Network SDK will automatically add the `-lxml2` flag to the linker flags for iOS (both development and shipping builds).
