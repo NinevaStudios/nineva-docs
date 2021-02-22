@@ -256,6 +256,18 @@ In order to get another page of friends use ```GetFriendsPagingData``` method. I
 To get user's profile picture call ```GetProfilePicture``` method. Callback returns image's url.
 
 ![](images/facebook/FacebookGetProfilePic.png)
+
+# **Audience Network setup for iOS 14**
+
+You can change the Advertising Tracking status using the plugin.
+
+First, you will need to enable the Audience Network SDK inclusion in the Project Settings -> Facebook Goodies.
+
+![](images/facebook/FacebookAudience.png)
+
+Enabling Audience Network SDK will automatically add the `-lxml2` flag to the linker flags for iOS (both development and shipping builds).
+
+Then you can call the `SetAudienceNetworkAdvertiserTrackingEnabled` function to enable or disable the Advertiser Tracking.
 ___
 
 # Changelog
