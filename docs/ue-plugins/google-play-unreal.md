@@ -208,6 +208,12 @@ Read about how to configure and use *Leaderboards* [here](https://developers.goo
 
 To post a score invoke the `Submit Score` node. If the submitted score is less than it was it will be discarded. To show a leaderboard use the `Show Leaderboard UI` node. You can specify the default leaderboard time span (daily, weekly, or all-time) and the collection scope (public or friends only). These filters can be changed in the eternal UI.
 
+### Load player scores
+
+You can load the player centered scores and other info using the `Load Player Centered Scores` node. (See the demo level for more details)
+
+![](images/play-goodies/social/load_scores.png)
+
 ## Events
 
 Read about how to configure and use *Events* [here](https://developers.google.com/games/services/common/concepts/events).
@@ -217,3 +223,16 @@ Read about how to configure and use *Events* [here](https://developers.google.co
 `Increment Event` will increment an event by the specified value. The `Load Events` node allows you to retrieve all available events for your project. You can specify an array of Event Ids so that only they are loaded. Once you load the events you can access this data on them:
 
 ![](images/play-goodies/social/event.png)
+
+---
+
+### Changelog
+
+v.1.1.0
+
+* ADDED A function to fetch player and players close to him leadebord information
+
+v.1.0.0
+
+* Initial release
+
