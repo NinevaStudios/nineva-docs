@@ -276,6 +276,11 @@ ___
 
 # Changelog
 
+v 1.4.0
+
+* UPDATE iOS SDK to version 9.0.1
+* IMPROVED Addition of FBAudienceNetwork framework and other improvements for iOS 14.5. See https://docs.ninevastudios.com/#/ue-plugins/facebook-goodies?id=audience-network-setup-and-changes-for-ios-145
+
 v 1.3.5
 
 * UPDATE iOS SDK to version 8.2.2
