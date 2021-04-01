@@ -432,6 +432,73 @@ There are two methods that you can use: `GetCredentialState` to retrieve the sta
 
 ![](images/ios-goodies/SignInWithApple1.png)
 ![](images/ios-goodies/SignInWithApple2.png)
+
+# **Sensor Data**
+
+## Step Counter
+
+### Setup
+
+There are two ways of obtaining step count data for iOS:
+- use device sensor (CMPedometer class);
+- use HealthKit framework.
+Device sensor requires less platform-specific setup, but can only fetch data from the last 7 days. It also only contains data from the device sensor while the HealthKit data is synchronized between devices (phone and watch, for example).
+
+HealthKit requires additional setup (Project Settings -> IOSGoodies) -> Enable Health Kit. Additionally, HealthKit requires a capability to be added to the output XCode project. If you are just launching on the device, you can open the output xcode project in the PROJECT_PATH/Intermediate/ProjectFilesIOS/ ProjectName.xcproj, go to Signing & Capabilities, and add the HealthKit capability:
+
+![](images/ios-goodies/Sensors0.png)
+
+After that you can relaunch from the xcode (do not delete the application from the device), and it will work.
+
+This approach, however, will not work if you are packaging the project. The only way for you to add the capability is to modify the Engine Sources (requires engine from GitHub repository).
+
+To do this you have to edit the `ENGINE_FOLDER\Engine\Source\Programs\UnrealBuildTool\Platform\IOS\IOSExports.cs` file.
+
+You have to find the following lines:
+```csharp
+// for Sign in with Apple
+bool bSignInWithAppleSupported = false;
+PlatformGameConfig.GetBool("/Script/IOSRuntimeSettings.IOSRuntimeSettings", "bEnableSignInWithAppleSupport", out bSignInWithAppleSupported);
+
+if (bSignInWithAppleSupported)
+{
+  Text.AppendLine("\t<key>com.apple.developer.applesignin</key>");
+  Text.AppendLine("\t<array><string>Default</string></array>");
+}
+```
+
+And add this snippet right after them:
+
+```csharp
+// for Health Kit
+bool bHealthKitSupported = false;
+PlatformGameConfig.GetBool("/Script/IOSGoodies.IOSGoodiesSettings", "bEnableHealthKit", out bHealthKitSupported);
+
+if (bHealthKitSupported)
+{
+  Text.AppendLine("\t<key>com.apple.developer.healthkit</key>");
+  Text.AppendLine("\t<true/>");
+  Text.AppendLine("\t<key>com.apple.developer.healthkit.access</key>");
+  Text.AppendLine("\t<array/>");
+}
+```
+
+### Usage
+
+If you use the pedometer data, you have to request the permission using the following call:
+
+![](images/ios-goodies/Sensors1.png)
+
+In case of Health Kit you should request permission using this call:
+
+![](images/ios-goodies/Sensors2.png)
+
+Only if you get the “Authorized” status, you can get the step counter data:
+
+![](images/ios-goodies/Sensors3.png)
+
+The method takes the following parameters: start date, end date, callbacks to be invoked with step count or error, if it happens, and the data source type (device sensor or health kit).
+
 ___
 
 # Changelog
