@@ -27,3 +27,68 @@ When you are ready to go to production with your app, you must upgrade your API 
 ![](/images/giphy/api_key_upgrade_prod.png ':size=1024')
 
 # Functionality and Features
+
+## Initialize the plugin
+
+Call `Giphy.Init()` to initialize the SDK and providing whether to enter the verification mode. You will need to do this at least once to upgrade your API key to the production one. In that case you will see the verification code in the device logs.
+
+## Pick GIF
+
+The plugin allows to open native OS view with preview GIFs using the `Giphy.PickGif()` call.
+
+You can customize the appearance of the view, as well as the Media search preferences by providing an instance of `GiphyPickSettings`. Please, note that some customizations are only available on Android devices.
+
+You should also specify the respective callbacks to handle the picked media file, and to handle the user search input, as well as a callback to handle the cases when the user closes the picker.
+
+```csharp
+public void OnPickGifButtonClicked()
+{
+    var settings = new GiphyPickSettings
+    {
+        Rating = GiphyRating.Unrated,
+        Theme = GiphyGridTheme.Dark,
+        GiphyGridType = GiphyGridType.Carousel,
+        ImageFormat = GiphyImageFormat.GIF,
+        RenditionType = GiphyRenditionType.FixedWidthSmall,
+        ShowAttribution = false,
+        ConfirmationRenditionType = GiphyRenditionType.Original,
+        EnableDynamicText = true,
+        EnablePartnerProfiles = false,
+        MediaTypeConfig = new List<GiphyContentType> {GiphyContentType.Gif},
+        SelectedContentType = GiphyContentType.Gif,
+        ShowCheckeredBackground = false,
+        ShowConfirmationScreen = true,
+        ShowSuggestionsBar = true,
+        StickerColumnCount = 2,
+        UseBlurredBackground = false,
+        SuggestionsBarFixedPosition = false
+    };
+
+    Giphy.PickGif(settings, OnPickSuccess, OnTextSearched, OnViewDismissed);
+}
+
+void OnViewDismissed()
+{
+    print("Picker view was dismissed.");
+}
+
+void OnTextSearched(string text)
+{
+    print("Text " + text + " was searched.");
+}
+
+void OnPickSuccess(GiphyMedia media, GiphyContentType type)
+{
+    //TODO: handle the media data here.
+}
+```
+
+After the media is picked, you have access to the information about the original resource (`GiphyMedia` object).
+
+If you wish to get the download URL's and other data for the files, you should call the `GiphyMedia.GetMediaImage()` providing the [rendition type](https://developers.giphy.com/docs/optional-settings#rendition-guide) to obtain the `GiphyMediaImage` object that provides download URL's and other useful metadata for the MP4, GIF and WEBP files representing the selected media.
+
+## Media handling
+
+Unity does not support the GIF playback, but there are numerous solutions. We have tested [UniGif](https://github.com/WestHillApps/UniGif) package to play GIF files in the demo.
+
+Unity's built-in [Video Player](https://docs.unity3d.com/ScriptReference/Video.VideoPlayer.html) handles the playback of MP4 files.
