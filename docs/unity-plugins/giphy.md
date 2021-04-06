@@ -87,8 +87,14 @@ After the media is picked, you have access to the information about the original
 
 If you wish to get the download URL's and other data for the files, you should call the `GiphyMedia.GetMediaImage()` providing the [rendition type](https://developers.giphy.com/docs/optional-settings#rendition-guide) to obtain the `GiphyMediaImage` object that provides download URL's and other useful metadata for the MP4, GIF and WEBP files representing the selected media.
 
+![](/images/giphy/Giphy0.jpeg)
+![](/images/giphy/Giphy1.jpeg)
+![](/images/giphy/Giphy2.jpeg)
+![](/images/giphy/Giphy3.jpeg)
+
 ## Media handling
 
 Unity does not support the GIF playback, but there are numerous solutions. We have tested [UniGif](https://github.com/WestHillApps/UniGif) package to play GIF files in the demo.
 
 Unity's built-in [Video Player](https://docs.unity3d.com/ScriptReference/Video.VideoPlayer.html) handles the playback of MP4 files.
+
