@@ -347,3 +347,99 @@ Usage of some marker properties is limited depending on the mobile platform:
 You can change the marker icon by calling the `SetIcon()` function and specifying the Texture2D to use as a new icon and scale factor (used for iOS). Leaving the Texture2D field empty will result in setting the default red marker icon. The scale factor for iOS is useful when you are using big textures. Providing the value of 10 will result in the marker image being ten times smaller, the value of 0.1 will make it ten times bigger.
 
 ***Note!*** Textures used for marker icons should have the following settings: Compression Settings - VectorDisplacementMap, MipGenSettings - NoMipMaps, sRGB - false. Textures can sometimes display some artifacts when applied as marker icons. This can often be removed if you convert the image to .tga format before importing it in your Unreal project.
+
+# **Circles**
+
+To get more details about circles check [CircleOptions android](https://developers.google.com/maps/documentation/android-sdk/reference/com/google/android/libraries/maps/model/CircleOptions) and [Circle android](https://developers.google.com/maps/documentation/android-sdk/reference/com/google/android/libraries/maps/model/Circle) or [Circle iOS](https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_circle) Google API.
+
+![](images/google-maps/circle/Circle.png)
+
+## Adding circles
+
+To add circle to map call `AddCircle` method on GoogleMapView and pass marker options as a parameter.
+
+![](images/google-maps/circle/Circle-Add-Options.png)
+
+## Removing circles
+
+To remove circle simply call its `Remove` method.
+
+Removing circle via blueprint:
+
+![](images/google-maps/circle/Circle-Remove.png)
+
+?> Note that you won't be able to use marker after it was removed.
+
+## Reading and modifying circle options
+
+You can read and modify circle properties by calling corresponding getters and setters.
+
+Usage of some circle properties is limited depending on the mobile platform:
+
+* `GetCircleStrokePattern` - android only.
+* `SetCircleStrokePattern` - android only.
+* `GetCircleIsVisible` - android only.
+* `SetCircleIsVisible` - android only.
+
+![](images/google-maps/circle/Circle-Getters.png)
+![](images/google-maps/circle/Circle-Setters.png)
+
+## Setting circle stroke pattern
+
+If you are using android you can modify the pattern of circle's outline by creating an array of various combinations of ```Pattern item```.
+
+?> This functionality is available only for android.
+
+![](images/google-maps/circle/Circle-PatterItem.png)
+
+# **Polygon**
+
+To get more details about polygons check [PolygonOptions android](https://developers.google.com/maps/documentation/android-sdk/reference/com/google/android/libraries/maps/model/PolygonOptions) and [Polygon android](https://developers.google.com/maps/documentation/android-sdk/reference/com/google/android/libraries/maps/model/Polygon) or [Polygon iOS](https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_polygon) Google API.
+
+![](images/google-maps/polygon/Polygon.png)
+
+## Adding polygons
+
+To add polygon to map call `AddPolygon` method on GoogleMapView and pass marker options as a parameter.
+
+![](images/google-maps/polygon/Polygon-Add-Options.png)
+
+## Removing polygons
+
+To remove polygon call its `Remove` method.
+
+![](images/google-maps/polygon/Polygon-Remove.png)
+
+?> Note that you won't be able to use polygon after it was removed.
+
+## Reading and modifying polygon options
+
+You can read and modify polygon properties by calling corresponding getters and setters.
+
+Usage of some polygon properties is limited depending on the mobile platform:
+
+* `GetPolygonStrokeJointType` - android only.
+* `SetPolygonStrokeJointType` - android only.
+* `GetPolygonStrokePattern` - android only.
+* `SetPolygonStrokePattern` - android only.
+* `GetPolygonIsVisible` - android only.
+* `SetPolygonIsVisible` - android only.
+
+![](images/google-maps/polygon/Polygon-Getters.png)
+![](images/google-maps/polygon/Polygon-Setters.png)
+
+## Setting polygon stroke pattern
+
+If you are using android you can modify the pattern of polygon's outline by creating an array of various combinations of `Pattern item`.
+
+?> This functionality is available only for android.
+
+![](images/google-maps/polygon/Polygon-PatternItem.png)
+
+## Adding polygon holes
+
+To add hole or multiple holes to the polygon call `SetPolygonHoles` method on existing polygon and pass an array of `Hole` structures.
+
+?> Note that all the coordinates of hole's vertices must be located inside of the polygon to be dispayed properly.
+
+![](images/google-maps/polygon/Polygon-SetHoles.png)
