@@ -503,6 +503,12 @@ ___
 
 # Changelog
 
+v.1.6.0
+
+* ADDED Pedometer support via HealthKit
+* ADDED Alternative method for taking photos
+* FIXED Issues with date picker on iOS 13+
+
 v.1.5.0
 
 * ADDED [Sign in with Apple](https://developer.apple.com/sign-in-with-apple/get-started/)
