@@ -56,7 +56,13 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 ## Gathering consent
 
-This plugin wraps the official Google User Messaging Platform SDK. To start make sure you meet the prerequisites on the [official guide](https://developers.google.com/admob/ump/ios/quick-start). You can also read the official guide to understand better how the SDK works. 
+This plugin wraps the official Google User Messaging Platform SDK. Please read the official guides to better understand the process:
+- [iOS official guide](https://developers.google.com/admob/ump/ios/quick-start)
+- [Android official guide](https://developers.google.com/admob/ump/android/quick-start)
+
+**You must read the official guides above to understand better how the SDK works.** 
+
+!> This is quite complicated topic, and it is really difficult to troubleshoot why your implementation does not work in your particular case. Things that usually go wrong: wrong setup on [Funding Choices](https://fundingchoices.google.com) portal, not adding device test ids correctly, etc. If you encounter errors or something does not work as expected, please explore the official guides, the source code in the plugin and the blueprints and try also googling your issue.
 
 !> **Warning:** After you finish your setup in Funding choices portal, make sure your app is published and active as displayed in the images below.
 
