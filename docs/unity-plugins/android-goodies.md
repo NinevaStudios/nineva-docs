@@ -2348,3 +2348,14 @@ When your build fails, please check the console, it will have a very long error 
 **Q:** Do I have to override `UnityPlayerActivity` for any of the functions to work properly?
 
 **A:** No, Android Native Goodies does not require to override `UnityPlayerActivity` .
+
+# Changelog
+
+v.1.7.0
+
+* IMPROVE UPL file logging
+* ADDED `android:requestLegacyExternalStorage=true` automatically via UPL
+* FIXED Various proguard warnings in different scenarios
+* FIXED Months conversions in date pickers
+* FIXED Saving images to gallery on Android >= 30
+* FIXED Sharing Texture iamges on Android >= 30
