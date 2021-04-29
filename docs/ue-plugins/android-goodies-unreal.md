@@ -594,6 +594,14 @@ ___
 
 # Changelog
 
+v.1.7.0
+
+* FIXED Issues with sharing images
+* FIXED Issues with saving images to the gallery on Android 30+
+* FIXED Months conversions for date pickers
+* FIXED Various proguard issues
+* ADDED UPL Logging for easier debugging
+
 v.1.6.0
 
 * ADDED in-app review dialog feature
