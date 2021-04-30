@@ -380,6 +380,8 @@ Usage of some circle properties is limited depending on the mobile platform:
 * `SetCircleStrokePattern` - android only.
 * `GetCircleIsVisible` - android only.
 * `SetCircleIsVisible` - android only.
+* `GetCircleTitle` - iOS only.
+* `SetCircleTitle` - iOS only.
 
 ![](images/google-maps/circle/Circle-Getters.png)
 ![](images/google-maps/circle/Circle-Setters.png)
@@ -424,6 +426,8 @@ Usage of some polygon properties is limited depending on the mobile platform:
 * `SetPolygonStrokePattern` - android only.
 * `GetPolygonIsVisible` - android only.
 * `SetPolygonIsVisible` - android only.
+* `GetPolygonTitle` - iOS only.
+* `SetPolygonTitle` - iOS only.
 
 ![](images/google-maps/polygon/Polygon-Getters.png)
 ![](images/google-maps/polygon/Polygon-Setters.png)
