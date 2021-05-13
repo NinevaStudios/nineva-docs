@@ -6,25 +6,13 @@ Welcome to iOS Goodies Documentation for Unreal Engine
 
 ---
 
+[filename](common/copy_plugin.md ':include')
+
 # **FAQ**
 
 ## .plist
 
 iOS Goodies plugin in order to make all of its features work properly adds extra entries to .plist file. Note that those entries overwrite ones that were added in project settings. In order to remove/edit those entries, you have to edit IOSGoodies_UPL.xml (included in the plugin sources) accordingly.
-
-## Input dialog and date-time picker theming on iOS 13
-
-On iOS 13 native date picker and input field have some appearance issues when using dark theme. To fix this problem please follow these instructions:
-
-* Go to /[UE4 Root]/Engine/Plugins/ and copy iOSGoodies plugin to /[Project Root]/Plugins/
-* In /[Project Root]/Plugins/iOSGoodies/Source/iOSGoodies/Private/IGDialogBPL.cpp uncomment lines 353-364 and comment line 369
-* In /[Project Root]/Plugins/iOSGoodies/Source/iOSGoodies/Private/IOS/IGDateTimePicker.cpp uncomment lines 68-79 and comment line 84
-* Remove Binaries and Intermediate folders in /[Project Root]/Plugins/iOSGoodies/
-* Remove Binarie, Intermediate, Build and Saved folders in /[Project Root]/
-* Run the engine and rebuild your project
-
-	As a result those native dialogs should have appropriate theming when running on device with iOS 13 installed.
-
 # **Native dialogs**
 
 You can show standard iOS native dialogs with:

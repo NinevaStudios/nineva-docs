@@ -4,6 +4,8 @@ Welcome to Admob Goodies Documentation for Unreal Engine
 
 ?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
+[filename](common/copy_plugin.md ':include')
+
 ---
 
 This plugin gives you the ability to load and show banner, interstitial, and rewarded video ads.

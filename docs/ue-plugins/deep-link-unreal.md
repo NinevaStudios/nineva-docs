@@ -6,6 +6,8 @@ Welcome to Deep Link Goodies Documentation for Unreal Engine.
 
 ---
 
+[filename](common/copy_plugin.md ':include')
+
 ## About the plugin
 
 The plugin allows your application to intercept specific URLs and handle them on Android and iOS.
