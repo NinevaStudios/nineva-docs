@@ -261,6 +261,8 @@ The database reference is the entry point from where you modify data.
 
   Get a reference to the parent node.
 
+!> You must maintain a reference to your DB if you are subscribing to update events for it to not automatically disconnect after the certain time. Please see the demo for reference implementation.
+
 ![](images/firebase/db/DbMakeRef.png)
 
 ### Read/Write Data
