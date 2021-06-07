@@ -54,7 +54,7 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 * Enable App Tracking Transparency - add the App Tracking Transparency framework to show the *App Tracking Transparency* (ATT) dialog.
 * User Tracking Usage Description - this field is required for iOS14. This message will be shown to the user when presenting the *App Tracking Transparency* (ATT) dialog.
 * Mediation - specify which mediation network providers should be enabled.
-* Test Sute - allows you to test whether you have correctly configured your app and ad units to be able to display ads from third-party networks through mediation. Refer to the [Test Suite](#test-suite) section for more information. 
+* Test Suite - allows you to test whether you have correctly configured your app and ad units to be able to display ads from third-party networks through mediation. Refer to the [Test Suite](#test-suite) section for more information. 
 
 ## Gathering consent
 
@@ -134,6 +134,8 @@ Another way to add test devices: https://support.google.com/admob/answer/9691433
 ## Test Suite
 
 !> This feature is available only for Android devices for now.
+
+!> This feature will add `READ_PHONE_STATE` permission to your app, so it's recommended to disable it for release builds
 
 To open Test Suite on the device call ```LaunchTestSuite``` method (Make sure it's enabled in Project Settings).  For detailed information on how to use Test Suite, please, refer to the [official documentation](https://developers.google.com/admob/android/mediation-test-suite#navigating_the_test_suite).
 
