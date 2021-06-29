@@ -667,6 +667,11 @@ ___
 
 # Changelog
 
+v 1.3.4
+
++ FIXED Issue on add child listerner not being triggered
++ FIXED Small blueprint issues
+
 v.1.3.3
 
 * FIXED iOS crash when no realtime database was created
