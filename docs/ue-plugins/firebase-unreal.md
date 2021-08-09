@@ -684,7 +684,7 @@ To obtain a collection reference, call `GetCollection` function providing a rela
 
 ![](images/firebase/firestore/firestore-0.png)
 
-Collection reference is a subclass of [Query](https://docs.ninevastudios.com/#/ue-plugins/firebase-unreal?id=queries) that is responsible for sorting, ordering and filtering collection items, and also allows to get the snapshot of the documents, contained in the collection.
+Collection reference is a subclass of [Query](https://docs.ninevastudios.com/#/ue-plugins/firebase-unreal?id=queries-1) that is responsible for sorting, ordering and filtering collection items, and also allows to get the snapshot of the documents, contained in the collection.
 
 ![](images/firebase/firestore/firestore-1.png)
 
