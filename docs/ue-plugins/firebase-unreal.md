@@ -654,15 +654,110 @@ In order to call them from your app use Cloud Function method of respective retu
 
 ![](images/firebase/cloud-functions/Scr_CloudFunctions.png)
 
-!> Note: If you don't specify region functions run in the ```us-central1``` region by default.
+!> Note: If you don't specify region functions run in the `us-central1` region by default.
 
-You can pass any amount of parameters of different types inside the ```Parameters``` map, including arrays and maps. To pass them use Value Variant convertor.
+You can pass any amount of parameters of different types inside the `Parameters` map, including arrays and maps. To pass them use Value Variant convertor.
 
 ![](images/firebase/cloud-functions/Scr_CloudFunctionsValueVariantConv.png)
 
-In case cloud function returns map in a callback use ```Break MapWrapper``` to extract map from incoming ```MapWrapper``` struct.
+In case cloud function returns map in a callback use `Break MapWrapper` to extract map from incoming `MapWrapper` struct.
 
 ![](images/firebase/cloud-functions/Scr_CloudFunctionsBreakMapWrapper.png)
+
+# **Firestore Database**
+
+!> NOT RELEASED YET!
+
+Official documentation regarding the Firestore Database can be found [here](https://firebase.google.com/docs/firestore).
+
+In Cloud Firestore, the unit of storage is the document. A document is a lightweight record that contains fields, which map to values. Each document is identified by a name.
+
+Every document in Cloud Firestore is uniquely identified by its location within the database.
+
+A reference is a lightweight object that just points to a location in your database. You can create a reference whether or not data exists there, and creating a reference does not perform any network operations.
+
+Documents live in collections, which are simply containers for documents. For example, you could have a users collection to contain your various users, each represented by a document.
+
+## Collections
+
+To obtain a collection reference, call `GetCollection` function providing a relative path to the collection. For example, if you pass `boi` as collection path, you will receive the reference to this collection, located in the root of the database:
+
+![](images/firebase/firestore/firestore-0.png)
+
+Collection reference is a subclass of [Query](https://docs.ninevastudios.com/#/ue-plugins/firebase-unreal?id=queries) that is responsible for sorting, ordering and filtering collection items, and also allows to get the snapshot of the documents, contained in the collection.
+
+![](images/firebase/firestore/firestore-1.png)
+
+To add an item to the collection, call the `Add` function providing a map of the values to be contained withing the newly created document.
+
+![](images/firebase/firestore/firestore-2.png)
+
+The collection also contains the `GetPath` call to obtain the path to the collection relative to the database root, and the `GetId` function to obtain the unique identifier used for querying the collection items.
+
+## Queries
+
+Queries allow to sort, order and filter collections and collection groups.
+
+To get a reference to a query, call the `GetQuery` function and providing an ID of the collection or collection group.
+
+The `Query` supports the following filtering and sorting operations: `WhereEqualTo`, `WhereNotEqualTo`,  `WhereLessThan`, `WhereLessThanOrEqualTo`, `WhereGreaterThan`, `WhereGreaterThanOrEqualTo`, `WhereArrayContains`, `WhereArrayContainsAny`, `WhereIn`, `WhereNotIn`, `OrderBy`, `Limit`, `LimitToLast`, `StartAt`, `StartAfter`, `EndBefore`, `EndAt`.
+
+Official documentation regarding the queries and rules can be found [here](https://firebase.google.com/docs/firestore/query-data/queries).
+
+You can also add a listener to subscribe to the updates in the items in the query.
+
+![](images/firebase/firestore/firestore-3.png)
+
+You have to store a reference to the resulting `ListenerRegistration` object, so you can `Remove` it when you no longer wish to receive the updates.
+
+![](images/firebase/firestore/firestore-4.png)
+
+To get the snapshot of the documents in the `Query`, call the `Get` function:
+
+![](images/firebase/firestore/firestore-5.png)
+
+All of the `Query` functions also work on the `CollectionReference` objects.
+
+## Documents
+
+You can obtain a reference to any of the documents in the collection using the `GetDocument` function and providing a relative path to the item within the collection.
+
+Document can contain any amount of fields with the following types: string, integer, boolean, float, map and array.
+
+Call `GetPath` call to obtain the path to the document relative to the database root, and the `GetId` function to obtain the unique identifier of the document.
+
+Call the `GetDocumentSnapshot` to gain an access to the snapshot of the document values.
+
+![](images/firebase/firestore/firestore-10.png)
+
+Document snapshot contains the values in form of a map, accesible via `GetData` function, as well as a reference to the original document and metadata values (`IsFromCache` and `HasPendingWrites`).
+
+To change the document data, you can use the `SetData` function, providing the fields to set in the document.
+
+![](images/firebase/firestore/firestore-6.png)
+
+You can also call the `UpdateData` function to change the document fields, and also specifying whether to rewrite the document fields or merge them.
+
+![](images/firebase/firestore/firestore-7.png)
+
+You can add a document listener the same way as with queries:
+
+![](images/firebase/firestore/firestore-8.png)
+
+You have to store a reference to the resulting `ListenerRegistration` object, so you can `Remove` it when you no longer wish to receive the updates.
+
+To delete the document reference, call the `Delete` function. Do not forget to remove the listener, if you have added it, prior to this operation.
+
+![](images/firebase/firestore/firestore-9.png)
+
+## Batching
+
+If you are doing several consecutive operations in a row, you should use batching.
+
+First, you create the batch request using the `GetBatch` function. Then you can use any number of the `AddSetDataOperation`, `AddUpdateDataOperation` and `AddDeleteDataOperation` calls to form the batch body. After that you need to call the `Commit` function to apply the changes. The following example shows how to update the odd items in the query, while deleting the even ones:
+
+![](images/firebase/firestore/firestore-11.png)
+
 ___
 
 # Changelog
