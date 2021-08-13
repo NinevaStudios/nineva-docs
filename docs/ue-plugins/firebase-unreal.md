@@ -100,6 +100,7 @@ First of all, you should activate the listeners that will be triggered whenever 
 ![](images/firebase/auth/AuthInit.png)
 
 ### User registration and login
+
 You can create a new user with an email and password by calling the `CreateUser` method.
 
 ![](images/firebase/auth/AuthCreateUser.png)
@@ -138,6 +139,14 @@ You can also link additional credentials to the user, for example, Google and Fa
 If there is a need, you can reauthenticate or reload the current user by calling the respective methods.
 
 Call `Delete` on the FirebaseUser object to delete the user from your user database.
+
+### Sing in with Apple integration
+
+If you are using [iOS Goodies](ue-plugins/ios-goodies) sign in with Apple functionality, you can use it to login to Firebase with Apple auth provider. To do this, you would need to get the id token and the raw nonce fields and use the `GetAppleCredentials` node to create the credentials and login.
+
+Example blueprint setup:
+
+![](images/firebase/auth/AppleSignIn.png)
 
 # **Cloud Storage**
 
@@ -761,6 +770,10 @@ First, you create the batch request using the `GetBatch` function. Then you can 
 ___
 
 # Changelog
+
+v 1.3.5
+
++ ADDED New node to create Sign In with Apple credentials
 
 v 1.3.4
 
