@@ -238,7 +238,7 @@ Request the latest consent information. This will allow you to determine if your
 
 ![](images/admob/ConsentRequestDebug.png)
 
-This node allows you to easily test your app's behaviour by simulating your location. This method requires a valid test device ID. Refer to this (section)[#test-evices] on how to get your device's test ID.
+This node allows you to easily test your app's behaviour by simulating your location. This method requires a valid test device ID. Refer to this [section](#test-devices) on how to get your device's test ID.
 
 * Load And Show Consent Form
 
