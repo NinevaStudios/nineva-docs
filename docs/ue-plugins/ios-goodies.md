@@ -491,6 +491,10 @@ ___
 
 # Changelog
 
+v.1.6.5
+
+* ADDED Nonce generation to Sign in with Apple to allow intergration with 3rd party services like Firebase
+
 v.1.6.0
 
 * ADDED Pedometer support via HealthKit
