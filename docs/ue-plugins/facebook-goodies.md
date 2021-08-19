@@ -170,6 +170,8 @@ TODO add image
 
 ![](images/facebook/LinkAdManager.png)
 
+- Try enabling 'Allow Tracking' option in the Facebook app on your device and having it open in the background while testing
+
 # **Share**
 
 Official documentation on sharing can be found [here](https://developers.facebook.com/docs/sharing/).
