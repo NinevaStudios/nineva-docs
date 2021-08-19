@@ -30,7 +30,7 @@ When you add the App ID to your settings `FacebookGoodies.xml` file will be crea
 
 ## Fill in iOS-specific Project settings
 
-Make sure to copy the Client Token (from Settings -> Advanced -> Security on the dashboard), as well as enable Automatic Event Logging and Advertiser ID Collection if needed. These flags are also required for the event logging to work properly on iOS 14 and later.
+Make sure to copy the Client Token (from `Settings -> Advanced -> Security` on the dashboard), as well as enable Automatic Event Logging and Advertiser ID Collection if needed. These flags are also required for the event logging to work properly on iOS 14 and later.
 
 ![](images/facebook/FacebookFillIOSSettings.png ':size=900')
 
@@ -164,7 +164,7 @@ To make the automatic app events and Testing events tab work, I did these things
 
 - In the plugin settings, enable all the iOS checkboxes as showed here and make sure you have added your ID Token
 
-TODO add image
+![](images/facebook/PluginSettingsForAppEvents.png ':size=900')
 
 - Link your advertising account in the app Advanced settings
 
