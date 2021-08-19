@@ -28,6 +28,12 @@ When you add the App ID to your settings `FacebookGoodies.xml` file will be crea
 
 ?> In case you don't have the default folder structure for your project there might be an issue when copying this file to the Android APK. If you experience crashes when your Android app is launching please verify that this file is present in the built APK located at *Project\Intermediate\Android\APK\res\values\*. If there is absent, integrate the copy process into your build pipeline.
 
+## Fill in iOS-specific Project settings
+
+Make sure to copy the Client Token, as well as enable Automatic Event Logging and Advertiser ID Collection if needed. These flags are also required for the event logging to work properly on iOS 14 and later.
+
+![](images/facebook/FacebookFillIOSSettings.png ':size=900')
+
 ## Fill in settings and add Android and iOS platforms
 
 Go to `Settings -> Basic` and fill in all the information you need there. Now scroll down to the bottom of the page and add Android and iOS platforms to your app. You will see new sections for Android and iOS after you do this.
