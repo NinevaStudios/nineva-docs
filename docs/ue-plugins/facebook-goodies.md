@@ -30,7 +30,7 @@ When you add the App ID to your settings `FacebookGoodies.xml` file will be crea
 
 ## Fill in iOS-specific Project settings
 
-Make sure to copy the Client Token, as well as enable Automatic Event Logging and Advertiser ID Collection if needed. These flags are also required for the event logging to work properly on iOS 14 and later.
+Make sure to copy the Client Token (from Settings -> Advanced -> Security on the dashboard), as well as enable Automatic Event Logging and Advertiser ID Collection if needed. These flags are also required for the event logging to work properly on iOS 14 and later.
 
 ![](images/facebook/FacebookFillIOSSettings.png ':size=900')
 
@@ -153,6 +153,22 @@ It's a privacy feature that allows users to control if advertisers receive data 
 Starting with iOS 14, you will need to set ```AdvertiserTrackingEnabled``` and log each time you give a device permission to share data with Facebook.
 
 ![](images/facebook/FacebookAdTracking.png)
+
+## Setting app events on iOS 14
+
+Apparently, a lot of people are having difficulties making app events workd and testing them in [Event Manager](https://www.facebook.com/events_manager2). You can check this thread for more info: https://github.com/facebook/facebook-ios-sdk/issues/1667
+
+To make the automatic app events and Testing events tab work, I did these things, and I am not sure which one actually had the impact:
+
+- Make sure your project bundle ID matches the bundle ID in the iOS app setting on the dashboard
+
+- In the plugin settings, enable all the iOS checkboxes as showed here and make sure you have added your ID Token
+
+TODO add image
+
+- Link your advertising account in the app Advanced settings
+
+![](images/facebook/LinkAdManager.png)
 
 # **Share**
 
