@@ -767,6 +767,31 @@ First, you create the batch request using the `GetBatch` function. Then you can 
 
 ![](images/firebase/firestore/firestore-11.png)
 
+# **Editor support**
+
+!> NOT RELEASED YET!
+
+We have added Firebase C++ SDK as a part of the plugin for editor support on Windows and Mac.
+
+The complete table of feature support can be found below.
+
+!> The C++ libraries are still experimental, so the behaviour might be unpredictable. Please, use them only to test in the editor, and not in the production standalone builds.
+
+| Module | Submodule | Availability |
+| :--- | :----: | :----: |
+| **Authentication** | Sign in/out | ✅ |
+|   | Get/Update User Data | ✅ |
+|   | Sign-in with Google | ❌ |
+|   | Verify Phone Number | ❌ |
+| **Remote Config** | ✅ | ✅ |
+| **Analytics** | ❌ | ❌ |
+| **Cloud Storage** | ❌ | ❌ |
+| **Realtime Database** | ✅ | ✅ |
+| **Cloud Messaging** | ❌ | ❌|
+| **Crashlytics** | ❌ | ❌ |
+| **Cloud Functions** | ✅ | ✅ |
+| **Firestore** | ✅ | ✅ |
+
 ___
 
 # Changelog
