@@ -164,8 +164,6 @@ To send email call `SendEMail` function. Pass to it initialized `AGShareEmailDat
 
 To send email with multiple images call `SendMultipleImagesEmail` function. Pass to it initialized `AGShareEmailData` structure as parameter and array of extra images. The structure includes data fields like subject, image, list of recipients, CC recipients and BCC recipients. **Adding email body is not possible in case of multiple images attached, this is native android limitation that can not be overridden.**
 
-_* this feature is not yet released._
-
 ![Send multiple image email](images/android-goodies/native-sharing/Scr_MultipleImageEmail.png)
 
 ### Sharing via Social Media
