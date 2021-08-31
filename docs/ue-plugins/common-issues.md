@@ -23,6 +23,11 @@ Hi there, if you are reading this, this means you did not provide enough informa
   * Are you using remote build?
   * Are there other 3rd party plugins that might conflict with our plugins?
 
+## Why do I need to copy the plugin to my project?
+
+- You need to make source code changes
+- Some features require this for them to work, UE Marketplace team uses a very old XCode version to package the plugins and sometimes you need to wrap features with `#if FEATURE_ENABLED #endif` defines for it to pass the processing on their end.
+
 ## How to correctly copy the Marketplace plugin to my project folder?
 
 - Find your plugin in the Engine folder:
