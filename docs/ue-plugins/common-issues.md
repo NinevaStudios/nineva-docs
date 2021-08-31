@@ -4,6 +4,12 @@
 
 Yes, all the source code is inside the plugin and you can modify it as you see fit.
 
+## Where is the demo project?
+
+The demo level and the blueprints are included in the plugin `Content` folder, to see them, in the inspector, you must enable `Show Plugin Content` option in the View Options of the Content Browser tab.
+
+![](/images/issues/show-plugin-content.png)
+
 ## What information should I provide when reporting the issue?
 
 Hi there, if you are reading this, this means you did not provide enough information to troubleshoot your issue :) Please provide the information below so we could better help you resolve the issue:
