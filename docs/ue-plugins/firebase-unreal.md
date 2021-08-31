@@ -773,6 +773,18 @@ First, you create the batch request using the `GetBatch` function. Then you can 
 
 We have added Firebase C++ SDK as a part of the plugin for editor support on Windows and Mac.
 
+!> For the plugin to work in the editor you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
+
+Go to the Project Settings -> Firebase Goodies and toggle the Enable Editor support toggle.
+
+![](images/firebase/desktop/desktop-0.png)
+
+After that close the Editor, go to the `[Project]/Plugins/FirebaseGoodies` directory and delete the `Binaries` and `Intermediate` folders. This will force the plugin to be rebuilt and include the desktop dependencies. 
+
+![](images/firebase/desktop/desktop-1.png)
+
+?> You have to do this every time you change this setting.
+
 The complete table of feature support can be found below.
 
 !> The C++ libraries are still experimental, so the behaviour might be unpredictable. Please, use them only to test in the editor, and not in the production standalone builds.
