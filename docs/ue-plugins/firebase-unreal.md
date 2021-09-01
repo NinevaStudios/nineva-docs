@@ -675,8 +675,6 @@ In case cloud function returns map in a callback use `Break MapWrapper` to extra
 
 # **Firestore Database**
 
-!> NOT RELEASED YET!
-
 Official documentation regarding the Firestore Database can be found [here](https://firebase.google.com/docs/firestore).
 
 In Cloud Firestore, the unit of storage is the document. A document is a lightweight record that contains fields, which map to values. Each document is identified by a name.
