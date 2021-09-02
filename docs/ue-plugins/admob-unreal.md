@@ -454,6 +454,19 @@ ___
 
 # Changelog
 
+v.2.0.0
+
+!> This version introduces various major changes, such as some breaking API updates, make sure to backup your project before updating.
+
++ IMPROVED Updated AdMob to the latest versions on Android and iOS
++ UPDATED Some new events according to new native APIs
++ IMPROVED Updated all the mediation providers SDKs
++ ADDED Targeting params for ad requests
++ ADDED Mediation ad inspector
++ REMOVED Mediation test suite is no longer available
+
+---
+
 v.1.3.3
 
 *ADDED Plugin version logging
