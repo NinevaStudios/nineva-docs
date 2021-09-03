@@ -88,7 +88,7 @@ Here are the nodes available to configure ad targeting, for more detailed info, 
 + https://developers.google.com/admob/android/targeting
 + https://developers.google.com/admob/ios/targeting
 
-![](images/admob/AdTargeting.png)
+![](images/admob/AdTargeting.jpg)
 
 ## Loading and showing ads
 
