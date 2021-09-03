@@ -81,6 +81,16 @@ Once everything is setup in your AdMob and [Funding Choices](https://fundingchoi
 
 ![](images/admob/ConsentWorkflowBP.png)
 
+## Targeting
+
+Here are the nodes available to configure ad targeting, for more detailed info, please refer to:
+
++ https://developers.google.com/admob/android/targeting
++ https://developers.google.com/admob/ios/targeting
++ 
+
+![](images/admob/AdTargeting.png)
+
 ## Loading and showing ads
 
 To actually display ads you will also need to setup ad units in your AdMob account. Later you can copy these ad units into respective blueprint nodes. Make sure that you are using an ad unit for the correct ad format. As with the app ID - use the copy button to only get the required data from the website.
