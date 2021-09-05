@@ -129,7 +129,7 @@ There are three convenience methods for event logging:
 
 You can either just log event with a name, with name and parameters or with name, parameters and a sum value, that will be added for the events with this name.
 
-## Set event flush behaviour
+## Set event flush behavior
 
 By default, the logged events are flushed automatically by the SDK, but if you want, you can change it to manual and flush them whenever it's convenient for you.
 
@@ -156,7 +156,7 @@ Starting with iOS 14, you will need to set ```AdvertiserTrackingEnabled``` and l
 
 ## Setting app events on iOS 14
 
-Apparently, a lot of people are having difficulties making app events workd and testing them in [Event Manager](https://www.facebook.com/events_manager2). You can check this thread for more info: https://github.com/facebook/facebook-ios-sdk/issues/1667
+Apparently, a lot of people are having difficulties making app events work and testing them in [Event Manager](https://www.facebook.com/events_manager2). You can check this thread for more info: https://github.com/facebook/facebook-ios-sdk/issues/1667
 
 To make the automatic app events and Testing events tab work, I did these things, and I am not sure which one actually had the impact:
 
