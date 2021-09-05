@@ -1,8 +1,8 @@
+[filename](common/common_ue_header.md ':include')
+
 # **BLE Goodies**
 
 Welcome to BLE Goodies Documentation for Unreal Engine
-
-?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
 ---
 

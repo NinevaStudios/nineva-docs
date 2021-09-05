@@ -1,8 +1,8 @@
+[filename](common/common_ue_header.md ':include')
+
 # **Google Maps View**
 
 !> **Please read the [limitations](#limitations) before purchasing**
-
-Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!
 
 ---
 

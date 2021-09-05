@@ -1,8 +1,8 @@
+[filename](common/common_ue_header.md ':include')
+
 # **Firebase Goodies**
 
 Welcome to Firebase Goodies Documentation for Unreal Engine
-
-?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
 ---
 Create a Firebase project, follow the instructions in this [video](https://www.youtube.com/watch?v=6juww5Lmvgo).

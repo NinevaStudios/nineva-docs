@@ -4,11 +4,22 @@
 
 Yes, all the source code is inside the plugin and you can modify it as you see fit.
 
+---
+
+## How can I find out the versions of the native libs that are used in your plugins?
+
+- Android - check the Android `.UPL` file in the plugin source code, all the dependencies are lister there
+- iOS - go to `<PluginName>/Source/ThirdParty/IOS/versions.txt` file
+
+---
+
 ## Where is the demo project?
 
 The demo level and the blueprints are included in the plugin `Content` folder, to see them, in the inspector, you must enable `Show Plugin Content` option in the View Options of the Content Browser tab.
 
 ![](/images/issues/show-plugin-content.png)
+
+---
 
 ## What information should I provide when reporting the issue?
 
@@ -23,10 +34,14 @@ Hi there, if you are reading this, this means you did not provide enough informa
   * Are you using remote build?
   * Are there other 3rd party plugins that might conflict with our plugins?
 
+---
+
 ## Why do I need to copy the plugin to my project?
 
 - You need to make source code changes
 - Some features require this for them to work, UE Marketplace team uses a very old XCode version to package the plugins and sometimes you need to wrap features with `#if FEATURE_ENABLED #endif` defines for it to pass the processing on their end.
+
+---
 
 ## How to correctly copy the Marketplace plugin to my project folder?
 
@@ -44,9 +59,13 @@ Now you can make changes to the plugin source code and they should be reflected 
 
 !> Don't forget to delete `Build`, `Intermediate`, `Binaries` folders **both from project folder and plugin folder** as you make changes to the plugin!
 
+---
+
 ## How do I get a logcat log from my Android device?
 
 Get Android Studio and [follow these instructions](https://developer.android.com/studio/debug/am-logcat) or [run it from the command line using ADB](https://developer.android.com/studio/command-line/logcat).
+
+---
 
 ## How do I get an XCode log from an iOS device when running my UE project?
 
@@ -56,3 +75,5 @@ Get Android Studio and [follow these instructions](https://developer.android.com
 
 ![](/images/issues/xcode-proj.png)
 ![](/images/issues/logs.png)
+
+---

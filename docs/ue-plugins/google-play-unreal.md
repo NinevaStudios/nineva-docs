@@ -1,8 +1,8 @@
+[filename](common/common_ue_header.md ':include')
+
 # **Google Play Goodies**
 
 Welcome to Google Play Goodies Documentation for Unreal Engine
-
-?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
 ---
 
