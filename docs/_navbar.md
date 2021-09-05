@@ -21,6 +21,3 @@
 	* [iOS Goodies](unity-plugins/ios-goodies)
 	* [Mobile Places SDK](unity-plugins/places-sdk)
     * [GIPHY Gif Picker](unity-plugins/giphy)
-
-- **Godot Plugins**
-	* [Android Goodies](godot-plugins/android-goodies-godot)
