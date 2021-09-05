@@ -14,28 +14,24 @@ Useful links:
 
 ## Unreal Engine 4 Plugins
 
-| [<img src="icons/admob-ue.png">](ue-plugins/admob-unreal) <br> [Admob Goodies](ue-plugins/admob-unreal)                   | [<img src="icons/ag-ue.png">](ue-plugins/android-goodies-unreal) <br> [Android Goodies](ue-plugins/android-goodies-unreal) | [<img src="icons/ig-ue.png">](ue-plugins/ios-goodies) <br> [iOS Goodies](ue-plugins/ios-goodies)                                    | [<img src="icons/facebook-ue.png">](ue-plugins/facebook-goodies) <br> [Facebook Goodies](ue-plugins/facebook-goodies) | [<img src="icons/firebase-ue.png">](ue-plugins/firebase-unreal) <br> **[Firebase Goodies](ue-plugins/firebase-unreal)** |
-| ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| [<img src="icons/maps-ue.png">](ue-plugins/google-maps-unreal) <br> **[Google Maps View](ue-plugins/google-maps-unreal)** | [<img src="icons/ble-ue.png">](ue-plugins/ble-goodies) <br> **[BLE Goodies](ue-plugins/ble-goodies)**                      | [<img src="icons/play-games-ue.png">](ue-plugins/google-play-unreal) <br> [Google Play Goodies](ue-plugins/google-play-unreal) <br> | [<img src="icons/game-center-ios.png">]() <br>[Game Center Goodies](ue-plugins/game-center-unreal)<br>                | [<img src="icons/flurry-ue.png">]() <br>[Flurry Goodies](ue-plugins/flurry-unreal)<br>                                  |
-
 <table>
   <tr>
-    <td><a href="ue-plugins/admob-unreal"><img src="icons/admob-ue.png"><br>Admob Goodies</a></td>
-    <td><a href="ue-plugins/android-goodies-unreal"><img src="icons/ag-ue.png"><br>Android Goodies</a></td>
-    <td><a href="ue-plugins/ios-goodies"><img src="icons/ig-ue.png"><br>iOS Goodies</a></td>
-    <td><a href="ue-plugins/facebook-goodies"><img src="icons/facebook-ue.png"><br>Facebook Goodies</a></td>
+    <td><a href="#ue-plugins/admob-unreal"><img src="icons/admob-ue.png"><br>Admob Goodies</a></td>
+    <td><a href="#ue-plugins/android-goodies-unreal"><img src="icons/ag-ue.png"><br>Android Goodies</a></td>
+    <td><a href="#ue-plugins/ios-goodies"><img src="icons/ig-ue.png"><br>iOS Goodies</a></td>
+    <td><a href="#ue-plugins/facebook-goodies"><img src="icons/facebook-ue.png"><br>Facebook Goodies</a></td>
   </tr>
     <tr>
-    <td><a href="ue-plugins/firebase-unreal"><img src="icons/firebase-ue.png"><br>Firebase Goodies</a></td>
-    <td><a href="ue-plugins/google-maps-unreal"><img src="icons/map-ue.png"><br>Google Maps View</a></td>
-    <td><a href="ue-plugins/"><img src="icons/.png"><br>BLE Goodies</a></td>
-    <td><a href="ue-plugins/"><img src="icons/.png"><br>Google Play Goodies</a></td>
+    <td><a href="#ue-plugins/firebase-unreal"><img src="icons/firebase-ue.png"><br>Firebase Goodies</a></td>
+    <td><a href="#ue-plugins/google-maps-unreal"><img src="icons/maps-ue.png"><br>Google Maps View</a></td>
+    <td><a href="#ue-plugins/ble-goodies"><img src="icons/ble-ue.png"><br>BLE Goodies</a></td>
+    <td><a href="#ue-plugins/google-play-unreal"><img src="icons/play-games-ue.png"><br>Google Play Goodies</a></td>
   </tr>
     <tr>
-    <td><a href="ue-plugins/admob-unreal"><img src="icons/admob-ue.png"><br>Game Center Goodies</a></td>
-    <td><a href="ue-plugins/"><img src="icons/.png"><br>Flurry Goodies</a></td>
-    <td><a href="ue-plugins/"><img src="icons/.png"><br>Deep Link Goodies</a></td>
-    <td><a href="ue-plugins/"><img src="icons/.png"><br>Monetization Goodies</a></td>
+    <td><a href="#ue-plugins/game-center-unreal"><img src="icons/game-center-ios.png"><br>Game Center Goodies</a></td>
+    <td><a href="#ue-plugins/flurry-unreal"><img src="icons/flurry-ue.png"><br>Flurry Goodies</a></td>
+    <td><a href="#ue-plugins/deep-link-unreal"><img src="icons/deeplink-ue.png"><br>Deep Link Goodies</a></td>
+    <td><a href="#ue-plugins/monetization-unreal"><img src="icons/monetize-ue.png"><br>Monetization Goodies</a></td>
   </tr>
 </table>
 
@@ -46,10 +42,6 @@ Useful links:
 * [iOS Goodies](unity-plugins/ios-goodies)
 * [Mobile Places SDK](unity-plugins/places-sdk)
 * [GIPHY Gif Picker](unity-plugins/giphy)
-
-## Godot Plugins
-
-* [Android Goodies](godot-plugins/android-goodies-godot)
 
 ## Hire us!
 
