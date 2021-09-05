@@ -20,7 +20,7 @@ Useful links:
 
 <table>
   <tr>
-    <td>[<img src="icons/admob-ue.png">](ue-plugins/admob-unreal) <br> [Admob Goodies](ue-plugins/admob-unreal)</td>
+    <td><a href="ue-plugins/admob-unreal"><img src="icons/admob-ue.png"><br>Admob Goodies</a></td>
     <td>[<img src="icons/admob-ue.png">](ue-plugins/admob-unreal) <br> [Admob Goodies](ue-plugins/admob-unreal)</td>
     <td>[<img src="icons/admob-ue.png">](ue-plugins/admob-unreal) <br> [Admob Goodies](ue-plugins/admob-unreal)</td>
     <td>[<img src="icons/admob-ue.png">](ue-plugins/admob-unreal) <br> [Admob Goodies](ue-plugins/admob-unreal)</td>
