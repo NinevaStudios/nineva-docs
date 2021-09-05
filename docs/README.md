@@ -26,8 +26,8 @@ Useful links:
     <td><a href="ue-plugins/facebook-goodies"><img src="icons/facebook-ue.png"><br>Facebook Goodies</a></td>
   </tr>
     <tr>
-    <td><a href="ue-plugins/admob-unreal"><img src="icons/admob-ue.png"><br>Firebase Goodies</a></td>
-    <td><a href="ue-plugins/"><img src="icons/.png"><br>Google Maps View</a></td>
+    <td><a href="ue-plugins/firebase-unreal"><img src="icons/firebase-ue.png"><br>Firebase Goodies</a></td>
+    <td><a href="ue-plugins/google-maps-unreal"><img src="icons/map-ue.png"><br>Google Maps View</a></td>
     <td><a href="ue-plugins/"><img src="icons/.png"><br>BLE Goodies</a></td>
     <td><a href="ue-plugins/"><img src="icons/.png"><br>Google Play Goodies</a></td>
   </tr>
