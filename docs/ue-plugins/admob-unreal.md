@@ -1,8 +1,8 @@
-﻿[filename](common/common_ue_header.md ':include')
-
-# **Admob Goodies**
+﻿# **Admob Goodies**
 
 Welcome to Admob Goodies Documentation for Unreal Engine
+
+?> **Join our [Discord server](https://bit.ly/nineva_support_discord) and ask us anything!**
 
 [filename](common/copy_plugin.md ':include')
 
@@ -80,15 +80,6 @@ Once everything is setup in your AdMob and [Funding Choices](https://fundingchoi
 !> If an error occurs during form loading and consent is required the SDK treats this the same as if the user did not grant consent.
 
 ![](images/admob/ConsentWorkflowBP.png)
-
-## Targeting
-
-Here are the nodes available to configure ad targeting, for more detailed info, please refer to:
-
-+ https://developers.google.com/admob/android/targeting
-+ https://developers.google.com/admob/ios/targeting
-
-![](images/admob/AdTargeting.jpg)
 
 ## Loading and showing ads
 
@@ -207,6 +198,7 @@ This plugin supports the following mediation providers:
 * Tapjoy
 * Unity Ads
 * Vungle
+* AppLovin
 
 !> The Chartboost Android SDK requires minimum Android SDK level to be set to at least 26
 
@@ -461,6 +453,12 @@ If you see test ads using Google provided test unit IDs then you are all set for
 ___
 
 # Changelog
+
+v.2.0.3
+
++ ADDED AppLovin mediation provider
+
+---
 
 v.2.0.0
 
