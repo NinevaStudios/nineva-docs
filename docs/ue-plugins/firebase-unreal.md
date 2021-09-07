@@ -767,11 +767,15 @@ First, you create the batch request using the `GetBatch` function. Then you can 
 
 # **Editor support**
 
-!> NOT RELEASED YET!
-
 We have added Firebase C++ SDK as a part of the plugin for editor support on Windows and Mac.
 
+## Limitations
+
+!> On Windows, Visual Studio 2019 must be installed as Google provides the latest versions of native libs compiled with it
+
 !> For the plugin to work in the editor you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
+
+## Setup
 
 Go to the Project Settings -> Firebase Goodies and toggle the Enable Editor support toggle.
 
