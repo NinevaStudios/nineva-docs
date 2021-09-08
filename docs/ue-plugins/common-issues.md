@@ -45,7 +45,9 @@ Hi there, if you are reading this, this means you did not provide enough informa
 
 ## How to correctly copy the Marketplace plugin to my project folder?
 
-- Find your plugin in the Engine folder:
+1. **First of all, your project must be a C++ project, you can easily convert your Blueprint-only project to C++ project by creating a random C++ class in the inspection**
+
+2. Find your plugin in the Engine folder:
   - MAC: `/Users/Shared/Epic Games/UE_4.26/Engine/Plugins/Marketplace/YourPluginName`
   - Windows: `D:\UnrealEditors\UE_4.26\Engine\Plugins\Marketplace`
 
