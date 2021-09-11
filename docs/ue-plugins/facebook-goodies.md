@@ -17,22 +17,25 @@ Log in on the [Facebook Developer portal](https://developers.facebook.com/apps/)
 ![](images/facebook/FacebookCreateApp.jpg ':size=900')
 ![](images/facebook/FacebookCreateApp_2.jpg ':size=900')
 
-## Copy your App ID to UE Project settings
+## Copy your App ID and Client Token to UE Project settings
 
-After you create your app you will see a screen of your app. Your App ID will be displayed at the top. Now go to your UE project `Edit -> Project Settings` and find the Facebook Goodies section in settings and paste your App ID there.
+After you create your app you will see a screen of your app. Your App ID will be displayed at the top. 
 
 ![](images/facebook/FacebookCreatedApp.jpg ':size=900')
+
+Copy the Client Token (from `Settings -> Advanced -> Security` on the dashboard)
+
+![](images/facebook/FacebookClientToken.jpg ':size=900')
+
+Now go to your UE project `Edit -> Project Settings` and find the Facebook Goodies section in settings and paste your App ID and Facebook Client Token there.
+
 ![](images/facebook/FacebookPasteAppIdIntoSettings.jpg ':size=900')
 
-When you add the App ID to your settings `FacebookGoodies.xml` file will be created in the root folder of your project. This file is required for Android builds to work so do **not** delete it.
+When you add the App ID or Facebook Client Token to your settings `FacebookGoodies.xml` file will be created in the root folder of your project. This file is required for Android builds to work so do **not** delete it.
 
 ?> In case you don't have the default folder structure for your project there might be an issue when copying this file to the Android APK. If you experience crashes when your Android app is launching please verify that this file is present in the built APK located at *Project\Intermediate\Android\APK\res\values\*. If there is absent, integrate the copy process into your build pipeline.
 
-## Fill in iOS-specific Project settings
-
-Make sure to copy the Client Token (from `Settings -> Advanced -> Security` on the dashboard), as well as enable Automatic Event Logging and Advertiser ID Collection if needed. These flags are also required for the event logging to work properly on iOS 14 and later.
-
-![](images/facebook/FacebookFillIOSSettings.png ':size=900')
+Enable Automatic Event Logging and Advertiser ID Collection if needed. These flags are also required for the event logging to work properly on iOS 14 and later.
 
 ## Fill in settings and add Android and iOS platforms
 
