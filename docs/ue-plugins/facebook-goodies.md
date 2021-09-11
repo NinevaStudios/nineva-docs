@@ -305,6 +305,15 @@ ___
 
 # Changelog
 
+v 1.5.3
+
+* ADD Client ID Token for Android
+
+v 1.5.0
+
+* UPDATE iOS and Android native SDKs
+* ADD More settings and customizations
+
 v 1.4.0
 
 * UPDATE iOS SDK to version 9.0.1
