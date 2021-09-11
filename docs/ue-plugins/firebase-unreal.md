@@ -791,24 +791,28 @@ The complete table of feature support can be found below.
 
 !> The C++ libraries are still experimental, so the behaviour might be unpredictable. Please, use them only to test in the editor, and not in the production standalone builds.
 
-| Module | Submodule | Availability |
-| :--- | :----: | :----: |
-| **Authentication** | Sign in/out | ✅ |
-|   | Get/Update User Data | ✅ |
-|   | Sign-in with Google | ❌ |
-|   | Verify Phone Number | ❌ |
-| **Remote Config** | ✅ | ✅ |
-| **Analytics** | ❌ | ❌ |
-| **Cloud Storage** | ❌ | ❌ |
-| **Realtime Database** | ✅ | ✅ |
-| **Cloud Messaging** | ❌ | ❌|
-| **Crashlytics** | ❌ | ❌ |
-| **Cloud Functions** | ✅ | ✅ |
-| **Firestore** | ✅ | ✅ |
+| Module                |      Submodule       | Availability |
+| :-------------------- | :------------------: | :----------: |
+| **Authentication**    |     Sign in/out      |      ✅       |
+|                       | Get/Update User Data |      ✅       |
+|                       | Sign-in with Google  |      ❌       |
+|                       | Verify Phone Number  |      ❌       |
+| **Remote Config**     |          ✅           |      ✅       |
+| **Analytics**         |          ❌           |      ❌       |
+| **Cloud Storage**     |          ❌           |      ❌       |
+| **Realtime Database** |          ✅           |      ✅       |
+| **Cloud Messaging**   |          ❌           |      ❌       |
+| **Crashlytics**       |          ❌           |      ❌       |
+| **Cloud Functions**   |          ✅           |      ✅       |
+| **Firestore**         |          ✅           |      ✅       |
 
 ___
 
 # Changelog
+
+v 1.3.5
+
++ ADDED New node to create Sign In with Apple credentials
 
 v 1.3.5
 
