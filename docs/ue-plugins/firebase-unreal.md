@@ -810,6 +810,15 @@ ___
 
 # Changelog
 
+v 1.4.2
+
++ ADDED More customization options for analytics
+
+v 1.4.1
+
++ ADDED Firestore support
++ ADDED Editor (Windows+Mac) support
+
 v 1.3.5
 
 + ADDED New node to create Sign In with Apple credentials
