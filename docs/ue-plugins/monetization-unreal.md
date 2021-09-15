@@ -18,7 +18,7 @@ The plugin contains demo levels for both Android and iOS in the `Content` folder
 
 Disable `Online Subsystem Google Play` in project Plugins window.
 
-![](images/monetization/DisableGooglePlaySubsystem.png)
+![](images/monetization/DisableGooglePlaySubsystem.jpg)
 
 Due to low XCode version on Marketplace packaging servers, we had to add a workaround to get the plugin published. If you plan to use it for iOS, you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
 
