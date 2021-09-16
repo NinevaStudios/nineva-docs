@@ -1,4 +1,5 @@
 [filename](common/common_ue_header.md ':include')
+[filename](common/copy_plugin.md ':include')
 
 # **iOS Goodies**
 
@@ -6,7 +7,6 @@ Welcome to iOS Goodies Documentation for Unreal Engine
 
 ---
 
-[filename](common/copy_plugin.md ':include')
 
 # **FAQ**
 
