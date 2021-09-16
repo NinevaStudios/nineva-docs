@@ -1,12 +1,11 @@
 [filename](common/common_ue_header.md ':include')
+[filename](common/copy_plugin.md ':include')
 
 # **Deep Link Goodies**
 
 Welcome to Deep Link Goodies Documentation for Unreal Engine.
 
 ---
-
-[filename](common/copy_plugin.md ':include')
 
 ## About the plugin
 

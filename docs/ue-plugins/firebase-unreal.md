@@ -1,4 +1,5 @@
 [filename](common/common_ue_header.md ':include')
+[filename](common/copy_plugin.md ':include')
 
 # **Firebase Goodies**
 
