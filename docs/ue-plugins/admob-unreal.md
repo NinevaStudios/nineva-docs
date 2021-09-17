@@ -454,6 +454,12 @@ ___
 
 # Changelog
 
+v.2.0.4
+
++ FIXED Build issues on Android because of Bintray deprecation
+
+---
+
 v.2.0.3
 
 + ADDED AppLovin mediation provider
