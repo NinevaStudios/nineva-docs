@@ -812,6 +812,13 @@ ___
 
 # Changelog
 
+v 1.5.0
+
++ UPDATED Firebase BOM version on Android
++ IMPROVED Updated and improved Crashlytics support for Android
++ IMPROVED Analytics customization on iOS
+
+
 v 1.4.2
 
 + ADDED More customization options for analytics
