@@ -766,15 +766,15 @@ First, you create the batch request using the `GetBatch` function. Then you can 
 
 ![](images/firebase/firestore/firestore-11.png)
 
-# **Editor support**
+# **Editor/Windows/Mac OS X support**
 
-We have added Firebase C++ SDK as a part of the plugin for editor support on Windows and Mac.
+We have added Firebase C++ SDK as a part of the plugin for editor/desktop support on Windows and Mac.
 
 ## Limitations
 
 !> On Windows, Visual Studio 2019 must be installed as Google provides the latest versions of native libs compiled with it
 
-!> For the plugin to work in the editor you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
+!> For the plugin to work in the editor/desktop you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
 
 ## Setup
 
@@ -799,13 +799,14 @@ The complete table of feature support can be found below.
 |                       | Sign-in with Google  |      ❌       |
 |                       | Verify Phone Number  |      ❌       |
 | **Remote Config**     |          ✅           |      ✅       |
+| **Cloud Functions**   |          ✅           |      ✅       |
+| **Realtime Database** |          ✅           |      ✅       |
+| **Firestore**         |          ✅           |      ✅       |
 | **Analytics**         |          ❌           |      ❌       |
 | **Cloud Storage**     |          ❌           |      ❌       |
-| **Realtime Database** |          ✅           |      ✅       |
 | **Cloud Messaging**   |          ❌           |      ❌       |
 | **Crashlytics**       |          ❌           |      ❌       |
-| **Cloud Functions**   |          ✅           |      ✅       |
-| **Firestore**         |          ✅           |      ✅       |
+
 
 ___
 
