@@ -455,7 +455,7 @@ ___
 
 # Changelog
 
-v.2.0.4
+v.2.1.0
 
 + FIXED Unity mediation on Android not working properly
 + ADDED IronSource mediation provider
