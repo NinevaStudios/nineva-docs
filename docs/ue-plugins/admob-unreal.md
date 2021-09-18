@@ -199,6 +199,7 @@ This plugin supports the following mediation providers:
 * Unity Ads
 * Vungle
 * AppLovin
+* IronSource
 
 !> The Chartboost Android SDK requires minimum Android SDK level to be set to at least 26
 
@@ -453,6 +454,13 @@ If you see test ads using Google provided test unit IDs then you are all set for
 ___
 
 # Changelog
+
+v.2.0.4
+
++ FIXED Unity mediation on Android not working properly
++ ADDED IronSource mediation provider
+
+---
 
 v.2.0.4
 
