@@ -778,7 +778,7 @@ We have added Firebase C++ SDK as a part of the plugin for editor/desktop suppor
 
 ## Setup
 
-- First of all, your project must be a C++ project, you can easily convert your Blueprint-only project to C++ project by creating a random C++ class in the inspection
+- First of all, your project must be a C++ project, you can easily convert your Blueprint-only project to C++ project by creating a random C++ class in the inspector
 
 - Go to the Project Settings -> Firebase Goodies and toggle the Enable Editor support toggle.
 
