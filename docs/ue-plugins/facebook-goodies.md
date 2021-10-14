@@ -45,13 +45,9 @@ Go to `Settings -> Basic` and fill in all the information you need there. Now sc
 ![](images/facebook/FacebookAppSettingsBasic.jpg ':size=900')
 ![](images/facebook/FacebookSettingsAddAndroidAndIos.jpg ':size=900')
 
-## iOS Setup
+<!-- tabs:start -->
 
-Fill in the Bundle id that you are using for your app
-
-![](images/facebook/FacebookSetupIos.jpg ':size=900')
-
-## Android setup
+#### **Android Setup**
 
 ![](images/facebook/FacebookAndroidSetup.png ':size=900')
 
@@ -60,6 +56,14 @@ In the Android section of your app you need to setup a few things
 1. Put your application package name in this field
 2. As a class name put `com.epicgames.ue4.GameActivity` which is the default name of the main activity
 3. You need to find your keystore hashes which you are signing your app with. Please follow the [instructions on Facebook developers](https://developers.facebook.com/docs/android/getting-started/#release-key-hash).
+
+#### **iOS Setup**
+
+Fill in the Bundle id that you are using for your app
+
+![](images/facebook/FacebookSetupIos.jpg ':size=900')
+
+<!-- tabs:end -->
 
 ## Products setup
 
