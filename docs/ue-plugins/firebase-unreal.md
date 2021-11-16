@@ -221,7 +221,7 @@ To remove files from cloud storage use `DeleteFile` method.
 
 ## Initial Setup
 
-Firebase supports two types of databases: realtime database and firestore. This plugin, currently, only supports the realtime database. You can find the differences between these databases and which one will suit you better on the [official site](https://firebase.google.com/docs/database/rtdb-vs-firestore).
+Firebase supports two types of databases: realtime database and firestore. You can find the differences between these databases and which one will suit you better on the [official site](https://firebase.google.com/docs/database/rtdb-vs-firestore).
 
 If you are set on using the realtime database you will need to first create it in your Firebase console:
 
