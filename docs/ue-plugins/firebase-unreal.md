@@ -816,12 +816,16 @@ ___
 
 # Changelog
 
+v 1.5.2
+
++ ADDED Possibility to add timestamps in the realtime DB
++ ADDED Possibility to use multiple realtime DBs from the same project
+
 v 1.5.0
 
 + UPDATED Firebase BOM version on Android
 + IMPROVED Updated and improved Crashlytics support for Android
 + IMPROVED Analytics customization on iOS
-
 
 v 1.4.2
 
