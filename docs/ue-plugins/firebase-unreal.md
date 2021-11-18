@@ -806,8 +806,8 @@ The complete table of feature support can be found below.
 | **Cloud Functions**   |          ✅           |      ✅       |
 | **Realtime Database** |          ✅           |      ✅       |
 | **Firestore**         |          ✅           |      ✅       |
+| **Cloud Storage**     |          ✅           |      ✅       |
 | **Analytics**         |          ❌           |      ❌       |
-| **Cloud Storage**     |          ❌           |      ❌       |
 | **Cloud Messaging**   |          ❌           |      ❌       |
 | **Crashlytics**       |          ❌           |      ❌       |
 
@@ -815,6 +815,11 @@ The complete table of feature support can be found below.
 ___
 
 # Changelog
+
+v 1.5.4
+
++ FIXED **Cloud storage** now works on Editor/Windows/Mac
++ ADDED Possibility to add timestamps in **Firestore**
 
 v 1.5.2
 
