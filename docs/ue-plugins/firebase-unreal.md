@@ -792,6 +792,10 @@ We have added Firebase C++ SDK as a part of the plugin for editor/desktop suppor
 
 ?> You have to do this every time you change this setting.
 
+- You can also check whether you have all the required C++ tools installed in Visual Studio, here is my configuration which you can compare with in case the plugin does not compile for the Editor:
+
+![](images/firebase/desktop/vs1.png)
+
 The complete table of feature support can be found below.
 
 !> The C++ libraries are still experimental, so the behaviour might be unpredictable. Please, use them only to test in the editor, and not in the production standalone builds.
