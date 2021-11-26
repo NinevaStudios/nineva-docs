@@ -768,6 +768,160 @@ First, you create the batch request using the `GetBatch` function. Then you can 
 
 ![](images/firebase/firestore/firestore-11.png)
 
+# **Dynamic Links**
+
+The entry point for the Dynamic Links in your app are [App Links](https://developer.android.com/training/app-links) for Android and [Universal Links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content?language=objc) for iOS.
+
+!> Universal Links and App Links offer a potential attack vector into your app, so make sure to validate all URL parameters and discard any malformed URLs. In addition, limit the available actions to those that don’t risk the user’s data. For example, don’t allow universal links to directly delete content or access sensitive information about the user. When testing your URL-handling code, make sure your test cases include improperly formatted URLs.
+
+## Add associated domains
+
+Go to plugin settings (Project Settings -> Firebase Goodies -> Dynamic Links) and set the respective fields for the platform(-s) you plan to build for:
+
+![](images/firebase/dynamic-links/dynlinks-settings.png)
+
+?> Note: you have to enable dynamic links for iOS manually in the project settings.
+
+## Verify ownership of the domains
+
+Both iOS and Android require domain ownership verification for your application to be allowed to handle the specified URL's. You can do it manually, or configure your domain as described [here](https://firebase.google.com/docs/dynamic-links/custom-domains#manual).
+
+For manual setup, please, check the guide below.
+
+### Android
+
+You have to add a specific `JSON` file to your domain at the following address: `https://YOUR_HOST_NAME/.well-known/assetlinks.json`
+
+Its content is more thoroughly described [here](https://developer.android.com/training/app-links/verify-site-associations).
+
+You can take a look at our example [here](https://deeplinks.ninevastudios.com/.well-known/assetlinks.json).
+
+Example:
+```
+[{
+	"relation": ["delegate_permission/common.handle_all_urls"],
+	"target": {
+		"namespace": "android_app",
+		"package_name": "YOUR_PACKAGE_NAME",
+		"sha256_cert_fingerprints": ["SHA256_FINGERPRINT_1", "SHA256_FINGERPRINT_2"]
+	}
+}]
+```
+
+### iOS
+
+!> Due to some limitations, for iOS to work properly the plugin must be copied to the project `Plugins` folder.
+
+You have to add a specific file to your domain at the following address: `https://YOUR_HOST_NAME/.well-known/apple-app-site-association`
+
+?> Note: the file has to be without the `.json` resolution in the end.
+
+Official documentation on this topic can be found [here](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html).
+
+You can take a look at our example [here](https://deeplinks.ninevastudios.com/.well-known/apple-app-site-association).
+
+?> There is a newer approach to form this file (should work only on iOS 13 and higher), described [here](https://developer.apple.com/documentation/safariservices/supporting_associated_domains?language=objc), but it hasn't worked for us.
+
+Example:
+```
+{
+	"applinks": {
+		"apps": [],
+		"details": [
+			{
+				"appID": "TEAM_ID_1.PACKAGE_NAME_1",
+				"paths": [ "*" ],
+			},
+			{
+				"appID": "TEAM_ID_2.PACKAGE_NAME_2",
+				"paths": [ "*" ],
+			},
+		]
+	}
+}
+```
+
+### Add entitlements for iOS
+
+Unfortunately, we could not add an automated task to add the Associated Domains capability to the output xcode project during build time, so you will have to add those entitlements manually and relaunch the application on the device.
+
+It has to be in the following format: `applinks:YOUR_DOMAIN_NAME`
+
+![](images/deep-link/deep-link-associated-domains.png)
+
+But if you are using an Engine version from Github, you can add the following lines to the `Engine\Source\Programs\UnrealBuildTool\Platform\IOS\IOSExports.cs` in the body of the `WriteEntitlements` method just before the
+``` csharp 
+// End of entitlements
+Text.AppendLine("</dict>");
+Text.AppendLine("</plist>");
+```
+lines:
+
+``` csharp
+/// <summary>
+/// 
+/// </summary>
+/// <param name="Platform"></param>
+/// <param name="PlatformGameConfig"></param>
+/// <param name="AppName"></param>
+/// <param name="MobileProvisionFile"></param>
+/// <param name="bForDistribution"></param>
+/// <param name="IntermediateDir"></param>
+public static void WriteEntitlements(UnrealTargetPlatform Platform, ConfigHierarchy PlatformGameConfig,
+string AppName, FileReference MobileProvisionFile, bool bForDistribution, string IntermediateDir)
+{
+	...
+	
+	// Associated Domains
+	List<string> AssociatedDomains;
+	
+	if (PlatformGameConfig.GetArray("/Script/FirebaseGoodies.FirebaseGoodiesSettings", 	"AssociatedDomains", out AssociatedDomains))
+	{
+		Text.AppendLine("\t<key>com.apple.developer.associated-domains</key>");
+		Text.AppendLine("\t<array>");
+	
+		foreach (var Domain in AssociatedDomains)
+		{
+			if (string.IsNullOrEmpty(Domain))
+			{
+				continue;
+			}
+	
+			Text.AppendLine(string.Format("\t\t<string>applinks:{0}</string>", Domain));
+		}
+	
+		Text.AppendLine("\t</array>");
+	}
+	
+	...
+	
+	// End of entitlements
+	Text.AppendLine("</dict>");
+	Text.AppendLine("</plist>");
+```
+
+## Handle the URL
+
+Basically, there are two scenarios that your application needs to handle:
+- your application was not open when the link prompted it to be opened;
+- your application was open when the link prompted it to be opened.
+
+In first case, you can check the URL in the `EventConstruct` node in your blueprint.
+
+![](images/firebase/dynamic-links/dynlinks-construct.png)
+
+?> Note: it is recommended to clear the deep link URL after handling it. It makes its handling when the application was reopened when it was on pause a lot easier.
+
+You also should subscribe to the `ApplicationHasEnteredForeground` event to handle the case when your application was in the background when another application opened the link that the application is subscribed to.
+
+![](images/firebase/dynamic-links/dynlinks-foreground.png)
+
+To check whether your application was open via URL, call the `WasAppOpenViaDynamicLink` function.
+
+?> Note: URL processing on iOS is asynchronous, so if `WasAppOpenViaDynamicLink` returns `true`, but the URL is empty, you should wait, and check again after a small amount of time.
+
+![](images/firebase/dynamic-links/dynlinks-handle.png)
+
 # **Editor/Windows/Mac OS X support**
 
 We have added Firebase C++ SDK as a part of the plugin for editor/desktop support on Windows and Mac.
