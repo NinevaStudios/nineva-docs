@@ -21,6 +21,8 @@ Features:
 
 # **Getting started**
 
+!> **Warning:** First of all, make sure to disable the built-in support for AdMob ads in UE, since they are not compatible with this plugin
+
 * Create an AdMob account at https://admob.google.com/home (skip this step if you already have a valid AdMob account)
 * Create an app on your AdMob dashboard and save the App ID
 
