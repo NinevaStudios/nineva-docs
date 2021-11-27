@@ -968,11 +968,17 @@ The complete table of feature support can be found below.
 | **Analytics**         |          ❌           |      ❌       |
 | **Cloud Messaging**   |          ❌           |      ❌       |
 | **Crashlytics**       |          ❌           |      ❌       |
-
+| **Dynamic links**     |          ❌           |      ❌       |
 
 ___
 
 # Changelog
+
+v 1.6.0
+
++ ADDED Dynamic links feature support for iOS and Android
++ FIXED A cloud storage issue on iOS with 'Download file to location'
++ FIXED A missing category compile issue
 
 v 1.5.4
 
