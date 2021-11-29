@@ -19,6 +19,11 @@ Disable `Online Subsystem Google Play` in project Plugins window.
 
 ![](images/monetization/DisableGooglePlaySubsystem.jpg)
 
+You also need to remove the dependency by removing these lines if you have it in your `Target.cs` and `Build.cs` files:
+
+* `PrivateDependencyModuleNames.Add("OnlineSubsystemGooglePlay");`
+* `ExtraModuleNames.Add("OnlineSubsystemGooglePlay");`
+
 Due to low XCode version on Marketplace packaging servers, we had to add a workaround to get the plugin published. If you plan to use it for iOS, you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
 
 Go to the Project Settings -> Monetization Goodies and switch the Enable In App Purchases toggle.
