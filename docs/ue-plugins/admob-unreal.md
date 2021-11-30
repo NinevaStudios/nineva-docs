@@ -13,11 +13,13 @@ Note that this plugin wraps official AdMob API and requires a valid AdMob accoun
 
 You can find all available blueprint nodes and their description [here](#blueprint-nodes).
 
-Features:
+Supported ad formats:
 
 * Banner Ads
 * Interstitial Ads
 * Rewarded Ads
+* Rewarded Interstitials
+* Open App Ads
 
 # **Getting started**
 
@@ -439,6 +441,20 @@ You can bind to the following events:
 * Ad Closed - fires when a rewarded ad is closed
 * User earned reward - fires when a rewarded ad triggers a reward. The app is responsible for crediting the user with the reward.
 
+## Rewarded Iterstitials
+
+Rewarded interstitials are almost identical to rewarded ads. Please check the demo for the usage example.
+
+## Open App Ads
+
+App open ads are a special ad format intended for publishers wishing to monetize their app load screens. App open ads can be closed by your users at any time. App open ads can be shown when users bring your app to the foreground.
+
+You can check the use cases and the suggested implementation logic in the official docs:
+
+- [Android](https://developers.google.com/admob/android/app-open}
+- [iOS](https://developers.google.com/admob/ios/app-open)
+
+In the demo, we have implemented the logic to show it every time you app is brought to foreground, it is probably a good starting point to start your implementation from.
 # **Known issues**
 
 * When Vungle mediation is enabled the `SaveGameToSlot`/`LoadGameFromSlot` functions do not work on Android for some reason. We unfortunately still cannot figure out why is this happening. If you are using this functionality please disable Vungle mediation in plugin settings.
@@ -457,9 +473,13 @@ ___
 
 # Changelog
 
+v.2.3.0
+
++ Added 'Open App Ads' ad format for Android and iOS
+
 v.2.2.0
 
-+ Added Rewarded interstitials ad format for Android and iOS
++ Added 'Rewarded interstitials' ad format for Android and iOS
 
 v.2.1.0
 
