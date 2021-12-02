@@ -974,9 +974,11 @@ ___
 
 # Changelog
 
-v 1.6.1
+v 1.6.3
 
 + FIXED Sign-in with email result check for invalid user
++ FIXED Editor crash when json/plist file with project settings is missing
++ FIXED Error with missing category
 
 v 1.6.0
 
