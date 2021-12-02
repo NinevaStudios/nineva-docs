@@ -974,6 +974,10 @@ ___
 
 # Changelog
 
+v 1.6.1
+
++ FIXED Sign-in with email result check for invalid user
+
 v 1.6.0
 
 + ADDED Dynamic links feature support for iOS and Android
