@@ -975,6 +975,11 @@ ___
 
 # Changelog
 
+v 1.6.5
+
++ FIXED Some logging error when building for iOS
++ AddItem Firestore method randomly crashing on iOS
+
 v 1.6.3
 
 + FIXED Sign-in with email result check for invalid user
