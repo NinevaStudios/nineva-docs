@@ -249,11 +249,11 @@ This method allows you to get the list of your friends.
 
 ### OnLoadFriendsSuccess
 
-If loading friends is successful, you get you get list of your friends.
+If loading friends is successful, you will get list of your friends.
 
 ### OnLoadFriendsFailure
 
-If loading friends failed, you get Error Message and Error Code.
+If loading friends failed, you will get Error Message and Error Code.
 
 ## View Another Player Profile
 
@@ -261,7 +261,7 @@ It shows you profile of your friend.
 
 ![](images/play-goodies/friends/ViewAnotherPlayerProfile_Function.png)
 
-* Other Player Id - your friend's profile Id
+* Other Player Id - your friend's profile Id;
 
 ## View Another Player Profile With Alternative Hints
 
