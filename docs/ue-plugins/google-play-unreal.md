@@ -238,6 +238,8 @@ v.1.0.0
 
 # **Friends** (coming soon)
 
+For more information on friends API see the [official docs](https://developers.google.com/games/services/common/concepts/friends).
+
 ## Load Friends
 
 This method allows you to get the list of your friends.
