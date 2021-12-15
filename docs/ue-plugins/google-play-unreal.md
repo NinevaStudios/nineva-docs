@@ -236,7 +236,7 @@ v.1.0.0
 
 * Initial release
 
-# **Friends**
+# **Friends** (coming soon)
 
 ## Load Friends
 
