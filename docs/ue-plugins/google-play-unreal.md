@@ -226,17 +226,7 @@ Read about how to configure and use *Events* [here](https://developers.google.co
 
 ---
 
-### Changelog
-
-v.1.1.0
-
-* ADDED A function to fetch player and players close to him leadebord information
-
-v.1.0.0
-
-* Initial release
-
-# **Friends** (coming soon)
+# **Friends**
 
 For more information on friends API see the [official docs](https://developers.google.com/games/services/common/concepts/friends).
 
@@ -271,3 +261,42 @@ If the player sends an invitation to the profile they are viewing, their game-sp
 
 ![](images/play-goodies/friends/ViewAnotherPlayerProfileWithAlternativeHints_Function.png)
  
+---
+
+# Cloud Saves (coming soon)
+
+For more detailed information on Saved Games API see the [official docs](https://developers.google.com/games/services/android/savedgames)
+
+The term 'snapshot' here is used to represent the saved game.
+
+## Showing save games UI
+
+## Fetching all save games
+
+## Writing saves
+
+## Reading saves
+
+## Resolving conflicts
+
+Read more about conflicts [here](https://developers.google.com/games/services/android/savedgames#handling_saved_game_conflicts). We recommend to pick one of the automatic conflict resolution policies when using the 'Open Snapshot' methods. If you choose the the 'Manual' conflict resolution policy you would have to handle the conflict resolution yourself.
+
+!> Note that resolving a conflict might result into yet another conflict. You can try resolving it a few times or try a few times recursively.
+
+Currently the plugin does not support the method to merge two snapshots into one. You must pick to go with either local or remote version of the snapshot.
+
+---
+
+### Changelog
+
+v2.0.0
+
+* Added functionality to fetch friends and view other player profile
+
+v.1.1.0
+
+* ADDED A function to fetch player and players close to him leadebord information
+
+v.1.0.0
+
+* Initial release
