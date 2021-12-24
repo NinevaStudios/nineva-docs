@@ -268,6 +268,12 @@ For more detailed information on Saved Games API see the [official docs](https:/
 
 The term 'snapshot' here is used to represent the saved game.
 
+## Setup
+
+When using 'Login' node you must make sure you check the 'Cloud Save' checkbox permission.
+
+TODO image
+
 ## Showing save games UI
 
 ## Fetching all save games
