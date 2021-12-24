@@ -237,7 +237,6 @@ This method allows you to get the list of your friends.
 ![](images/play-goodies/friends/LoadFriendsFunction.png)
 
 * Page size must be bigger than 1 (PageSize >= 1);
-* Force Reload must be false by default;
 
 ### OnLoadFriendsSuccess
 
