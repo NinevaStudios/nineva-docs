@@ -263,7 +263,7 @@ If the player sends an invitation to the profile they are viewing, their game-sp
  
 ---
 
-# Cloud Saves (coming soon)
+# **Cloud Saves (coming soon)**
 
 For more detailed information on Saved Games API see the [official docs](https://developers.google.com/games/services/android/savedgames)
 
