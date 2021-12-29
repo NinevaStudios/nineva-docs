@@ -344,7 +344,7 @@ Result:
 
 ## IGImagePicker.cs
 
-This class allows you to get a `Texture2D` into Unity by [Taking Photo with Camera](#/IGImagePicker.cs#taking-photo-with-camera) / [Choosing Photo from Photo Library](#/IGImagePicker.cs#choosing-photo-from-photo-library) / [Choosing Photo from Photos Album](#/IGImagePicker.cs#choosing-photo-from-photos-album)
+This class allows you to get a `Texture2D` into Unity by [Taking Photo with Camera](#id=taking-photo-with-camera) / [Choosing Photo from Photo Library](#id=choosing-photo-from-photo-library) / [Choosing Photo from Photos Album](#id=choosing-photo-from-photos-album)
 
 **Please read the Requirements & Setup section below carefully before contacting support.**
 

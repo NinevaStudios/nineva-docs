@@ -473,6 +473,10 @@ ___
 
 # Changelog
 
+v.2.3.1
+
++ UPDATED Disable mediations by default. Now mediations need to be explicitly enabled in the plugin settings.
+
 v.2.3.0
 
 + Added 'Open App Ads' ad format for Android and iOS
