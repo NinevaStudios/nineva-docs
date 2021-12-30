@@ -272,13 +272,13 @@ The term 'snapshot' here is used to represent the saved game.
 
 When using 'Login' node you must make sure you check the 'Cloud Save' checkbox permission.
 
-TODO image
+![](images/play-goodies/save_games/login.png)
 
 ## Showing save games UI
 
 This method will show a Google Play Save Games native UI screen.
 
-TODO image
+![](images/play-goodies/save_games/show_saved_games.png)
 
 When showing the save games UI you can receive the following callbacks:
 
@@ -293,23 +293,35 @@ Before reading or writing a snapshot you first must open it.
 
 ### Opening a snapshot with Metadata
 
+![](images/play-goodies/save_games/open_snapshot_with_metadata.png)
+
 ### Opening a snapshot by filename
+
+![](images/play-goodies/save_games/open_snapshot_with_file_name.png)
 
 ## Fetching all save games
 
+![](images/play-goodies/save_games/load_snapshot_metadata.png)
+
 ## Writing saves
 
+![](images/play-goodies/save_games/write_snapshot.png)
+
 ## Reading saves
+
+![](images/play-goodies/save_games/read_snapshot.png)
 
 ## Resolving conflicts
 
 Read more about conflicts [here](https://developers.google.com/games/services/android/savedgames#handling_saved_game_conflicts). We recommend to pick one of the automatic conflict resolution policies when using the 'Open Snapshot' methods. If you choose the the 'Manual' conflict resolution policy you would have to handle the conflict resolution yourself.
 
+![](images/play-goodies/save_games/resolve_conflict.png)
+
 !> Note that resolving a conflict might result into yet another conflict. You can try resolving it a few times or try a few times recursively.
 
 Currently the plugin does not support the method to merge two snapshots into one. You must pick to go with either local or remote version of the snapshot.
 
-# **Video recording API**
+# **Video recording API (coming soon)**
 
 For more detailed information on Video recording API see the [official docs](https://developers.google.com/games/services/android/videoRecording) and explore the demo level inside the plugin `Content` folder.
 
