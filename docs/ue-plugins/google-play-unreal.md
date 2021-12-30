@@ -264,7 +264,7 @@ If the player sends an invitation to the profile they are viewing, their game-sp
 
 # **Cloud Saves (coming soon)**
 
-For more detailed information on Saved Games API see the [official docs](https://developers.google.com/games/services/android/savedgames)
+For more detailed information on Saved Games API see the [official docs](https://developers.google.com/games/services/android/savedgames) and explore the demo level inside the plugin `Content` folder.
 
 The term 'snapshot' here is used to represent the saved game.
 
@@ -275,6 +275,25 @@ When using 'Login' node you must make sure you check the 'Cloud Save' checkbox p
 TODO image
 
 ## Showing save games UI
+
+This method will show a Google Play Save Games native UI screen.
+
+TODO image
+
+When showing the save games UI you can receive the following callbacks:
+
+* **On Add New Snapshot** - user pressed the "Add" button, you can implement the flow to create a new save after this
+* **On View Snapshot Metadata** - user selected an existing snapshot, the metadata of the selected snapshot is passed as a parameter, you can use it to open the selected snapshot.
+* **On Error** - an error happened, message is passed as a parameter
+* **On Cancel** - user just closed the screen with a close button
+
+## Opening a Snapshot
+
+Before reading or writing a snapshot you first must open it.
+
+### Opening a snapshot with Metadata
+
+### Opening a snapshot by filename
 
 ## Fetching all save games
 
@@ -289,6 +308,24 @@ Read more about conflicts [here](https://developers.google.com/games/services/an
 !> Note that resolving a conflict might result into yet another conflict. You can try resolving it a few times or try a few times recursively.
 
 Currently the plugin does not support the method to merge two snapshots into one. You must pick to go with either local or remote version of the snapshot.
+
+# **Video recording API**
+
+For more detailed information on Video recording API see the [official docs](https://developers.google.com/games/services/android/videoRecording) and explore the demo level inside the plugin `Content` folder.
+
+Video recording API allows you to launch recording of the game play video while your game is running.
+
+# Starting the recording
+
+Before starting the recording you should check whether the recording is supported on currect device and if yes, present the video recording overlay.
+
+# Getting the information
+
+To fetch the information about what functionality is supported on device, use `Get Capture Capabilites` node.
+
+# Listening to recording state changes
+
+You can register an event to listen for the recording state changes
 
 ---
 
