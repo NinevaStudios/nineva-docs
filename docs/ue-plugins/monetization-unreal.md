@@ -25,6 +25,15 @@ You also need to remove the dependency by removing these lines if you have it in
 * `PrivateDependencyModuleNames.Add("OnlineSubsystemGooglePlay");`
 * `ExtraModuleNames.Add("OnlineSubsystemGooglePlay");`
 
+You might also need to add/modify the `Config/Android/AndroidEngine.ini` file contents fo have all the built-in Google Play Billing features disabled:
+
+```ini
+[OnlineSubsystemGooglePlay.Store]
+bSupportsInAppPurchasing=false
+bUseStoreV2=false
+bUseGooglePlayBillingApiV2=false
+```
+
 Due to low XCode version on Marketplace packaging servers, we had to add a workaround to get the plugin published. If you plan to use it for iOS, you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
 
 Go to the Project Settings -> Monetization Goodies and switch the Enable In App Purchases toggle.
