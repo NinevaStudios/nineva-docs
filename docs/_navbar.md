@@ -14,6 +14,7 @@
 	* [Deep Link Goodies](ue-plugins/deep-link-unreal)
 	* [iOS Goodies](ue-plugins/ios-goodies)
 	* [Monetization Goodies](ue-plugins/monetization-unreal)
+	* [Nearby Connections](ue-plugins/nearby-connections-unreal)
 	* **[Common issues](ue-plugins/common-issues)**
 
 - **Unity Plugins**
