@@ -307,6 +307,10 @@ ___
 
 # Changelog
 
+v 2.1.1
+
+* FIXED 'exported' tag on acitivities for Android 12
+
 v 1.5.4
 
 * FIXED Sharing crashes on release Android builds due to proguad obfuscation

@@ -361,6 +361,10 @@ You can also unregister from recording state changes event
 
 ### Changelog
 
+v2.1.1
+
+* FIXED 'exported' tag on acitivities for Android 12
+
 v2.0.0
 
 * Added functionality to fetch friends and view other player profile

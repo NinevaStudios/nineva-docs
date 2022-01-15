@@ -975,6 +975,10 @@ ___
 
 # Changelog
 
+v 1.6.6
+
+* FIXED 'exported' tag on acitivities for Android 12
+
 v 1.6.5
 
 + FIXED Some logging error when building for iOS

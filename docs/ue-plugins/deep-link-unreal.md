@@ -159,7 +159,11 @@ ___
 
 # Changelog
 
-v.1.0.0
+v1.0.3
+
+* FIXED 'exported' tag on acitivities for Android 12
+
+v1.0.0
 
 * Initial release
 
