@@ -562,7 +562,17 @@ Call the `VibrateWithEffectAndAttributes` function to provide an additional Audi
 
 You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions.
 
-___
+
+## Wi-Fi scan
+
+You can use the Wi-Fi scanning capabilities provided by the WifiManager API to get a list of Wi-Fi access points that are visible from the device.
+
+
+![](images\android-goodies\hardware\Scr_StartWifiScan.png)
+
+* `On Wifi Scan Success` - callback which returns you founded Wi-Fi networks;
+
+* `On Wifi Scan Failure` - callback which returns you error message;
 
 # **Contacts**
 
