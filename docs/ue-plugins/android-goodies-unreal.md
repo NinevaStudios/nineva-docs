@@ -567,12 +567,17 @@ You can get one of the many battery characteristics, such as capacity, health, p
 
 You can use the Wi-Fi scanning capabilities provided by the WifiManager API to get a list of Wi-Fi access points that are visible from the device.
 
+You should check if the following permissions are granted
+
+![](images\android-goodies\hardware\Scr_StartScanPermissions.png)
+
+You also must request the `android.permission.ACCESS_FINE_LOCATION` runtime permission before using this function.
 
 ![](images\android-goodies\hardware\Scr_StartWifiScan.png)
 
 * `On Wifi Scan Success` - callback which returns you founded Wi-Fi networks;
-
 * `On Wifi Scan Failure` - callback which returns you error message;
+
 
 # **Contacts**
 
@@ -600,6 +605,11 @@ Requires the "android.permission. WRITE_CONTACTS" permission.
 ___
 
 # Changelog
+
+v.1.8.0
+
+* ADDED Wi-Fi scan
+* FIXED incorrect demo behaviour with permissions
 
 v.1.7.0
 
