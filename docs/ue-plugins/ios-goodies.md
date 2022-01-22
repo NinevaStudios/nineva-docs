@@ -492,6 +492,11 @@ ___
 
 # Changelog
 
+v.1.7.0
+
++ FIXED Media and file pickers returning incorrect file paths
++ IMPROVED Haptic feedback performance and add a `prepare` function to address latency issues
+
 v.1.6.5
 
 * ADDED Nonce generation to Sign in with Apple to allow intergration with 3rd party services like Firebase
