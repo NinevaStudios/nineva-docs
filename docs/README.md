@@ -33,6 +33,7 @@ Useful links:
     <td align="center"><a href="#ue-plugins/deep-link-unreal"><img src="icons/deeplink-ue.png"><br>Deep Link Goodies</a></td>
     <td align="center"><a href="#ue-plugins/monetization-unreal"><img src="icons/monetize-ue.png"><br>Monetization Goodies</a></td>
 	<td align="center"><a href="#ue-plugins/nearby-connections-unreal"><img src="icons/nearby-conn-ue.png"><br>Nearby Connections</a></td>
+	<td align="center"><a href="#ue-plugins/yodo-unreal"><img src="icons/yodo-ue.png"><br>Yodo Ads</a></td>
   </tr>
 </table>
 
