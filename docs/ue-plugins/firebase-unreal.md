@@ -571,8 +571,6 @@ Official documentation regarding the Firebase Cloud Messaging can be found [here
 
 ![](images/firebase/cloud-messaging/CloudMessagingSettings.png)
 
-!> If you are using UE 4.23 or 4.24, you will have to manually add the `Push Notifications` capability for the resulting XCode project of your iOS build.
-
 ## Manage device ID
 
 Call `GetInstanceIdData` to receive Firebase Cloud Messaging (FCM) token and Instance ID.
@@ -620,9 +618,7 @@ Official documentation regarding the Firebase Crashlytics can be found [here](ht
 
 #### **Android Setup**
 
-If you are using Android NDK version 14 (UE4.24 and earlier) everything should work. For Android NDK version 21 (UE4.25 and newer) you will have to pass an additional linker flag `-Wl,--no-rosegment` for proper crash stack trace symbolication. Unfortunately it is impossible to pass this flag in the binary release of Unreal Engine. If you do not want to build the whole engine it is possible to only build the *Unreal Built Tool* and update the linker flags in *AndroidToolchain.cs*. For further instructions on building Unreal Engine from source please refer to the official documentation.
-
-!> Right now the crashlytics stack trace will correctly report the file name and function where the crash happened but the rest of the stack will report unrelated UE source files. We are monitoring this issue and looking for a valid fix.
+No further instructions required.
 
 #### **iOS Setup**
 
