@@ -19,6 +19,8 @@ After the setup is complete in the Firebase console, you can open your UE4 proje
 
 ![](images/firebase/Settings.png)
 
+For Firebase to work in editor follow the [editor setup](#editorwindowsmac-os-x-support). 
+
 !> If you do not provide a valid path to the *google-services.json* and/or *GoogleService-info.plist* file your application will crash on start. A descriptive error message in the device logs will indicate that it was not able to find these files.
 
 ?> Most of the API tries to be as close as possible to the official Firebase API, because of this we advise to look at the [official documentation](https://firebase.google.com/docs) from Google as this might help you understand some concepts better with the examples they provide.
@@ -931,13 +933,15 @@ We have added Firebase C++ SDK as a part of the plugin for editor/desktop suppor
 
 ## Setup
 
+- Go through the [initial setup](#firebase-goodies) in the beginning of this guide and make sure you have your `google-services.json` or `GoogleService-Info.plist` file picked in the plugin settings. If you make changes in the dashboard, make sure to re-download and re-pick it!
+
 - First of all, your project must be a C++ project, you can easily convert your Blueprint-only project to C++ project by creating a random C++ class in the inspector
 
 - Go to the Project Settings -> Firebase Goodies and toggle the Enable Editor support toggle.
 
 ![](images/firebase/desktop/desktop-0.png)
 
-- After that close the Editor, go to the `[Project]/Plugins/FirebaseGoodies` directory and delete the `Binaries` and `Intermediate` folders. This will force the plugin to be rebuilt and include the desktop dependencies. 
+!> After that close the Editor, go to the `[Project]/Plugins/FirebaseGoodies` directory and delete the `Build`, `Binaries` and `Intermediate` folders. This will force the plugin to be rebuilt and include the desktop dependencies. 
 
 ![](images/firebase/desktop/desktop-1.png)
 
