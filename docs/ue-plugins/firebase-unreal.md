@@ -15,7 +15,9 @@ After this, you should download the *google-services.json* (for Android) and/or 
 
 ![](images/firebase/auth/AuthConfigGoogleServices.png)
 
-After the setup is complete in the Firebase console, you can open your UE4 project and go to Project Settings -> Firebase Goodies. You should provide the path to previously downloaded *google-services.json* (for Android) and/or *GoogleService-info.plist* files for them to be parsed by the plugin. This path needs to be absolute for the plugin to properly use this file so it is advised not to commit this setting to your VCS.
+After the setup is complete in the Firebase console, you can open your UE4 project and go to Project Settings -> Firebase Goodies. You should provide the path to previously downloaded `google-services.json` (for Android) and/or `GoogleService-info.plist` files for them to be parsed by the plugin. This path needs to be absolute for the plugin to properly use this file so it is advised not to commit this setting to your VCS.
+
+You can also place your `google-services.json` inside the plugin directory (Next to UPL xml files) and check the respective checkbox in plugin settings for it to work.
 
 ![](images/firebase/Settings.png)
 
@@ -974,6 +976,15 @@ The complete table of feature support can be found below.
 ___
 
 # Changelog
+
+v 1.7.0
+
++ Add possibility to put `google-services.json` file inside the plugin directory - makes CI integration easier
++ FIXED Gradle build under some circumstances by explicitly adding `ANDROID_TOOLS_BUILD_GRADLE_VERSION` to gradle properties
++ FIXED Removed Win32 from supported platforms
++ FIXED Demo crash in editor because child listener on realtime DB were no unsubscribed when exiting play mode
++ FIXED Some compile issues when engine is built from source code
++ FIXED Firestore demo, so it doesn't crash when document does not exist
 
 v 1.6.6
 
