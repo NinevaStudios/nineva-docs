@@ -977,6 +977,14 @@ ___
 
 # Changelog
 
+v 1.7.2
+
++ FIXED uploading Cloud storage file upload on iOS issue
++ FIXED putting `google-services.json` file inside the plugin directory now also works in editor.
++ UPDATE Android Firebase version to `29.1.0`
+
+---
+
 v 1.7.0
 
 + Add possibility to put `google-services.json` file inside the plugin directory - makes CI integration easier
