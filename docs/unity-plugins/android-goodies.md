@@ -31,7 +31,7 @@ The plugin is in active development and new things will be added. Please [contac
   + [AGAlertDialog.cs](#agalertdialogcs) - Showing native alert dialogs with buttons/radiobuttons/checkboxes
   + [AGDateTimePicker.cs](#agdatetimepickercs) - Showing date/time picker
   + [AGProgressDialog.cs](#agprogressdialogcs) - Show spinner/horizontal progress bar
-  + [AGLocalNotifications.cs](#aglocalnotificationscs) - Showing local notifications with info provided.
+  + [AGLocalNotificationManager.cs](#agnotificationmanagercs) - Showing local notifications with info provided.
   + [AGUIMisc.cs](#aguimisccs) - Showing toasts and immersive mode methods.
 * Retrieving Info
 
