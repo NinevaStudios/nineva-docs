@@ -1094,6 +1094,14 @@ Result:
 
 ## AGNotificationManager.cs
 
+### Required permissons
+
+* Schedule exact alarms permission must be present in `AndroidManifest.xml` file if you target Android API level 31+ and plan to schedule exact notifications:
+
+``` xml
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+```
+
 !> Emojis may not work on older Android versions so test carefully
 
 This class is used to manipulate local notifications
