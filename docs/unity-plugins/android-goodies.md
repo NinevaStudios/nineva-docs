@@ -1412,12 +1412,20 @@ AGNotificationManager.NotifyRepeating(null, notificationId, builder.Build(), int
 
 ### Cancelling notifications
 
-To cancel a notification use `AGNotificationManager.Cancel()` . To cancel all notifications use `CancelAll()` :
+To cancel a notification (this only removes the notification from notifications bar) use `AGNotificationManager.Cancel()` . To cancel all notifications use `CancelAll()` :
 
 ``` csharp
 AGNotificationManager.Cancel(notificationId);
 //or
 AGNotificationManager.CancelAll();
+```
+
+### Cancelling schedules notifications
+
+To cancel a scheduled notification you must use:
+
+``` csharp
+AGNotificationManager.CancelScheduledNotification(notificationId);
 ```
 
 ## AGWallpaperManager.cs
