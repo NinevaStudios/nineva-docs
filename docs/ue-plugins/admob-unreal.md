@@ -473,6 +473,15 @@ ___
 
 # Changelog
 
+v.3.0.0
+
++ UPDATED Added UE5 support.
++ UPDATE iOS libs to 9.1 and other adapter versions (See `versions.txt` file in the 3rdParty folder)
++ REMOVED Deprecated test suite method (breaking change)
++ Improved compatibility with other plugins
+
+---
+
 v.2.3.1
 
 + UPDATED Disable mediations by default. Now mediations need to be explicitly enabled in the plugin settings.
