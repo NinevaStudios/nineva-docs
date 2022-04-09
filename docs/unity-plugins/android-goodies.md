@@ -1104,7 +1104,8 @@ Result:
 
 !> Emojis may not work on older Android versions so test carefully
 
-!> Scheduled noticiations are NOT rescheduled automatically on device reboot. This functionality is on roadmap.
+!> Scheduled noticiations are NOT rescheduled automatically on device reboot. This functionality is on roadmap. Currently all scheduled notifications will be cancelled when device is turned off.
+
 This class is used to manipulate local notifications
 
 ### Checking if app was launched from notification
