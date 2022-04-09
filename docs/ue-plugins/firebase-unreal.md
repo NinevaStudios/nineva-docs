@@ -977,6 +977,17 @@ ___
 
 # Changelog
 
+v 2.0.0
+
++ ADDED Support for UE 5
++ UPDATED Reworked callbacks for firestore DB that fixes the issue of multiple parallel calls invoking only the last callback.
++ UPDATED iOS native libs to 8.14.0
++ FIXED Broken Google login
++ FIXED Rare desktop compilation issues
++ UPDATE A few Android dependencies
+
+---
+
 v 1.7.2
 
 + FIXED uploading Cloud storage file upload on iOS issue
