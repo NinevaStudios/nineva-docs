@@ -929,6 +929,8 @@ We have added Firebase C++ SDK as a part of the plugin for editor/desktop suppor
 
 ## Limitations
 
+!> Unfortunately, we can't get it working on Mac in UE5 (it works in UE4). We are working on this but without any success so far.
+
 !> On Windows, Visual Studio 2019 must be installed as Google provides the latest versions of native libs compiled with it
 
 !> For the plugin to work in the editor/desktop you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
