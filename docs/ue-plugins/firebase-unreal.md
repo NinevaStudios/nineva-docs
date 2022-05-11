@@ -979,6 +979,15 @@ ___
 
 # Changelog
 
+--
+v 2.0.5
+
++ FIXED Incorrect Unicode string encodings which resulted in not displayed symbols
++ FIXED Fixed compile issues on Android by updating gradle
++ FIX UE5 Compilation issues
+ 
+--
+
 v 2.0.0
 
 + ADDED Support for UE 5
