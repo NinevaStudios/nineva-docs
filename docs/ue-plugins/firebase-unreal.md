@@ -985,6 +985,7 @@ v 2.0.5
 + FIXED Incorrect Unicode string encodings which resulted in not displayed symbols
 + FIXED Fixed compile issues on Android by updating gradle
 + FIX UE5 Compilation issues
++ FIX File download on iOS
  
 --
 
