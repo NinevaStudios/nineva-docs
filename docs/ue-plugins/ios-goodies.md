@@ -492,6 +492,11 @@ ___
 
 # Changelog
 
+v.1.7.3
+
++ FIXED incorrect colors when saving images to gallery
++ FIXED Image pickers and other things because of new iOS updates
+
 v.1.7.0
 
 + FIXED Media and file pickers returning incorrect file paths
