@@ -563,7 +563,17 @@ Call the `VibrateWithEffectAndAttributes` function to provide an additional Audi
 You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions.
 
 
-## Wi-Fi scan
+## Wifi
+
+### Check/Set Wifi state
+
+Call `IsWifiEnabled` function to check whether Wifi is enabled on the device.
+
+Call `ToggleWifiState` to turn on/off Wifi on the device. Requires `android.permission.CHANGE_WIFI_STATE` permission enabled in the project settings.
+
+?> On Android 29 and higher you can't turn wifi on/off directly. Instead, this function will open a system window, where the user can do it.
+
+### Scan Networks
 
 You can use the Wi-Fi scanning capabilities provided by the WifiManager API to get a list of Wi-Fi access points that are visible from the device.
 
@@ -578,6 +588,11 @@ You also must request the `android.permission.ACCESS_FINE_LOCATION` runtime perm
 * `On Wifi Scan Success` - callback which returns you founded Wi-Fi networks;
 * `On Wifi Scan Failure` - callback which returns you error message;
 
+### Connect to Wifi network
+
+If you know the `SSID` and `Password` to a Wifi network, you can connect to it programmatically using the `ConnectToWifiNetwork` function. 
+
+?> On Android 29 and higher you can't connect to a network directly. You can only make a suggestion to the system to do it. Read more [here](https://developer.android.com/guide/topics/connectivity/wifi-suggest)
 
 # **Contacts**
 
@@ -605,6 +620,9 @@ Requires the "android.permission. WRITE_CONTACTS" permission.
 ___
 
 # Changelog
+
+v.1.8.1
+* ADDED Wifi check and turn on/off, connect to specific wifi network
 
 v.1.8.0
 
