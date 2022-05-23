@@ -99,8 +99,9 @@ Use this node to open a specific leaderboard.
 !> On iOS14 or newer you can set filters for the leaderboard but currently there is a bug in iOS that does not take these filters into account
 
 
+# CHANGELOG
 
+v1.1.4
 
-
-
-
++ ADDED Error callback for fetching leaderboard scores
++ Added `IsValid` check for leaderboard player score
