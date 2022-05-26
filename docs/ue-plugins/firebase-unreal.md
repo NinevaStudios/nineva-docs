@@ -979,17 +979,18 @@ ___
 
 # Changelog
 
---
-v 2.0.5
+---
+
+### 2.0.5
 
 + FIXED Incorrect Unicode string encodings which resulted in not displayed symbols
 + FIXED Fixed compile issues on Android by updating gradle
 + FIX UE5 Compilation issues
 + FIX File download on iOS
  
---
+---
 
-v 2.0.0
+### 2.0.0
 
 + ADDED Support for UE 5
 + UPDATED Reworked callbacks for firestore DB that fixes the issue of multiple parallel calls invoking only the last callback.
@@ -1000,7 +1001,7 @@ v 2.0.0
 
 ---
 
-v 1.7.2
+### .7.2
 
 + FIXED uploading Cloud storage file upload on iOS issue
 + FIXED putting `google-services.json` file inside the plugin directory now also works in editor.
@@ -1008,7 +1009,7 @@ v 1.7.2
 
 ---
 
-v 1.7.0
+### 1.7.0
 
 + Add possibility to put `google-services.json` file inside the plugin directory - makes CI integration easier
 + FIXED Gradle build under some circumstances by explicitly adding `ANDROID_TOOLS_BUILD_GRADLE_VERSION` to gradle properties
@@ -1017,66 +1018,66 @@ v 1.7.0
 + FIXED Some compile issues when engine is built from source code
 + FIXED Firestore demo, so it doesn't crash when document does not exist
 
-v 1.6.6
+### 1.6.6
 
 * FIXED 'exported' tag on acitivities for Android 12
 
-v 1.6.5
+### 1.6.5
 
 + FIXED Some logging error when building for iOS
 + AddItem Firestore method randomly crashing on iOS
 
-v 1.6.3
+### 1.6.3
 
 + FIXED Sign-in with email result check for invalid user
 + FIXED Editor crash when json/plist file with project settings is missing
 + FIXED Error with missing category
 
-v 1.6.0
+### 1.6.0
 
 + ADDED Dynamic links feature support for iOS and Android
 + FIXED A cloud storage issue on iOS with 'Download file to location'
 + FIXED A missing category compile issue
 
-v 1.5.4
+### 1.5.4
 
 + FIXED **Cloud storage** now works on Editor/Windows/Mac
 + ADDED Possibility to add timestamps in **Firestore**
 
-v 1.5.2
+### 1.5.2
 
 + ADDED Possibility to add timestamps in the realtime DB
 + ADDED Possibility to use multiple realtime DBs from the same project
 
-v 1.5.0
+### 1.5.0
 
 + UPDATED Firebase BOM version on Android
 + IMPROVED Updated and improved Crashlytics support for Android
 + IMPROVED Analytics customization on iOS
 
-v 1.4.2
+### 1.4.2
 
 + ADDED More customization options for analytics
 
-v 1.4.1
+### 1.4.1
 
 + ADDED Firestore support
 + ADDED Editor (Windows+Mac) support
 
-v 1.3.5
+### 1.3.5
 
 + ADDED New node to create Sign In with Apple credentials
 
-v 1.3.5
+### 1.3.5
 
 + ADDED New node to create Sign In with Apple credentials
 
-v 1.3.4
+### 1.3.4
 
 + FIXED Issue on add child listerner not being triggered
 + FIXED Small blueprint issues
 
-v.1.3.3
+### 1.3.3
 
 * FIXED iOS crash when no realtime database was created
 * ADDED Separate settings for Crashlytics debug/release symbols upload for Android
@@ -1084,22 +1085,22 @@ v.1.3.3
 * IMPROVED Better CFBundleURLTypes plist handling in iOS UPL file
 * IMPROVED Added logging to UPL files for easier debugging
 
-v.1.3.0
+### 1.3.0
 
 * ADDED Cloud functions
 * FIXED Crashlytics did not report crashes for native code on Android
 
-v.1.2.1
+### 1.2.1
 
 * FIXED Crash on startup when JNI modules were not initialized
 * FIXED Deprecation warning in Auth module
 
-v.1.2.0
+### 1.2.0
 
 * ADDED Crashlytics
 * ADDED Cloud messaging
 
-v.1.1.0
+### 1.1.0
 
 * UPDATE Android SDK to version 17.5.0
 * FIXED Proguard errors in shipping builds
@@ -1107,11 +1108,11 @@ v.1.1.0
 
 ?> This release uses AndroidX libraries and may cause conflicts with other Android plugins
 
-v.1.0.2
+### 1.0.2
 
 * UPDATE Settings screen
 
-v.1.0.0
+### 1.0.0
 
 * Initial release
 
