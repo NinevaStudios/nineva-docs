@@ -68,7 +68,7 @@ Add all the products you need and follow the setup instructions for each product
 
 ![](images/facebook/FacebookAddProducts.jpg ':size=900')
 
-If properly configured your app should have green checkboxes for Login and Analytics in the products section.
+If properly configured your app should have green checkboxes for Login and App Events in the products section.
 
 ![](images/facebook/FacebookConfiguredApp.png)
 
@@ -113,7 +113,7 @@ To access certain data the user needs to grant specific permissions. You can che
 
 ![](images/facebook/FacebookPermissionOps.png)
 
-# **Analytics**
+# **App Events**
 
 To test the events please use the [Event Manager](https://www.facebook.com/events_manager)
 
