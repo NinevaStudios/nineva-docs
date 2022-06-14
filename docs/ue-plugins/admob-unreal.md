@@ -473,6 +473,15 @@ ___
 
 # Changelog
 
+v.3.1.0
+
++ FIXED Memory leaks on Android with `jstring` conversion
++ FIXED Project not building on Android when all mediation providers were disabled
++ UPDATE Gradle version
++ ADDED Adaptive banners functionality
+
+---
+
 v.3.0.0
 
 + UPDATED Added UE5 support.
