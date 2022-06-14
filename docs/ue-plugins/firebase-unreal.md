@@ -981,6 +981,15 @@ ___
 
 ---
 
+### 2.1.0
+
++ FIXED Memory leak on Android when creating `jstring` objects
++ FIXED Transactions on realtime DB not working properly
++ FIXED Realtime DB queries not working properly
++ IMPROVED Refactoring the realtime DB codebase
+
+---
+
 ### 2.0.5
 
 + FIXED Incorrect Unicode string encodings which resulted in not displayed symbols
