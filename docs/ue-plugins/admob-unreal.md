@@ -455,9 +455,12 @@ You can check the use cases and the suggested implementation logic in the offici
 - [iOS](https://developers.google.com/admob/ios/app-open)
 
 In the demo, we have implemented the logic to show it every time you app is brought to foreground, it is probably a good starting point to start your implementation from.
+
 # **Known issues**
 
 * When Vungle mediation is enabled the `SaveGameToSlot`/`LoadGameFromSlot` functions do not work on Android for some reason. We unfortunately still cannot figure out why is this happening. If you are using this functionality please disable Vungle mediation in plugin settings.
+
+* This plugin is not compatible on Android with built-in Google Play Login (external login) as it uses modern versions of Google Play libs that are not compatible with very old google play libs version which UE uses.
 
 # **FAQ**
 
