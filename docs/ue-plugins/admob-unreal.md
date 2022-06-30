@@ -25,6 +25,8 @@ Supported ad formats:
 
 !> **Warning:** First of all, make sure to disable the built-in support for AdMob ads in UE, since they are not compatible with this plugin
 
+!> For Android, it is recommended to update the build tools to 32.0.0 or higher and set Target SDK version in project settings to 32 or higher
+
 * Create an AdMob account at https://admob.google.com/home (skip this step if you already have a valid AdMob account)
 * Create an app on your AdMob dashboard and save the App ID
 
@@ -204,8 +206,6 @@ This plugin supports the following mediation providers:
 * Vungle
 * AppLovin
 * IronSource
-
-!> The Chartboost Android SDK requires minimum Android SDK level to be set to at least 26
 
 For mediation to work you will need to properly setup an application on the provider's website and setup mediation groups for your unit IDs on the AdMob website. Please follow the official instructions provided by Google for specific providers: [AdColony](https://developers.google.com/admob/android/mediation/adcolony#step_1_set_up_adcolony), [Chartboost](https://developers.google.com/admob/android/mediation/chartboost#step_1_set_up_chartboost), [Facebook](https://developers.google.com/admob/android/mediation/facebook#step_1_set_up_facebook_audience_network), [Tapjoy](https://developers.google.com/admob/android/mediation/tapjoy#step_1_set_up_tapjoy), [Unity Ads](https://developers.google.com/admob/android/mediation/unity#step_1_set_up_unity_ads), [Vungle](https://developers.google.com/admob/android/mediation/vungle#step_1_set_up_vungle). All the necessary information is specified in steps 1 and 2, all other steps can be skipped.
 
