@@ -981,6 +981,14 @@ ___
 
 ---
 
+### 2.1.3
+
++ FIXED Android remote config `SetDefaults` node crash
++ FIXED iOS - download to local file progress callback not invoked
++ FIXED Some packaging issues when building from source
+
+---
+
 ### 2.1.0
 
 + FIXED Memory leak on Android when creating `jstring` objects
