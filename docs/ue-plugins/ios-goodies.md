@@ -492,6 +492,10 @@ ___
 
 # Changelog
 
+v.1.7.4
+
++ FIXED File picker paths not being usable to read the file correclty
+
 v.1.7.3
 
 + FIXED incorrect colors when saving images to gallery
