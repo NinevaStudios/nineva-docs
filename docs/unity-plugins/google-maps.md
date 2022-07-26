@@ -13,7 +13,7 @@ The plugin allows you to embed **Native [GoogleMapsView](https://developers.goog
 
 **Please read the limitations carefully before purchasing:**
 
-!> The view is **ALWAYS** shown on top of everything in your unity game. The view is implemented as an Android native dialog/iOS native view on top of Unity Activity.
+!> The view is **ALWAYS** shown on top of everything in your unity game. The view is implemented as an Android native dialog/iOS native view on top of Unity Activity. (You can experiment with Render Over Native UI option in Player Settings to workaound this, but it won't be able to intercept user events then - https://forum.unity.com/threads/what-does-this-feature-mean-support-for-rendering-unity-on-top-of-native-ui.616651/)
 
 !> Minimum supported Android version is **API level 16 (Jelly Bean)**
 
