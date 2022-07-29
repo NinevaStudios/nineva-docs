@@ -621,8 +621,14 @@ ___
 
 # Changelog
 
+v.1.9.0
+
+* FIXED Notification crash issues for Android 12+
+* ADDED Various Wi-Fi funcitonality (connect to network, toggle Wi-Fi state, check if Wi-Fi is enabled)
+
 v.1.8.1
-* ADDED Wifi check and turn on/off, connect to specific wifi network
+
+* ADDED Wi-Fi check and turn on/off, connect to specific wifi network
 
 v.1.8.0
 
