@@ -476,6 +476,13 @@ ___
 
 # Changelog
 
+v.3.2.0
+
++ FIXED TapJoy mediation comppile issue
++ UPDATE Various Android library versions
+
+---
+
 v.3.1.0
 
 + FIXED Memory leaks on Android with `jstring` conversion
