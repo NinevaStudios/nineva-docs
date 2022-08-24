@@ -1025,7 +1025,7 @@ ___
 
 ---
 
-### .7.2
+### 1.7.2
 
 + FIXED uploading Cloud storage file upload on iOS issue
 + FIXED putting `google-services.json` file inside the plugin directory now also works in editor.
