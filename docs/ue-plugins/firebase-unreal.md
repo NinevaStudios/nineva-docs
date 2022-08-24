@@ -981,6 +981,13 @@ ___
 
 ---
 
+### 2.1.5
+
++ UPDATE firebase BOM to 30.3.1 from 29.1.0
++ FIXED dynamic links breaking other apps openURL method call usage, it was conflicting with `FacebookGoodies` login
+
+---
+
 ### 2.1.3
 
 + FIXED Android remote config `SetDefaults` node crash
