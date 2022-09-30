@@ -8,7 +8,7 @@ Welcome to Google Play Goodies Documentation for Unreal Engine
 
 # **Setup**
 
-!> It is recommended to follow the official [Google Documentation for Setting Up Google Play Games Services](https://developers.google.com/games/services/console/enabling#android) instead of this guide. You can also follow the guide below but please refer to the official docs if something is not clear regarding the project setup.
+!> It is recommended to follow the official [Google Documentation for Setting Up Google Play Games Services](https://developer.android.com/games/pgs/console/setup) instead of this guide. You can also follow the guide below but there is little sense in duplicating everything Google explains here, so please refer to the official docs if something is not clear regarding the project setup.
 
 !> If you encounter issues please check the [list of the most common problems](https://developers.google.com/games/services/console/enabling#avoiding_common_setup_problems) and double-check everything
 
@@ -21,28 +21,17 @@ First of all create a new app on Google Play Console or you can use the existing
 ![](images/play-goodies/setup/create_app_1.png ':size=900')
 ![](images/play-goodies/setup/create_app_2.png ':size=900')
 
-### Create a game in Google Play Console
+### Add Play Games Services Project to your game
 
-After this you need to create a new game. A game is like a project for using Google Play Games services. To do this go to your [Google Play Console](https://play.google.com/apps/publish), click *ADD NEW GAME* (You might need to switch to old console to do this).
+After this you need to add play services to your game. To do this go to your [Google Play Console](https://play.google.com/apps/publish), choose your game that you wold like to add the functionality to and go to `Play Game Services -> Setup and management -> Configuration`. If you don't have an existing Play Games Services project, create one by choosing `No, my game doesn’t use Google APIs` option and choose a GPS project name. This will create a new Play Games Services project and link it to a new cloud project
 
-?> Note that Google is rolling out new console design so your UI may be somewhat different.
+?> Note that Google is rolling out new console design from time to time so your UI may be somewhat different.
 
 ![](images/play-goodies/setup/create_game.png ':size=900')
 
 You can either create and new project or link to existing one if you already have a Firebase project or have previously created a project on Google Developers Console.
 
 ![](images/play-goodies/setup/create_game_start.png ':size=900')
-
-### Add your game to your app
-
-In the list of games select your newly created game and add it to the app you need. To do this go to the **Manage game projects** tab in [Google Play Console](https://play.google.com/apps/publish) and click on your game project. Afterwards select the app to add it.
-
-![](images/play-goodies/setup/add_game_to_app_1.png ':size=900')
-![](images/play-goodies/setup/add_game_to_app_2.png ':size=900')
-
-In the process it will ask whether your game already uses Google APIs. For example, if your game already uses firebase you can link it to the already existing project. If so, choose to use the existing Play Game Services project and choose the project. Otherwise choose the option to create a new project.
-
-![](images/play-goodies/setup/add_game_to_app_3.png ':size=900')
 
 When finished, you can open your app and you will see the section called **Play Games Services**. Now we need to continue the setup under the **Configuration** section.
 
@@ -56,7 +45,19 @@ Also check the properties screen by clicking **Edit properties** on the **Config
 
 ![](images/play-goodies/setup/configure_2.png ':size=900')
 
+### Generate an OAuth 2.0 client ID
+
+!> For this part please follow the official guide here: [Generate an OAuth 2.0 client ID setup guide](https://developer.android.com/games/pgs/console/setup#generate_an_oauth_20_client_id)
+
+![](images/play-goodies/setup/configure_auth_client_1.png ':size=900')
+
+Follow the instructions on this screen and after done, click `Confirm configuration`
+
+![](images/play-goodies/setup/configure_auth_client_2.png ':size=900')
+
 ### Add Android Credentials
+
+!> For this part please follow the official guide here: [Create a credential](https://developer.android.com/games/pgs/console/setup#create_a_credential)
 
 ?> When setting up the project that is linked to an existing Firebase project you should be able to select the Android OAuth client that was created by the Firebase project. (Assuming you added your Android app to your Firebase project settings). After selecting the project check the details carefully if everything matches (app package, fingerprint SHA)
 
@@ -78,6 +79,14 @@ Follow the link and create the Android OAuth client in the Google Cloud Platform
 When done it should display your settings.
 
 ![](images/play-goodies/setup/add_credential_5.png ':size=900')
+
+## Enable testing
+
+!> For this part please just follow the official guide here: [Enable testing](https://developer.android.com/games/pgs/console/setup#test)
+
+## Avoiding common issues
+
+If yor login fails when you test, most likely it is a setup mistake, [this sections explains how to troubleshoot common issues](https://developer.android.com/games/pgs/console/setup#avoid_common_issues). Please check it out carefully if something goes wrong.
 
 ## UE Project Settings
 
