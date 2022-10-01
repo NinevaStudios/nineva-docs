@@ -12,6 +12,8 @@ Welcome to Google Play Goodies Documentation for Unreal Engine
 
 !> If you encounter issues please check the [list of the most common problems](https://developers.google.com/games/services/console/enabling#avoiding_common_setup_problems) and double-check everything
 
+First of all, if the project fails to build in UE5 - try disabling `Android File Server` built-in plugin.
+
 ## Google Play Console
 
 ### Create an app in Google Play Console
