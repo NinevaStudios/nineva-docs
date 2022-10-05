@@ -200,6 +200,8 @@ Our plugin includes most of the common features for creating different types of 
 
 In order to make notifications work properly, you have to tweak settings of the Android Goodies plugin. Go to _Project Settings -> Android Goodies_ and set path to the folder that contains small notification icon which is required by Android API.
 
+When targeting Android 12+ you must also check the `Set Exact Alarms Permission` checkbox in the plugin settings. 
+
 ### Notification channels
 
 Starting from Android Oreo (API level 26), all notifications have to be posted to a notification channel.
