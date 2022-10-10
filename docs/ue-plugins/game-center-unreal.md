@@ -101,6 +101,11 @@ Use this node to open a specific leaderboard.
 
 # CHANGELOG
 
+v1.1.5
+
++ FIXED Downloading avatar image on newer iOS versions
++ FIXED Some deprecation warnings
+
 v1.1.4
 
 + ADDED Error callback for fetching leaderboard scores
