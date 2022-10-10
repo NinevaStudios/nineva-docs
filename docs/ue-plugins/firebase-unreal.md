@@ -981,6 +981,16 @@ ___
 
 ---
 
+### 2.2.0
+
++ ADDED Method to fetch iOS Game Center credentials (after Game Center user is authenticated)
++ UPDATE Mac CPP libs to v9.6.0
++ FIXED Realtime DB listeners leak on desktop
++ FIXED Plugin init issues with packaged desktop builds
++ UPDATE Some Android dependencies
+
+---
+
 ### 2.1.5
 
 + UPDATE firebase BOM to 30.3.1 from 29.1.0
