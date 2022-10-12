@@ -273,7 +273,7 @@ If the player sends an invitation to the profile they are viewing, their game-sp
  
 ---
 
-# **Cloud Saves (coming soon)**
+# **Cloud Saves**
 
 For more detailed information on Saved Games API see the [official docs](https://developers.google.com/games/services/android/savedgames) and explore the demo level inside the plugin `Content` folder.
 
@@ -332,7 +332,7 @@ Read more about conflicts [here](https://developers.google.com/games/services/an
 
 Currently the plugin does not support the method to merge two snapshots into one. You must pick to go with either local or remote version of the snapshot.
 
-# **Video recording API (coming soon)**
+# **Video recording API**
 
 For more detailed information on Video recording API see the [official docs](https://developers.google.com/games/services/android/videoRecording) and explore the demo level inside the plugin `Content` folder.
 
