@@ -27,6 +27,8 @@ For Firebase to work in editor follow the [editor setup](#editorwindowsmac-os-x-
 
 ?> Most of the API tries to be as close as possible to the official Firebase API, because of this we advise to look at the [official documentation](https://firebase.google.com/docs) from Google as this might help you understand some concepts better with the examples they provide.
 
+?> On Android `AndroidFileServer` built-in plugin seems to cause issues sometimes, try disabling it if you get compile errors related to `AFSProject...` or something similar.
+
 # **Analytics**
 
 ## Initial Setup
