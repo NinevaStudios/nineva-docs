@@ -307,6 +307,14 @@ ___
 
 # Changelog
 
+v 2.2.0
+
++ Update Android SDK to 14.1.1
++ Fix some Android sharing issues
++ Fix some string Android memory leaks and bugs
+
+---
+
 v 2.1.1
 
 * FIXED 'exported' tag on acitivities for Android 12
