@@ -8,7 +8,7 @@ Welcome to Admob Goodies Documentation for Unreal Engine
 
 ---
 
-This plugin gives you the ability to load and show banner, interstitial, and rewarded video ads.
+This plugin gives you the ability to load and show banner, interstitial, rewarded interstitial and rewarded ads.
 Note that this plugin wraps official AdMob API and requires a valid AdMob account. Please follow the [instructions](#getting-started) on how to setup your AdMob account and project settings for this plugin to function properly.
 
 You can find all available blueprint nodes and their description [here](#blueprint-nodes).
@@ -17,8 +17,8 @@ Supported ad formats:
 
 * Banner Ads
 * Interstitial Ads
-* Rewarded Ads
 * Rewarded Interstitials
+* Rewarded Ads
 * Open App Ads
 
 # **Getting started**
@@ -284,6 +284,8 @@ If you are using Funding Choices as your consent management solution you can tri
 
 ![](images/admob/ConsentATT.png)
 
+---
+
 ## Banner Ads
 
 * Make Banner Ad
@@ -399,7 +401,7 @@ You can bind to the following events:
 
 ![](images/admob/MakeRewardedAdBP.jpg)
 
-Create a rewarded video ad
+Create a rewarded ad
 
 Parameters:
 AdUnitId - Ad unit id (provided by Admob)
