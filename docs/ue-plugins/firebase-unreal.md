@@ -981,6 +981,12 @@ ___
 
 # Changelog
 
+### 3.0.3
+
++ UPDATE UE 5.1 support
++ Fixing includes in non-unity builds
++ Various bug fixes
+
 ---
 
 ### 2.2.0
