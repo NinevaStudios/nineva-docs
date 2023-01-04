@@ -480,6 +480,14 @@ ___
 
 v.3.2.0
 
++ ADDED Impression ad level revenue feature
++ Update iOS AdMob frameworks to version 9.14.0
++ FIXED Some includes for non-unity builds
+
+---
+
+v.3.2.0
+
 + FIXED TapJoy mediation comppile issue
 + UPDATE Various Android library versions
 
