@@ -623,6 +623,16 @@ ___
 
 # Changelog
 
+
+v.2.0.1
+
+* FIXED refactor the notifications code
+* FIXED compilation for non-unity builds
+* FIXED Removed unneeded Launch module dependency
+* FIXED Compilation for Android target API 33
+
+---
+
 v.1.9.0
 
 * FIXED Notification crash issues for Android 12+
