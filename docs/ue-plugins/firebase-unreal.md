@@ -981,6 +981,17 @@ ___
 
 # Changelog
 
+### 3.0.4
+
++ FIX some linux compilation issue
++ FIX realtime DB child listener callback (desktop)
++ ADDED is email verified check on the user
++ Moving all initialization to subsystem
++ FIXED rare iOS crash on app startup
++ FIXED Refactoring to avoid `NewObject<>` calls on game thread 
+
+---
+
 ### 3.0.3
 
 + UPDATE UE 5.1 support
