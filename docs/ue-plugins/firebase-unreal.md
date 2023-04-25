@@ -981,6 +981,16 @@ ___
 
 # Changelog
 
+### 4.0.1
+
++ FIXED Android firestore crashes because of callback objects being created off Game Thread
++ FIXED Cloud storage SetMetadata on Android
++ IMPROVE Lot's of code refactoring
++ IMPROVE Other minor bug fixes
++ Added `IsEmailVerified` property on Account object
+
+---
+
 ### 3.0.4
 
 + FIX some linux compilation issue
