@@ -981,6 +981,13 @@ ___
 
 # Changelog
 
+### 4.2.1
+
++ FIX string conversion for realtime DB queries on desktop
++ IMPROVE Add plugin setting to fix compat issues with Android File Server plugin
++ IMPROVE How timestamps work for firebase/firestore
++ FIX some includes
+
 ### 4.0.1
 
 + FIXED Android firestore crashes because of callback objects being created off Game Thread
