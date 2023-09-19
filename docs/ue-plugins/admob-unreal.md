@@ -478,6 +478,13 @@ ___
 
 # Changelog
 
+v.3.3.8
+
++ ADDED Impression level ad revenue feature
++ FIXED Compile issues for UE 5.x
+
+---
+
 v.3.2.0
 
 + ADDED Impression ad level revenue feature

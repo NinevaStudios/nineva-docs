@@ -981,6 +981,11 @@ ___
 
 # Changelog
 
+### 4.2.4
+
++ FIX Some more include compile issues
++ FIX Some compile issues for UE 5.3
+
 ### 4.2.1
 
 + FIX string conversion for realtime DB queries on desktop
