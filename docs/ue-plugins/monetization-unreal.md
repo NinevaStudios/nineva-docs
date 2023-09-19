@@ -165,6 +165,13 @@ The plugin wraps all of the native [Original In-App-Purchase API](https://develo
 
 # Changelog
 
+2.0.1
+
++ FIXED Some crash on iOS
++ IMPROVE Updated billing client on Android to v5
+
+---
+
 1.0.0
 
 * Initial release
