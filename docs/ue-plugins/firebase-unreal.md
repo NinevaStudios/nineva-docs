@@ -1,17 +1,18 @@
-[filename](common/common_ue_header.md ':include')
+[filename](common/common_ue_header.md ":include")
 
-[filename](common/copy_plugin.md ':include')
+[filename](common/copy_plugin.md ":include")
 
 # **Firebase Goodies**
 
 Welcome to Firebase Goodies Documentation for Unreal Engine
 
 ---
+
 Create a Firebase project, follow the instructions in this [video](https://www.youtube.com/watch?v=6juww5Lmvgo).
 
 In the Project Settings of your Firebase console, create an Android/iOS app providing the required information.
 You will have to provide the SHA1 fingerprints for the keystores that will be used to sign the application on Android. The information on how to generate a keystore and read its fingerprint can be found [here](https://stackoverflow.com/questions/15727912/sha-1-fingerprint-of-keystore-certificate).
-After this, you should download the *google-services.json* (for Android) and/or *GoogleService-info.plist* files.
+After this, you should download the _google-services.json_ (for Android) and/or _GoogleService-info.plist_ files.
 
 ![](images/firebase/auth/AuthConfigGoogleServices.png)
 
@@ -21,9 +22,9 @@ You can also place your `google-services.json` inside the plugin directory (Next
 
 ![](images/firebase/Settings.png)
 
-For Firebase to work in editor follow the [editor setup](#editorwindowsmac-os-x-support). 
+For Firebase to work in editor follow the [editor setup](#editorwindowsmac-os-x-support).
 
-!> If you do not provide a valid path to the *google-services.json* and/or *GoogleService-info.plist* file your application will crash on start. A descriptive error message in the device logs will indicate that it was not able to find these files.
+!> If you do not provide a valid path to the _google-services.json_ and/or _GoogleService-info.plist_ file your application will crash on start. A descriptive error message in the device logs will indicate that it was not able to find these files.
 
 ?> Most of the API tries to be as close as possible to the official Firebase API, because of this we advise to look at the [official documentation](https://firebase.google.com/docs) from Google as this might help you understand some concepts better with the examples they provide.
 
@@ -34,8 +35,9 @@ For Firebase to work in editor follow the [editor setup](#editorwindowsmac-os-x-
 ## Initial Setup
 
 Analytics collects usage and behavior data for your app. There are two types of information you can log:
-* Events - any event that is happening in your app with or without parameters
-* User properties - attributes you assign to a certain group of your users (e. g. language preference)
+
+- Events - any event that is happening in your app with or without parameters
+- User properties - attributes you assign to a certain group of your users (e. g. language preference)
 
 After enabling analytics in your Firebase console you're all set to start logging events.
 
@@ -45,19 +47,19 @@ After enabling analytics in your Firebase console you're all set to start loggin
 
 ### State control
 
-* Enable/Disable analytics collection
-* Reset analytics data
-* Specify session timeout duration (default is 30 minutes)
+- Enable/Disable analytics collection
+- Reset analytics data
+- Specify session timeout duration (default is 30 minutes)
 
 ![](images/firebase/analytics/AnalyticsStateControl.png)
 
 ### User properties
 
-* Set user ID
+- Set user ID
 
   Sets the user ID property
 
-* Set user property
+- Set user property
 
   Sets a user property to a given value
 
@@ -65,25 +67,25 @@ After enabling analytics in your Firebase console you're all set to start loggin
 
 ### Screen tracking
 
-* Set current screen
+- Set current screen
 
 ![](images/firebase/analytics/AnalyticsScreenTracking.png)
 
 ### Event loging
 
-* Log event with parameter
+- Log event with parameter
 
   You can log an event with one of the following parameter types: Integer, Float, String. Use a respective CreateParameter node to get the desired type.
 
 ![](images/firebase/analytics/AnalyticsCreateEventParams.png)
 
-* Parameter value
+- Parameter value
 
   You can change the parameter's value.
 
 ![](images/firebase/analytics/AnalyticsSetParamValue.png)
 
-* Log event with parameters
+- Log event with parameters
 
   You can log an event with multiple parameters by putting them in an array.
 
@@ -242,11 +244,11 @@ Setup rules to be able to read/write data from your database by following the of
 
 ## Settings
 
-* Enable data persistence
+- Enable data persistence
 
   If enabled clients will cache synchronized data and keep track of all writes you've initiated while your application is running.
 
-* Cache size
+- Cache size
 
   Size of the cache used for persistence storage (default is 10 MB).
 
@@ -258,23 +260,23 @@ Setup rules to be able to read/write data from your database by following the of
 
 The database reference is the entry point from where you modify data.
 
-* Create database root ref
+- Create database root ref
 
   Get a reference to the root of your database.
 
-* Create database ref from path
+- Create database ref from path
 
   Get a reference to a specific node in your database. Path can be a name or an actual path separated by **/**.
 
-* Root
+- Root
 
   Get a reference to the root of your database.
 
-* Child
+- Child
 
   Get a reference to a specific child node in your database.
 
-* Parent
+- Parent
 
   Get a reference to the parent node.
 
@@ -288,19 +290,19 @@ All data is written and read as database variants. This is a special type that c
 
 #### Write
 
-* Set value
+- Set value
 
 ![](images/firebase/db/DbSetVal.png)
 
-* Set array of values
+- Set array of values
 
 ![](images/firebase/db/DbSetArray.png)
 
-* Set map of values
+- Set map of values
 
 ![](images/firebase/db/DbSetMap.png)
 
-* Composite containers
+- Composite containers
 
   A variant can be a container that can also contain other containers (e. g. a map where one of its values in an array). Try to avoid deep nesting of containers as the more complicated data you are trying to write the more room for error you introduce.
 
@@ -310,23 +312,23 @@ All data is written and read as database variants. This is a special type that c
 
 ![](images/firebase/db/DbCompositeContainerError.png)
 
-?> At any point where automatic conversion to a variant does not work you can invoke the variant conversion node manually. Simply search the node by name *variant* and you should see it.
+?> At any point where automatic conversion to a variant does not work you can invoke the variant conversion node manually. Simply search the node by name _variant_ and you should see it.
 
 ![](images/firebase/db/DbManualVariantConv.png)
 
-* Set priority
+- Set priority
 
   Sets the priority for the current database node.
 
 ![](images/firebase/db/DbSetPriority.png)
 
-* Update children
+- Update children
 
   Update the specific child keys to the specified values.
 
 ![](images/firebase/db/DbUpdateChildren.png)
 
-* Push
+- Push
 
   Create a new child at the current location. The name is auto-generated.
 
@@ -334,7 +336,7 @@ All data is written and read as database variants. This is a special type that c
 
 #### Read
 
-* Get value
+- Get value
 
   You can request the value once.
 
@@ -342,9 +344,9 @@ All data is written and read as database variants. This is a special type that c
 
 If the value was retrieved properly you will receive it in a callback in the form of a Data Snapshot object. You can get the following data from this object:
 
-* Get value
-* Get key
-* Get priority
+- Get value
+- Get key
+- Get priority
 
 ![](images/firebase/db/DbSnapshotGetters.png)
 
@@ -354,36 +356,36 @@ Value and priority are variant objects. You can find out what type of value the 
 
 There are two ways to get the actual values.
 
-* Direct access by type
+- Direct access by type
   These nodes return the value if the provided type is the same as the variant or a default value for the type requested. This never fails.
-* Try get type nodes
+- Try get type nodes
   These nodes try to get the value of a specified type and will fail if the variant does not hold this type.
 
 ![](images/firebase/db/DbVariantRead.png)
 
 Data snapshots support navigation and these checks:
 
-* Exists
+- Exists
 
   Returns true if the snapshot contains data.
 
-* Has children
+- Has children
 
   Returns true if the snapshot contains any children,
 
-* Has child
+- Has child
 
   Return true if the snapshot contains a specific child.
 
-* Child
+- Child
 
   Get a snapshot of a specific child node.
 
-* Get children count
+- Get children count
 
   Get the count of children of this node.
 
-* Get children
+- Get children
 
   Get all child snapshots as an array.
 
@@ -395,21 +397,22 @@ If an error occurs during value retrieval you can react to it in the error callb
 
 #### Subscribe
 
-* Value listener
+- Value listener
 
   Subscribe/unsubscribe to receive events when a value changes at the current path.
 
 ![](images/firebase/db/DbSubValueChange.png)
 
-* Child listener
+- Child listener
 
   Subscribe/unsubscribe to receive events when a child node changes at the current path.
 
 ![](images/firebase/db/DbSubChildChange.png)
 
-* Child event
+- Child event
 
   When subscribed to child events you may receive the following event types:
+
   - Added
   - Changed
   - Removed
@@ -425,34 +428,34 @@ If an error occurs during value retrieval you can react to it in the error callb
 
 #### Sort data
 
-* Order By Child
-* Order By Value
-* Order By Key
-* Order By Priority
+- Order By Child
+- Order By Value
+- Order By Key
+- Order By Priority
 
 ![](images/firebase/db/DbOrderBy.png)
 
 #### Filter data
 
-* StartAt
+- StartAt
 
   Return items greater than or equal to the specified key or value.
 
 ![](images/firebase/db/DbStartAt.png)
 
-* EndAt
+- EndAt
 
   Return items less than or equal to the specified key or value.
 
 ![](images/firebase/db/DbEndAt.png)
 
-* EqualTo
+- EqualTo
 
   Return items equal to the specified key or value.
 
 ![](images/firebase/db/DbEqualTo.png)
 
-* Limit
+- Limit
 
   Sets the maximum number of items to return from the beginning/end of the ordered list of results.
 
@@ -462,7 +465,7 @@ If an error occurs during value retrieval you can react to it in the error callb
 
 When working with data that could be corrupted by concurrent modifications, such as incremental counters, you can use a transaction.
 
-* Run transaction
+- Run transaction
 
   This will execute a transaction handler.
 
@@ -488,22 +491,22 @@ The handler operates on a MutableData object. After all of the operations are do
 
 Mutable data supports the following operations:
 
-* Get value
-* Get key
-* Get priority
+- Get value
+- Get key
+- Get priority
 
 ![](images/firebase/db/DbMutableDataGet.png)
 
-* Set value
-* Set priority
+- Set value
+- Set priority
 
 ![](images/firebase/db/DbMutableDataSet.png)
 
-* Has children
-* Has child
-* Child
-* Get children count
-* Get children
+- Has children
+- Has child
+- Child
+- Get children count
+- Get children
 
 ![](images/firebase/db/DbMutableDataNav.png)
 
@@ -556,10 +559,11 @@ If you want to fetch and activate values in one call, use `FetchAndActivate` met
 ### Read config values
 
 If you set values in the backend, fetch them, and then activate them, those values are available to your app. Now you can get parameter values from the Remote Config. To get the values, call the method listed below that maps to the data type expected by your app, providing the parameter key as an argument:
- - `GetString`;
- - `GetLong`;
- - `GetFload`;
- - `GetBoolean`;
+
+- `GetString`;
+- `GetLong`;
+- `GetFload`;
+- `GetBoolean`;
 
 ### Default values
 
@@ -608,7 +612,7 @@ You can also subscribe to the token change events (`BindEventToOnNewToken`). Thi
 
 You can send upstream messages using the `SendMessage` method. You need to call the `NewRemoteMessageBuilder` to create a message builder object, set the necessary fields before sending it.
 
-?> Note!!! Sending upstream messages only works if  your app server implements the XMPP Connection Server protocol.
+?> Note!!! Sending upstream messages only works if your app server implements the XMPP Connection Server protocol.
 
 ![](images/firebase/cloud-messaging/CloudMessagingSendMessage.png)
 
@@ -713,7 +717,7 @@ Queries allow to sort, order and filter collections and collection groups.
 
 To get a reference to a query, call the `GetQuery` function and providing an ID of the collection or collection group.
 
-The `Query` supports the following filtering and sorting operations: `WhereEqualTo`, `WhereNotEqualTo`,  `WhereLessThan`, `WhereLessThanOrEqualTo`, `WhereGreaterThan`, `WhereGreaterThanOrEqualTo`, `WhereArrayContains`, `WhereArrayContainsAny`, `WhereIn`, `WhereNotIn`, `OrderBy`, `Limit`, `LimitToLast`, `StartAt`, `StartAfter`, `EndBefore`, `EndAt`.
+The `Query` supports the following filtering and sorting operations: `WhereEqualTo`, `WhereNotEqualTo`, `WhereLessThan`, `WhereLessThanOrEqualTo`, `WhereGreaterThan`, `WhereGreaterThanOrEqualTo`, `WhereArrayContains`, `WhereArrayContainsAny`, `WhereIn`, `WhereNotIn`, `OrderBy`, `Limit`, `LimitToLast`, `StartAt`, `StartAfter`, `EndBefore`, `EndAt`.
 
 Official documentation regarding the queries and rules can be found [here](https://firebase.google.com/docs/firestore/query-data/queries).
 
@@ -800,6 +804,7 @@ Its content is more thoroughly described [here](https://developer.android.com/tr
 You can take a look at our example [here](https://deeplinks.ninevastudios.com/.well-known/assetlinks.json).
 
 Example:
+
 ```
 [{
 	"relation": ["delegate_permission/common.handle_all_urls"],
@@ -826,6 +831,7 @@ You can take a look at our example [here](https://deeplinks.ninevastudios.com/.w
 ?> There is a newer approach to form this file (should work only on iOS 13 and higher), described [here](https://developer.apple.com/documentation/safariservices/supporting_associated_domains?language=objc), but it hasn't worked for us.
 
 Example:
+
 ```
 {
 	"applinks": {
@@ -853,16 +859,18 @@ It has to be in the following format: `applinks:YOUR_DOMAIN_NAME`
 ![](images/deep-link/deep-link-associated-domains.png)
 
 But if you are using an Engine version from Github, you can add the following lines to the `Engine\Source\Programs\UnrealBuildTool\Platform\IOS\IOSExports.cs` in the body of the `WriteEntitlements` method just before the
-``` csharp 
+
+```csharp
 // End of entitlements
 Text.AppendLine("</dict>");
 Text.AppendLine("</plist>");
 ```
+
 lines:
 
-``` csharp
+```csharp
 /// <summary>
-/// 
+///
 /// </summary>
 /// <param name="Platform"></param>
 /// <param name="PlatformGameConfig"></param>
@@ -874,30 +882,30 @@ public static void WriteEntitlements(UnrealTargetPlatform Platform, ConfigHierar
 string AppName, FileReference MobileProvisionFile, bool bForDistribution, string IntermediateDir)
 {
 	...
-	
+
 	// Associated Domains
 	List<string> AssociatedDomains;
-	
+
 	if (PlatformGameConfig.GetArray("/Script/FirebaseGoodies.FirebaseGoodiesSettings", 	"AssociatedDomains", out AssociatedDomains))
 	{
 		Text.AppendLine("\t<key>com.apple.developer.associated-domains</key>");
 		Text.AppendLine("\t<array>");
-	
+
 		foreach (var Domain in AssociatedDomains)
 		{
 			if (string.IsNullOrEmpty(Domain))
 			{
 				continue;
 			}
-	
+
 			Text.AppendLine(string.Format("\t\t<string>applinks:{0}</string>", Domain));
 		}
-	
+
 		Text.AppendLine("\t</array>");
 	}
-	
+
 	...
-	
+
 	// End of entitlements
 	Text.AppendLine("</dict>");
 	Text.AppendLine("</plist>");
@@ -906,6 +914,7 @@ string AppName, FileReference MobileProvisionFile, bool bForDistribution, string
 ## Handle the URL
 
 Basically, there are two scenarios that your application needs to handle:
+
 - your application was not open when the link prompted it to be opened;
 - your application was open when the link prompted it to be opened.
 
@@ -947,7 +956,7 @@ We have added Firebase C++ SDK as a part of the plugin for editor/desktop suppor
 
 ![](images/firebase/desktop/desktop-0.png)
 
-!> After that close the Editor, go to the `[Project]/Plugins/FirebaseGoodies` directory and delete the `Build`, `Binaries` and `Intermediate` folders. This will force the plugin to be rebuilt and include the desktop dependencies. 
+!> After that close the Editor, go to the `[Project]/Plugins/FirebaseGoodies` directory and delete the `Build`, `Binaries` and `Intermediate` folders. This will force the plugin to be rebuilt and include the desktop dependencies.
 
 ![](images/firebase/desktop/desktop-1.png)
 
@@ -963,233 +972,232 @@ The complete table of feature support can be found below.
 
 | Module                |      Submodule       | Availability |
 | :-------------------- | :------------------: | :----------: |
-| **Authentication**    |     Sign in/out      |      ✅       |
-|                       | Get/Update User Data |      ✅       |
-|                       | Sign-in with Google  |      ❌       |
-|                       | Verify Phone Number  |      ❌       |
-| **Remote Config**     |          ✅           |      ✅       |
-| **Cloud Functions**   |          ✅           |      ✅       |
-| **Realtime Database** |          ✅           |      ✅       |
-| **Firestore**         |          ✅           |      ✅       |
-| **Cloud Storage**     |          ✅           |      ✅       |
-| **Analytics**         |          ❌           |      ❌       |
-| **Cloud Messaging**   |          ❌           |      ❌       |
-| **Crashlytics**       |          ❌           |      ❌       |
-| **Dynamic links**     |          ❌           |      ❌       |
+| **Authentication**    |     Sign in/out      |      ✅      |
+|                       | Get/Update User Data |      ✅      |
+|                       | Sign-in with Google  |      ❌      |
+|                       | Verify Phone Number  |      ❌      |
+| **Remote Config**     |          ✅          |      ✅      |
+| **Cloud Functions**   |          ✅          |      ✅      |
+| **Realtime Database** |          ✅          |      ✅      |
+| **Firestore**         |          ✅          |      ✅      |
+| **Cloud Storage**     |          ✅          |      ✅      |
+| **Analytics**         |          ❌          |      ❌      |
+| **Cloud Messaging**   |          ❌          |      ❌      |
+| **Crashlytics**       |          ❌          |      ❌      |
+| **Dynamic links**     |          ❌          |      ❌      |
 
-___
+---
 
 # Changelog
 
 ### 4.2.4
 
-+ FIX Some more include compile issues
-+ FIX Some compile issues for UE 5.3
+- FIX Some more include compile issues
+- FIX Some compile issues for UE 5.3
 
 ### 4.2.1
 
-+ FIX string conversion for realtime DB queries on desktop
-+ IMPROVE Add plugin setting to fix compat issues with Android File Server plugin
-+ IMPROVE How timestamps work for firebase/firestore
-+ FIX some includes
+- FIX string conversion for realtime DB queries on desktop
+- IMPROVE Add plugin setting to fix compat issues with Android File Server plugin
+- IMPROVE How timestamps work for firebase/firestore
+- FIX some includes
 
 ### 4.0.1
 
-+ FIXED Android firestore crashes because of callback objects being created off Game Thread
-+ FIXED Cloud storage SetMetadata on Android
-+ IMPROVE Lot's of code refactoring
-+ IMPROVE Other minor bug fixes
-+ Added `IsEmailVerified` property on Account object
+- FIXED Android firestore crashes because of callback objects being created off Game Thread
+- FIXED Cloud storage SetMetadata on Android
+- IMPROVE Lot's of code refactoring
+- IMPROVE Other minor bug fixes
+- Added `IsEmailVerified` property on Account object
 
 ---
 
 ### 3.0.4
 
-+ FIX some linux compilation issue
-+ FIX realtime DB child listener callback (desktop)
-+ ADDED is email verified check on the user
-+ Moving all initialization to subsystem
-+ FIXED rare iOS crash on app startup
-+ FIXED Refactoring to avoid `NewObject<>` calls on game thread 
+- FIX some linux compilation issue
+- FIX realtime DB child listener callback (desktop)
+- ADDED is email verified check on the user
+- Moving all initialization to subsystem
+- FIXED rare iOS crash on app startup
+- FIXED Refactoring to avoid `NewObject<>` calls on game thread
 
 ---
 
 ### 3.0.3
 
-+ UPDATE UE 5.1 support
-+ Fixing includes in non-unity builds
-+ Various bug fixes
+- UPDATE UE 5.1 support
+- Fixing includes in non-unity builds
+- Various bug fixes
 
 ---
 
 ### 2.2.0
 
-+ ADDED Method to fetch iOS Game Center credentials (after Game Center user is authenticated)
-+ UPDATE Mac CPP libs to v9.6.0
-+ FIXED Realtime DB listeners leak on desktop
-+ FIXED Plugin init issues with packaged desktop builds
-+ UPDATE Some Android dependencies
+- ADDED Method to fetch iOS Game Center credentials (after Game Center user is authenticated)
+- UPDATE Mac CPP libs to v9.6.0
+- FIXED Realtime DB listeners leak on desktop
+- FIXED Plugin init issues with packaged desktop builds
+- UPDATE Some Android dependencies
 
 ---
 
 ### 2.1.5
 
-+ UPDATE firebase BOM to 30.3.1 from 29.1.0
-+ FIXED dynamic links breaking other apps openURL method call usage, it was conflicting with `FacebookGoodies` login
+- UPDATE firebase BOM to 30.3.1 from 29.1.0
+- FIXED dynamic links breaking other apps openURL method call usage, it was conflicting with `FacebookGoodies` login
 
 ---
 
 ### 2.1.3
 
-+ FIXED Android remote config `SetDefaults` node crash
-+ FIXED iOS - download to local file progress callback not invoked
-+ FIXED Some packaging issues when building from source
+- FIXED Android remote config `SetDefaults` node crash
+- FIXED iOS - download to local file progress callback not invoked
+- FIXED Some packaging issues when building from source
 
 ---
 
 ### 2.1.0
 
-+ FIXED Memory leak on Android when creating `jstring` objects
-+ FIXED Transactions on realtime DB not working properly
-+ FIXED Realtime DB queries not working properly
-+ IMPROVED Refactoring the realtime DB codebase
+- FIXED Memory leak on Android when creating `jstring` objects
+- FIXED Transactions on realtime DB not working properly
+- FIXED Realtime DB queries not working properly
+- IMPROVED Refactoring the realtime DB codebase
 
 ---
 
 ### 2.0.5
 
-+ FIXED Incorrect Unicode string encodings which resulted in not displayed symbols
-+ FIXED Fixed compile issues on Android by updating gradle
-+ FIX UE5 Compilation issues
-+ FIX File download on iOS
- 
+- FIXED Incorrect Unicode string encodings which resulted in not displayed symbols
+- FIXED Fixed compile issues on Android by updating gradle
+- FIX UE5 Compilation issues
+- FIX File download on iOS
+
 ---
 
 ### 2.0.0
 
-+ ADDED Support for UE 5
-+ UPDATED Reworked callbacks for firestore DB that fixes the issue of multiple parallel calls invoking only the last callback.
-+ UPDATED iOS native libs to 8.14.0
-+ FIXED Broken Google login
-+ FIXED Rare desktop compilation issues
-+ UPDATE A few Android dependencies
+- ADDED Support for UE 5
+- UPDATED Reworked callbacks for firestore DB that fixes the issue of multiple parallel calls invoking only the last callback.
+- UPDATED iOS native libs to 8.14.0
+- FIXED Broken Google login
+- FIXED Rare desktop compilation issues
+- UPDATE A few Android dependencies
 
 ---
 
 ### 1.7.2
 
-+ FIXED uploading Cloud storage file upload on iOS issue
-+ FIXED putting `google-services.json` file inside the plugin directory now also works in editor.
-+ UPDATE Android Firebase version to `29.1.0`
+- FIXED uploading Cloud storage file upload on iOS issue
+- FIXED putting `google-services.json` file inside the plugin directory now also works in editor.
+- UPDATE Android Firebase version to `29.1.0`
 
 ---
 
 ### 1.7.0
 
-+ Add possibility to put `google-services.json` file inside the plugin directory - makes CI integration easier
-+ FIXED Gradle build under some circumstances by explicitly adding `ANDROID_TOOLS_BUILD_GRADLE_VERSION` to gradle properties
-+ FIXED Removed Win32 from supported platforms
-+ FIXED Demo crash in editor because child listener on realtime DB were no unsubscribed when exiting play mode
-+ FIXED Some compile issues when engine is built from source code
-+ FIXED Firestore demo, so it doesn't crash when document does not exist
+- Add possibility to put `google-services.json` file inside the plugin directory - makes CI integration easier
+- FIXED Gradle build under some circumstances by explicitly adding `ANDROID_TOOLS_BUILD_GRADLE_VERSION` to gradle properties
+- FIXED Removed Win32 from supported platforms
+- FIXED Demo crash in editor because child listener on realtime DB were no unsubscribed when exiting play mode
+- FIXED Some compile issues when engine is built from source code
+- FIXED Firestore demo, so it doesn't crash when document does not exist
 
 ### 1.6.6
 
-* FIXED 'exported' tag on acitivities for Android 12
+- FIXED 'exported' tag on acitivities for Android 12
 
 ### 1.6.5
 
-+ FIXED Some logging error when building for iOS
-+ AddItem Firestore method randomly crashing on iOS
+- FIXED Some logging error when building for iOS
+- AddItem Firestore method randomly crashing on iOS
 
 ### 1.6.3
 
-+ FIXED Sign-in with email result check for invalid user
-+ FIXED Editor crash when json/plist file with project settings is missing
-+ FIXED Error with missing category
+- FIXED Sign-in with email result check for invalid user
+- FIXED Editor crash when json/plist file with project settings is missing
+- FIXED Error with missing category
 
 ### 1.6.0
 
-+ ADDED Dynamic links feature support for iOS and Android
-+ FIXED A cloud storage issue on iOS with 'Download file to location'
-+ FIXED A missing category compile issue
+- ADDED Dynamic links feature support for iOS and Android
+- FIXED A cloud storage issue on iOS with 'Download file to location'
+- FIXED A missing category compile issue
 
 ### 1.5.4
 
-+ FIXED **Cloud storage** now works on Editor/Windows/Mac
-+ ADDED Possibility to add timestamps in **Firestore**
+- FIXED **Cloud storage** now works on Editor/Windows/Mac
+- ADDED Possibility to add timestamps in **Firestore**
 
 ### 1.5.2
 
-+ ADDED Possibility to add timestamps in the realtime DB
-+ ADDED Possibility to use multiple realtime DBs from the same project
+- ADDED Possibility to add timestamps in the realtime DB
+- ADDED Possibility to use multiple realtime DBs from the same project
 
 ### 1.5.0
 
-+ UPDATED Firebase BOM version on Android
-+ IMPROVED Updated and improved Crashlytics support for Android
-+ IMPROVED Analytics customization on iOS
+- UPDATED Firebase BOM version on Android
+- IMPROVED Updated and improved Crashlytics support for Android
+- IMPROVED Analytics customization on iOS
 
 ### 1.4.2
 
-+ ADDED More customization options for analytics
+- ADDED More customization options for analytics
 
 ### 1.4.1
 
-+ ADDED Firestore support
-+ ADDED Editor (Windows+Mac) support
+- ADDED Firestore support
+- ADDED Editor (Windows+Mac) support
 
 ### 1.3.5
 
-+ ADDED New node to create Sign In with Apple credentials
+- ADDED New node to create Sign In with Apple credentials
 
 ### 1.3.5
 
-+ ADDED New node to create Sign In with Apple credentials
+- ADDED New node to create Sign In with Apple credentials
 
 ### 1.3.4
 
-+ FIXED Issue on add child listerner not being triggered
-+ FIXED Small blueprint issues
+- FIXED Issue on add child listerner not being triggered
+- FIXED Small blueprint issues
 
 ### 1.3.3
 
-* FIXED iOS crash when no realtime database was created
-* ADDED Separate settings for Crashlytics debug/release symbols upload for Android
-* FIXED Crashes related to `OnNewToken` method on Cloud Messaging for Android
-* IMPROVED Better CFBundleURLTypes plist handling in iOS UPL file
-* IMPROVED Added logging to UPL files for easier debugging
+- FIXED iOS crash when no realtime database was created
+- ADDED Separate settings for Crashlytics debug/release symbols upload for Android
+- FIXED Crashes related to `OnNewToken` method on Cloud Messaging for Android
+- IMPROVED Better CFBundleURLTypes plist handling in iOS UPL file
+- IMPROVED Added logging to UPL files for easier debugging
 
 ### 1.3.0
 
-* ADDED Cloud functions
-* FIXED Crashlytics did not report crashes for native code on Android
+- ADDED Cloud functions
+- FIXED Crashlytics did not report crashes for native code on Android
 
 ### 1.2.1
 
-* FIXED Crash on startup when JNI modules were not initialized
-* FIXED Deprecation warning in Auth module
+- FIXED Crash on startup when JNI modules were not initialized
+- FIXED Deprecation warning in Auth module
 
 ### 1.2.0
 
-* ADDED Crashlytics
-* ADDED Cloud messaging
+- ADDED Crashlytics
+- ADDED Cloud messaging
 
 ### 1.1.0
 
-* UPDATE Android SDK to version 17.5.0
-* FIXED Proguard errors in shipping builds
-* FIXED Various crashes
+- UPDATE Android SDK to version 17.5.0
+- FIXED Proguard errors in shipping builds
+- FIXED Various crashes
 
 ?> This release uses AndroidX libraries and may cause conflicts with other Android plugins
 
 ### 1.0.2
 
-* UPDATE Settings screen
+- UPDATE Settings screen
 
 ### 1.0.0
 
-* Initial release
+- Initial release
 
-___
-
+---
