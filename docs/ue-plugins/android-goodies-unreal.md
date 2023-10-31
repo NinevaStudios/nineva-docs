@@ -1,10 +1,10 @@
-[filename](common/common_ue_header.md ':include')
+[filename](common/common_ue_header.md ":include")
 
 # **Android Goodies**
 
 Welcome to Android Goodies Documentation for Unreal Engine
 
-___
+---
 
 # **Native UI**
 
@@ -12,14 +12,14 @@ ___
 
 You can show standard Android AlertDialog with:
 
-* [Only positive button](#message-dialog-with-positive-button)
-* [Positive and negative buttons](#message-dialog-with-positive-and-negative-buttons)
-* [Positive, negative and neutral buttons](#message-dialog-with-positive-negative-and-neutral-buttons)
-* [Dialog with simple items chooser](#dialog-with-simple-items-chooser)
-* [Dialog with radio buttons items chooser](#dialog-with-radio-buttons-items-chooser)
-* [Dialog with checkboxes buttons items chooser](#dialog-with-check-boxes-buttons-items-chooser)
-* [Progress dialog (spinner)](#progress-dialog-spinner)
-* [Progress dialog (progress bar)](#progress-dialog-horizontal-progress-bar)
+- [Only positive button](#message-dialog-with-positive-button)
+- [Positive and negative buttons](#message-dialog-with-positive-and-negative-buttons)
+- [Positive, negative and neutral buttons](#message-dialog-with-positive-negative-and-neutral-buttons)
+- [Dialog with simple items chooser](#dialog-with-simple-items-chooser)
+- [Dialog with radio buttons items chooser](#dialog-with-radio-buttons-items-chooser)
+- [Dialog with checkboxes buttons items chooser](#dialog-with-check-boxes-buttons-items-chooser)
+- [Progress dialog (spinner)](#progress-dialog-spinner)
+- [Progress dialog (progress bar)](#progress-dialog-horizontal-progress-bar)
 
 It is also possible to set native dialog theme ( `Light` , `Dark` or `Default` , which will apply global device's dialog theme).
 
@@ -115,11 +115,11 @@ Duration can be either `Short` or `Long` (corresponds to Android [default values
 
 You can use native Android sharing functionality.
 
-* [Share text, image or both](#share-text-image-or-both)
-* [Sending SMS](#sending-sms)
-* [Sending Email](#sending-email)
-* [Sharing via Social Media](#sharing-via-social-media)
-* [Share video](#sharing-video)
+- [Share text, image or both](#share-text-image-or-both)
+- [Sending SMS](#sending-sms)
+- [Sending Email](#sending-email)
+- [Sharing via Social Media](#sharing-via-social-media)
+- [Share video](#sharing-video)
 
 !> **Warning:** if your target SDK is 29 or higher, you have to add `android:requestLegacyExternalStorage = "true"` line to the `Extra Tags for the <application> node` in the Project Settings -> Android -> Advanced APK packaging.
 
@@ -169,12 +169,12 @@ To send email with multiple images call `SendMultipleImagesEmail` function. Pass
 
 Android Goodies plugin has a set of functions that allow sharing text and images via a number of popular social media.
 
-* `ShareInstagram` - to share image via Instagram
-* `TweetText` , `TweetTextWithImage` - to share text or text+image via Twitter
-* `SendFacebookText` , `SendFacebookImage` - to share text or image via Facebook
-* `SendWhatsAppText` , `SendWhatsAppImage` - to share text or image via WhatsApp
-* `SendTelegramText` , `SendTelegramImage` - to share text or image via Telegram
-* `SendViberText` , `SendViberImage` - to share text or image via Viber
+- `ShareInstagram` - to share image via Instagram
+- `TweetText` , `TweetTextWithImage` - to share text or text+image via Twitter
+- `SendFacebookText` , `SendFacebookImage` - to share text or image via Facebook
+- `SendWhatsAppText` , `SendWhatsAppImage` - to share text or image via WhatsApp
+- `SendTelegramText` , `SendTelegramImage` - to share text or image via Telegram
+- `SendViberText` , `SendViberImage` - to share text or image via Viber
 
 ![Tweet](images/android-goodies/native-sharing/Scr_Tweet.png)
 
@@ -184,11 +184,11 @@ Currently, this functionality is experimental and doesn't provide any high-level
 
 ## Notifications
 
-* [General overview](#general-overview)
-* [Setup](#setup)
-* [Notification channels](#notification-channels)
-* [Notification Channel Groups](#notification-channel-groups)
-* [Notifications](#notifications-1)
+- [General overview](#general-overview)
+- [Setup](#setup)
+- [Notification channels](#notification-channels)
+- [Notification Channel Groups](#notification-channel-groups)
+- [Notifications](#notifications-1)
 
 ### General overview
 
@@ -200,7 +200,7 @@ Our plugin includes most of the common features for creating different types of 
 
 In order to make notifications work properly, you have to tweak settings of the Android Goodies plugin. Go to _Project Settings -> Android Goodies_ and set path to the folder that contains small notification icon which is required by Android API.
 
-When targeting Android 12+ you must also check the `Set Exact Alarms Permission` checkbox in the plugin settings. 
+When targeting Android 12+ you must also check the `Set Exact Alarms Permission` checkbox in the plugin settings.
 
 ### Notification channels
 
@@ -210,21 +210,21 @@ Call the `AreNotificationChannelsSupported` method to find if the device support
 Use the `NewNotificationChannel` function to create a new object representing the notification channel settings, providing a unique identifier, name, and importance of the channel.
 You can then customize it using the following methods:
 
-* `SetBypassDnd` - set whether or not notifications posted to this channel can bypass the Do Not Disturb mode;
-* `SetShowBadge` - set whether notifications posted to this channel can appear as badges in a Launcher application;
-* `SetEnableLights` - set whether notifications posted to this channel should display notification lights;
-* `SetEnableVibration` - set whether notification posted to this channel should vibrate. Requires the "VIBRATE" permission;
-* `SetDescription` - set the user-visible description of this channel;
-* `SetImportance` - set the notification importance;
-* `SetLightColor` - set the notification light color for notifications posted to this channel. Works with `SetEnableLights(true)` ;
-* `SetLockScreenVisibility` - set whether or not notifications posted to this channel are shown on the lock screen in full or redacted form;
-* `SetVibrationPattern` - set the vibration pattern for notifications posted to this channel. Will be ignored if the vibration is not enabled by `SetEnableVibration(true)` . Requires the "VIBRATE" permission;
-* `SetSound` - set the sound that should be played for notifications posted to this channel and its audio attributes;
-* `SetGroup` - set what [group](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channel-groups) this channel belongs to.
+- `SetBypassDnd` - set whether or not notifications posted to this channel can bypass the Do Not Disturb mode;
+- `SetShowBadge` - set whether notifications posted to this channel can appear as badges in a Launcher application;
+- `SetEnableLights` - set whether notifications posted to this channel should display notification lights;
+- `SetEnableVibration` - set whether notification posted to this channel should vibrate. Requires the "VIBRATE" permission;
+- `SetDescription` - set the user-visible description of this channel;
+- `SetImportance` - set the notification importance;
+- `SetLightColor` - set the notification light color for notifications posted to this channel. Works with `SetEnableLights(true)` ;
+- `SetLockScreenVisibility` - set whether or not notifications posted to this channel are shown on the lock screen in full or redacted form;
+- `SetVibrationPattern` - set the vibration pattern for notifications posted to this channel. Will be ignored if the vibration is not enabled by `SetEnableVibration(true)` . Requires the "VIBRATE" permission;
+- `SetSound` - set the sound that should be played for notifications posted to this channel and its audio attributes;
+- `SetGroup` - set what [group](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Notifications#notification-channel-groups) this channel belongs to.
 
 After the channel settings are modified it can be created in the system using the `CreateNotificationChannel` method.
 
-!>  Most of the setters will work only before creating the notification channel.
+!> Most of the setters will work only before creating the notification channel.
 
 You can later find the notification channel by calling the `GetNotificationChannel` method and providing the unique identifier of the channel, used during its creation. Alternatively, you can call the `GetNotificationChannels` channels to obtain an array of all the notification channels, registered for the calling package. You can then call the `GetXXX` methods to read the respective properties of the notification channels.
 
@@ -275,7 +275,7 @@ Call the `CancelNotification` method to cancel a specific notification by its ID
 
 ?> Please [read the official docs about this feature](https://developer.android.com/guide/playcore/in-app-review) thoroughly before contacting support!
 
-![](images/android-goodies/manage-apps/InAppReview.jpg ':size=900')
+![](images/android-goodies/manage-apps/InAppReview.jpg ":size=900")
 
 This functionality allows to request the review of the app right from the app. You can read more about it in the [documentation](https://developer.android.com/guide/playcore/in-app-review).
 
@@ -283,7 +283,7 @@ This functionality allows to request the review of the app right from the app. Y
 
 ?> The dialog will NOT be shown every time you request it to prevent you from spamming the user. Also, there is NO way to find out if the user actually rated your app.
 
-___
+---
 
 # **App interaction**
 
@@ -293,7 +293,7 @@ ___
 
 In order to invoke the `SetAlarm` function, your app must have the `SET_ALARM` permission in your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 ```
 
@@ -406,7 +406,7 @@ To uninstall an application call `UninstallPackage` function and provide its pac
 
 To dial/call phone number use `DialPhoneNumber` or `CallPhoneNumber` functions respectively. Also, there is a function allowing to check whether the phone app is installed - `HasPhoneApp` .
 
-___
+---
 
 # **Getting info**
 
@@ -430,7 +430,7 @@ Patterns for those function names are `Supports<feature name>` or `Has<feature n
 
 Check out a detailed description of all features [here](https://developer.android.com/guide/topics/manifest/uses-feature-element#features-reference).
 
-___
+---
 
 # **Image & File tools**
 
@@ -497,6 +497,7 @@ To obtain a texture from given path call `GetTextureFromPath` method. You should
 ![](images/android-goodies/images/Scr_GetTextureFromPath.png)
 
 ### Chosen objects functionality
+
 #### ChosenFile methods
 
 ![](images/android-goodies/images/Scr_ChosenFile.png)
@@ -506,6 +507,7 @@ To obtain a texture from given path call `GetTextureFromPath` method. You should
 ![](images/android-goodies/images/Scr_ChosenImage.png)
 
 ## Image utility Methods
+
 ### Clear texture
 
 Utility method for clearing memory dedicated to UTexture2D object to prevent memory leaks.
@@ -514,11 +516,11 @@ Use this method in case UTxeture2D object is no longer needed, as Unreal doesn't
 
 ![](images/android-goodies/images/Scr_ClearTexture.png)
 
-___
+---
 
 # **Hardware**
 
-* [Flashlight, vibrations, battery](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Hardware)
+- [Flashlight, vibrations, battery](https://github.com/NinevaStudios/AndroidGoodiesUnreal-SampleProject/wiki/Hardware)
 
 ## Flashlight
 
@@ -532,7 +534,7 @@ You can call `EnableFlashlight` function, passing a bool parameter, indicating w
 
 ### Check the vibration availability
 
-You can monitor the device's capability of vibrations using the following functions: `HasVibrator` indicating whether the device has the vibrator engine, `HasAmplitudeControl` indicating whether the device supports vibrations of different amplitudes, and `AreVibrationEffectsSupported` indicating, whether the device (usually with  Android OS version Oreo and higher) supports the vibration effects.
+You can monitor the device's capability of vibrations using the following functions: `HasVibrator` indicating whether the device has the vibrator engine, `HasAmplitudeControl` indicating whether the device supports vibrations of different amplitudes, and `AreVibrationEffectsSupported` indicating, whether the device (usually with Android OS version Oreo and higher) supports the vibration effects.
 
 ### Simple vibrations
 
@@ -550,20 +552,19 @@ Use the `VibrateWithPattern` function to create a vibration pattern. Pass in an 
 
 Call the `VibrateWithEffect` function to vibrate with one of the following effects:
 
-* `VibrationEffectOneShot` , creating a single vibration at the specified amplitude (1 for minimal, 255 for maximal);
+- `VibrationEffectOneShot` , creating a single vibration at the specified amplitude (1 for minimal, 255 for maximal);
 
 ![](images/android-goodies/hardware/Scr_VibrationEffect.png)
 
-* `VibrationEffectWaveForm` , creating a sequence, similar to the `VibrateWithPattern` function;
+- `VibrationEffectWaveForm` , creating a sequence, similar to the `VibrateWithPattern` function;
 
-* `VibrationEffectWaveFormWithAmplitudes` , creating a sequence with the ability to specify the amplitude for the different fragments.
+- `VibrationEffectWaveFormWithAmplitudes` , creating a sequence with the ability to specify the amplitude for the different fragments.
 
 Call the `VibrateWithEffectAndAttributes` function to provide an additional AudioAttributes parameter for the vibration, that contains the usage, content type and flags, indicating the purpose of vibration.
 
 ## Battery
 
 You can get one of the many battery characteristics, such as capacity, health, plugged status, temperature and others using the `GetBatteryXXX` functions.
-
 
 ## Wifi
 
@@ -587,12 +588,12 @@ You also must request the `android.permission.ACCESS_FINE_LOCATION` runtime perm
 
 ![](images\android-goodies\hardware\Scr_StartWifiScan.png)
 
-* `On Wifi Scan Success` - callback which returns you founded Wi-Fi networks;
-* `On Wifi Scan Failure` - callback which returns you error message;
+- `On Wifi Scan Success` - callback which returns you founded Wi-Fi networks;
+- `On Wifi Scan Failure` - callback which returns you error message;
 
 ### Connect to Wifi network
 
-If you know the `SSID` and `Password` to a Wifi network, you can connect to it programmatically using the `ConnectToWifiNetwork` function. 
+If you know the `SSID` and `Password` to a Wifi network, you can connect to it programmatically using the `ConnectToWifiNetwork` function.
 
 ?> On Android 29 and higher you can't connect to a network directly. You can only make a suggestion to the system to do it. Read more [here](https://developer.android.com/guide/topics/connectivity/wifi-suggest)
 
@@ -619,114 +620,120 @@ Call the `AddContact` method to add a contact to the phone book.
 
 Requires the "android.permission. WRITE_CONTACTS" permission.
 
-___
+---
 
 # Changelog
 
+v.2.2.1
+
+- FIXED Upside down screenshot in UE 5.1 and higher
+- FIXED A few compilation issues
+
+---
 
 v.2.0.1
 
-* FIXED refactor the notifications code
-* FIXED compilation for non-unity builds
-* FIXED Removed unneeded Launch module dependency
-* FIXED Compilation for Android target API 33
+- FIXED refactor the notifications code
+- FIXED compilation for non-unity builds
+- FIXED Removed unneeded Launch module dependency
+- FIXED Compilation for Android target API 33
 
 ---
 
 v.1.9.0
 
-* FIXED Notification crash issues for Android 12+
-* ADDED Various Wi-Fi funcitonality (connect to network, toggle Wi-Fi state, check if Wi-Fi is enabled)
+- FIXED Notification crash issues for Android 12+
+- ADDED Various Wi-Fi funcitonality (connect to network, toggle Wi-Fi state, check if Wi-Fi is enabled)
 
 v.1.8.1
 
-* ADDED Wi-Fi check and turn on/off, connect to specific wifi network
+- ADDED Wi-Fi check and turn on/off, connect to specific wifi network
 
 v.1.8.0
 
-* ADDED Wi-Fi scan
-* FIXED incorrect demo behaviour with permissions
+- ADDED Wi-Fi scan
+- FIXED incorrect demo behaviour with permissions
 
 v.1.7.0
 
-* FIXED Issues with sharing images
-* FIXED Issues with saving images to the gallery on Android 30+
-* FIXED Months conversions for date pickers
-* FIXED Various proguard issues
-* ADDED UPL Logging for easier debugging
+- FIXED Issues with sharing images
+- FIXED Issues with saving images to the gallery on Android 30+
+- FIXED Months conversions for date pickers
+- FIXED Various proguard issues
+- ADDED UPL Logging for easier debugging
 
 v.1.6.0
 
-* ADDED in-app review dialog feature
+- ADDED in-app review dialog feature
 
 v.1.5.0
 
-* FIXED Proguard errors in shipping builds
+- FIXED Proguard errors in shipping builds
 
 ?> This release uses AndroidX libraries and may cause conflicts with other Android plugins
 
 v.1.4.0
 
-* ADDED PickedFile and PickedImage abstractions to expose more properties for the media and files, picked by Image and File pickers
+- ADDED PickedFile and PickedImage abstractions to expose more properties for the media and files, picked by Image and File pickers
 
 v.1.3.1
 
-* ADDED Unreal Engine 4.25 support
-* ADDED Sharing of multiple images via email app
-* ADDED Permissions setup via plugin settings
-* FIXED Issues with date and time picker initialization
-* FIXED Texture to image conversion
+- ADDED Unreal Engine 4.25 support
+- ADDED Sharing of multiple images via email app
+- ADDED Permissions setup via plugin settings
+- FIXED Issues with date and time picker initialization
+- FIXED Texture to image conversion
 
 v.1.3.0
 
-* ADDED Check for notification channels support
-* FIXED Some method categories
+- ADDED Check for notification channels support
+- FIXED Some method categories
 
 v.1.2.3
 
-* ADDED Unreal Engine 4.24 support
-* FIXED Issues with native callbacks
+- ADDED Unreal Engine 4.24 support
+- FIXED Issues with native callbacks
 
 v.1.2.3
 
-* ADDED Fetching contacts info
+- ADDED Fetching contacts info
 
 v.1.2.2
 
-* ADDED Toggle flashlight
-* ADDED Vibrations
-* ADDED Device battery information
-* ADDED Basic telephony operations (dial/call number)
-* FIXED Issue with image color format while sharing
+- ADDED Toggle flashlight
+- ADDED Vibrations
+- ADDED Device battery information
+- ADDED Basic telephony operations (dial/call number)
+- FIXED Issue with image color format while sharing
 
 v.1.2.1
 
-* ADDED Capture screenshot
-* FIXED Performace issue with picking image from gallery
-* FIXED Image functions callback handling in game thread
+- ADDED Capture screenshot
+- FIXED Performace issue with picking image from gallery
+- FIXED Image functions callback handling in game thread
 
 v.1.2.0
 
-* ADDED Capture photo
-* ADDED Pick image from gallery
-* ADDED Save image to gallery
+- ADDED Capture photo
+- ADDED Pick image from gallery
+- ADDED Save image to gallery
 
 v.1.1.2
 
-* ADDED Unreal Engine 4.22 support
-* REMOVED Redundant parameters in Java callback functions
+- ADDED Unreal Engine 4.22 support
+- REMOVED Redundant parameters in Java callback functions
 
 v.1.1.1
 
-* FIXED Crash for release application builds with enabled IAP
+- FIXED Crash for release application builds with enabled IAP
 
 v.1.1.0
 
-* ADDED Unreal Engine 4.21 support
-* UPDATED Image sharing functionality
+- ADDED Unreal Engine 4.21 support
+- UPDATED Image sharing functionality
 
 v.1.0.0
 
-* Initial release
+- Initial release
 
-___
+---

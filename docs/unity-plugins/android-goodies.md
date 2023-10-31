@@ -2369,13 +2369,6 @@ When your build fails, please check the console, it will have a very long error 
 
 # Changelog
 
-2.2.1
-
-+ FIXED Upside down screenshot in UE 5.1 and higher
-+ FIXED A few compilation issues
-
----
-
 1.7.0
 
 * IMPROVE UPL file logging
