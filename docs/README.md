@@ -6,11 +6,11 @@ This documentation is open-source: https://github.com/NinevaStudios/nineva-docs.
 
 Useful links:
 
-* [Our web site](https://ninevastudios.com)
-* [Talk to us on discord](https://bit.ly/nineva_support_discord)
-* [Read our blog on Medium](https://medium.com/nineva)
-* [Explore our Unity plugins](https://assetstore.unity.com/publishers/5296)
-* [Explore our Unreal Engine 4 plugins](https://www.unrealengine.com/marketplace/profile/Nineva+Studios)
+- [Our web site](https://ninevastudios.com)
+- [Talk to us on discord](https://bit.ly/nineva_support_discord)
+- [Read our blog on Medium](https://medium.com/nineva)
+- [Explore our Unity plugins](https://assetstore.unity.com/publishers/5296)
+- [Explore our Unreal Engine 4 plugins](https://www.unrealengine.com/marketplace/profile/Nineva+Studios)
 
 ## Unreal Engine 4 Plugins
 
@@ -39,11 +39,11 @@ Useful links:
 
 ## Unity Plugins
 
-* [Android Goodies](unity-plugins/android-goodies)
-* [Google Maps View](unity-plugins/google-maps)
-* [iOS Goodies](unity-plugins/ios-goodies)
-* [Mobile Places SDK](unity-plugins/places-sdk)
-* [GIPHY Gif Picker](unity-plugins/giphy)
+- [Android Goodies](unity-plugins/android-goodies)
+- [Google Maps View](unity-plugins/google-maps)
+- [iOS Goodies](unity-plugins/ios-goodies)
+- [Mobile Places SDK](unity-plugins/places-sdk)
+- [GIPHY Gif Picker](unity-plugins/giphy)
 
 ## Hire us!
 
