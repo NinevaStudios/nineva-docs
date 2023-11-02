@@ -1,7 +1,7 @@
 - <a href="https://www.patreon.com/bePatron?u=168010"><img src="/icons/patreon.png" style="height:42px;vertical-align: bottom"></a>
 
 - **Unreal Engine Plugins**
-	* **[BUY ALL ON ITCH.IO](https://nineva-studios.itch.io/unreal-engine-plugins)**
+	* **[🛒 BUY ALL ON ITCH.IO](https://nineva-studios.itch.io/unreal-engine-plugins)**
 	* [Admob Goodies](ue-plugins/admob-unreal)
 	* [Android Goodies](ue-plugins/android-goodies-unreal)
 	* [iOS Goodies](ue-plugins/ios-goodies)
