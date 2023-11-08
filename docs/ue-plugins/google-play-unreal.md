@@ -4,6 +4,8 @@
 
 Welcome to Google Play Goodies Documentation for Unreal Engine
 
+!> WARNING This plugin is INCOMPATIBLE with Google Play Subsystem of UE (UE uses very old versions of dependencies), for this plugin to work, it must be disabled. We will not approve refunds on the grounds that it breaks the built-in Google Play login (The plugin has it's own login implementation).
+
 ---
 
 # **Setup**
