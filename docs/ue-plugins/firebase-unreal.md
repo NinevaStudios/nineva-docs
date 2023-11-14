@@ -990,6 +990,10 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.2.5
+
+- FIX Firestore set data method not working on Android
+
 ### 4.2.4
 
 - FIX Some more include compile issues

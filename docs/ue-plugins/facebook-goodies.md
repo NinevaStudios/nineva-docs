@@ -306,6 +306,11 @@ Then you can call the `SetAudienceNetworkAdvertiserTrackingEnabled` function to 
 ___
 
 # Changelog
+v 2.2.2
+
++ FIXED UPL issue on Android with provider
+
+---
 
 v 2.2.2
 

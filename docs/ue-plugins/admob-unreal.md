@@ -478,6 +478,16 @@ ___
 
 # Changelog
 
+v.3.3.9
+
++ ADD Settings checkbox to disable using custom gradle (uncheck it if you use UE5.3+)
++ UPDATE TapJoy mediation on iOS to v13.2.1
++ UPDATE Make addign ATT dialog entry addition to plist optional
++ FIX Some compile isssues
++ FIX Mediations being enabled by default in some cases
+
+---
+
 v.3.3.8
 
 + ADDED Impression level ad revenue feature
