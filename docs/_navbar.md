@@ -16,7 +16,6 @@
 	* [iOS Goodies](ue-plugins/ios-goodies)
 	* [Monetization Goodies](ue-plugins/monetization-unreal)
 	* [Nearby Connections](ue-plugins/nearby-connections-unreal)
-	* [Yodo Ads](ue-plugins/yodo-unreal)
 	* **[Common issues](ue-plugins/common-issues)**
 
 - **Unity Plugins**
