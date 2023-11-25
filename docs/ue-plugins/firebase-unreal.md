@@ -990,6 +990,13 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.3.2
+
+- FIX Some packaging issues for iOS frameworks that contain `.bundle` resource bundles (GoogleSignIn, grpc)
+- FIX Firestore crashes on iOS related to threading
+- FIX the query `AddSetDataOperation` firestore method on Android
+- ADDED Ability to access more details on the token upon auth
+
 ### 4.2.5
 
 - FIX Firestore set data method not working on Android
