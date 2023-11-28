@@ -1,6 +1,6 @@
-[filename](common/common_ue_header.md ':include')
+[filename](common/common_ue_header.md ":include")
 
-[filename](common/copy_plugin.md ':include')
+[filename](common/copy_plugin.md ":include")
 
 # **Monetization Goodies**
 
@@ -22,8 +22,8 @@ Disable `Online Subsystem Google Play` in project Plugins window.
 
 You also need to remove the dependency by removing these lines if you have it in your `Target.cs` and `Build.cs` files:
 
-* `PrivateDependencyModuleNames.Add("OnlineSubsystemGooglePlay");`
-* `ExtraModuleNames.Add("OnlineSubsystemGooglePlay");`
+- `PrivateDependencyModuleNames.Add("OnlineSubsystemGooglePlay");`
+- `ExtraModuleNames.Add("OnlineSubsystemGooglePlay");`
 
 You might also need to add/modify the `Config/Android/AndroidEngine.ini` file contents fo have all the built-in Google Play Billing features disabled:
 
@@ -40,7 +40,7 @@ Go to the Project Settings -> Monetization Goodies and switch the Enable In App 
 
 ![](images/monetization/monetization-0.png)
 
-After that close the Editor, go to the `[Project]/Plugins/MonetizationGoodies` directory and delete the `Binaries` and `Intermediate` folders. This will force the plugin to be rebuilt and include the required dependencies. 
+After that close the Editor, go to the `[Project]/Plugins/MonetizationGoodies` directory and delete the `Binaries` and `Intermediate` folders. This will force the plugin to be rebuilt and include the required dependencies.
 
 ![](images/monetization/monetization-1.png)
 
@@ -165,15 +165,24 @@ The plugin wraps all of the native [Original In-App-Purchase API](https://develo
 
 # Changelog
 
+---
+
+2.0.2
+
+- IMPROVED Update Android billing client version to 6.0.1
+- FIXED Period unit bug on iOS
+
+---
+
 2.0.1
 
-+ FIXED Some crash on iOS
-+ IMPROVE Updated billing client on Android to v5
+- FIXED Some crash on iOS
+- IMPROVE Updated billing client on Android to v5
 
 ---
 
 1.0.0
 
-* Initial release
+- Initial release
 
 ---

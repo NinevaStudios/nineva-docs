@@ -4,7 +4,7 @@
 
 ---
 
-![alt text](/images/ag/logo.png ':size=256')
+![alt text](/images/ag/logo.png ":size=256")
 
 **Supported Android versions - API Level 14 and higher (4.0 Ice Cream Sandwich)**
 
@@ -16,50 +16,50 @@ The plugin is in active development and new things will be added. Please [contac
 
 ## Supported Features:
 
-* App Interaction
-  + [AGAlarmClock.cs](#agalarmclockcs) - Methods to show all alarms, set alarm with all properties or set timer
-  + [AGApps.cs](#agappscs) - Open app by package name, watch YouTube video in native app
-  + [AGCalendar.cs](#agcalendarcs) - Class that allows to create calendar event with all required params or open calendar app on the provided date
-  + [AGDialer.cs](#agdialercs) - Dial or directly call phone number, check if user has phone app
-  + [AGMaps.cs](#agmapscs) - Open maps location, address, check if user has maps app
-  + [AGSettings.cs](#agsettingscs) - Open any system settings screen
-  + [AGShare.cs](#agsharecs) - Native share text, text+image, tweet, email, send SMS etc, check if user has twitter, sms, email app installed.
-  + [AGGallery.cs](#aggallerycs) - Pick photo from gallery app, save picture to gallery.
-  + [AGContacts.cs](#agcontactscs) - Pick a contact from phone address book
-  + [AGFilePicker.cs](#agfilepickercs) - Different file pickers (audio file, video file, general file by mime-type)
-* UI
-  + [AGAlertDialog.cs](#agalertdialogcs) - Showing native alert dialogs with buttons/radiobuttons/checkboxes
-  + [AGDateTimePicker.cs](#agdatetimepickercs) - Showing date/time picker
-  + [AGProgressDialog.cs](#agprogressdialogcs) - Show spinner/horizontal progress bar
-  + [AGLocalNotificationManager.cs](#agnotificationmanagercs) - Showing local notifications with info provided.
-  + [AGUIMisc.cs](#aguimisccs) - Showing toasts and immersive mode methods.
-* Retrieving Info
+- App Interaction
+  - [AGAlarmClock.cs](#agalarmclockcs) - Methods to show all alarms, set alarm with all properties or set timer
+  - [AGApps.cs](#agappscs) - Open app by package name, watch YouTube video in native app
+  - [AGCalendar.cs](#agcalendarcs) - Class that allows to create calendar event with all required params or open calendar app on the provided date
+  - [AGDialer.cs](#agdialercs) - Dial or directly call phone number, check if user has phone app
+  - [AGMaps.cs](#agmapscs) - Open maps location, address, check if user has maps app
+  - [AGSettings.cs](#agsettingscs) - Open any system settings screen
+  - [AGShare.cs](#agsharecs) - Native share text, text+image, tweet, email, send SMS etc, check if user has twitter, sms, email app installed.
+  - [AGGallery.cs](#aggallerycs) - Pick photo from gallery app, save picture to gallery.
+  - [AGContacts.cs](#agcontactscs) - Pick a contact from phone address book
+  - [AGFilePicker.cs](#agfilepickercs) - Different file pickers (audio file, video file, general file by mime-type)
+- UI
+  - [AGAlertDialog.cs](#agalertdialogcs) - Showing native alert dialogs with buttons/radiobuttons/checkboxes
+  - [AGDateTimePicker.cs](#agdatetimepickercs) - Showing date/time picker
+  - [AGProgressDialog.cs](#agprogressdialogcs) - Show spinner/horizontal progress bar
+  - [AGLocalNotificationManager.cs](#agnotificationmanagercs) - Showing local notifications with info provided.
+  - [AGUIMisc.cs](#aguimisccs) - Showing toasts and immersive mode methods.
+- Retrieving Info
 
-   * [AGDeviceInfo.cs](#agdeviceinfocs) - Various methods to get various info about device and apps ( `android.os.Build` , `android.os.Build.Version` ) and other
-   * [AGEnvironment.cs](#agdeviceinfocs) - Access to some `android.os.Environment` properties and methods
-   * [AGNetwork.cs](#agnetworkcs) - Internet connectivity and wifi related methods
-   * [AGTelephony.cs](#agtelephonycs) - Telephony related methods
+  - [AGDeviceInfo.cs](#agdeviceinfocs) - Various methods to get various info about device and apps ( `android.os.Build` , `android.os.Build.Version` ) and other
+  - [AGEnvironment.cs](#agdeviceinfocs) - Access to some `android.os.Environment` properties and methods
+  - [AGNetwork.cs](#agnetworkcs) - Internet connectivity and wifi related methods
+  - [AGTelephony.cs](#agtelephonycs) - Telephony related methods
 
-* Hardware
-  + [AGBattery.cs](#agbatterycs) - Get device battery charge level
-  + [AGFlashLight.cs](#agflashlightcs) - Enable and disable camera flashlight (as torch), check if device has flashlight
-  + [AGGPS.cs](#aggpscs) - Listen to GPS location changes, check if GPS enabled, get last known location.
-  + [AGVibrator.cs](#agvibratorcs) - Check if device has vibrator, vibrate or vibrate pattern
-  + [AGCamera.cs](#agcameracs) - Take photo (or thumbnail photo) from camera and receive it as `Texture2D` , various methods to check device camera capabilities.
-* Storage
-  + [AGFileUtils.cs](#agfileutilscs) - Method to save Unity Texture2D to Android gallery
-  + [AGSharedPrefs.cs](#agsharedprefscs) - Work natively with [Android Shared Preferences](https://developer.android.com/reference/android/content/SharedPreferences.html)
-* Other
-  + [AGPermissions.cs](#agpermissionscs) - Manage, request and check [Android runtime permissions](https://developer.android.com/training/permissions/requesting.html).
-  + [AGMediaRecorder.cs](#agmediarecordercs) - Record audio using device microphone
-  + [AGPrintHelper.cs](#agprinthelpercs) - Print images and HTML-pages
+- Hardware
+  - [AGBattery.cs](#agbatterycs) - Get device battery charge level
+  - [AGFlashLight.cs](#agflashlightcs) - Enable and disable camera flashlight (as torch), check if device has flashlight
+  - [AGGPS.cs](#aggpscs) - Listen to GPS location changes, check if GPS enabled, get last known location.
+  - [AGVibrator.cs](#agvibratorcs) - Check if device has vibrator, vibrate or vibrate pattern
+  - [AGCamera.cs](#agcameracs) - Take photo (or thumbnail photo) from camera and receive it as `Texture2D` , various methods to check device camera capabilities.
+- Storage
+  - [AGFileUtils.cs](#agfileutilscs) - Method to save Unity Texture2D to Android gallery
+  - [AGSharedPrefs.cs](#agsharedprefscs) - Work natively with [Android Shared Preferences](https://developer.android.com/reference/android/content/SharedPreferences.html)
+- Other
+  - [AGPermissions.cs](#agpermissionscs) - Manage, request and check [Android runtime permissions](https://developer.android.com/training/permissions/requesting.html).
+  - [AGMediaRecorder.cs](#agmediarecordercs) - Record audio using device microphone
+  - [AGPrintHelper.cs](#agprinthelpercs) - Print images and HTML-pages
 
 ## Advantages
 
-* Clean and flexible API
-* No overriding of Unity default activity
-* Full source code included
-* Well-written docs
+- Clean and flexible API
+- No overriding of Unity default activity
+- Full source code included
+- Well-written docs
 
 ## Running the demo scene
 
@@ -69,7 +69,7 @@ To build and run the demo scene just connect your Android device switch target p
 
 You will see the menu like this on device where you can start testing:
 
-![alt text](/images/ag/demo-home.png ':size=512')
+![alt text](/images/ag/demo-home.png ":size=512")
 
 # **App Interaction**
 
@@ -79,7 +79,7 @@ You will see the menu like this on device where you can start testing:
 
 In order to invoke the `AGAlarmClock.SetAlarm()` method, your app must have the `SET_ALARM` permission in your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 ```
 
@@ -90,9 +90,9 @@ You can show the list of alarms invoking `AGAlarmClock.ShowAllAlarms()` method. 
 ### Setting an alarm
 
 You can set an alarm by invoking `AGAlarmClock.SetAlarm()`
- method, optionally specifying days on which alarm has to be invoked (repeating alarm), if to vibrate, and whether to skip the UI when creating an alarm. To check if there is an app installed to handle setting alarms invoke `AGAlarmClock.CanSetAlarm()`
+method, optionally specifying days on which alarm has to be invoked (repeating alarm), if to vibrate, and whether to skip the UI when creating an alarm. To check if there is an app installed to handle setting alarms invoke `AGAlarmClock.CanSetAlarm()`
 
-``` csharp
+```csharp
 var weekdays = new []
 {
     AGAlarmClock.AlarmDays.Monday,
@@ -114,14 +114,14 @@ Result:
 
 To set a timer invoke `AGAlarmClock.SetTimer` providing time in seconds, label and whether to skip the UI. To check if there is an app installed to handle setting the timer invoke `AGAlarmClock.CanSetTimer()`
 
-``` csharp
+```csharp
 const bool skipUI = true; // skip the UI and start the timer immediately
 AGAlarmClock.SetTimer(5, "My awesome timer", skipUI);
 ```
 
 Result:
 
-![alt text](/images/ag/timer.png ':size=512')
+![alt text](/images/ag/timer.png ":size=512")
 
 Please check [article about common Android intents](https://developer.android.com/guide/components/intents-common.html#Clock) for more information.
 
@@ -133,7 +133,7 @@ Contains various methods to open other applications.
 
 To open the video in YouTube app call this methods providing the video id:
 
-``` csharp
+```csharp
 var videoId = "mZqjmyyJkQc";
 AGApps.WatchYoutubeVideo(videoId);
 ```
@@ -142,7 +142,7 @@ AGApps.WatchYoutubeVideo(videoId);
 
 To open the profile of any user on Instagram:
 
-``` csharp
+```csharp
 const string profileId = "tarasleskivlviv";
 AGApps.OpenInstagramProfile(profileId);
 ```
@@ -151,7 +151,7 @@ AGApps.OpenInstagramProfile(profileId);
 
 To open the profile of any user on Twitter:
 
-``` csharp
+```csharp
 const string profileId = "Taras_Leskiv";
 AGApps.OpenTwitterProfile(profileId);
 ```
@@ -160,7 +160,7 @@ AGApps.OpenTwitterProfile(profileId);
 
 To open the profile of any user on Facebook:
 
-``` csharp
+```csharp
 const string profileId = "4"; // Mark Zuckerberg
 AGApps.OpenFacebookProfile(profileId);
 ```
@@ -171,7 +171,7 @@ If YouTube app in not installed it will open the video with the browser.
 
 You can open any app on the device if you know its package and this app has launcher activity:
 
-``` csharp
+```csharp
 // Open twitter app
 var package = "com.twitter.android";
 AGApps.OpenOtherAppOnDevice(package, () => AGUIMisc.ShowToast("Could not launch " + package));
@@ -191,22 +191,22 @@ To open a calendar at specific date invoke `AGCalendar.OpenCalendarForDate` and 
 
 The following details about the event can be provided:
 
-* The event title.
-* The event description.
-* The event location.
-* Array of email addresses that specify the invitees.
-* The start time of the event
-* The end time of the event
-* Whether this is an all-day event.
-* RRule (repeating rule)
-* Access level
-* Availability
+- The event title.
+- The event description.
+- The event location.
+- Array of email addresses that specify the invitees.
+- The start time of the event
+- The end time of the event
+- Whether this is an all-day event.
+- RRule (repeating rule)
+- Access level
+- Availability
 
 To create an event you must create an `AGCalendar.EventBuilder` instance, set the required event properties and call `BuildAndShow()` method.
 
 Example usage:
 
-``` csharp
+```csharp
 var beginTime = DateTime.Now;
 var endTime = beginTime.AddHours(2);
 var eventBuilder = new AGCalendar.EventBuilder("Lunch with someone special", beginTime);
@@ -223,7 +223,7 @@ eventBuilder.BuildAndShow();
 
 Result:
 
-![alt text](/images/ag/calendar_event.png ':size=512')
+![alt text](/images/ag/calendar_event.png ":size=512")
 
 Please check [article about common Android intents](https://developer.android.com/guide/components/intents-common.html#Calendar) for more information.
 
@@ -233,7 +233,7 @@ Please check [article about common Android intents](https://developer.android.co
 
 To place a phone call you need the following permission in your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.CALL_PHONE" />
 ```
 
@@ -247,7 +247,7 @@ To check if the device can place phone calls call `AGDialer.UserHasPhoneApp()`
 
 To open a dialer with specified phone number call
 
-``` csharp
+```csharp
 string PhoneNumber = "123456789";
 AGDialer.OpenDialer(PhoneNumber);
 ```
@@ -256,7 +256,7 @@ AGDialer.OpenDialer(PhoneNumber);
 
 To place a phone call immediately invoke
 
-``` csharp
+```csharp
 string PhoneNumber = "123456789";
 AGDialer.PlacePhoneCall(PhoneNumber);
 ```
@@ -267,10 +267,10 @@ Android Goodies provides simple and easy interface to [open a map application (p
 
 Functionality:
 
-* [Check if user has maps app](#check-if-user-has-maps-app)
-* [Open location with zoom level](#open-location-with-zoom-level)
-* [Open location with label](#open-location-with-label)
-* [Open location with address](#open-location-with-address)
+- [Check if user has maps app](#check-if-user-has-maps-app)
+- [Open location with zoom level](#open-location-with-zoom-level)
+- [Open location with label](#open-location-with-label)
+- [Open location with address](#open-location-with-address)
 
 ### Check if user has maps app
 
@@ -282,13 +282,13 @@ Show the map at the given longitude and latitude at a certain zoom level. A zoom
 
 Example:
 
-``` csharp
+```csharp
 AGMaps.OpenMapLocation(47.6f, -122.3f, 9);
 ```
 
 Result:
 
-![alt text](/images/ag/map_location_zoom.png ':size=512')
+![alt text](/images/ag/map_location_zoom.png ":size=512")
 
 ### Open location with label
 
@@ -296,13 +296,13 @@ Show the map at the given longitude and latitude with a certain label.
 
 Example:
 
-``` csharp
+```csharp
 AGMaps.OpenMapLocationWithLabel(47.6f, -122.3f, "My Label");
 ```
 
 Result:
 
-![alt text](/images/ag/map_address.png ':size=512')
+![alt text](/images/ag/map_address.png ":size=512")
 
 ### Open location with address
 
@@ -310,13 +310,13 @@ Opens the map location with the provided address.
 
 Example:
 
-``` csharp
+```csharp
 AGMaps.OpenMapLocation("1st & Pike, Seattle");
 ```
 
 Result:
 
-![alt text](/images/ag/map_label.png ':size=512')
+![alt text](/images/ag/map_label.png ":size=512")
 
 ## AGSettings.cs
 
@@ -324,7 +324,7 @@ Result:
 
 All settings screen action types are represented as constants (mirrored from [ `android.provider.Settings` ](https://developer.android.com/reference/android/provider/Settings.html)), e.g.
 
-``` csharp
+```csharp
 /// <summary>
 /// Show settings for accessibility modules.
 /// </summary>
@@ -333,7 +333,7 @@ public const string ACTION_ACCESSIBILITY_SETTINGS = "android.settings.ACCESSIBIL
 
 You can open any system settings section using this class like this:
 
-``` csharp
+```csharp
 public void OnOpenWifiSettings()
 {
     AGSettings.OpenSettingsScreen(AGSettings.ACTION_WIFI_SETTINGS);
@@ -356,7 +356,7 @@ You can open application details settings for any application installed on the d
 
 The method `AGSettings.OpenModifySystemSettingsActivity(Action onFailure)` opens system activity where user can allow apps to modify Android system settings.
 
-![alt text](/images/ag/modify_system_settings.png ':size=512')
+![alt text](/images/ag/modify_system_settings.png ":size=512")
 
 ### Getting/Setting System Screen Brightness
 
@@ -368,16 +368,16 @@ To get current system screen brightness use `AGSettings.GetSystemScreenBrightnes
 
 To modify system screen brightness you must have the following permission declared in your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 ```
 
 Before setting the screen brightness you must also check if user has explicitly allowed your app to modify system settings by invoking `AGSettings.CanWriteSystemSettings()` , if it returns `false` you can prompt the user to allow your app to modify settings and open the **Modify System Settings Screen** by invoking `AGSettings.OpenModifySystemSettingsActivity()` where user can grant a permission to your app. After it you must check again. Shortly - do not invoke `AGSettings.SetSystemScreenBrightness()`
- until `AGSettings.CanWriteSystemSettings()` returns `true` .
+until `AGSettings.CanWriteSystemSettings()` returns `true` .
 
 Example usage:
 
-``` csharp
+```csharp
 if (!AGSettings.CanWriteSystemSettings())
 {
     AGUIMisc.ShowToast("Can't modify system settings because user did not allow it!");
@@ -390,7 +390,7 @@ AGSettings.SetSystemScreenBrightness(newBrightness);
 
 On some device to open bluetooth settings you need to add the following permission in `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
 
@@ -402,39 +402,39 @@ Add the permission above if you see the relevant message when trying to open blu
 
 To share images you must add the following permission to your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
 or modify Android Build Settings to set Write Access to `External (SDCard)`
 
-![alt text](/images/ag/external_storage.png ':size=512')
+![alt text](/images/ag/external_storage.png ":size=512")
 
 ### Sharing setting for images
 
 If you want to share an image ( `Texture2D` ) from your project assets you have to set **Texture Type** to **Advanced** plus set **Read/Write Enabled** checkbox to true and **Compression Format** to **RGBA 32 bit** otherwise you will get errors.
 
-![alt text](/images/ag/share-image-settings-read-write.png ':size=512')
+![alt text](/images/ag/share-image-settings-read-write.png ":size=512")
 
-![alt text](/images/ag/share-image-settings.png ':size=512')
+![alt text](/images/ag/share-image-settings.png ":size=512")
 
 ### Functionality
 
-* [Native share](#native-share)
-* [Sending email](#sending-email)
-* [Sending SMS text](#sending-sms)
-* [Sending MMS](#sending-mms)
-* [Tweet](#tweeting)
-* [Sharing Instagram photo](#sharing-instagram-photo)
-* [Sending message via popular messengers](#sending-message-via-popular-messengers)
-* [Sending message via arbitrary apps](#sending-message-via-arbitrary-apps)
-* [Sharing video on the file system](#sharing-video-on-the-file-system)
+- [Native share](#native-share)
+- [Sending email](#sending-email)
+- [Sending SMS text](#sending-sms)
+- [Sending MMS](#sending-mms)
+- [Tweet](#tweeting)
+- [Sharing Instagram photo](#sharing-instagram-photo)
+- [Sending message via popular messengers](#sending-message-via-popular-messengers)
+- [Sending message via arbitrary apps](#sending-message-via-arbitrary-apps)
+- [Sharing video on the file system](#sharing-video-on-the-file-system)
 
 ### Checking if app is installed
 
 You can check if user has SMS app, email app or twitter app installed:
 
-``` csharp
+```csharp
 var hasSmsApp = AGShare.UserHasSmsApp();
 var hasEmailApp = AGShare.UserHasEmailApp();
 var isTwitterInstalled = AGShare.IsTwitterInstalled();
@@ -446,14 +446,14 @@ var isTwitterInstalled = AGShare.IsTwitterInstalled();
 
 Share text:
 
-``` csharp
+```csharp
 AGShare.ShareText("My subject", "My text to share");
 
 ```
 
 Share text with image:
 
-``` csharp
+```csharp
 public Texture2D image;
 
 AGShare.ShareTextWithImage("My subject", "My text to share", image);
@@ -463,7 +463,7 @@ AGShare.ShareTextWithImage("My subject", "My text to share", image);
 
 Send an email using Android intent providing array of addresses, subject, body, optionally with cc and bcc recipients. Shows chooser by default.
 
-``` csharp
+```csharp
 bool withChooser = true;
 var recipients = new[] {"x@gmail.com", "hello@gmail.com"};
 var ccRecipients = new[] {"cc@gmail.com"};
@@ -477,7 +477,7 @@ Send an SMS text message to specified phone number
 
 Example usage:
 
-``` csharp
+```csharp
 bool withChooser = true;
 AGShare.SendSms("123123123", "Hello", withChooser);
 ```
@@ -488,7 +488,7 @@ Send an MMS message to specified phone number
 
 Example usage:
 
-``` csharp
+```csharp
 AGShare.SendMms("777-888-999", "Hello my friend", image, false, "MMS!");
 ```
 
@@ -498,7 +498,7 @@ Android Goodies allows you to tweet text or text with image directly through off
 
 Example code:
 
-``` csharp
+```csharp
 AGShare.Tweet("hello! I am tweeting like a boss!", image); // Image is optional
 ```
 
@@ -506,7 +506,7 @@ AGShare.Tweet("hello! I am tweeting like a boss!", image); // Image is optional
 
 You can share photo in Instagram if it is installed. To check whether Instagram is installed use `AGShare.IsInstagramInstalled()`
 
-``` csharp
+```csharp
 AGShare.ShareInstagramPhoto(image);
 ```
 
@@ -516,7 +516,7 @@ You can also send message to the most popular messaging apps. Supported apps: Fa
 
 Example code:
 
-``` csharp
+```csharp
 AGShare.SendFacebookMessageText(message);
 AGShare.SendFacebookMessageImage(image);
 
@@ -541,7 +541,7 @@ You can also send the message and specify the app package to share it to a speci
 
 You can also share video providing the path to it on your file system. File must exist to do so.
 
-``` csharp
+```csharp
 // To test this method you put 'xxx.mov' video into your downloads folder
 const string videoFileName = "/xxx.mov";
 var filePath = Path.Combine(AGEnvironment.ExternalStorageDirectoryPath, AGEnvironment.DirectoryDownloads) + videoFileName;
@@ -559,12 +559,12 @@ You can pick a picture from device and receive it in Unity as `ImagePickResult` 
 
 Method parameters are:
 
-* a success callback where you will receive `ImagePickResult` object. Invoke `LoadTexture2D()` or `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` to load `Texture2D` texture. Object also contains such info as display name of the picked image, width, height, size etc. Check the class itself for more information.
-* a cancel callback which is invoked when user cancels taking photo or an error happens.
-* an optional `ImageResultSize` - defaults to `ImageResultSize.Original` - specify this parameter if the photo takes up to much memory and needs to be downscaled before returned.
-* an optional `bool` parameter whether to generate thumnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
+- a success callback where you will receive `ImagePickResult` object. Invoke `LoadTexture2D()` or `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` to load `Texture2D` texture. Object also contains such info as display name of the picked image, width, height, size etc. Check the class itself for more information.
+- a cancel callback which is invoked when user cancels taking photo or an error happens.
+- an optional `ImageResultSize` - defaults to `ImageResultSize.Original` - specify this parameter if the photo takes up to much memory and needs to be downscaled before returned.
+- an optional `bool` parameter whether to generate thumnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
 
-``` csharp
+```csharp
 var imageResultSize = ImageResultSize.Max512;
 AGGallery.PickImageFromGallery(
     selectedImage =>
@@ -586,7 +586,7 @@ AGGallery.PickImageFromGallery(
 
 To save `Texture2D` image to Android gallery use:
 
-``` csharp
+```csharp
 var imageTitle = "Screenshot-" + System.DateTime.Now.ToString("yy-MM-dd-hh-mm-ss");
 const string folderName = "Goodies";
 AGGallery.SaveImageToGallery(texture2d, imageTitle, folderName, ImageFormat.JPEG);
@@ -596,7 +596,7 @@ AGGallery.SaveImageToGallery(texture2d, imageTitle, folderName, ImageFormat.JPEG
 
 You can also refresh some other file to become noticed by gallery apps. Imagine you saved a picture somewhere on disk and now want for it to become visible in the gallery.
 
-``` csharp
+```csharp
 AGGallery.RefreshFile(absoluteFilePath);
 ```
 
@@ -608,22 +608,22 @@ Class allows to pick a contacts from device's address book and receive the info 
 
 Information returned:
 
-* Contact display name
-* URI of of the photo
-* Contact list of phones if contact has any
-* Contact list of emails if contact has any
+- Contact display name
+- URI of of the photo
+- Contact list of phones if contact has any
+- Contact list of emails if contact has any
 
 ### Requirements
 
 For this feature to work you must add `READ_CONTACTS` permission to your `AndroidManifest.xml`
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.READ_CONTACTS" />
 ```
 
 ### Example Usage
 
-``` csharp
+```csharp
 public void OnPickContactFromAddressBook()
 {
     AGContacts.PickContact(
@@ -658,9 +658,9 @@ This class contains different file pickers
 
 ### Requirements
 
-* You must add this permission to your `AndroidManifest.xml` or set **Write Access** to **External (SD Card)** in Android build settings:
+- You must add this permission to your `AndroidManifest.xml` or set **Write Access** to **External (SD Card)** in Android build settings:
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
@@ -672,7 +672,7 @@ Pick audio file from file system and returns the video information as a `AudioPi
 
 Example:
 
-``` csharp
+```csharp
 AGFilePicker.PickAudio(audioFile =>
     {
         var msg = "Audio file was picked: " + audioFile;
@@ -690,17 +690,17 @@ Pick video from file system and returns the video information as a `VideoPickRes
 
 `VideoPickResult` contains the following properties:
 
-* `OriginalPath`
-* `DisplayName`
-* `PreviewImagePath` , `PreviewImageThumbnailPath` , `PreviewImageSmallThumbnailPath` - only if requested generating thumbnails
-* `Width` , `Height`
-* `Orientation`
-* `Size`
-* `CreatedAt`
+- `OriginalPath`
+- `DisplayName`
+- `PreviewImagePath` , `PreviewImageThumbnailPath` , `PreviewImageSmallThumbnailPath` - only if requested generating thumbnails
+- `Width` , `Height`
+- `Orientation`
+- `Size`
+- `CreatedAt`
 
 Example:
 
-``` csharp
+```csharp
 AGFilePicker.PickVideo(videoFile =>
     {
         var msg = "Video file was picked: " + videoFile;
@@ -719,7 +719,7 @@ This file picker allows you to specify [mime-type]() of the files to be picked s
 
 Example:
 
-``` csharp
+```csharp
 const string mimeType = "application/pdf"; // pick only pdfs
 
 AGFilePicker.PickFile(file =>
@@ -736,7 +736,7 @@ AGFilePicker.PickFile(file =>
 
 In order use the `AGMediaRecorder` class, your app must have the `RECORD_AUDIO` permission in your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.RECORD_AUDIO" />
 ```
 
@@ -744,7 +744,7 @@ In order use the `AGMediaRecorder` class, your app must have the `RECORD_AUDIO` 
 
 To start audio recording - call `AGMediaRecorder.StartRecording()` method, providing full path to the file you are about to create:
 
-``` csharp
+```csharp
 var downloadsDir = Path.Combine(AGEnvironment.ExternalStorageDirectoryPath, AGEnvironment.DirectoryDownloads);
 var fullFilePath = Path.Combine(downloadsDir, "my_voice_recording.3gp");
 AGMediaRecorder.StartRecording(fullFilePath);
@@ -752,7 +752,7 @@ AGMediaRecorder.StartRecording(fullFilePath);
 
 You can optionally specify the resulting file output format and preferred audio encoder.
 
-``` csharp
+```csharp
 AGMediaRecorder.StartRecording(fullFilePath, OutputFormat.THREE_GPP, AudioEncoder.AMR_NB);
 ```
 
@@ -764,7 +764,7 @@ This method returns bool value to indicate whether the call has been successful 
 You should only call this method if you are sure that `AGMediaRecorder` is currently recording audio.
 Otherwise, you will get an `java.lang.illegalStateException` exception.
 
-``` csharp
+```csharp
 var recordingWasStopped = AGMediaRecorder.StopRecording();
 AGUIMisc.ShowToast(recordingWasStopped ? "Stopped recording" : "Failed to stop recording");
 ```
@@ -777,8 +777,8 @@ Class for displaying standard Android dialogs
 
 ### FAQ
 
-* What if I don't want a callback? Should I pass `null` ?
-* No, you should just pass empty lambda `() => {}` and the callback will do nothing.
+- What if I don't want a callback? Should I pass `null` ?
+- No, you should just pass empty lambda `() => {}` and the callback will do nothing.
 
 ### Message dialog with positive button
 
@@ -786,7 +786,7 @@ Opens Android [AlertDialog](https://developer.android.com/reference/android/app/
 
 Example usage:
 
-``` csharp
+```csharp
 AGAlertDialog.ShowMessageDialog("Single Button", "This dialog has only positive button", "Ok",
     () => AndroidGoodiesMisc.ShowToast("Positive button Click"),
     () => AndroidGoodiesMisc.ShowToast("Dismissed"));
@@ -794,7 +794,7 @@ AGAlertDialog.ShowMessageDialog("Single Button", "This dialog has only positive 
 
 Result:
 
-![alt text](/images/ag/dialog_1_btn.png ':size=512')
+![alt text](/images/ag/dialog_1_btn.png ":size=512")
 
 ### Message dialog with positive and negative buttons
 
@@ -802,7 +802,7 @@ Opens Android [AlertDialog](https://developer.android.com/reference/android/app/
 
 Example usage:
 
-``` csharp
+```csharp
 AGAlertDialog.ShowMessageDialog("Two Buttons", "This dialog has positive and negative button",
     "Ok", () => AndroidGoodiesMisc.ShowToast("Positive button Click"),
     "No!", () => AndroidGoodiesMisc.ShowToast("Negative button Click"),
@@ -811,7 +811,7 @@ AGAlertDialog.ShowMessageDialog("Two Buttons", "This dialog has positive and neg
 
 Result:
 
-![alt text](/images/ag/dialog_2_btn.png ':size=512')
+![alt text](/images/ag/dialog_2_btn.png ":size=512")
 
 ### Message dialog with positive, negative and neutral buttons
 
@@ -819,7 +819,7 @@ Opens Android [AlertDialog](https://developer.android.com/reference/android/app/
 
 Example usage:
 
-``` csharp
+```csharp
 AGAlertDialog.ShowMessageDialog("Three Buttons",
     "This dialog has positive, negative and neutral buttons button",
     "Ok", () => AndroidGoodiesMisc.ShowToast("Positive button Click"),
@@ -830,7 +830,7 @@ AGAlertDialog.ShowMessageDialog("Three Buttons",
 
 Result:
 
-![alt text](/images/ag/dialog_3_btn.png ':size=512')
+![alt text](/images/ag/dialog_3_btn.png ":size=512")
 
 ### Dialog with simple items chooser
 
@@ -838,7 +838,7 @@ Opens Android [AlertDialog](https://developer.android.com/reference/android/app/
 
 Example usage:
 
-``` csharp
+```csharp
 string[] Colors = { "Red", "Green", "Blue" };
 
 AGAlertDialog.ShowChooserDialog("Choose color", Colors,
@@ -847,7 +847,7 @@ AGAlertDialog.ShowChooserDialog("Choose color", Colors,
 
 Result:
 
-![alt text](/images/ag/dialog_chooser.png ':size=512')
+![alt text](/images/ag/dialog_chooser.png ":size=512")
 
 ### Dialog with radio buttons items chooser
 
@@ -855,7 +855,7 @@ Opens Android [AlertDialog](https://developer.android.com/reference/android/app/
 
 Example usage:
 
-``` csharp
+```csharp
 string[] Colors = { "Red", "Green", "Blue" };
 int defaultSelectedItemIndex = 1;
 
@@ -866,7 +866,7 @@ AGAlertDialog.ShowSingleItemChoiceDialog("Choose color", Colors, defaultSelected
 
 Result:
 
-![alt text](/images/ag/dialog_single_choice.png ':size=512')
+![alt text](/images/ag/dialog_single_choice.png ":size=512")
 
 ### Dialog with check boxes buttons items chooser
 
@@ -874,7 +874,7 @@ Opens Android [AlertDialog](https://developer.android.com/reference/android/app/
 
 Example usage:
 
-``` csharp
+```csharp
 string[] Colors = { "Red", "Green", "Blue" };
 bool[] initiallyCheckedItems = { false, true, false }; // second item is selected when dialog is shown
 
@@ -886,7 +886,7 @@ AGAlertDialog.ShowMultiItemChoiceDialog("Choose color", Colors,
 
 Result:
 
-![alt text](/images/ag/dialog_multi_choice.png ':size=512')
+![alt text](/images/ag/dialog_multi_choice.png ":size=512")
 
 ### Progress dialog (spinner and horizontal progress bar)
 
@@ -894,7 +894,7 @@ You can also create [Android progress dialogs](https://developer.android.com/ref
 
 Example usage of spinner (showing spinner for a given period of time):
 
-``` csharp
+```csharp
 public void ShowSpinnerProgressDialog()
 {
     StartCoroutine(ShowSpinnerForDuration());
@@ -914,7 +914,7 @@ private IEnumerator ShowSpinnerForDuration()
 
 Example usage of horizontal progress bar progress dialog (example is showing incremental progress using coroutine):
 
-``` csharp
+```csharp
 public void ShowHorizontalProgressDialog()
 {
     StartCoroutine(ShowHorizontalForDuration());
@@ -951,7 +951,7 @@ You can also specify the theme of the dialog (light or dark) as an optional para
 
 Example:
 
-``` csharp
+```csharp
 AGAlertDialog.ShowMessageDialog("Single Button", "This dialog has only positive button", "Ok",
     () => AndroidGoodiesMisc.ShowToast("Positive button Click"), () => AndroidGoodiesMisc.ShowToast("Dismissed"),
     AndroidDialogTheme.Dark);
@@ -967,7 +967,7 @@ Show the default Android [TimePickerDialog](https://developer.android.com/refere
 
 Usage Example:
 
-``` csharp
+```csharp
 public void OnTimePickClick()
 {
     var now = DateTime.Now;
@@ -990,7 +990,7 @@ private void OnTimePickCancel()
 
 Result:
 
-![alt text](/images/ag/time_picker.png ':size=512')
+![alt text](/images/ag/time_picker.png ":size=512")
 
 ### Date Picker
 
@@ -998,7 +998,7 @@ Show the default Android [DatePickerDialog](https://developer.android.com/refere
 
 Usage Example:
 
-``` csharp
+```csharp
 public void OnPickDateClick()
 {
     var now = DateTime.Now;
@@ -1019,7 +1019,7 @@ private void OnDatePickCancel()
 
 Result:
 
-![alt text](/images/ag/date_picker.png ':size=512')
+![alt text](/images/ag/date_picker.png ":size=512")
 
 ## AGProgressDialog.cs
 
@@ -1031,7 +1031,7 @@ You can also create [Android progress dialogs](https://developer.android.com/ref
 
 Example usage of spinner (showing spinner for a given period of time):
 
-``` csharp
+```csharp
 public void ShowSpinnerProgressDialog()
 {
     StartCoroutine(ShowSpinnerForDuration());
@@ -1051,13 +1051,13 @@ private IEnumerator ShowSpinnerForDuration()
 
 Result:
 
-![alt text](/images/ag/spinner.png ':size=512')
+![alt text](/images/ag/spinner.png ":size=512")
 
 ### Horizontal progress bar
 
 Example usage of horizontal progress bar progress dialog (example is showing incremental progress using coroutine):
 
-``` csharp
+```csharp
 public void ShowHorizontalProgressDialog()
 {
     StartCoroutine(ShowHorizontalForDuration());
@@ -1090,15 +1090,15 @@ private IEnumerator ShowHorizontalForDuration()
 
 Result:
 
-![alt text](/images/ag/progress-bar.png ':size=512')
+![alt text](/images/ag/progress-bar.png ":size=512")
 
 ## AGNotificationManager.cs
 
 ### Required permissons
 
-* Schedule exact alarms permission must be present in `AndroidManifest.xml` file if you target Android API level 31+ and plan to schedule exact notifications:
+- Schedule exact alarms permission must be present in `AndroidManifest.xml` file if you target Android API level 31+ and plan to schedule exact notifications:
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
 ```
 
@@ -1110,13 +1110,13 @@ This class is used to manipulate local notifications
 
 ### Checking if app was launched from notification
 
-``` csharp
+```csharp
 var result = AGNotificationManager.IsAppOpenedViaNotification;
 ```
 
 ### Checking if notifications are enabled
 
-``` csharp
+```csharp
 var result = AGNotificationManager.AreNotificationsEnabled;
 ```
 
@@ -1126,7 +1126,7 @@ Starting in Android 8.0 (API level 26), all notifications must be assigned to a 
 
 ### Checking if device supports notification channels API
 
-``` csharp
+```csharp
 var result = AGNotificationManager.AreNotificationChannelsSupported;
 ```
 
@@ -1139,13 +1139,13 @@ To create a notification channel, follow these steps:
 
 1. Construct a `NotificationChannel` object with a unique channel ID, a user-visible name, and an importance level.
 
-``` csharp
+```csharp
 var channel = new NotificationChannel(channelId, channelName, AGNotificationManager.Importance.Low);
 ```
 
 2. Optionally, specify the other parameters of the channel.
 
-``` csharp
+```csharp
 //What group this channel belongs to. This is used only for visually grouping channels in the UI.
 channel.Group = group;
 //The user visible description of this channel.
@@ -1170,14 +1170,14 @@ channel.SetSound(soundFilePath, audioAttributes);
 
 3. Register the notification channel by passing it to `CreateNotificationChannel()` .
 
-``` csharp
+```csharp
 AGNotificationManager.CreateNotificationChannel(channel);
 ```
 
 Creating an existing notification channel with its original values performs no operation, so it's safe to call this code when starting an app.
 You can also create multiple notification channels in a single operation by calling `CreateNotificationChannels()` .
 
-``` csharp
+```csharp
 var channels = new List<NotificationChannel>();
 ...
 AGNotificationManager.CreateNotificationChannels(channels);
@@ -1185,13 +1185,13 @@ AGNotificationManager.CreateNotificationChannels(channels);
 
 ### Deleting notification channel
 
-``` csharp
+```csharp
 AGNotificationManager.DeleteNotificationChannel(channelId);
 ```
 
 ### Getting notification channels
 
-``` csharp
+```csharp
 foreach (var channel in AGNotificationManager.NotificationChannels)
 {
     //Your logic
@@ -1200,11 +1200,11 @@ foreach (var channel in AGNotificationManager.NotificationChannels)
 
 ### Opening notification channel settings
 
-``` csharp
+```csharp
 AGNotificationManager.OpenNotificationChannelSettings(channelId);
 ```
 
-![alt text](/images/ag/NotificationChannelSettings.png ':size=512')
+![alt text](/images/ag/NotificationChannelSettings.png ":size=512")
 
 ### Creating notification channel group
 
@@ -1212,7 +1212,7 @@ If you'd like to further organize the appearance of your channels in the setting
 Organizing the notification channels into groups for each account ensures that users can easily distinguish between them.
 Each notification channel group requires an ID that must be unique within your package, as well as a user-visible name.
 
-``` csharp
+```csharp
 var group = new NotificationChannelGroup(groupId, groupName)
 {
 	Description = "Android-Goodies test notification channel group"
@@ -1228,7 +1228,7 @@ AGNotificationManager.DeleteNotificationChannelGroup(groupId);
 
 ### Getting notification channel group(s)
 
-``` csharp
+```csharp
 //Getting one group by its ID
 var channelGroup = AGNotificationManager.GetNotificationChannelGroup(group.Id);
 //Getting all channel groups
@@ -1242,7 +1242,7 @@ foreach (var group in AGNotificationManager.NotificationChannelGroups)
 
 To get started, you need to set the notification's content and channel using a `Notification.Builder` object.
 
-``` csharp
+```csharp
 var builder = new Notification.Builder(channelId)
 	.SetContentTitle("Simple")
 	.SetContentText("Notification")
@@ -1255,7 +1255,7 @@ Notice that the `NotificationCompat.Builder` constructor requires that you provi
 
 To make the notification appear, call `AGNotificationManager.Notify()` , passing it a unique ID for the notification and the result of Notification. Builder. Build(). For example:
 
-``` csharp
+```csharp
 ...
 AGNotificationManager.Notify(notificationId, builder.Build());
 ```
@@ -1265,7 +1265,7 @@ AGNotificationManager.Notify(notificationId, builder.Build());
 Apply `Notification.InboxStyle` to a notification if you want to add multiple short summary lines, such as snippets from incoming emails. This allows you to add multiple pieces of content text that are each truncated to one line.
 To add a new line, call `AddLine()` up to 6 times. If you add more than 6 lines, only the first 6 are visible.
 
-``` csharp
+```csharp
 builder.SetInboxStyle(new Notification.InboxStyle()
 	.SetBigContentTitle("5 new messages from Julia:")
 	.AddLine("Message 1")
@@ -1274,13 +1274,13 @@ builder.SetInboxStyle(new Notification.InboxStyle()
 AGNotificationManager.Notify(notificationId, builder.Build());
 ```
 
-![alt text](/images/ag/InboxNotification.png ':size=512')
+![alt text](/images/ag/InboxNotification.png ":size=512")
 
 #### Progress bar style
 
 Notifications can include an animated progress indicator that shows users the status of an ongoing operation.
 
-``` csharp
+```csharp
 builder.SetContentTitle("Progress Bar Notification")
 	.SetContentText("So progressive :)");
 
@@ -1289,13 +1289,13 @@ AGNotificationManager.Notify(notificationId, builder.Build());
 StartCoroutine(UpdateProgressBar(builder));
 ```
 
-![alt text](/images/ag/ProgressBarNotification.png ':size=512')
+![alt text](/images/ag/ProgressBarNotification.png ":size=512")
 
 If you can estimate how much of the operation is complete at any time, use the "determinate" form of the indicator (as shown in figure) by calling `SetProgress(max, progress, false)` .
 The first parameter is what the "complete" value is (such as 100); the second is how much is currently complete, and the last indicates this is a determinate progress bar.
 As your operation proceeds, continuously call `SetProgress(max, progress, false)` with an updated value for progress and re-issue the notification.
 
-``` csharp
+```csharp
 ...
 IEnumerator UpdateProgressBar(Notification.Builder builder)
 {
@@ -1323,7 +1323,7 @@ IEnumerator UpdateProgressBar(Notification.Builder builder)
 Starting in Android 7.0 (API level 24), Android provides a notification style template specifically for messaging content. Using the `Notification.MessagingStyle` class, you can change several of the labels displayed on the notification, including the conversation title, additional messages, and the content view for the notification.
 The following code snippet demonstrates how to customize a notification's style using the `MessagingStyle` class.
 
-``` csharp
+```csharp
 builder.SetMessagingStyle(new Notification.MessagingStyle("John")
 	.SetConversationTitle("Conversation Title")
 	.AddMessage(NewMessage("Hello!", null)) // Pass in null for user.
@@ -1332,13 +1332,13 @@ builder.SetMessagingStyle(new Notification.MessagingStyle("John")
 );
 ```
 
-![alt text](/images/ag/MessagingNotification.png ':size=512')
+![alt text](/images/ag/MessagingNotification.png ":size=512")
 
 #### Big text/big picture style
 
 To add an image in your notification, pass an instance of `NotificationCompat.BigPictureStyle` to `Notification.Builder.SetBigPictureStyle()` :
 
-``` csharp
+```csharp
 builder.SetBigPictureStyle(new Notification.BigPictureStyle()
 		.SetSummaryText("Summary Text")
 		.SetBigContentTitle("Big Picture Title")
@@ -1346,27 +1346,27 @@ builder.SetBigPictureStyle(new Notification.BigPictureStyle()
 		.SetBigPicture(bigPictureTexture));
 ```
 
-![alt text](/images/ag/BigPictureNotification.png ':size=512')
+![alt text](/images/ag/BigPictureNotification.png ":size=512")
 
 Apply `Notification.BigTextStyle` to display text in the expanded content area of the notification:
 
-``` csharp
+```csharp
 builder.SetBigTextStyle(new Notification.BigTextStyle()
 					.BigText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
 ```
 
-![alt text](/images/ag/BigTextNotification.png ':size=512')
+![alt text](/images/ag/BigTextNotification.png ":size=512")
 
 #### Notification with action
 
 A notification can offer up to three action buttons that allow the user to respond quickly. But these action buttons should not duplicate the action performed when the user taps the notification.
 The following example adds "Open URL" button to the notification. When tapped, it opens the page in a web-browser.
 
-``` csharp
+```csharp
 builder.AddAction(Notification.CreateOpenUrlAction("https://docs.ninevastudios.com", "notify_icon_small", "Open URL"));
 ```
 
-![alt text](/images/ag/ActionNotification.png ':size=512')
+![alt text](/images/ag/ActionNotification.png ":size=512")
 
 ### Passing custom data with notification
 
@@ -1374,7 +1374,7 @@ You can add custom string key/value pairs to the notification and if the app lat
 
 When creating the notification:
 
-``` csharp
+```csharp
 var builder = new Notification.Builder(channelId, new Dictionary<string, string>
 {
 	{"key1", "value1"},
@@ -1384,7 +1384,7 @@ var builder = new Notification.Builder(channelId, new Dictionary<string, string>
 
 To retrieve the data use `AGNotificationManager.GetNotificationParameter` , which takes the Key as parameter:
 
-``` csharp
+```csharp
 var result = string.Format("App was opened via notification with parameters: {0}, {1}",
 	AGNotificationManager.GetNotificationParameter(CustomDataKey1),
 	AGNotificationManager.GetNotificationParameter(CustomDataKey2));
@@ -1394,7 +1394,7 @@ var result = string.Format("App was opened via notification with parameters: {0}
 
 You can schedule the notification by passing an optional time parameter to `AGNotificationManager.Notify()` .
 
-``` csharp
+```csharp
 var time = DateTime.Now.AddSeconds(20);
 AGNotificationManager.Notify(notificationId, builder.Build(), time);
 ```
@@ -1403,7 +1403,7 @@ AGNotificationManager.Notify(notificationId, builder.Build(), time);
 
 Use `AGNotificationManager.NotifyRepeating()` to send a repeating scheduled notification:
 
-``` csharp
+```csharp
 var time = DateTime.Now.AddSeconds(20); //is scheduled at 20 seconds after call
 const long intervalMillis = 10 * 1000L; // repeats every 10 seconds
 
@@ -1416,7 +1416,7 @@ AGNotificationManager.NotifyRepeating(null, notificationId, builder.Build(), int
 
 To cancel a notification (this only removes the notification from notifications bar) use `AGNotificationManager.Cancel()` . To cancel all notifications use `CancelAll()` :
 
-``` csharp
+```csharp
 AGNotificationManager.Cancel(notificationId);
 //or
 AGNotificationManager.CancelAll();
@@ -1426,7 +1426,7 @@ AGNotificationManager.CancelAll();
 
 To cancel a scheduled notification you must use:
 
-``` csharp
+```csharp
 AGNotificationManager.CancelScheduledNotification(notificationId);
 ```
 
@@ -1436,27 +1436,27 @@ This class allows you to change device wallpaper image
 
 ### Required permissons
 
-* Set wallpaper permission must be present in `AndroidManifest.xml` file:
+- Set wallpaper permission must be present in `AndroidManifest.xml` file:
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.SET_WALLPAPER"/>
 ```
 
-* Write external storage permission must be present in `AndroidManifest.xml` file (to save texture to file before setting it as wallpaper):
+- Write external storage permission must be present in `AndroidManifest.xml` file (to save texture to file before setting it as wallpaper):
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
 or modify Android Build Settings to set Write Access to `External (SDCard)`
 
-![alt text](/images/ag/external_storage.png ':size=512')
+![alt text](/images/ag/external_storage.png ":size=512")
 
 ### Checking if setting wallpaper is supported or allowed
 
 Before setting the wallpaper you must make sure it is supported and allowed:
 
-``` csharp
+```csharp
 var isSupported = AGWallpaperManager.IsWallpaperSupported();
 var isAllowed = AGWallpaperManager.IsSetWallpaperAllowed();
 AGUIMisc.ShowToast(string.Format("Wallpaper supported? - {0}, set allowed? - {1}", isSupported, isAllowed));
@@ -1468,7 +1468,7 @@ To set wallpaper from existing `Texture2D` call `AGWallpaperManager.SetWallpaper
 
 ?> If you want to set wallpaper ( `Texture2D` ) from your project assets you have to set **Texture Type** to **Advanced** plus set **Read/Write Enabled** checkbox to true and **Compression Format** to **RGBA 32 bit** otherwise you will get errors.
 
-![alt text](/images/ag/share-image-settings.png ':size=512')
+![alt text](/images/ag/share-image-settings.png ":size=512")
 
 ### Setting wallpaper from file path
 
@@ -1476,7 +1476,7 @@ You can also set wallpaper from the file path.
 
 This is the example that allows user to pick image from the gallery and then use it to set the wallpaper:
 
-``` csharp
+```csharp
 AGGallery.PickImageFromGallery(
     selectedImage =>
     {
@@ -1512,7 +1512,7 @@ Other methods relevant to UI
 
 You can show toast (short or long) like this:
 
-``` csharp
+```csharp
 AndroidGoodiesMisc.ShowToast("hello long!", AndroidGoodiesMisc.ToastLength.Long);
 ```
 
@@ -1524,7 +1524,7 @@ You can use the `AGUIMisc.ChangeApplicationIconState(false);` to hide the app ic
 
 Use the following methods to show and hide the status bar:
 
-``` csharp
+```csharp
 public void OnShowStatusBar()
 {
     Screen.fullScreen = false;
@@ -1542,7 +1542,7 @@ public void OnHideStatusBar()
 
 To enable immersive mode invoke:
 
-``` csharp
+```csharp
 AndroidGoodiesMisc.EnableImmersiveMode();
 ```
 
@@ -1562,12 +1562,12 @@ Class provides various information about device, os.
 
 ### Functionality
 
-  + Checking if device has specific feature available (e.g. if device has light sensor). Use `AGDeviceInfo.SystemFeatures.HasSystemFeature(string feature)` to check if device has the specified feature. Features are provided as constants in `AGDeviceInfo.SystemFeatures` class.
-  + Getting [Android ID](https://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID)
-  + Getting properties of `android.os.Build` and `android.os.Build$VERSION` classes. ( `DEVICE, MODEL, PRODUCT, MANUFACTURER, BASE_OS, CODENAME, INCREMENTAL, PREVIEW_SDK_INT, RELEASE, SDK_INT, SECURITY_PATCH` )
-  + Getting application package - `AGDeviceInfo.GetApplicationPackage()`
-  + Checking if package is installed on device `AGDeviceInfo.IsPackageInstalled(string package)`
-  + Getting the list of installed packages on device `AGDeviceInfo.GetInstalledPackages()` - returns a list of `PackageInfo` objects that contain `PackageName` , `VersionCode` , `VersionName`
+- Checking if device has specific feature available (e.g. if device has light sensor). Use `AGDeviceInfo.SystemFeatures.HasSystemFeature(string feature)` to check if device has the specified feature. Features are provided as constants in `AGDeviceInfo.SystemFeatures` class.
+- Getting [Android ID](https://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID)
+- Getting properties of `android.os.Build` and `android.os.Build$VERSION` classes. ( `DEVICE, MODEL, PRODUCT, MANUFACTURER, BASE_OS, CODENAME, INCREMENTAL, PREVIEW_SDK_INT, RELEASE, SDK_INT, SECURITY_PATCH` )
+- Getting application package - `AGDeviceInfo.GetApplicationPackage()`
+- Checking if package is installed on device `AGDeviceInfo.IsPackageInstalled(string package)`
+- Getting the list of installed packages on device `AGDeviceInfo.GetInstalledPackages()` - returns a list of `PackageInfo` objects that contain `PackageName` , `VersionCode` , `VersionName`
 
 ## AGEnvironment.cs
 
@@ -1577,12 +1577,12 @@ Provides access to Android [environment](https://developer.android.com/reference
 
 Shortly, writing to this path requires the `WRITE_EXTERNAL_STORAGE` permission, and starting in KITKAT, read access requires the `READ_EXTERNAL_STORAGE` permission, which is automatically granted if you hold the write permission.
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
 
-Required permissions are dependent on Android version. Read more about permissions to read and write external storage [ `getExternalStorageDirectory` method documentation](https://developer.android.com/reference/android/os/Environment.html#getExternalStorageDirectory()).
+Required permissions are dependent on Android version. Read more about permissions to read and write external storage [ `getExternalStorageDirectory` method documentation](<https://developer.android.com/reference/android/os/Environment.html#getExternalStorageDirectory()>).
 
 ### Functionality
 
@@ -1602,20 +1602,20 @@ This class allows to retrieve information about device network connectivity.
 
 The following permissions are required in `AndroidManifest.xml` for the class methods to work:
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 ```
 
 ### Functionality
 
-  + Checking if internet is available ( `AGNetwork.IsInternetAvailable()` )
-  + Checking if wi-fi enabled ( `AGNetwork.IsWifiEnabled()` )
-  + Checking if wi-fi connected ( `AGNetwork.IsWifiConnected()` )
-  + Checking if mobile data connection connected ( `AGNetwork.IsMobileConnected()` )
-  + Getting wi-fi signal level ( `AGNetwork.GetWifiSignalLevel()` )
-  + Getting wi-fi connection info ( `AGNetwork.GetWifiConnectionInfo()` - `BSSID, SSID, MacAddress, LinkSpeed, IpAddress, NetworkId, Rssi` )
-  + Getting Ethernet MAC address if available (useful for Android TV) `AGNetwork.EthernetMacAddress`
+- Checking if internet is available ( `AGNetwork.IsInternetAvailable()` )
+- Checking if wi-fi enabled ( `AGNetwork.IsWifiEnabled()` )
+- Checking if wi-fi connected ( `AGNetwork.IsWifiConnected()` )
+- Checking if mobile data connection connected ( `AGNetwork.IsMobileConnected()` )
+- Getting wi-fi signal level ( `AGNetwork.GetWifiSignalLevel()` )
+- Getting wi-fi connection info ( `AGNetwork.GetWifiConnectionInfo()` - `BSSID, SSID, MacAddress, LinkSpeed, IpAddress, NetworkId, Rssi` )
+- Getting Ethernet MAC address if available (useful for Android TV) `AGNetwork.EthernetMacAddress`
 
 ## AGTelephony.cs
 
@@ -1627,7 +1627,7 @@ Note that access to some telephony information is permission-protected. Your app
 
 To use this class methods you need to add the following permission to `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```
 
@@ -1635,9 +1635,9 @@ To use this class methods you need to add the following permission to `AndroidMa
 
 Currently available functionality:
 
-  + Getting the telephony device identifier. ( `AGTelephony.TelephonyDeviceId` )
-  + Getting the telephony sim serial number. ( `AGTelephony.TelephonySimSerialNumber` )
-  + Getting the ISO country code. ( `AGTelephony.NetworkCountryIso` )
+- Getting the telephony device identifier. ( `AGTelephony.TelephonyDeviceId` )
+- Getting the telephony sim serial number. ( `AGTelephony.TelephonySimSerialNumber` )
+- Getting the ISO country code. ( `AGTelephony.NetworkCountryIso` )
 
 # **Hardware**
 
@@ -1649,7 +1649,7 @@ Methods to get rich info about device battery
 
 Current method allows to get current battery percentage level of the device:
 
-``` csharp
+```csharp
 // Gets the battery charge level from 1-100.
 var batteryLevel = AGBattery.GetBatteryChargeLevel();
 ```
@@ -1658,21 +1658,21 @@ var batteryLevel = AGBattery.GetBatteryChargeLevel();
 
 Here are the properties that you can get about battery state:
 
-* `AGBattery.ChargeTimeRemaining` - An approximation for how much time (in milliseconds) remains until the battery is fully charged.
-* `AGBattery.Capacity` - Remaining battery capacity as an integer percentage of total capacity (with no fractional part).
-* `AGBattery.ChargeCounter` - Battery capacity in micro ampere-hours, as an integer.
-* `AGBattery.CurrentAverage` - Average battery current in micro amperes, as an integer.
-* `AGBattery.CurrentNow` - Instantaneous battery current in micro amperes, as an integer.
-* `AGBattery.EnergyCounter` - Battery remaining energy in nano watt-hours, as a long integer.
-* `AGBattery.Status` - Battery charge status.
-* `AGBattery.IsBatteryLow` - Whether the battery is currently considered to be low.
-* `AGBattery.Health` - Current health constant.
-* `AGBattery.BatteryPlugged` - Value indicating whether the device is plugged in to a power source.
-* `AGBattery.IsBatteryPresent` - Whether a battery is present.
-* `AGBattery.Scale` - The maximum battery level.
-* `AGBattery.Technology` - The technology of the current battery.
-* `AGBattery.Temperature` - The current battery temperature.
-* `AGBattery.Voltage` - The current battery voltage level in mV.
+- `AGBattery.ChargeTimeRemaining` - An approximation for how much time (in milliseconds) remains until the battery is fully charged.
+- `AGBattery.Capacity` - Remaining battery capacity as an integer percentage of total capacity (with no fractional part).
+- `AGBattery.ChargeCounter` - Battery capacity in micro ampere-hours, as an integer.
+- `AGBattery.CurrentAverage` - Average battery current in micro amperes, as an integer.
+- `AGBattery.CurrentNow` - Instantaneous battery current in micro amperes, as an integer.
+- `AGBattery.EnergyCounter` - Battery remaining energy in nano watt-hours, as a long integer.
+- `AGBattery.Status` - Battery charge status.
+- `AGBattery.IsBatteryLow` - Whether the battery is currently considered to be low.
+- `AGBattery.Health` - Current health constant.
+- `AGBattery.BatteryPlugged` - Value indicating whether the device is plugged in to a power source.
+- `AGBattery.IsBatteryPresent` - Whether a battery is present.
+- `AGBattery.Scale` - The maximum battery level.
+- `AGBattery.Technology` - The technology of the current battery.
+- `AGBattery.Temperature` - The current battery temperature.
+- `AGBattery.Voltage` - The current battery voltage level in mV.
 
 ## AGFlashLight.cs
 
@@ -1682,7 +1682,7 @@ Turns on camera flashlight in a torch mode.
 
 To use flashlight you must have the following permissions declared in your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <!-- Flashlight -->
 <uses-permission android:name="android.permission.CAMERA" />
 <uses-feature android:name="android.hardware.camera" />
@@ -1701,7 +1701,7 @@ To check if if flashlight is available on device call `AGFlashLight.HasFlashligh
 
 To enable and disable flashlight:
 
-``` csharp
+```csharp
 // Enable
 AGFlashLight.Enable();
 
@@ -1713,14 +1713,14 @@ AGFlashLight.Disable();
 
 ### FAQ
 
-* Will GPS work if there is no internet connection or mobile data etc.?
-* Yes, GPS is seperate hardware module that does not depend on internet connection in any way.
+- Will GPS work if there is no internet connection or mobile data etc.?
+- Yes, GPS is seperate hardware module that does not depend on internet connection in any way.
 
 ### Required permissions
 
 To use GPS you must have the following permission ([and uses-feature if you target API level 21 or higher (Android 5.0)](https://developer.android.com/guide/topics/location/strategies.html#Permission)) declared in your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-feature android:name="android.hardware.location.gps" android:required="false" />
 ```
@@ -1741,7 +1741,7 @@ To start listening for location updates call `AGGPS.RequestLocationUpdates()` pr
 
 Example:
 
-``` csharp
+```csharp
 public void OnStartTrackingLocation()
 {
     // Minimum time interval between location updates, in milliseconds.
@@ -1768,7 +1768,7 @@ You can calculate distance from one location to another by calling `AGGPS.Locati
 
 Example:
 
-``` csharp
+```csharp
 const double AmsterdamLatitude = 52.3745913;
 const double AmsterdamLongitude = 4.8285751;
 const double BrusselsLatitude = 50.854954;
@@ -1785,7 +1785,7 @@ Another way is to use static method `AGGPS.DistanceBetween()` which is equivalen
 
 Example:
 
-``` csharp
+```csharp
 var results = new float[3];
 AGGPS.DistanceBetween(AmsterdamLatitude, AmsterdamLongitude,
     BrusselsLatitude, BrusselsLongitude, results);
@@ -1801,7 +1801,7 @@ This class allows you to interact with device vibrator.
 
 To be able to use vibrator you have to add the following permission to `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.VIBRATE"/>
 ```
 
@@ -1809,7 +1809,7 @@ To be able to use vibrator you have to add the following permission to `AndroidM
 
 To check if device actually has vibrator call
 
-``` csharp
+```csharp
 AGVibrator.HasVibrator()
 ```
 
@@ -1817,13 +1817,13 @@ AGVibrator.HasVibrator()
 
 To vibrate once provide vibrate duration in milliseconds:
 
-``` csharp
+```csharp
 AGVibrator.Vibrate(500);
 ```
 
 To vibrate a pattern:
 
-``` csharp
+```csharp
 // Start without a delay
 // Each element then alternates between vibrate, sleep, vibrate, sleep...
 long[] pattern = {0, 100, 1000, 300, 200, 100, 500, 200, 100};
@@ -1835,13 +1835,13 @@ AGVibrator.VibratePattern(pattern);
 
 ### Checking if the device has the required API
 
-``` csharp
+```csharp
 bool supportsNewVibrationsApi = AGVibrator.AreVibrationEffectsSupported;
 ```
 
 ### Checking if the device has amplitude control
 
-``` csharp
+```csharp
 bool hasAmplitudeControl = AGVibrator.HasAmplitudeControl;
 ```
 
@@ -1850,7 +1850,7 @@ bool hasAmplitudeControl = AGVibrator.HasAmplitudeControl;
 Create a one shot vibration. One shot vibrations will vibrate constantly for the specified
 period of time at the specified amplitude, and then stop.
 
-``` csharp
+```csharp
 // Create a one shot vibration for 1000 ms at selected amplitude
 // Amplitude is the strength of the vibration. This must be a value between 1 and 255,
 // or DEFAULT_AMPLITUDE.
@@ -1866,7 +1866,7 @@ it vibrates for.
 To cause the pattern to repeat, pass the index into the timings array at which to start
 the repetition, or -1 to disable repeating.
 
-``` csharp
+```csharp
 // Start without a delay
 // Each element then alternates between vibrate, sleep, vibrate, sleep...
 // To cause the pattern to repeat, pass the index into the pattern array at which to start the repeat,
@@ -1890,7 +1890,7 @@ to vibrate at `DEFAULT_AMPLITUDE` strength, etc.
 To cause the pattern to repeat, pass the index into the timings array
 at which to start the repetition, or -1 to disable repeating.
 
-``` csharp
+```csharp
 // Start without a delay
 // Each element then alternates between vibrate, sleep, vibrate, sleep...
 // To cause the pattern to repeat, pass the index into the pattern array at which to start the repeat,
@@ -1908,7 +1908,7 @@ AGVibrator.Vibrate(VibrationEffect.CreateWaveForm(vibratePattern, amplitudes, 0)
 
 Cancels current vibration.
 
-``` csharp
+```csharp
 AGVibrator.Cancel();
 ```
 
@@ -1918,15 +1918,15 @@ This class allows you to check if device has camera and its certain features and
 
 ### Requirements
 
-* **CAMERA permission** To take photos you must add this permission to your `AndroidManifest.xml` and also request the `CAMERA` runtime permission BEFORE calling `AGCamera.TakePhoto()` method. [See AGPermissions.cs how to do it](#agpermissionscs) or see the `AGCamera.TakePhoto()` example usage in the demo.
+- **CAMERA permission** To take photos you must add this permission to your `AndroidManifest.xml` and also request the `CAMERA` runtime permission BEFORE calling `AGCamera.TakePhoto()` method. [See AGPermissions.cs how to do it](#agpermissionscs) or see the `AGCamera.TakePhoto()` example usage in the demo.
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-* To take photos you must add this permission to your `AndroidManifest.xml` or set **Write Access** to **External (SD Card)** in Android build settings:
+- To take photos you must add this permission to your `AndroidManifest.xml` or set **Write Access** to **External (SD Card)** in Android build settings:
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
 
@@ -1934,10 +1934,10 @@ This class allows you to check if device has camera and its certain features and
 
 You can check the following things:
 
-* if device actually has camera: `AGCamera.DeviceHasCamera()`
-* if device has frontal camera: `AGCamera.DeviceHasFrontalCamera()`
-* if device has camera with autofocus: `AGCamera.DeviceHasCameraWithAutoFocus()`
-* if device has camera with flashlight: `AGCamera.DeviceHasCameraWithFlashlight()`
+- if device actually has camera: `AGCamera.DeviceHasCamera()`
+- if device has frontal camera: `AGCamera.DeviceHasFrontalCamera()`
+- if device has camera with autofocus: `AGCamera.DeviceHasCameraWithAutoFocus()`
+- if device has camera with flashlight: `AGCamera.DeviceHasCameraWithFlashlight()`
 
 ### Taking a photo and receiving a result
 
@@ -1945,14 +1945,14 @@ Takes photo using Android camera intent, stores photo in user gallery and return
 
 Method parameters are:
 
-* a success callback where you will receive `ImagePickResult` object. Invoke `LoadTexture2D()` or `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` to load `Texture2D` texture. Object also contains such info as display name of the picked image, width, height, size etc. Check the class itself for more information.
-* a cancel callback which is invoked when user cancels taking photo or an error happens.
-* an optional `ImageResultSize` - defaults to `ImageResultSize.Original` - specify this parameter if the photo takes up to much memory and needs to be downscaled before returned.
-* an optional `bool` parameter whether to generate thumnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
+- a success callback where you will receive `ImagePickResult` object. Invoke `LoadTexture2D()` or `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` to load `Texture2D` texture. Object also contains such info as display name of the picked image, width, height, size etc. Check the class itself for more information.
+- a cancel callback which is invoked when user cancels taking photo or an error happens.
+- an optional `ImageResultSize` - defaults to `ImageResultSize.Original` - specify this parameter if the photo takes up to much memory and needs to be downscaled before returned.
+- an optional `bool` parameter whether to generate thumnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
 
 Example:
 
-``` csharp
+```csharp
 var imageResultSize = ImageResultSize.Max1024;
 AGCamera.TakePhoto(
     selectedImage =>
@@ -1976,19 +1976,19 @@ Records video using Android camera intent, returns the video information as a `V
 
 `VideoPickResult` contains the following properties:
 
-* `OriginalPath`
-* `DisplayName`
-* `PreviewImagePath` , `PreviewImageThumbnailPath` , `PreviewImageSmallThumbnailPath` - only if requested generating thumbnails
-* `Width` , `Height`
-* `Orientation`
-* `Size`
-* `CreatedAt`
+- `OriginalPath`
+- `DisplayName`
+- `PreviewImagePath` , `PreviewImageThumbnailPath` , `PreviewImageSmallThumbnailPath` - only if requested generating thumbnails
+- `Width` , `Height`
+- `Orientation`
+- `Size`
+- `CreatedAt`
 
 Also it contains methods to load corresponding preview images into `Texture2D` .
 
 Example:
 
-``` chsarp
+```chsarp
 var generatePreviewImages = true;
 AGCamera.RecordVideo(videoFile =>
     {
@@ -2010,7 +2010,7 @@ This class allows to user fingerprint scanner to identify the user and also for 
 
 To use fingerprint scanner you must add the following permission to your `AndroidManifest.xml` :
 
-``` xml
+```xml
 <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 ```
 
@@ -2018,8 +2018,8 @@ To use fingerprint scanner you must add the following permission to your `Androi
 
 Before prompting for fingerprint authentication you first have to check two things:
 
-* if the device has the fingerprint scanner by checking `AGFingerprintScanner.HasFingerprintHardware` property
-* if the user has enrolled fingerprints in the scanner by checking `AGFingerprintScanner.HasEnrolledFingerprint` property
+- if the device has the fingerprint scanner by checking `AGFingerprintScanner.HasFingerprintHardware` property
+- if the user has enrolled fingerprints in the scanner by checking `AGFingerprintScanner.HasEnrolledFingerprint` property
 
 ### Usage
 
@@ -2027,7 +2027,7 @@ When ready call `AGFingerprintScanner.Authenticate()` and provide the necessary 
 
 Example:
 
-``` csharp
+```csharp
 AGFingerprintScanner.Authenticate(
     () =>
     {
@@ -2057,7 +2057,7 @@ You can use this class to safely encrypt and store sensitive user data.
 
 Encrypting:
 
-``` csharp
+```csharp
 var Key = "MyKey";
 var ToEncrypt = "My Sensitive data to encrypt";
 AGFingerprintScanner.Encrypt(Key, ToEncrypt,
@@ -2084,7 +2084,7 @@ AGFingerprintScanner.Encrypt(Key, ToEncrypt,
 
 Decrypting:
 
-``` csharp
+```csharp
 AGFingerprintScanner.Decrypt(Key, _encryptedValue /* Encrypted value that you saved when encrypting */,
     decryptedValue =>
     {
@@ -2117,7 +2117,7 @@ Different methods to interact with file system.
 
 To save `Texture2D` image to Android gallery use:
 
-``` csharp
+```csharp
 AGFileUtils.SaveImageToGallery(texture2d, imageTitle, "My awesome screenshot");
 ```
 
@@ -2127,7 +2127,7 @@ Sometimes you need to load Unity `Texture2D` from Android content URI, e.g. `con
 
 Example:
 
-``` csharp
+```csharp
 public void OnPickContactFromAddressBook()
 {
     AGContacts.PickContact(
@@ -2167,7 +2167,7 @@ For each method you call you must specify a shared preferences filename in which
 
 Example code:
 
-``` csharp
+```csharp
 // Unique file name
 _sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
 
@@ -2186,7 +2186,7 @@ All the methods above return a boolean indicating whether the operation succeede
 
 To get all the preferences stored in particular file:
 
-``` csharp
+```csharp
 _sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
 
 var allPrefs = AGSharedPrefs.GetAll(_sharedPrefsFileKey);
@@ -2198,7 +2198,7 @@ foreach (var key in allPrefs.Keys)
 
 To get value by key:
 
-``` csharp
+```csharp
 _sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
 
 var boolValue = AGSharedPrefs.GetBool(_sharedPrefsFileKey, BoolKey, true);
@@ -2214,7 +2214,7 @@ Note that the last parameter is default value and is returned if the current key
 
 To clear all the saved values:
 
-``` csharp
+```csharp
 _sharedPrefsFileKey = AGDeviceInfo.GetApplicationPackage() + AGDeviceInfo.GetAndroidId();
 AGSharedPrefs.Clear(_sharedPrefsFileKey);
 ```
@@ -2227,7 +2227,7 @@ AGSharedPrefs.Clear(_sharedPrefsFileKey);
 
 Beginning in Android 6.0 (API level 23), users grant permissions to apps while the app is running, not when they install the app. This approach streamlines the app install process, since the user does not need to grant permissions when they install or update the app. It also gives the user more control over the app's functionality; for example, a user could choose to give a camera app access to the camera but not to the device location. The user can revoke the permissions at any time, by going to the app's Settings screen.
 
-![alt text](/images/ag/runtime-permission.png ':size=512')
+![alt text](/images/ag/runtime-permission.png ":size=512")
 
 Read more about requesting permissions on [Android Documentation](https://developer.android.com/training/permissions/requesting.html).
 
@@ -2237,7 +2237,7 @@ Read more about requesting permissions on [Android Documentation](https://develo
 
 And the way Unity works with runtime permissions now is it requests all the runtime permissions when you application starts, all in a row. Sometimes it is not what you want so you can disable this behaviour by putting these lines into manifest:
 
-``` xml
+```xml
 <meta-data
     android:name="unityplayer.SkipPermissionsDialog"
     android:value="true"/>
@@ -2249,7 +2249,7 @@ To check if the user has granted a specific permission use `AGPermissions.IsPerm
 
 Example - check if user granted location permission:
 
-``` csharp
+```csharp
 var isLocationPermissionGranted = AGPermissions.IsPermissionGranted(AGPermissions.ACCESS_FINE_LOCATION);
 ```
 
@@ -2261,7 +2261,7 @@ Before requesting permissions first always check if the user has already granted
 
 This is the example flow, it might seem complicated but look through code carefully:
 
-``` csharp
+```csharp
 public void OnRequestPermissions()
 {
     // Don't forget to also add the permissions you need to manifest!
@@ -2318,7 +2318,7 @@ This class allows printing images and/or HTML pages.
 
 Use `AGPrintHelper.PrintImage` method to print an image from a `Texture2D` . You can also provide an optional callback to be performed after the job is done and specify additional print parameters (colour mode, orientation and scale mode).
 
-***Note:*** The callback will be performed even if the print job is unsuccessful.
+**_Note:_** The callback will be performed even if the print job is unsuccessful.
 
 ## Print an HTML page
 
@@ -2329,11 +2329,11 @@ Use `AGPrintHelper.PrintHtmlPage` to print an HTML page from the source HTML-for
 ### Print from URL
 
 Call `AGPrintHelper.PrintHtmlPageFromUrl` method to print an HTML page from the respective URL.
-***Note:*** This method takes time to load the page from the internet.
+**_Note:_** This method takes time to load the page from the internet.
 
- # **FAQ**
+# **FAQ**
 
- ## Can't Build my project after importing Android Goodies
+## Can't Build my project after importing Android Goodies
 
 **Q:** I can't Build my project after importing Android Goodies, how do I fix this?
 
@@ -2341,7 +2341,7 @@ When your build fails, please check the console, it will have a very long error 
 
 **A #1:** Most likely you can't build because you already have Android Support Library Version 4 in your project, try removing **android-support-v4.jar** that comes with my package in Android/Plugins folder and rebuilding the project.
 
-**A #2:** The error is *java.lang. UnsupportedClassVersionError: com/android/dx/command/Main : Unsupported major.minor version 52.0* - this means you need to update your Java to the latest JDK8 ([Download here and install](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)). **Don't forget to set the JDK inside Unity -> Preferences -> External Tools -> JDK to newly downloaded version**
+**A #2:** The error is _java.lang. UnsupportedClassVersionError: com/android/dx/command/Main : Unsupported major.minor version 52.0_ - this means you need to update your Java to the latest JDK8 ([Download here and install](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)). **Don't forget to set the JDK inside Unity -> Preferences -> External Tools -> JDK to newly downloaded version**
 
 ## I click buttons in the demo but nothing happens
 
@@ -2371,9 +2371,9 @@ When your build fails, please check the console, it will have a very long error 
 
 1.7.0
 
-* IMPROVE UPL file logging
-* ADDED `android:requestLegacyExternalStorage=true` automatically via UPL
-* FIXED Various proguard warnings in different scenarios
-* FIXED Months conversions in date pickers
-* FIXED Saving images to gallery on Android >= 30
-* FIXED Sharing Texture iamges on Android >= 30
+- IMPROVE UPL file logging
+- ADDED `android:requestLegacyExternalStorage=true` automatically via UPL
+- FIXED Various proguard warnings in different scenarios
+- FIXED Months conversions in date pickers
+- FIXED Saving images to gallery on Android >= 30
+- FIXED Sharing Texture iamges on Android >= 30

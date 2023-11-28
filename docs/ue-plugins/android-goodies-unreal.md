@@ -624,6 +624,12 @@ Requires the "android.permission. WRITE_CONTACTS" permission.
 
 # Changelog
 
+v.2.2.3
+
+- FIXED Refactoring and fixing some issues with image pickers
+- FIXED Direct sharing to some messsenger apps on new Android versions
+- FIXED UPL package name for sharing image/text
+
 v.2.2.1
 
 - FIXED Upside down screenshot in UE 5.1 and higher
