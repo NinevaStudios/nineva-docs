@@ -1,4 +1,4 @@
-[filename](common/common_ue_header.md ':include')
+[filename](common/common_ue_header.md ":include")
 
 # **Google Maps View**
 
@@ -14,15 +14,15 @@ The plugin allows you to embed **Native [GoogleMapsView](https://developers.goog
 
 **Please read the limitations carefully before purchasing**
 
-* Minimum supported Android version is **API level 16 (Jelly Bean)**
+- Minimum supported Android version is **API level 16 (Jelly Bean)**
 
-* The view is **ALWAYS** shown on top of everything in your UE4 game. The view is implemented as an Android native dialog on top of UE4 `GameActivity`.
+- The view is **ALWAYS** shown on top of everything in your UE4 game. The view is implemented as an Android native dialog on top of UE4 `GameActivity`.
 
-* The plugin does NOT work in Editor! It is a native Android/iOS view (not a web view), so performance is awesome but there is no way to get native Android/iOS view working in Unreal Editor or desktop.
+- The plugin does NOT work in Editor! It is a native Android/iOS view (not a web view), so performance is awesome but there is no way to get native Android/iOS view working in Unreal Editor or desktop.
 
-* You have to handle device orientation changes.
+- You have to handle device orientation changes.
 
-* **You can't move the view (e.g scroll in Unreal view)**. The view for now is static and can't be moved around.
+- **You can't move the view (e.g scroll in Unreal view)**. The view for now is static and can't be moved around.
 
 # **Setup (Plugin)**
 
@@ -45,12 +45,13 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", ... , "GoogleMapsVie
 ```
 
 3. Follow setup steps for:
-* [Android](#setupandroid)
-* [iOS](#setupios)
+
+- [Android](#setupandroid)
+- [iOS](#setupios)
 
 # **Setup (Android)**
 
-## Enable *Maps SDK for Android* API in Gooogle Console
+## Enable _Maps SDK for Android_ API in Gooogle Console
 
 Go to [Google Console dashboard](https://console.developers.google.com/apis/dashboard) and click on `ENABLE APIS AND SERVICES` button, then find **Maps SDK for Android** and make sure it is enabled.
 
@@ -60,7 +61,7 @@ Go to [Google Console dashboard](https://console.developers.google.com/apis/dash
 
 ## Change the default Bundle id to your Bundle Id (package name)
 
-Go to Unreal Editor Project Settings and set the Package Name, e.g. `com.ninevastudios.googlemapsview` and save it. **This is important as Google API Key in the next step is bound to the package you set.** In this document I will refer to your package as ```${YOUR_PACKAGE_NAME}```
+Go to Unreal Editor Project Settings and set the Package Name, e.g. `com.ninevastudios.googlemapsview` and save it. **This is important as Google API Key in the next step is bound to the package you set.** In this document I will refer to your package as `${YOUR_PACKAGE_NAME}`
 
 ![](images/google-maps/PackageName.png)
 
@@ -68,22 +69,22 @@ Go to Unreal Editor Project Settings and set the Package Name, e.g. `com.ninevas
 
 This part is a bit tricky so please follow instructions carefully.
 
-* If you don't already have a [Google Console](https://console.developers.google.com) account create one and login.
-* Go to [Android API documentation](https://developers.google.com/maps/documentation/android-sdk/get-api-key#get-the-api-key) and follow the instructions on how to get an API key.
+- If you don't already have a [Google Console](https://console.developers.google.com) account create one and login.
+- Go to [Android API documentation](https://developers.google.com/maps/documentation/android-sdk/get-api-key#get-the-api-key) and follow the instructions on how to get an API key.
 
 ![](images/google-maps/get_api_key_1.png)
 
-* Now copy your key and save it, you will need it later. After this click `Restrict key` button.
+- Now copy your key and save it, you will need it later. After this click `Restrict key` button.
 
 ![](images/google-maps/get_api_key_2.png)
 
-* What we need to do now and its very important that we restrict usage of this key to only our Android application (So other people can't use it if the obtain your key). In `Key restriction section` choose `Android apps` and click on `+ Add package name and fingerprint` button.
+- What we need to do now and its very important that we restrict usage of this key to only our Android application (So other people can't use it if the obtain your key). In `Key restriction section` choose `Android apps` and click on `+ Add package name and fingerprint` button.
 
 ![](images/google-maps/get_api_key_3.png)
 
-* The form that appears maps app package names to SHA-1 certificate fingerprints. Put **Package name** from your project that you set up in [Step 1](#change-the-default-bundle-id-to-your-bundle-id-package-name) into the package field.
+- The form that appears maps app package names to SHA-1 certificate fingerprints. Put **Package name** from your project that you set up in [Step 1](#change-the-default-bundle-id-to-your-bundle-id-package-name) into the package field.
 
-### Obtaining *SHA-1 certificate fingerprint*
+### Obtaining _SHA-1 certificate fingerprint_
 
 To obtain **SHA-1 certificate fingerprint** run this command in your terminal pointing to your keystore that application is signed with:
 
@@ -95,15 +96,15 @@ If you use your Windows machine its very similar, in my case I specified full pa
 
 ![](images/google-maps/get_key_7.png)
 
-* Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save`.
+- Now copy your **SHA-1 certificate fingerprint** into the form in Google Console. After you filled in all the information click `Save`.
 
 ![](images/google-maps/get_key_6.png)
 
-* Repeat adding package-**SHA-1 certificate fingerprint** pairs for all keystores that you sign the app with. For example I usually have two entries - one with my debug keystore to develop locally and another pair for Google Play publishing.
+- Repeat adding package-**SHA-1 certificate fingerprint** pairs for all keystores that you sign the app with. For example I usually have two entries - one with my debug keystore to develop locally and another pair for Google Play publishing.
 
 !> It may take up to 5 minutes for settings to take effect after you save them
 
-### Adding Google Play *SHA-1 certificate fingerprint* if you use Google Play App Signing
+### Adding Google Play _SHA-1 certificate fingerprint_ if you use Google Play App Signing
 
 ?> If you are not using new [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/7384423) mechanism please skip this part.
 
@@ -113,33 +114,27 @@ You have to do this because with the new [Google Play App Signing](https://suppo
 
 ![](images/google-maps/new-signing.png)
 
-## Put the API key inside your `AndroidManifest.xml` by editing Unreal Project settings.
+## Put the API key in the plugin setting in Project Setings.
 
-Once you have your key (it starts with "AIza"), in Unreal Editor go to _Edit -> Project Settings -> Android_ and put the following `meta-data` tag in _Advanced APK Packaging -> Extra Settings for <application> section (\n to separate lines)_ field (replace the `YOUR_API_KEY_HERE` value with the API key that you recently retrieved).
-
-```xml
-<meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR_API_KEY_HERE"/>
-```
-
-![](images/google-maps/APIKeySetup.png)
+Go to your Project Settings, find the plugin settings section and place your API keys into the corresponsing Android/iOS fields.
 
 ## Run the Demo Project
 
-* Open demo level in _Content Browser -> Content -> Levels_
-* Connect Android device and launch the level (Device must have Google Play Services installed)
+- Open demo level in _Content Browser -> Content -> Levels_
+- Connect Android device and launch the level (Device must have Google Play Services installed)
 
 After running the application on your device you will see the demo scene, now you can play around with the map.
 
 ![](images/google-maps/AppScreen1.png)
-
 
 # **Setup (iOS)**
 
 ## What's different on iOS?
 
 There are a few differences and things to note about iOS implementation:
-* Most of the functionality is identical but there are some methods and properties that can be used only on Android. This means referring this functionality will have no effect on iOS.
-* API key is provided by calling `UGoogleMapsViewBlueprintLibrary::SetAPIKey(apiKey)` function unlike providing it in the manifest file on Android.
+
+- Most of the functionality is identical but there are some methods and properties that can be used only on Android. This means referring this functionality will have no effect on iOS.
+- API key is provided by calling `UGoogleMapsViewBlueprintLibrary::SetAPIKey(apiKey)` function unlike providing it in the manifest file on Android.
 
 ## Make sure that Google Maps is enabled for iOS SDK
 
@@ -165,7 +160,7 @@ or in C++:
 UGoogleMapsViewBlueprintLibrary::SetAPIKey("YOUR_API_KEY_HERE");
 ```
 
-***Note!*** When building for iPhone XS/XS Max, add these lines of code to the Engine/UE4/Source/UE4Game.Target.cs and Games/YourProjectName/Source/YourProjectName.Target.cs:
+**_Note!_** When building for iPhone XS/XS Max, add these lines of code to the Engine/UE4/Source/UE4Game.Target.cs and Games/YourProjectName/Source/YourProjectName.Target.cs:
 
 ```csharp
 if (Target.Platform == UnrealTargetPlatform.IOS)
@@ -209,7 +204,7 @@ Be aware that you won't be able to work with map after dismissing it.
 
 ## Google Map Options
 
- To customize what location is shown on the map and many many more settings, set all the configurations on the options object that you pass to view `Show` method. For more information on each option please refer to [GoogleMapOptions Documentation](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) where they are explained in detail.
+To customize what location is shown on the map and many many more settings, set all the configurations on the options object that you pass to view `Show` method. For more information on each option please refer to [GoogleMapOptions Documentation](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) where they are explained in detail.
 
 Example of creating map view configuration via blueprint:
 
@@ -272,9 +267,9 @@ MapView->GetCallbackProxy()->OnMapReadyDynamicDelegate.AddDynamic(this, &UMyTest
 
 ## Available Callbacks
 
-* **OnMapReadyDynamicDelegate** - Fires when Map View is fully initialized. Ensure that your application uses Map View only after this event is received.
-* **OnMapClickDynamicDelegate** - Fires when user taps on Map View. Receives latitude and longitude of clicked location point.
-* **OnMarkerClickDelegate** - Fires when user taps on the Marker. Receives clicked marker reference.
+- **OnMapReadyDynamicDelegate** - Fires when Map View is fully initialized. Ensure that your application uses Map View only after this event is received.
+- **OnMapClickDynamicDelegate** - Fires when user taps on Map View. Receives latitude and longitude of clicked location point.
+- **OnMarkerClickDelegate** - Fires when user taps on the Marker. Receives clicked marker reference.
 
 # **Markers**
 
@@ -337,13 +332,14 @@ You can read and modify marker properties by calling corresponding getters and s
 For more details check out the Google Maps view markers documentation for [Android](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) and [iOS](https://developers.google.com/maps/documentation/ios-sdk/reference/interface_g_m_s_marker)
 
 Usage of some marker properties is limited depending on the mobile platform:
-* `GetAnchor` function not supported on Android
-* `GetWindowAnchor` not supported on Android
-* `GetIsVisible` function not supported on iOS
-* `SetIsVisible` function not supported on iOS
+
+- `GetAnchor` function not supported on Android
+- `GetWindowAnchor` not supported on Android
+- `GetIsVisible` function not supported on iOS
+- `SetIsVisible` function not supported on iOS
 
 ## Setting marker icon
 
 You can change the marker icon by calling the `SetIcon()` function and specifying the Texture2D to use as a new icon and scale factor (used for iOS). Leaving the Texture2D field empty will result in setting the default red marker icon. The scale factor for iOS is useful when you are using big textures. Providing the value of 10 will result in the marker image being ten times smaller, the value of 0.1 will make it ten times bigger.
 
-***Note!*** Textures used for marker icons should have the following settings: Compression Settings - VectorDisplacementMap, MipGenSettings - NoMipMaps, sRGB - false. Textures can sometimes display some artifacts when applied as marker icons. This can often be removed if you convert the image to .tga format before importing it in your Unreal project.
+**_Note!_** Textures used for marker icons should have the following settings: Compression Settings - VectorDisplacementMap, MipGenSettings - NoMipMaps, sRGB - false. Textures can sometimes display some artifacts when applied as marker icons. This can often be removed if you convert the image to .tga format before importing it in your Unreal project.
