@@ -990,6 +990,14 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.3.4
+
++ FIX login with phone number method
++ IMPROVE Login with phone number demo
++ ADD `com.google.android.gms.permission.AD_ID` on Android automatically if advertising id collection is enabled in settings
++ FIX unlink provider crashes on error callbacks
+
+
 ### 4.3.2
 
 - FIX Some packaging issues for iOS frameworks that contain `.bundle` resource bundles (GoogleSignIn, grpc)
