@@ -196,6 +196,8 @@ Official Android documentation on notification essentials can be found [here](ht
 
 Our plugin includes most of the common features for creating different types of custom notifications.
 
+!> Recently, there has been a change in Android 14 about scheduling exact notifications, you can read more about it [here](https://carterchen247.medium.com/android-14-behavior-change-schedule-exact-alarms-are-denied-by-default-7563a814dee4) -- shortly, you can no longer schedule exact notifications without the user explicitly going to app settings and enabling this options. The plugin will now automatically schedule exact notifications only if it has the permission to do so, and inexact otherwise. See java sources in the plugin to see what exactly is going on. The plugin also includes nodes `CanScheduleExactNotifications` and `OpenExactAlarmSettingPage` to give you the possibility to check whether the permission is granted and you can also open the settings for the user to do so.
+
 ### Setup
 
 In order to make notifications work properly, you have to tweak settings of the Android Goodies plugin. Go to _Project Settings -> Android Goodies_ and set path to the folder that contains small notification icon which is required by Android API.
