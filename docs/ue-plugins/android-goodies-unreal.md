@@ -626,6 +626,12 @@ Requires the "android.permission. WRITE_CONTACTS" permission.
 
 # Changelog
 
+v.2.2.5
+
++ ADDED Contact picker functionality
+
+---
+
 v.2.2.4
 
 - IMPROVED Local notifications issues with Android 14, added method to check if exact notifications can be scheduled and method to open exact notification settings
