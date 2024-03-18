@@ -116,11 +116,14 @@ It is recommended to stop connection after you are done working with the Billing
 
 ?> Please, follow the recommendations from the [official documentation](https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase?language=objc) for most use cases and best practices.
 
-Make sure to follow the setup instructions at the beginning of this page before implementing In-App-Purchases for iOS.
+To test in-app purchases on iOS after the setup you need to either 1) Upload the App to internal testing via the TestFlight or 2) Create a [sandbox Apple Id](https://developer.apple.com/documentation/storekit/in-app_purchase/testing_in-app_purchases_with_sandbox?language=objc) in App Store Connect. You can 
+test the demo level inside the plugin first and then build your implementation upon it.
+
+Make sure to follow the setup instructions at the beginning of this page before implementing In-App-Purchases for iOS. Usually, the problems are with the setup, check the [discussion section for potential misconfiguration issues](https://developer.apple.com/documentation/storekit/skproductsresponse/1505985-invalidproductidentifiers?language=objc).
 
 ### Initialize
 
-`PaymentQueue` is main entry point for communicationg with App Store.
+`PaymentQueue` is main entry point for communication with App Store.
 
 You should get and store a reference to the default queue as soon as possible to initialize callbacks.
 It is also important to check if the user is authorized to make purchases.
