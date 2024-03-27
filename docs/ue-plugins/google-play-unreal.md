@@ -157,6 +157,11 @@ After [logging in](#login) your account should contain a token that you can use 
 
 ## Login
 
+
+After the release of the [Play Games Services Sign In v2](https://developers.google.com/games/services/android/signin) you can no longer choose when to login and you can no longer (and don't need to) pass any permission flags to request features. When your game launches, it will always attempt to sign in the user. To authenticate the user, you must verify that the user successfully signed in, and then get their Player ID. You also no longer have the option to log the user out.
+
+// TODO: Rewrite
+
 The authentication flow contains 4 nodes:
 
 ![](images/play-goodies/auth/auth_flow.png)
@@ -165,6 +170,11 @@ The authentication flow contains 4 nodes:
 * Logout - this will logout the current user.
 * Is Logged In - checks if a user is logged in.
 * Revoke Access - if you requested additional permissions (e. g. email) during login and they were granted you can revoke them using this node.
+
+## Getting Server Auth Code
+
+
+
 
 ## Account details
 
