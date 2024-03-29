@@ -119,11 +119,19 @@ You can create a new user with an email and password by calling the `CreateUser`
 
 There are several options for sign in. You can either do it with email and password, a custom token, or with a specific credential. There are also methods for obtaining these credentials, but they require an additional integration of the corresponding provider's SDK. For example, you can use Facebook credentials to sign the user in, but you will need a valid Facebook token that can only be obtained if you integrate the Facebook SDK into your project.
 
-We have integrated the Google Sign In SDK as a part of the plugin in order to show an example of how this should be done. Call the `PromptGoogleSignIn` method to show a native sign in with Google dialog. After the user successfully signs in, you will be able to use the AuthCredentials object to either sign the user in Firebase, or link them to an existing account.
+### Google Sign In
+
+We have integrated the Google Sign In SDK as a part of the plugin in order to show an example of how this should be done. Call the `PromptGoogleSignIn` method to show a native sign in with Google dialog. After the user successfully signs in, you will be able to use the AuthCredentials object to either sign the user in Firebase, or link them to an existing account. For Google sign in to work, make sure that you properly enable and configure this auth method in the auth dashboard and re-download and re-pick the configuration file in the plugin settings.
 
 ![](images/firebase/auth/AuthGoogleSignIn.png)
 
+---
+
+### Anonymous login
+
 You can also use the anonymous sign in by calling the `SignInAnonymously` method.
+
+---
 
 !> All sign in methods return the FirebaseUser object when successful, that can be used later to read and modify the user's data.
 
