@@ -815,7 +815,7 @@ You can take a look at our example [here](https://deeplinks.ninevastudios.com/.w
 
 Example:
 
-```
+```json
 [{
 	"relation": ["delegate_permission/common.handle_all_urls"],
 	"target": {
@@ -842,7 +842,7 @@ You can take a look at our example [here](https://deeplinks.ninevastudios.com/.w
 
 Example:
 
-```
+```json
 {
 	"applinks": {
 		"apps": [],
