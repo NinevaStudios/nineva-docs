@@ -147,11 +147,11 @@ Open the **Authentication** section of your Firebase project, in the **Sign-in m
 
 ![](images/play-goodies/setup/firebase_play_auth.png ':size=900')
 
-### How to use the token
+### How to use the server auth code
 
-After [logging in](#login) your account should contain a token that you can use to [login with a credential in Firebase Goodies](ue-plugins/firebase-unreal?id=user-registration-and-login) or link a Google Play Games account.
+After [logging in](#login) you can use `RequestServerAuthCode` node to get the server auth code that you can use to [login with a credential in Firebase Goodies](ue-plugins/firebase-unreal?id=user-registration-and-login) or link a Google Play Games account.
 
-![](images/play-goodies/setup/account_token.png)
+![ServerAuthCodeImage](images/play-goodies/auth/server_auth_code.png)
 
 # **Auth**
 
@@ -160,32 +160,16 @@ After [logging in](#login) your account should contain a token that you can use 
 
 After the release of the [Play Games Services Sign In v2](https://developers.google.com/games/services/android/signin) you can no longer choose when to login and you can no longer (and don't need to) pass any permission flags to request features. When your game launches, it will always attempt to sign in the user. To authenticate the user, you must verify that the user successfully signed in, and then get their Player ID. You also no longer have the option to log the user out.
 
-// TODO: Rewrite
+The login node basically just allows you to get the logged in player and to check if the login was successful.
 
-The authentication flow contains 4 nodes:
-
-![](images/play-goodies/auth/auth_flow.png)
-
-* Login - use this node to show a login UI to your users. After a successful login, an event will be raised where you will have access to the logged-in user's [Account](#account-details) (requires permissions flags) and [Player](#player-details) info. By enabling silent login the UI will not be shown after the first successful login and the last user will be logged in automatically.
-* Logout - this will logout the current user.
-* Is Logged In - checks if a user is logged in.
-* Revoke Access - if you requested additional permissions (e. g. email) during login and they were granted you can revoke them using this node.
+![LoginImage](images/play-goodies/auth/login.png)
 
 ## Getting Server Auth Code
 
 
+To get the server auth code use `RequestServerAuthCode` node. Note that `Client ID` must be filled in correctly in the plugin settings with your Web OAuth client ID (see setup in the previous sections).
 
-
-## Account details
-
-Account data requires additional permissions during login. If these permissions were not requested or granted the data here will be empty strings.
-
-![](images/play-goodies/auth/account.png)
-
-* Id - account unique ID (requires ID permission)
-* Name - account display name (requires Profile permissions)
-* Email - account email (requires email permission)
-* Access Token - token used to authenticate with other services (requires ID Token permission)
+![ServerAuthCodeImage](images/play-goodies/auth/server_auth_code.png)
 
 
 ## Player details
