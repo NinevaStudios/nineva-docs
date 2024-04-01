@@ -345,8 +345,8 @@ You can bind to the following events:
 * Ad Loaded - fires when an ad finishes loading
 * Ad Failed to Load - fires when an ad request fails (it is not recommended to load ads from this event's callback)
 * Ad Opened - fires when an ad opens an overlay that covers the screen
-* Ad Left Application - fires when the user clicks on an ad
 * Ad Closed - fires when the user is about to return to the app after tapping on an ad
+* Ad Clicked - fires when the banner is clicked
 
 ## Interstitial Ads
 
@@ -392,7 +392,6 @@ You can bind to the following events:
 * Ad Loaded - fires when an ad finishes loading
 * Ad Failed to Load - fires when an ad request fails (it is not recommended to load ads from this event's callback)
 * Ad Opened - fires when an ad opens an overlay that covers the screen.
-* Ad Left Application - fires when the user clicks on an ad
 * Ad Closed - fires when the user is about to return to the app after tapping on an ad
 
 ## Rewarded Ads

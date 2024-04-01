@@ -757,7 +757,7 @@ Call the `GetDocumentSnapshot` to gain an access to the snapshot of the document
 
 ![](images/firebase/firestore/firestore-10.png)
 
-Document snapshot contains the values in form of a map, accesible via `GetData` function, as well as a reference to the original document and metadata values (`IsFromCache` and `HasPendingWrites`).
+Document snapshot contains the values in form of a map, accessible via `GetData` function, as well as a reference to the original document and metadata values (`IsFromCache` and `HasPendingWrites`).
 
 To change the document data, you can use the `SetData` function, providing the fields to set in the document.
 
