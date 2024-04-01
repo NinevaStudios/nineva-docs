@@ -1000,6 +1000,16 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.4.0
+
++ FIX Some includes for non-unity builds
++ FIX Realtime DB listeners not working correctly in some cases
++ IMPROVE Refactor auth
++ ADD Now Firebase BOM version is a setting and can be changed in the plugin settings
++ UPDATED Android and iOS libs to newer versions (see plugin files for reference)
++ ADD A possibility to get the payload for the notification when the app was launched via notification. See `UFGCloudMessaging::GetLaunchNotificationPayloadJson()`.
++ IMPROVE Some demos
+
 ### 4.3.4
 
 + FIX login with phone number method

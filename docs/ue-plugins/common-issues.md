@@ -53,7 +53,7 @@ Hi there, if you are reading this, this means you did not provide enough informa
 
 - Copy the plugin into the `Plugins` folder of the root of your project. So the folder structure is like `YourProjectFolder/Plugins/YourPluginName`
 - Change the engine version in the `YourPluginName.uplugin` file to the UE version you are using.
-- Sometimes you have to uninstall/remove the plugin from the engine if it fails to build due to the conflict with the copy in the project
+- Sometimes you have to uninstall/remove the plugin from the engine if it fails to build due to the conflict with the copy in the project, o
 
 Example:
 
