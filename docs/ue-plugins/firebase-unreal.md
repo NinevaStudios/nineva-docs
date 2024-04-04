@@ -121,6 +121,10 @@ There are several options for sign in. You can either do it with email and passw
 
 ### Google Sign In
 
+First of all, make sure your Google sign-in is properly enabled and configured in the dashboard as sign-in provider and Web OAuth 2.0 Client Id is present. Afterwards (Android), you must re-download and re-pick your `google-services.json` file in the plugin settings (Make sure to first clear the current path and then pick again the fresh one, this way it triggers the callback that allows the plugin to read the correct settings).
+
+![](images/firebase/auth/google-signin-dashboard.png)
+
 We have integrated the Google Sign In SDK as a part of the plugin in order to show an example of how this should be done. Call the `PromptGoogleSignIn` method to show a native sign in with Google dialog. After the user successfully signs in, you will be able to use the AuthCredentials object to either sign the user in Firebase, or link them to an existing account. For Google sign in to work, make sure that you properly enable and configure this auth method in the auth dashboard and re-download and re-pick the configuration file in the plugin settings.
 
 ![](images/firebase/auth/AuthGoogleSignIn.png)
