@@ -125,7 +125,7 @@ First of all, make sure your Google sign-in is properly enabled and configured i
 
 !> To enable Google sign-in for your Android apps, you must provide the SHA-1 release fingerprint for each app (go to Project Settings > Your apps section)-- your app also must be signed by the keystore with this fingerprint when testing.
 
-!> To enable Google sign-in for your Android apps, you must provide the SHA-1 release fingerprint for each app (go to Project Settings > Your apps section)-- your app also must be signed by the keystore with this fingerprint when testing.
+!> To enable Google sign-in for your Android apps, you must provide the [SHA-1 release fingerprint](https://developers.google.com/android/guides/client-auth) for each app (on Firebase dashboard go to Project Settings > Your apps section) -- your app also must be signed by the keystore with this fingerprint when testing.
 
 It is also useful to check the official guide from Google regarding the parts of dashboard configuration: https://firebase.google.com/docs/auth/android/google-signin
 
