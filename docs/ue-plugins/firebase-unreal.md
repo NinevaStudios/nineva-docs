@@ -123,11 +123,11 @@ There are several options for sign in. You can either do it with email and passw
 
 First of all, make sure your Google sign-in is properly enabled and configured in the dashboard as sign-in provider. Afterwards (for Android), you must re-download and re-pick your `google-services.json` file in the plugin settings (**Make sure to first clear the current path and then pick again the fresh one, this way it triggers the callback that allows the plugin to read the correct settings**).
 
-!> To enable Google sign-in for your Android apps, you must provide the SHA-1 release fingerprint for each app (go to Project Settings > Your apps section)-- your app also must be signed by the keystore with this fingerprint when testing.
-
 !> To enable Google sign-in for your Android apps, you must provide the [SHA-1 release fingerprint](https://developers.google.com/android/guides/client-auth) for each app (on Firebase dashboard go to Project Settings > Your apps section) -- your app also must be signed by the keystore with this fingerprint when testing.
 
 It is also useful to check the official guide from Google regarding the parts of dashboard configuration: https://firebase.google.com/docs/auth/android/google-signin
+
+**You can check if your client ID has successfully been added to your UE project by checking the `AndroidOauthClientID` value in the `DefaultEngine.ini` file under `[/Script/FirebaseGoodies.FirebaseGoodiesSettings]` section.**
 
 ![](images/firebase/auth/google-signin-dashboard.png)
 
