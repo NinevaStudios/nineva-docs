@@ -23,7 +23,9 @@ Supported ad formats:
 
 # **Getting started**
 
-!> **Warning:** First of all, make sure to disable the built-in support for AdMob ads in UE, since they are not compatible with this plugin
+!> **Warning:** First of all, make sure to disable the built-in support for AdMob ads in Project Settings ('Include AdMob support for ads' option), since they are not compatible with this plugin. The 
+
+![](images/admob/admob_ue_off.png)
 
 !> For Android, it is recommended to update the build tools to 32.0.0 or higher and set Target SDK version in project settings to 32 or higher
 
