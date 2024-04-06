@@ -127,6 +127,8 @@ First of all, make sure your Google sign-in is properly enabled and configured i
 
 It is also useful to check the official guide from Google regarding the parts of dashboard configuration: https://firebase.google.com/docs/auth/android/google-signin
 
+!> Also, if you distribute the app via Google Play, note that [Google Play re-signs your app](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en) with its own keystore. You would also have to add the package/SHA1 combination in firebase app settings for the Android app.
+
 **You can check if your client ID has successfully been added to your UE project by checking the `AndroidOauthClientID` value in the `DefaultEngine.ini` file under `[/Script/FirebaseGoodies.FirebaseGoodiesSettings]` section.**
 
 ![](images/firebase/auth/google-signin-dashboard.png)
