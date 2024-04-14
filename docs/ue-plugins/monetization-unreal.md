@@ -2,8 +2,6 @@
 
 # **Monetization Goodies**
 
-Welcome to Monetization Goodies Documentation for Unreal Engine.
-
 This plugin wraps native payments for Android and iOS. On Android it wraps the [Billing library](https://developer.android.com/google/play/billing/integrate), and on iOS - [Original In-App-Purchase API](https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase?language=objc).
 
 ?> The plugin functionality wraps around native calls and should be used with the same recommendations and flows, as the original SDKs.
