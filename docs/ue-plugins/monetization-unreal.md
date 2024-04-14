@@ -1,7 +1,5 @@
 [filename](common/common_ue_header.md ":include")
 
-[filename](common/copy_plugin.md ":include")
-
 # **Monetization Goodies**
 
 Welcome to Monetization Goodies Documentation for Unreal Engine.
@@ -33,14 +31,6 @@ bSupportsInAppPurchasing=false
 bUseStoreV2=false
 bUseGooglePlayBillingApiV2=false
 ```
-
-Due to low XCode version on Marketplace packaging servers, we had to add a workaround to get the plugin published. If you plan to use it for iOS, you have to copy the plugin from the engine directory to the `[Project]/Plugins/` directory.
-
-Go to the Project Settings -> Monetization Goodies and switch the Enable In App Purchases toggle.
-
-![](images/monetization/monetization-0.png)
-
-After that close the Editor, go to the `[Project]/Plugins/MonetizationGoodies` directory and delete the `Binaries` and `Intermediate` folders. This will force the plugin to be rebuilt and include the required dependencies.
 
 ![](images/monetization/monetization-1.png)
 
@@ -168,23 +158,29 @@ The plugin wraps all of the native [Original In-App-Purchase API](https://develo
 
 # Changelog
 
+### 2.1.1
+
++ IMPROVED iOS version no longer requires the plugin to be copied to the project
++ FIXED Demo crash on iOS when products array is empty when trying to purchase an item
++ IMPROVED Remove price confirmation flow that was removed in billing client v5
+
 ---
 
-2.0.2
+### 2.0.2
 
 - IMPROVED Update Android billing client version to 6.0.1
 - FIXED Period unit bug on iOS
 
 ---
 
-2.0.1
+### 2.0.1
 
 - FIXED Some crash on iOS
 - IMPROVE Updated billing client on Android to v5
 
 ---
 
-1.0.0
+### 1.0.0
 
 - Initial release
 
