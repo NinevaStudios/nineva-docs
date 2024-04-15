@@ -48,9 +48,9 @@ It is recommended to copy the ID via the highlighted copy to clipboard button to
 
 ![](images/admob/AdmobApproved.jpg)
 
-!> **Warning:** For the real ads to be shown in your application you have to fill in the Funding Choices section.
+!> **Warning:** For the real ads to be shown in your application you have to fill in the `Privacy & Messaging` section.
 
-![](images/admob/FundingChoices.png)
+![](images/admob/FundingChoices1.png)
 
 ## Project Settings
 
@@ -72,14 +72,13 @@ This plugin wraps the official Google User Messaging Platform SDK. Please read t
 
 **You must read the official guides above to understand better how the SDK works.** 
 
-!> This is quite complicated topic, and it is really difficult to troubleshoot why your implementation does not work in your particular case. Things that usually go wrong: wrong setup on [Funding Choices](https://fundingchoices.google.com) portal, not adding device test ids correctly, etc. If you encounter errors or something does not work as expected, please explore the official guides, the source code in the plugin and the blueprints and try also googling your issue.
+!> This is quite complicated topic, and it is really difficult to troubleshoot why your implementation does not work in your particular case. Things that usually go wrong: wrong setup in the [Privacy & Messaging](https://apps.admob.com/v2/privacymessaging) section, not adding device test ids correctly, etc. If you encounter errors or something does not work as expected, please explore the official guides, the source code in the plugin and the blueprints and try also googling your issue.
 
-!> **Warning:** After you finish your setup in Funding choices portal, make sure your app is published and active as displayed in the images below.
+!> **Warning:** After you finish your setup in `Privacy & Messaging` section, make sure your app is published and active as displayed in the images below.
 
 ![](images/admob/FundingChoices1.png)
-![](images/admob/FundingChoices2.png)
 
-Once everything is setup in your AdMob and [Funding Choices](https://fundingchoices.google.com) accounts you can follow this simple workflow to get user consent:
+Once everything is setup in your AdMob and [Privacy & Messaging](https://apps.admob.com/v2/privacymessaging) section you can follow this simple workflow to get user consent:
 1. Request the consent info to determine if you need to show a consent form.
 2. After a successful request the Get Consent Status node can be used to check if consent is required.
 3. If it is required - load and show the consent form.
@@ -229,9 +228,9 @@ Initializes the ad subsystem. You should only call this method when the `Delay a
 
 Enable/disable personalized ads (enabled by default).
 
-?> If you are not using the Funding Choices service to manage user consent you can create your own consent form and use this node to disable personalized ads if the user does not grant his consent (required to be GDPR compliant).
+?> If you are not using the `Messaging & Privacy` section to manage user consent you can create your own consent form and use this node to disable personalized ads if the user does not grant his consent (required to be GDPR compliant).
 
-!> This only works for admob itself and not for mediation partners. If you are using mediation please use the Funding Choices consent management platform.
+!> This only works for admob itself and not for mediation partners. If you are using mediation please use the `Messaging & Privacy`.
 
 ## Consent Library
 
@@ -282,7 +281,7 @@ This resets the state of the consent SDK so that you can simulate a user's first
 
 ### iOS14 App Transparency Tracking Dialog
 
-If you are using Funding Choices as your consent management solution you can trigger the ATT dialog when using the *Load And Show Consent Form* node. If you are not using any consent managers use the following nodes to display the ATT dialog and get the authorization status from the user.
+If you are using `Messaging & Privacy` (User Messaging Framework or UMP) as your consent management solution you can trigger the ATT dialog when using the *Load And Show Consent Form* node. If you are not using any consent managers use the following nodes to display the ATT dialog and get the authorization status from the user.
 
 ![](images/admob/ConsentATT.png)
 
