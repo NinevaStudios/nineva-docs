@@ -1,7 +1,5 @@
 [filename](common/common_ue_header.md ':include')
 
-[filename](common/copy_plugin.md ':include')
-
 # **Game Center Goodies**
 
 Welcome to Game Center Goodies Documentation for Unreal Engine
@@ -11,12 +9,6 @@ Welcome to Game Center Goodies Documentation for Unreal Engine
 # **Setup**
 
 Please follow the official Apple guidelines on how to setup an app in App Store Connect. Once everything is configured make sure that the App Connect bundle ID and your iOS game bundle ID are the same.
-
-## iOS 14 Features
-
-iOS 14 added new features to Game Center. To use these new features enable them in the plugin's settings. You will also require XCode 12 or newer and Unreal Engine 4.25 or newer. Some nodes do nothing when iOS 14 features are disabled.
-
-![](images/game-center/plugin_settings.png)
 
 # **Auth**
 
@@ -46,7 +38,7 @@ The `Get Player Photo` node will retrieve the photo asynchronously. You can disp
 
 On iOS14 or newer you can check if the local account is restricted to use certain features:
 
-* Multiplayer - If this property is true, the player can’t join multiplayer games.
+* kultiplayer - If this property is true, the player can’t join multiplayer games.
 * Communication - If this property is true or the local player is underage, the player can’t create personalized messages on invites or enable voice communication in multiplayer games.
 * Underage - some Game Center features are not available if the user is underage.
 
