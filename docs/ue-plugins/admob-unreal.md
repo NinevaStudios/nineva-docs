@@ -478,6 +478,16 @@ ___
 
 # Changelog
 
+
+v.4.4.0
+
++ UPDATE Android and iOS library versions and mediation libs to the latest versions
++ ADDED Banner click event
++ ADDED Recorded click and recorded implession events to ads
++ ADDED Node to get purpose consent string
++ FIXED Crashes of OnPaidEvent on iOS
++ IMPROVED Reworked consent implementation and demo to follow the latest guides from Google.
+
 v.3.3.9
 
 + ADD Settings checkbox to disable using custom gradle (uncheck it if you use UE5.3+)
