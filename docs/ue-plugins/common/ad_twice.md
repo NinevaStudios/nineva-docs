@@ -1,0 +1,1 @@
+!> **Never show the same ad twice after it was loaded! After you have shown the ad once, it becomes invalid and showing it again will raise an error. The correct workflow is to create a new ad just after the previous one has been closed. So, again, never show the same ad twice!**
