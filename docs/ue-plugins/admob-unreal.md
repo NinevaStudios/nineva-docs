@@ -70,7 +70,7 @@ This plugin wraps the official Google User Messaging Platform SDK. Please read t
 - [iOS official guide](https://developers.google.com/admob/ump/ios/quick-start)
 - [Android official guide](https://developers.google.com/admob/ump/android/quick-start)
 
-**You must read the official guides above to understand better how the SDK works.** 
+**You must read the official guides above to understand better how the SDK works.**
 
 !> This is quite complicated topic, and it is really difficult to troubleshoot why your implementation does not work in your particular case. Things that usually go wrong: wrong setup in the [Privacy & Messaging](https://apps.admob.com/v2/privacymessaging) section, not adding device test ids correctly, etc. If you encounter errors or something does not work as expected, please explore the official guides, the source code in the plugin and the blueprints and try also googling your issue.
 
@@ -79,14 +79,15 @@ This plugin wraps the official Google User Messaging Platform SDK. Please read t
 ![](images/admob/FundingChoices1.png)
 
 Once everything is setup in your AdMob and [Privacy & Messaging](https://apps.admob.com/v2/privacymessaging) section you can follow this simple workflow to get user consent:
-1. Request the consent info to determine if you need to show a consent form.
-2. After a successful request the Get Consent Status node can be used to check if consent is required.
-3. If it is required - load and show the consent form.
-4. If no error occurred during form loading and it was dismissed by the user you will receive a callback and can proceed with your app's workflow.
+
+- First of all, disable the automatic initialization of the AdMob SDK in the plugin settings (Delay app measurement).
+- Load and show consent form if required (see demo implementation for details).
+- After the flow is completed, call the `Init` node of the plugin subsystem to initialize the SDK.
+- If something is unclear, you should consult the corresponding native Android/iOS guides mentioned above, the plugin is just a proxy for the native calls.
+
+You should also explore the implementation in the demo level, it has an implementation example that is up-to-date and also some comments.
 
 !> If an error occurs during form loading and consent is required the SDK treats this the same as if the user did not grant consent.
-
-![](images/admob/ConsentWorkflowBP.png)
 
 ## Loading and showing ads
 
@@ -348,8 +349,13 @@ You can bind to the following events:
 * Ad Opened - fires when an ad opens an overlay that covers the screen
 * Ad Closed - fires when the user is about to return to the app after tapping on an ad
 * Ad Clicked - fires when the banner is clicked
+* _See the demo level example for all the events_
 
 ## Interstitial Ads
+
+
+[filename](common/ad_twice.md ':include')
+
 
 * Make Interstitial Ad
 
@@ -378,12 +384,6 @@ Check if the ad has loaded. Return true if ad loaded successfully, false otherwi
 
 Show interstitial ad
 
-* Is Valid
-
-![](images/admob/InterstitialAdIsValidBP.jpg)
-
-Check if the ad is valid. This always returns true on Android. On IOS the ad becomes invalid after a single-use. Trying to load an invalid ad will raise an error.
-
 * Events
 
 ![](images/admob/InterstitialAdEventsBP.jpg)
@@ -394,8 +394,12 @@ You can bind to the following events:
 * Ad Failed to Load - fires when an ad request fails (it is not recommended to load ads from this event's callback)
 * Ad Opened - fires when an ad opens an overlay that covers the screen.
 * Ad Closed - fires when the user is about to return to the app after tapping on an ad
+* _See the demo level example for all the events_
 
 ## Rewarded Ads
+
+
+[filename](common/ad_twice.md ':include')
 
 * Make Rewarded Ad
 
@@ -442,21 +446,28 @@ You can bind to the following events:
 * Ad Failed to Show - fires when a rewarded ad failed to show
 * Ad Closed - fires when a rewarded ad is closed
 * User earned reward - fires when a rewarded ad triggers a reward. The app is responsible for crediting the user with the reward.
+* _See the demo level example for all the events_
 
 ## Rewarded Iterstitials
+
+
+[filename](common/ad_twice.md ':include')
 
 Rewarded interstitials are almost identical to rewarded ads. Please check the demo for the usage example.
 
 ## Open App Ads
 
+
+[filename](common/ad_twice.md ':include')
+
 App open ads are a special ad format intended for publishers wishing to monetize their app load screens. App open ads can be closed by your users at any time. App open ads can be shown when users bring your app to the foreground.
 
 You can check the use cases and the suggested implementation logic in the official docs:
 
-- [Android](https://developers.google.com/admob/android/app-open}
+- [Android](https://developers.google.com/admob/android/app-open)
 - [iOS](https://developers.google.com/admob/ios/app-open)
 
-In the demo, we have implemented the logic to show it every time you app is brought to foreground, it is probably a good starting point to start your implementation from.
+See the demo for the example implementation.
 
 # **Known issues**
 
@@ -479,7 +490,11 @@ ___
 # Changelog
 
 
+---
+
 v.4.4.0
+
+!> This release contains some breaking changes how consent flow works, make sure to visit the example in the demo to update your implementation. A few other things have been refactored so make sure to test everything thoroughly after the update.
 
 + UPDATE Android and iOS library versions and mediation libs to the latest versions
 + ADDED Banner click event
@@ -487,6 +502,8 @@ v.4.4.0
 + ADDED Node to get purpose consent string
 + FIXED Crashes of OnPaidEvent on iOS
 + IMPROVED Reworked consent implementation and demo to follow the latest guides from Google.
+
+---
 
 v.3.3.9
 
