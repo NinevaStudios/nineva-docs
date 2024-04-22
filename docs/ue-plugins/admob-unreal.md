@@ -492,6 +492,12 @@ ___
 
 ---
 
+### 4.4.1
+
++ ADDED Optimize ad loading and ad init featurees for Android (See: https://developers.google.com/admob/android/optimize-initialization)
+
+---
+
 v.4.4.0
 
 !> This release contains some breaking changes how consent flow works, make sure to visit the example in the demo to update your implementation. A few other things have been refactored so make sure to test everything thoroughly after the update.
