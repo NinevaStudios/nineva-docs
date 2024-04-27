@@ -11,7 +11,6 @@
 	* [Google Maps View](ue-plugins/google-maps-unreal)
 	* [Google Play Goodies](ue-plugins/google-play-unreal)
 	* [iOS Game Center Goodies](ue-plugins/game-center-unreal)
-	* [Flurry Goodies](ue-plugins/flurry-unreal)
 	* [Deep Link Goodies](ue-plugins/deep-link-unreal)
 	* [iOS Goodies](ue-plugins/ios-goodies)
 	* [Monetization Goodies](ue-plugins/monetization-unreal)
