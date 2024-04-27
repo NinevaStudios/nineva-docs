@@ -147,36 +147,27 @@ Open the **Authentication** section of your Firebase project, in the **Sign-in m
 
 ![](images/play-goodies/setup/firebase_play_auth.png ':size=900')
 
-### How to use the token
+### How to use the server auth code
 
-After [logging in](#login) your account should contain a token that you can use to [login with a credential in Firebase Goodies](ue-plugins/firebase-unreal?id=user-registration-and-login) or link a Google Play Games account.
+After [logging in](#login) your account use `Request Server Auth Code` node to get the server auth code that you use to login with a credential in Firebase Goodies or link a Google Play Games account.
 
-![](images/play-goodies/setup/account_token.png)
+![](images/play-goodies/auth/server_auth_code.png)
 
 # **Auth**
 
+With the new Google Play Services version it now logins automatically on the app launch, also there are no login permission flags available any more. Also **you can't log out any more**.
+
 ## Login
 
-The authentication flow contains 4 nodes:
+Even though it will now automatically log you in when the app starts, you can use login node to get the player details and confirm that login was actually successful:
 
 ![](images/play-goodies/auth/auth_flow.png)
 
-* Login - use this node to show a login UI to your users. After a successful login, an event will be raised where you will have access to the logged-in user's [Account](#account-details) (requires permissions flags) and [Player](#player-details) info. By enabling silent login the UI will not be shown after the first successful login and the last user will be logged in automatically.
-* Logout - this will logout the current user.
-* Is Logged In - checks if a user is logged in.
-* Revoke Access - if you requested additional permissions (e. g. email) during login and they were granted you can revoke them using this node.
+## Sever Auth Code
 
-## Account details
+Now getting server auth code is a separate node:
 
-Account data requires additional permissions during login. If these permissions were not requested or granted the data here will be empty strings.
-
-![](images/play-goodies/auth/account.png)
-
-* Id - account unique ID (requires ID permission)
-* Name - account display name (requires Profile permissions)
-* Email - account email (requires email permission)
-* Access Token - token used to authenticate with other services (requires ID Token permission)
-
+![](images/play-goodies/auth/server_auth_code.png)
 
 ## Player details
 
@@ -185,6 +176,7 @@ Account data requires additional permissions during login. If these permissions 
 * Id - player unique ID
 * Name - player display name
 * Title - player title
+* Retrieved Timestamp - when the player was retrieved
 
 You can grab the player icon and/or banner image using the following nodes. This is an asynchronous operation so the texture can only be used when the respective callback event is invoked.
 
@@ -283,12 +275,6 @@ For more detailed information on Saved Games API see the [official docs](https:/
 
 The term 'snapshot' here is used to represent the saved game.
 
-## Setup
-
-When using 'Login' node you must make sure you check the 'Cloud Save' checkbox permission.
-
-![](images/play-goodies/save_games/login.png)
-
 ## Showing save games UI
 
 This method will show a Google Play Save Games native UI screen.
@@ -375,6 +361,13 @@ You can also unregister from recording state changes event
 ---
 
 ### Changelog
+
+v2.2.3
+
+!> BREAKING CHANGES!
+
+* UPDATED to newest Google Play Services SDK v2
+* Reworked auth, see the docs above
 
 v2.1.2
 
