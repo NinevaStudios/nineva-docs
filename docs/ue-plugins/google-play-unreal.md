@@ -328,7 +328,7 @@ For more detailed information on Video recording API see the [official docs](htt
 
 Video recording API allows you to launch recording of the game play video while your game is running.
 
-# Starting the recording
+## Starting the recording
 
 Before starting the recording you should check whether the recording is supported on currect device and if yes, present the video recording overlay.
 
@@ -340,19 +340,19 @@ Before starting the recording you should check whether the recording is supporte
 
 ![](images/play-goodies/video_recording/show_overlay.png)
 
-# Getting the information
+## Getting the information
 
 To fetch the information about what functionality is supported on device, use `Get Capture Capabilites` node.
 
 ![](images/play-goodies/video_recording/get_capture_capabilities.png)
 
-# Listening to recording state changes
+## Listening to recording state changes
 
 You can register an event to listen for the recording state changes
 
 ![](images/play-goodies/video_recording/register_on_capture_overlay_state_changed.png)
 
-# Unregister from recording state changes
+## Unregister from recording state changes
 
 You can also unregister from recording state changes event
 
@@ -360,7 +360,7 @@ You can also unregister from recording state changes event
 
 ---
 
-### Changelog
+# **=== CHANGELOG ===**
 
 v2.2.3
 

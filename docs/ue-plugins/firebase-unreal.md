@@ -970,7 +970,7 @@ We have added Firebase C++ SDK as a part of the plugin for editor/desktop suppor
 
 ## Setup
 
-- Go through the [initial setup](#firebase-goodies) in the beginning of this guide and make sure you have your `google-services.json` or `GoogleService-Info.plist` file picked in the plugin settings. If you make changes in the dashboard, make sure to re-download and re-pick it!
+- Go through the [initial setup](#firebase-goodies) in the beginning of this guide and make sure you have your `google-services.json` or `GoogleService-Info.plist` file picked in the plugin settings. If you make changes in the dashboard, make sure to re-download and re-pick it! Sometimes, it fails to pickup up the changes if file path is now changed, so you can remove the file path in the field and than do the picking again.
 
 - First of all, your project must be a C++ project, you can easily convert your Blueprint-only project to C++ project by creating a random C++ class in the inspector
 
