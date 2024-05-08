@@ -64,13 +64,13 @@ It is recommended to query pending purchases after the connection is successfull
 
 ### Make purchase
 
-You have to obtain SKU details before launching the purchase flow. Use the `Query SKU Details` function for that.
+You have to obtain product details before launching the purchase flow. Use the `Query Product Details` function for that.
 
 ![](images/monetization/monetization-8.png)
 
-You can either fetch the SKU details for the required item before the purchase, or fetch the SKU details for all the required items beforehand and store them for future use.
+You can either fetch the product details for the required item before the purchase, or fetch the product details for all the required items beforehand and store them for future use.
 
-Once you have the required SKU details, you can call the `Launch Billing Flow` function and providing a valid `BillingFlowParameters` object.
+Once you have the required product details, you can call the `Launch Billing Flow` function and providing a valid `BillingFlowParameters` object.
 
 ![](images/monetization/monetization-9.png)
 
@@ -81,12 +81,6 @@ The result of the purchase will be received in the `OnPurchasesUpdated` callback
 You can also check if the purchase is already acknowledged:
 
 ![](images/monetization/monetization-3.png)
-
-### Launch Price Confirmation Flow
-
-If a user has an active subscription the price of which has recently changed, it is recommended to let them know and to confirm their acceptance of the new price. Use the following call providing the SKU details of the item with new price.
-
-![](images/monetization/monetization-10.png)
 
 ### Query data
 
