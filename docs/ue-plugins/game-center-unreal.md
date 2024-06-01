@@ -10,6 +10,8 @@ Welcome to Game Center Goodies Documentation for Unreal Engine
 
 Please follow the official Apple guidelines on how to setup an app in App Store Connect. Once everything is configured make sure that the App Connect bundle ID and your iOS game bundle ID are the same.
 
+?> If for some reason, the Game Center entitlement is not added to your XCode project automatically, try enabling the built-in Game Center support in UE (`Enable Game Center Support` checkbox in `Online` section of iOS settings in project settings).
+
 # **Auth**
 
 ## Login
