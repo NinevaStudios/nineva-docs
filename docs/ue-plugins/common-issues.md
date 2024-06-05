@@ -81,3 +81,10 @@ Get Android Studio and [follow these instructions](https://developer.android.com
 ![](/images/issues/logs.png)
 
 ---
+
+## What should I do if my build failed because of deprecated Gradle features due to AFS?
+
+* Disable the `AndroidFileServer` plugin will and restart the editor. 
+* You may need to delete `Build`, `Intermediate`, `Binaries` folders and regenerate the project files.
+
+---
