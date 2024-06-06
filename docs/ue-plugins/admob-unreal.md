@@ -139,6 +139,10 @@ Video from Google about this: https://www.youtube.com/watch?v=Gsd26EuSg4g&featur
 
 Another way to add test devices: https://support.google.com/admob/answer/9691433
 
+Once you have your device Id(s), add it to your AdMob Settings.
+
+![](images/admob/add-test-ids.png)
+
 ## Ad Inspector - Testing Mediation
 
 Ad inspector allows you to test the mediation providers, please see more info on it here:
