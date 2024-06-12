@@ -125,7 +125,7 @@ First of all, make sure your Google sign-in is properly enabled and configured i
 
 !> To enable Google sign-in for your Android apps, you must provide the [SHA-1 release fingerprint](https://developers.google.com/android/guides/client-auth) for each app (on Firebase dashboard go to Project Settings > Your apps section) -- your app also must be signed by the keystore with this fingerprint when testing.
 
-It is also useful to check the official guide from Google regarding the parts of dashboard configuration: https://firebase.google.com/docs/auth/android/google-signin
+It is also useful to check the official guide from Google regarding the parts of dashboard configuration: <https://firebase.google.com/docs/auth/android/google-signin>
 
 !> Also, if you distribute the app via Google Play, note that [Google Play re-signs your app](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en) with its own keystore. You would also have to add the package/SHA1 combination in firebase app settings for the Android app.
 
@@ -192,7 +192,7 @@ After the project is created you can go to the Cloud Storage Section in console,
 
 Cloud Storage library of the plugin allows manipulating files.
 
-!> In order to work with cloud storage user needs to be signed in to firebase. Please refer to [Auth page](#Authentication) for setup of authentication.
+!> In order to work with cloud storage user needs to be signed in to firebase. Please refer to [Auth page](#authentication) for setup of authentication.
 
 ### Upload files
 
@@ -828,14 +828,19 @@ You can take a look at our example [here](https://deeplinks.ninevastudios.com/.w
 Example:
 
 ```json
-[{
-	"relation": ["delegate_permission/common.handle_all_urls"],
-	"target": {
-		"namespace": "android_app",
-		"package_name": "YOUR_PACKAGE_NAME",
-		"sha256_cert_fingerprints": ["SHA256_FINGERPRINT_1", "SHA256_FINGERPRINT_2"]
-	}
-}]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "YOUR_PACKAGE_NAME",
+      "sha256_cert_fingerprints": [
+        "SHA256_FINGERPRINT_1",
+        "SHA256_FINGERPRINT_2"
+      ]
+    }
+  }
+]
 ```
 
 ### iOS
@@ -856,19 +861,19 @@ Example:
 
 ```json
 {
-	"applinks": {
-		"apps": [],
-		"details": [
-			{
-				"appID": "TEAM_ID_1.PACKAGE_NAME_1",
-				"paths": [ "*" ],
-			},
-			{
-				"appID": "TEAM_ID_2.PACKAGE_NAME_2",
-				"paths": [ "*" ],
-			},
-		]
-	}
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAM_ID_1.PACKAGE_NAME_1",
+        "paths": ["*"]
+      },
+      {
+        "appID": "TEAM_ID_2.PACKAGE_NAME_2",
+        "paths": ["*"]
+      }
+    ]
+  }
 }
 ```
 
@@ -903,34 +908,34 @@ lines:
 public static void WriteEntitlements(UnrealTargetPlatform Platform, ConfigHierarchy PlatformGameConfig,
 string AppName, FileReference MobileProvisionFile, bool bForDistribution, string IntermediateDir)
 {
-	...
+ ...
 
-	// Associated Domains
-	List<string> AssociatedDomains;
+ // Associated Domains
+ List<string> AssociatedDomains;
 
-	if (PlatformGameConfig.GetArray("/Script/FirebaseGoodies.FirebaseGoodiesSettings", 	"AssociatedDomains", out AssociatedDomains))
-	{
-		Text.AppendLine("\t<key>com.apple.developer.associated-domains</key>");
-		Text.AppendLine("\t<array>");
+ if (PlatformGameConfig.GetArray("/Script/FirebaseGoodies.FirebaseGoodiesSettings",  "AssociatedDomains", out AssociatedDomains))
+ {
+  Text.AppendLine("\t<key>com.apple.developer.associated-domains</key>");
+  Text.AppendLine("\t<array>");
 
-		foreach (var Domain in AssociatedDomains)
-		{
-			if (string.IsNullOrEmpty(Domain))
-			{
-				continue;
-			}
+  foreach (var Domain in AssociatedDomains)
+  {
+   if (string.IsNullOrEmpty(Domain))
+   {
+    continue;
+   }
 
-			Text.AppendLine(string.Format("\t\t<string>applinks:{0}</string>", Domain));
-		}
+   Text.AppendLine(string.Format("\t\t<string>applinks:{0}</string>", Domain));
+  }
 
-		Text.AppendLine("\t</array>");
-	}
+  Text.AppendLine("\t</array>");
+ }
 
-	...
+ ...
 
-	// End of entitlements
-	Text.AppendLine("</dict>");
-	Text.AppendLine("</plist>");
+ // End of entitlements
+ Text.AppendLine("</dict>");
+ Text.AppendLine("</plist>");
 ```
 
 ## Handle the URL
@@ -1012,23 +1017,31 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.5.0 (12.06.2024)
+
+- UPDATED iOS SDK to v10.25
+- FIX Bug with Realtime DB trying to persist timestamp
+- FIX Move iOS initialization to main queue block
+- ADD Send sign in link with email auth feature
+
+---
+
 ### 4.4.0
 
-+ FIX Some includes for non-unity builds
-+ FIX Realtime DB listeners not working correctly in some cases
-+ IMPROVE Refactor auth
-+ ADD Now Firebase BOM version is a setting and can be changed in the plugin settings
-+ UPDATED Android and iOS libs to newer versions (see plugin files for reference)
-+ ADD A possibility to get the payload for the notification when the app was launched via notification. See `UFGCloudMessaging::GetLaunchNotificationPayloadJson()`.
-+ IMPROVE Some demos
+- FIX Some includes for non-unity builds
+- FIX Realtime DB listeners not working correctly in some cases
+- IMPROVE Refactor auth
+- ADD Now Firebase BOM version is a setting and can be changed in the plugin settings
+- UPDATED Android and iOS libs to newer versions (see plugin files for reference)
+- ADD A possibility to get the payload for the notification when the app was launched via notification. See `UFGCloudMessaging::GetLaunchNotificationPayloadJson()`.
+- IMPROVE Some demos
 
 ### 4.3.4
 
-+ FIX login with phone number method
-+ IMPROVE Login with phone number demo
-+ ADD `com.google.android.gms.permission.AD_ID` on Android automatically if advertising id collection is enabled in settings
-+ FIX unlink provider crashes on error callbacks
-
+- FIX login with phone number method
+- IMPROVE Login with phone number demo
+- ADD `com.google.android.gms.permission.AD_ID` on Android automatically if advertising id collection is enabled in settings
+- FIX unlink provider crashes on error callbacks
 
 ### 4.3.2
 
