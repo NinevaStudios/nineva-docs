@@ -105,6 +105,10 @@ test the demo level inside the plugin first and then build your implementation u
 
 Make sure to follow the setup instructions at the beginning of this page before implementing In-App-Purchases for iOS. Usually, the problems are with the setup, check the [discussion section for potential misconfiguration issues](https://developer.apple.com/documentation/storekit/skproductsresponse/1505985-invalidproductidentifiers?language=objc).
 
+?> When setting up the purchases in the App Store Connect, make sure they are added to the application on the app page
+
+![](images/monetization/monetization-12.png)
+
 ### Initialize
 
 `PaymentQueue` is main entry point for communication with App Store.
