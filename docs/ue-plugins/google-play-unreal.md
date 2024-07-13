@@ -1,4 +1,4 @@
-[filename](common/common_ue_header.md ':include')
+[filename](common/common_ue_header.md ":include")
 
 # **Google Play Goodies**
 
@@ -14,6 +14,8 @@ Welcome to Google Play Goodies Documentation for Unreal Engine
 
 !> If you encounter issues please check the [list of the most common problems](https://developers.google.com/games/services/console/enabling#avoiding_common_setup_problems) and double-check everything
 
+[filename](common/afs_fix.md ":include")
+
 First of all, if the project fails to build in UE5 - try disabling `Android File Server` built-in plugin.
 
 ## Google Play Console
@@ -22,8 +24,8 @@ First of all, if the project fails to build in UE5 - try disabling `Android File
 
 First of all create a new app on Google Play Console or you can use the existing one.
 
-![](images/play-goodies/setup/create_app_1.png ':size=900')
-![](images/play-goodies/setup/create_app_2.png ':size=900')
+![](images/play-goodies/setup/create_app_1.png ":size=900")
+![](images/play-goodies/setup/create_app_2.png ":size=900")
 
 ### Add Play Games Services Project to your game
 
@@ -31,33 +33,33 @@ After this you need to add play services to your game. To do this go to your [Go
 
 ?> Note that Google is rolling out new console design from time to time so your UI may be somewhat different.
 
-![](images/play-goodies/setup/create_game.png ':size=900')
+![](images/play-goodies/setup/create_game.png ":size=900")
 
 You can either create and new project or link to existing one if you already have a Firebase project or have previously created a project on Google Developers Console.
 
-![](images/play-goodies/setup/create_game_start.png ':size=900')
+![](images/play-goodies/setup/create_game_start.png ":size=900")
 
 When finished, you can open your app and you will see the section called **Play Games Services**. Now we need to continue the setup under the **Configuration** section.
 
-![](images/play-goodies/setup/add_game_to_app_4.png ':size=900')
+![](images/play-goodies/setup/add_game_to_app_4.png ":size=900")
 
 Now go through all the warnings on the configuration page and resolve them if any appear.
 
-![](images/play-goodies/setup/configure_1.png ':size=900')
+![](images/play-goodies/setup/configure_1.png ":size=900")
 
 Also check the properties screen by clicking **Edit properties** on the **Configuration** page and resolve issues there.
 
-![](images/play-goodies/setup/configure_2.png ':size=900')
+![](images/play-goodies/setup/configure_2.png ":size=900")
 
 ### Generate an OAuth 2.0 client ID
 
 !> For this part please follow the official guide here: [Generate an OAuth 2.0 client ID setup guide](https://developer.android.com/games/pgs/console/setup#generate_an_oauth_20_client_id)
 
-![](images/play-goodies/setup/configure_auth_client_1.png ':size=900')
+![](images/play-goodies/setup/configure_auth_client_1.png ":size=900")
 
 Follow the instructions on this screen and after done, click `Confirm configuration`
 
-![](images/play-goodies/setup/configure_auth_client_2.png ':size=900')
+![](images/play-goodies/setup/configure_auth_client_2.png ":size=900")
 
 ### Add Android Credentials
 
@@ -69,20 +71,20 @@ To use Google Play Games services in your Android app you must create Android Cr
 
 Click on **Add credential** button
 
-![](images/play-goodies/setup/add_credential_1.png ':size=900')
+![](images/play-goodies/setup/add_credential_1.png ":size=900")
 
 Choose **Android** option and scroll down to **Authorization** section. Here you can select the existing OAuth client or create a new one required for your Android app.
 
-![](images/play-goodies/setup/add_credential_2.png ':size=900')
+![](images/play-goodies/setup/add_credential_2.png ":size=900")
 
 Follow the link and create the Android OAuth client in the Google Cloud Platform. When setting up the keystore fingerprint refer to [this page](https://developers.google.com/games/services/console/enabling#c_specify_client_id_settings)
 
-![](images/play-goodies/setup/add_credential_3.png ':size=900')
-![](images/play-goodies/setup/add_credential_4.png ':size=900')
+![](images/play-goodies/setup/add_credential_3.png ":size=900")
+![](images/play-goodies/setup/add_credential_4.png ":size=900")
 
 When done it should display your settings.
 
-![](images/play-goodies/setup/add_credential_5.png ':size=900')
+![](images/play-goodies/setup/add_credential_5.png ":size=900")
 
 ## Enable testing
 
@@ -95,16 +97,16 @@ If yor login fails when you test, most likely it is a setup mistake, [this secti
 ## UE Project Settings
 
 Unreal Engine already has built-in support for some Google Play Games features but they are limited and rely on old library versions. Because of this, some settings are in the platform settings section instead of the plugin settings.
-The main field to configure is the *Game App ID*. Navigate to `Project Settings -> Platforms -> Android -> Google Play Services` section and input your *Game App ID* in the respective field.
+The main field to configure is the _Game App ID_. Navigate to `Project Settings -> Platforms -> Android -> Google Play Services` section and input your _Game App ID_ in the respective field.
 
-![](images/play-goodies/setup/app_id.png ':size=900')
-![](images/play-goodies/setup/platform_settings.png ':size=900')
+![](images/play-goodies/setup/app_id.png ":size=900")
+![](images/play-goodies/setup/platform_settings.png ":size=900")
 
 ?> When you build the game, make sure that the file `Build/Android/res/values/GooglePlayAppID.xml` exists containing your app_id string. Sometimes UE does not generate it when moving the project to another machine, in this case copy-paste the project ID again in project settings to trigger its generation or copy this file from previous project.
 
 Now you can build your game and test the demo level provided with the plugin. **Note that the Android package name in your UE project must match the package name from your Android OAuth Credential and that the build must be signed with the same keystore that you took SHA1 from to put into Android OAuth Client setup**
 
-?> If *Enable Google Play Support* is checked then Unreal Engine will pull in its own Google Play Games Services dependencies. This might lead to undefined behavior if these dependencies  collide with our own. We cannot test every scenario so if you encounter any problems contact us on our Discord server.
+?> If _Enable Google Play Support_ is checked then Unreal Engine will pull in its own Google Play Games Services dependencies. This might lead to undefined behavior if these dependencies collide with our own. We cannot test every scenario so if you encounter any problems contact us on our Discord server.
 
 ## Integration with Firebase Goodies Auth
 
@@ -116,14 +118,14 @@ When logging in with Google Play Games you can also request an access token that
 
 First of all you need to link your Google Play Games project with the Firebase project. The easiest way to do it is to select existing Firebase project when creating the Game.
 
-![](images/play-goodies/setup/create_game_start.png ':size=900')
+![](images/play-goodies/setup/create_game_start.png ":size=900")
 
 ### Setting Android Credential
 
 After this, when you create the Android App in Firebase project settings you would be able to select it as OAuth client in you play games project.
 
-![](images/play-goodies/setup/firebase_add_app.png ':size=900')
-![](images/play-goodies/setup/android_oauth_client_firebase.png ':size=900')
+![](images/play-goodies/setup/firebase_add_app.png ":size=900")
+![](images/play-goodies/setup/android_oauth_client_firebase.png ":size=900")
 
 ### Obtaining and filling WEB Client ID and Client secret
 
@@ -131,21 +133,21 @@ To receive an access token as the part of account details you must fill in a **W
 
 !> Make sure you find the correct OAuth Client ID of the type WEB, not the Android one that you have created previously
 
-![](images/play-goodies/setup/web_client_id_console.png ':size=900')
+![](images/play-goodies/setup/web_client_id_console.png ":size=900")
 
 Copy your **Client ID** and **Client secret** values
 
-![](images/play-goodies/setup/web_client_id_and_secret.png ':size=900')
+![](images/play-goodies/setup/web_client_id_and_secret.png ":size=900")
 
 Paste your client id into the plugin settings in UE
 
-![](images/play-goodies/setup/plugin_settings.png ':size=900')
+![](images/play-goodies/setup/plugin_settings.png ":size=900")
 
 !> Note that there can be issues if you use Google Login and Google Play Games login at the same time. You should disable Google login if you use Google Play Games login or vice versa.
 
 Open the **Authentication** section of your Firebase project, in the **Sign-in method** tab Choose **Play Games**, enable it and paste your **Client ID** and **Client secret** values.
 
-![](images/play-goodies/setup/firebase_play_auth.png ':size=900')
+![](images/play-goodies/setup/firebase_play_auth.png ":size=900")
 
 ### How to use the server auth code
 
@@ -173,10 +175,10 @@ Now getting server auth code is a separate node:
 
 ![](images/play-goodies/auth/player.png)
 
-* Id - player unique ID
-* Name - player display name
-* Title - player title
-* Retrieved Timestamp - when the player was retrieved
+- Id - player unique ID
+- Name - player display name
+- Title - player title
+- Retrieved Timestamp - when the player was retrieved
 
 You can grab the player icon and/or banner image using the following nodes. This is an asynchronous operation so the texture can only be used when the respective callback event is invoked.
 
@@ -188,18 +190,18 @@ You can retrieve some statistics for the logged in user and act upon them.
 
 ![](images/play-goodies/auth/stats.png)
 
-* Days since last played: The approximate number of days since the player last played.
-* Average session length: The average session length of the player in minutes. Session length is determined by the time that a player is signed in to Google Play Games services.
-* Number of purchases: The approximate number of in-app purchases for the player.
-* Number of sessions: The approximate number of sessions of the player. Sessions are determined by the number of times that a player signs in to Google Play Games services.
-* Session percentile: The approximation of sessions percentile for the player, given as a decimal value between 0 to 1 inclusive. This value indicates how many sessions the current player has played in comparison to the rest of this game's player base. Higher numbers indicate that this player has played more sessions.
-* Spend percentile: The approximate spend percentile of the player, given as a decimal value between 0 to 1 inclusive. This value indicates how much the current player has spent in comparison to the rest of this game's player base. Higher numbers indicate that this player has spent more.
+- Days since last played: The approximate number of days since the player last played.
+- Average session length: The average session length of the player in minutes. Session length is determined by the time that a player is signed in to Google Play Games services.
+- Number of purchases: The approximate number of in-app purchases for the player.
+- Number of sessions: The approximate number of sessions of the player. Sessions are determined by the number of times that a player signs in to Google Play Games services.
+- Session percentile: The approximation of sessions percentile for the player, given as a decimal value between 0 to 1 inclusive. This value indicates how many sessions the current player has played in comparison to the rest of this game's player base. Higher numbers indicate that this player has played more sessions.
+- Spend percentile: The approximate spend percentile of the player, given as a decimal value between 0 to 1 inclusive. This value indicates how much the current player has spent in comparison to the rest of this game's player base. Higher numbers indicate that this player has spent more.
 
 # **Social**
 
 ## Achievements
 
-Read about how to configure and use *Achievements* [here](https://developers.google.com/games/services/common/concepts/achievements).
+Read about how to configure and use _Achievements_ [here](https://developers.google.com/games/services/common/concepts/achievements).
 
 ![](images/play-goodies/social/achievements.png)
 
@@ -209,7 +211,7 @@ To show an external UI with all of the achievements use the `Show Achievement UI
 
 ## Leaderboards
 
-Read about how to configure and use *Leaderboards* [here](https://developers.google.com/games/services/common/concepts/leaderboards).
+Read about how to configure and use _Leaderboards_ [here](https://developers.google.com/games/services/common/concepts/leaderboards).
 
 ![](images/play-goodies/social/leaderboards.png)
 
@@ -223,7 +225,7 @@ You can load the player centered scores and other info using the `Load Player Ce
 
 ## Events
 
-Read about how to configure and use *Events* [here](https://developers.google.com/games/services/common/concepts/events).
+Read about how to configure and use _Events_ [here](https://developers.google.com/games/services/common/concepts/events).
 
 ![](images/play-goodies/social/event_ops.png)
 
@@ -243,7 +245,7 @@ This method allows you to get the list of your friends.
 
 ![](images/play-goodies/friends/LoadFriendsFunction.png)
 
-* Page size must be bigger than 1 (PageSize >= 1);
+- Page size must be bigger than 1 (PageSize >= 1);
 
 ### OnLoadFriendsSuccess
 
@@ -259,14 +261,14 @@ It shows you profile of your friend.
 
 ![](images/play-goodies/friends/ViewAnotherPlayerProfile_Function.png)
 
-* Other Player Id - your friend's profile Id;
+- Other Player Id - your friend's profile Id;
 
 ## View Another Player Profile With Alternative Hints
 
 If the player sends an invitation to the profile they are viewing, their game-specific name can be included.
 
 ![](images/play-goodies/friends/ViewAnotherPlayerProfileWithAlternativeHints_Function.png)
- 
+
 ---
 
 # **Cloud Saves**
@@ -283,10 +285,10 @@ This method will show a Google Play Save Games native UI screen.
 
 When showing the save games UI you can receive the following callbacks:
 
-* **On Add New Snapshot** - user pressed the "Add" button, you can implement the flow to create a new save after this
-* **On View Snapshot Metadata** - user selected an existing snapshot, the metadata of the selected snapshot is passed as a parameter, you can use it to open the selected snapshot.
-* **On Error** - an error happened, message is passed as a parameter
-* **On Cancel** - user just closed the screen with a close button
+- **On Add New Snapshot** - user pressed the "Add" button, you can implement the flow to create a new save after this
+- **On View Snapshot Metadata** - user selected an existing snapshot, the metadata of the selected snapshot is passed as a parameter, you can use it to open the selected snapshot.
+- **On Error** - an error happened, message is passed as a parameter
+- **On Cancel** - user just closed the screen with a close button
 
 ## Opening a Snapshot
 
@@ -366,25 +368,25 @@ v2.2.3
 
 !> BREAKING CHANGES!
 
-* UPDATED to newest Google Play Services SDK v2
-* Reworked auth, see the docs above
+- UPDATED to newest Google Play Services SDK v2
+- Reworked auth, see the docs above
 
 v2.1.2
 
-* ADDED load top leaderboard scores function
+- ADDED load top leaderboard scores function
 
 v2.1.1
 
-* FIXED 'exported' tag on acitivities for Android 12
+- FIXED 'exported' tag on acitivities for Android 12
 
 v2.0.0
 
-* Added functionality to fetch friends and view other player profile
+- Added functionality to fetch friends and view other player profile
 
 v.1.1.0
 
-* ADDED A function to fetch player and players close to him leadebord information
+- ADDED A function to fetch player and players close to him leadebord information
 
 v.1.0.0
 
-* Initial release
+- Initial release

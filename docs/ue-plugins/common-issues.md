@@ -25,14 +25,14 @@ The demo level and the blueprints are included in the plugin `Content` folder, t
 
 Hi there, if you are reading this, this means you did not provide enough information to troubleshoot your issue :) Please provide the information below so we could better help you resolve the issue:
 
-* Platform on which an issue occurs (Android, iOS, editor?)
-* Steps to reproduce the issue
-* Does this also happen if you run our demo level? (We always have a demo level packaged inside the plugin folder)
-* Engine version and plugin version
-* The text file containing the **COMPLETE** log from the editor if your issue occurs when building the plugin, or complete **Logcat or XCode** log from a device if the problem happens at runtime. (See the questions below if you don't know how to do this)
-* All other relevant info:
-  * Are you using remote build?
-  * Are there other 3rd party plugins that might conflict with our plugins?
+- Platform on which an issue occurs (Android, iOS, editor?)
+- Steps to reproduce the issue
+- Does this also happen if you run our demo level? (We always have a demo level packaged inside the plugin folder)
+- Engine version and plugin version
+- The text file containing the **COMPLETE** log from the editor if your issue occurs when building the plugin, or complete **Logcat or XCode** log from a device if the problem happens at runtime. (See the questions below if you don't know how to do this)
+- All other relevant info:
+  - Are you using remote build?
+  - Are there other 3rd party plugins that might conflict with our plugins?
 
 ---
 
@@ -48,8 +48,9 @@ Hi there, if you are reading this, this means you did not provide enough informa
 1. **First of all, your project must be a C++ project, you can easily convert your Blueprint-only project to C++ project by creating a random C++ class in the inspector**
 
 2. Find your plugin in the Engine folder:
-  - MAC: `/Users/Shared/Epic Games/UE_4.26/Engine/Plugins/Marketplace/YourPluginName`
-  - Windows: `D:\UnrealEditors\UE_4.26\Engine\Plugins\Marketplace`
+
+- MAC: `/Users/Shared/Epic Games/UE_4.26/Engine/Plugins/Marketplace/YourPluginName`
+- Windows: `D:\UnrealEditors\UE_4.26\Engine\Plugins\Marketplace`
 
 - Copy the plugin into the `Plugins` folder of the root of your project. So the folder structure is like `YourProjectFolder/Plugins/YourPluginName`
 - Change the engine version in the `YourPluginName.uplugin` file to the UE version you are using.
@@ -73,18 +74,24 @@ Get Android Studio and [follow these instructions](https://developer.android.com
 
 ## How do I get an XCode log from an iOS device when running my UE project?
 
-* Run your project from the Editor at least once
-* Open your project folder in Finder and go to `Intermediate/ProjectFilesIOS` and open the project by double-clicking the `YourProject.xcodeproj` file.
-* Run the project on your iOS device and get the logs in the log window
+- Run your project from the Editor at least once
+- Open your project folder in Finder and go to `Intermediate/ProjectFilesIOS` and open the project by double-clicking the `YourProject.xcodeproj` file.
+- Run the project on your iOS device and get the logs in the log window
 
 ![](/images/issues/xcode-proj.png)
 ![](/images/issues/logs.png)
 
 ---
 
-## What should I do if my build failed because of deprecated Gradle features due to AFS?
+## What should I do if my build failed because of deprecated Gradle features due to Android File Server plugin (AFS)?
 
-* Disable the `AndroidFileServer` plugin will and restart the editor. 
-* You may need to delete `Build`, `Intermediate`, `Binaries` folders and regenerate the project files.
+- Disable the `AndroidFileServer` plugin will and restart the editor.
+- You may need to delete `Build`, `Intermediate`, `Binaries` folders and regenerate the project files.
+
+---
+
+## I am getting a packaging error in the release build because of Android File Server plugin
+
+[filename](common/afs_fix.md ":include")
 
 ---

@@ -10,6 +10,8 @@ Due to the native API's being different, the implementations and functions are d
 
 # Setup
 
+[filename](common/afs_fix.md ":include")
+
 The plugin contains demo levels for both Android and iOS in the `Content` folder.
 
 Disable `Online Subsystem Google Play` in project Plugins window.
@@ -98,7 +100,7 @@ It is recommended to stop connection after you are done working with the Billing
 
 ?> Please, follow the recommendations from the [official documentation](https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase?language=objc) for most use cases and best practices.
 
-To test in-app purchases on iOS after the setup you need to either 1) Upload the App to internal testing via the TestFlight or 2) Create a [sandbox Apple Id](https://developer.apple.com/documentation/storekit/in-app_purchase/testing_in-app_purchases_with_sandbox?language=objc) in App Store Connect. You can 
+To test in-app purchases on iOS after the setup you need to either 1) Upload the App to internal testing via the TestFlight or 2) Create a [sandbox Apple Id](https://developer.apple.com/documentation/storekit/in-app_purchase/testing_in-app_purchases_with_sandbox?language=objc) in App Store Connect. You can
 test the demo level inside the plugin first and then build your implementation upon it.
 
 Make sure to follow the setup instructions at the beginning of this page before implementing In-App-Purchases for iOS. Usually, the problems are with the setup, check the [discussion section for potential misconfiguration issues](https://developer.apple.com/documentation/storekit/skproductsresponse/1505985-invalidproductidentifiers?language=objc).
@@ -152,9 +154,9 @@ The plugin wraps all of the native [Original In-App-Purchase API](https://develo
 
 ### 2.1.1
 
-+ IMPROVED iOS version no longer requires the plugin to be copied to the project
-+ FIXED Demo crash on iOS when products array is empty when trying to purchase an item
-+ IMPROVED Remove price confirmation flow that was removed in billing client v5
+- IMPROVED iOS version no longer requires the plugin to be copied to the project
+- FIXED Demo crash on iOS when products array is empty when trying to purchase an item
+- IMPROVED Remove price confirmation flow that was removed in billing client v5
 
 ---
 
