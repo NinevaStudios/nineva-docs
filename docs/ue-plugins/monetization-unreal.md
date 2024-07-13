@@ -10,8 +10,6 @@ Due to the native API's being different, the implementations and functions are d
 
 # Setup
 
-[filename](common/afs_fix.md ":include")
-
 The plugin contains demo levels for both Android and iOS in the `Content` folder.
 
 Disable `Online Subsystem Google Play` in project Plugins window.
@@ -37,6 +35,8 @@ bUseGooglePlayBillingApiV2=false
 ## Android
 
 ?> Please, follow the recommendations from the [official documentation](https://developer.android.com/google/play/billing/integrate) for most use cases and best practices.
+
+[filename](common/afs_fix.md ":include")
 
 ### Initialize Client
 
