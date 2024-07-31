@@ -599,7 +599,9 @@ Before setting the default values, you first need to make a map of parameter nam
 
 Official documentation regarding the Firebase Cloud Messaging can be found [here](https://firebase.google.com/docs/cloud-messaging).
 
-?> The iOS setup is quite complex and it's easy to miss a step. Please, follow the instructions very carefully. You also have to go to Project Settings -> Feirebase Goodies and set the bEnableAPNForIOS to true.
+?> The iOS setup is quite complex and it's easy to miss a step. Please, follow the instructions very carefully. You also have to go to Project Settings -> Firebase Goodies and set the `Enable Apple Push Notifications for iOS` checkbox to true and do full project rebuild afterwards.
+
+?> On Android 13+, you must request `android.permission.POST_NOTIFICATIONS` runtime permission. See the demo level for an example which uses UE `Request Android Permissions` node.
 
 ![](images/firebase/cloud-messaging/CloudMessagingSettings.png)
 
