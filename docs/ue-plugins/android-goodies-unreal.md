@@ -382,7 +382,7 @@ To open a specific Twitter profile call `OpenTwitterProfile` function and provid
 
 ### Open YouTube video
 
-To open the video in YouTube app call `OpenYoutubeVideo` function and provide video ID parameter (a part that follows after "https://www.youtube.com/watch?v=").
+To open the video in YouTube app call `OpenYoutubeVideo` function and provide video ID parameter (a part that follows after "<https://www.youtube.com/watch?v=>").
 
 ![](images/android-goodies/manage-apps/Scr_OpenYouTubeVideo.png)
 
@@ -628,7 +628,14 @@ Requires the "android.permission. WRITE_CONTACTS" permission.
 
 v.2.2.5
 
-+ ADDED Contact picker functionality
+- FIXED Google Play Core dependency issue preventing to submit updates
+- IMPROVED Demo of save image to gallery having unnecessary permission
+
+---
+
+v.2.2.5
+
+- ADDED Contact picker functionality
 
 ---
 
