@@ -98,6 +98,7 @@ It is recommended to stop connection after you are done working with the Billing
 
 ## iOS
 
+
 ?> Please, follow the recommendations from the [official documentation](https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase?language=objc) for most use cases and best practices.
 
 To test in-app purchases on iOS after the setup you need to either 1) Upload the App to internal testing via the TestFlight or 2) Create a [sandbox Apple Id](https://developer.apple.com/documentation/storekit/in-app_purchase/testing_in-app_purchases_with_sandbox?language=objc) in App Store Connect. You can
@@ -105,13 +106,17 @@ test the demo level inside the plugin first and then build your implementation u
 
 Make sure to follow the setup instructions at the beginning of this page before implementing In-App-Purchases for iOS. Usually, the problems are with the setup, check the [discussion section for potential misconfiguration issues](https://developer.apple.com/documentation/storekit/skproductsresponse/1505985-invalidproductidentifiers?language=objc).
 
-**Make sure, in the end, not only to create the in-app purchases but also to add them to your app build in the dashboard!!!**
-
-![](images/monetization/monetization-goodies-add-to-app.png)
-
 ?> When setting up the purchases in the App Store Connect, make sure they are added to the application on the app page
 
 ![](images/monetization/monetization-12.png)
+
+If having issues, make sure your `Online Subsystem iOS` is enabled in the plugins section. Make sure that your `IOSEngine.ini` (or `BaseIOSEngine.ini` in the engine) contains the lines to enable the Online Subsystem IOS in-app purchases.
+
+```ini
+[OnlineSubsystemIOS.Store]
+bSupportsInAppPurchasing=true
+bUseStoreV2=true;
+```
 
 ### Initialize
 
