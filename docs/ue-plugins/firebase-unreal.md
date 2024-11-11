@@ -43,7 +43,7 @@ Analytics collects usage and behavior data for your app. There are two types of 
 
 After enabling analytics in your Firebase console you're all set to start logging events.
 
-?> Events usually take up to an hour to appear on the Firebase console dashboard. For testing, you can tell your device to send debug analytics events. Please follow the official instruction [here](https://support.google.com/firebase/answer/7201382) to activate this feature.
+?> Events usually take up to an hour to appear on the Firebase console dashboard. For testing, you can tell your device to send debug analytics events. Please follow the official instructions [here](https://firebase.google.com/docs/analytics/debugview) to activate this feature.
 
 ## Functions
 
