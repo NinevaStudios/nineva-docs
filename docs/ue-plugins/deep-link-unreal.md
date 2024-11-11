@@ -84,6 +84,8 @@ Example:
 
 Unfortunately, we could not add an automated task to add the Associated Domains capability to the output xcode project during build time, so you will have to add those entitlements manually and relaunch the application on the device.
 
+?> If you are using modernized XCode workflow, you can set the custom entitlements file via `PremadeIOSEntitlements=(FilePath="/Game/Build/IOS/Resources/Entitlements.plist")` setting in the `[/Script/MacTargetPlatform.XcodeProjectSettings]` section in `DefaultEngine.ini` (make sure this file has the correct format and structure as described below). 
+
 It has to be in the following format: `applinks:YOUR_DOMAIN_NAME`
 
 ![](images/deep-link/deep-link-associated-domains.png)
