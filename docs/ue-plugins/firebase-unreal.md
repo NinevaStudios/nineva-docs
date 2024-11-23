@@ -1019,6 +1019,13 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.5.2 (09.10.2024)
+
+- FIXED Removed old Google Play Android dependencies causing builds to fail
+- FIX iOS frameworks bundle paths not working in some cases
+- ADD Android UPL entry to change notification icon for Messaging
+- FIXED Cloud messaging on Android
+
 ### 4.5.0 (12.06.2024)
 
 - UPDATED iOS SDK to v10.25

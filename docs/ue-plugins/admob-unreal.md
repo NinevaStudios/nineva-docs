@@ -493,11 +493,15 @@ If you see test ads using Google provided test unit IDs then you are all set for
 
 # Changelog
 
+### 4.4.1
+
+- FIXED Removed old Google Play Android dependencies that caused builds to break on newer UE versions
+
 ---
 
 ### 4.4.1
 
-- ADDED Optimize ad loading and ad init featurees for Android (See: <https://developers.google.com/admob/android/optimize-initialization>)
+- ADDED Optimize ad loading and ad init features for Android (See: <https://developers.google.com/admob/android/optimize-initialization>)
 
 ---
 

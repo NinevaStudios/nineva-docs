@@ -165,6 +165,14 @@ The plugin wraps all of the native [Original In-App-Purchase API](https://develo
 
 # Changelog
 
+### 2.1.3
+
+- UPDATED billing client to v7
+- FIXED Some threading issues on iOS
+- 
+
+---
+
 ### 2.1.1
 
 - IMPROVED iOS version no longer requires the plugin to be copied to the project
