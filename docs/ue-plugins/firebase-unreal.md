@@ -969,7 +969,7 @@ We have added Firebase C++ SDK as a part of the plugin for editor/desktop suppor
 
 ## Limitations
 
-!> Unfortunately, we can't get it working on Mac in UE5 (it works in UE4). We are working on this but without any success so far.
+!> Currently, **we can't make it work with Unreal version 5.5 or higher on Windows**, Firebase [distributed windows libs](https://firebase.google.com/docs/cpp/setup?platform=ios#additional-info-desktop) are built with older Visual Studio versions and [5.5 requires VS2022](https://dev.epicgames.com/documentation/en-us/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine).
 
 !> On Windows, Visual Studio 2019 must be installed as Google provides the latest versions of native libs compiled with it
 
