@@ -1019,7 +1019,13 @@ The complete table of feature support can be found below.
 
 # Changelog
 
-### 4.5.2 (09.10.2024)
+### 4.5.5 (27.11.2024)
+
+- FIXED Some issues with new C++ in UE5.5
+- FIXED Broken Android build in 5.5 because of Crashlytics gradle plugin
+- UPDATE native Firebase iOS libs to v11.5.0
+
+### 4.5.2 (09.11.2024)
 
 - FIXED Removed old Google Play Android dependencies causing builds to fail
 - FIX iOS frameworks bundle paths not working in some cases
