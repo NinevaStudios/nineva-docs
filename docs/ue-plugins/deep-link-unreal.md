@@ -84,6 +84,8 @@ Example:
 
 ?> With modern UE versions with Modernized Xcode Workflow enabled, we can't figure out how to add/modify the `.entitlements` file required automatically, the only option right now is to open XCode project and add it manually. If you can figure out a better way, please let us know.
 
+[filename](common/entitlements.md ":include")
+
 Unfortunately, we could not add an automated task to add the Associated Domains capability to the output xcode project during build time, so you will have to add those entitlements manually and relaunch the application on the device.
 
 ?> If you are using modernized XCode workflow, you can set the custom entitlements file via `PremadeIOSEntitlements=(FilePath="/Game/Build/IOS/Resources/Entitlements.plist")` setting in the `[/Script/MacTargetPlatform.XcodeProjectSettings]` section in `DefaultEngine.ini` (make sure this file has the correct format and structure as described below). 
