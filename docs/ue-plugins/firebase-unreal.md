@@ -609,6 +609,8 @@ Official documentation regarding the Firebase Cloud Messaging can be found [here
 
 ?> With modern UE versions with Modernized Xcode Workflow enabled, we can't figure out how to add/modify the `.entitlements` file required automatically, the only option right now is to open XCode project and add it manually. If you can figure out a better way, please let us know.
 
+[filename](common/entitlements.md ":include")
+
 ![](images/firebase/cloud-messaging/entitlements.png)
 
 ## Manage device ID
