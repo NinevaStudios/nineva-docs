@@ -607,7 +607,7 @@ Official documentation regarding the Firebase Cloud Messaging can be found [here
 
 ## iOS Push notifications capability
 
-In order to work on iOS, Push Notifications capability has to be added to the XCode project.
+In order to work on iOS, **Push Notifications capability** has to be added to the XCode project.
 
 ![](images/firebase/cloud-messaging/entitlements.png)
 
