@@ -20,7 +20,7 @@ After the setup is complete in the Firebase console, you can open your UE4 proje
 
 You can also place your `google-services.json` inside the plugin directory (Next to UPL xml files) and check the respective checkbox in plugin settings for it to work.
 
-?> On Android you would need to use **JDK 11**, you can set it in the `Project Settings -> Platforms - Android SDK -> Location of JAVA`
+?> On Android you would need to use **at least JDK 11**, you can set it in the `Project Settings -> Platforms - Android SDK -> Location of JAVA`
 
 ![](images/firebase/Settings.png)
 
