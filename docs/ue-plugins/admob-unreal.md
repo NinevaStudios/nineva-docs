@@ -493,19 +493,28 @@ If you see test ads using Google provided test unit IDs then you are all set for
 
 # Changelog
 
-### 4.4.1
+### 4.0.1
+
+- FIXED Android build failing on UE 5.5
+- UPDATE Android AdMob and mediation dependencies
+- IMPROVE Cleanup unsupported mediations
+- FIXED Facebook mediation compile issue on Android
+
+---
+
+### 4.0.3
 
 - FIXED Removed old Google Play Android dependencies that caused builds to break on newer UE versions
 
 ---
 
-### 4.4.1
+### 4.0.1
 
 - ADDED Optimize ad loading and ad init features for Android (See: <https://developers.google.com/admob/android/optimize-initialization>)
 
 ---
 
-### 4.4.0
+### 4.0.0
 
 !> This release contains some breaking changes how consent flow works, make sure to visit the example in the demo to update your implementation. A few other things have been refactored so make sure to test everything thoroughly after the update.
 
