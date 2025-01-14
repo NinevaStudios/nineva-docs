@@ -493,7 +493,7 @@ If you see test ads using Google provided test unit IDs then you are all set for
 
 # Changelog
 
-### 4.0.1
+### 4.1.0
 
 - FIXED Android build failing on UE 5.5
 - UPDATE Android AdMob and mediation dependencies
