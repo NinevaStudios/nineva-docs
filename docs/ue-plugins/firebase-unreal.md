@@ -1031,6 +1031,12 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.6.0
+
+- UPDATE BREAKING CHANGE!!! Removed deprecated Firebase Dynamic Links
+- FIXED Saving config when picking config files in settings for UE 5.5
+- FIXED Crashlytics symbols upload for UE 5.5
+
 ### 4.5.5 (27.11.2024)
 
 - FIXED Some issues with new C++ in UE5.5
