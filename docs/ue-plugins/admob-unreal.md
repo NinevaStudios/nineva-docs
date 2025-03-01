@@ -131,7 +131,7 @@ To find out your device ID you need to launch the application on an actual devic
 For **Android** you can view this message in logcat ([via Android Studio - learn how to do this](https://developer.android.com/studio/debug/am-logcat)) and it will have the following format:
 `RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("YOUR_DEVICE_ID")`
 
-For **IOS** device first build and deploy your project using UE. After deploying your application to a device you can launch it via a generated XCode project located at _[Path_to_UE_Project]/Intermidiate/ProjectFilesIOS/[Project_Name].xcodeproj_. Now you can view your device logs in the XCode debug console. Search for a message of this format:
+For **IOS** device first build and deploy your project using UE. After deploying your application to a device you can launch it via a generated XCode project located at _[Path_to_UE_Project]/Intermediate/ProjectFilesIOS/[Project_Name].xcodeproj_. Now you can view your device logs in the XCode debug console. Search for a message of this format:
 `GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"YOUR_DEVICE_ID" ]`
 
 ?> View the logs in an IDE, UE device output log window may filter out the message and you won't see it.
