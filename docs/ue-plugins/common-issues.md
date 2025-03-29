@@ -83,6 +83,14 @@ Get Android Studio and [follow these instructions](https://developer.android.com
 
 ---
 
+You can also open Devices window in XCode, choose your device, find your app, choose 'Download container'. After that, right click on the downloaded container, choose 'Show Package Contents'. Then find your log in the `AppData/Documents/YourProjectLogFile.log` file.
+
+![](/images/issues/ios-logs-device-1.jpg)
+![](/images/issues/ios-logs-device-2.jpg)
+![](/images/issues/ios-logs-device-3.jpg)
+
+---
+
 ## What should I do if my build failed because of deprecated Gradle features due to Android File Server plugin (AFS)?
 
 - Disable the `AndroidFileServer` plugin will and restart the editor.
