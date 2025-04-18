@@ -493,6 +493,13 @@ If you see test ads using Google provided test unit IDs then you are all set for
 
 # Changelog
 
+### 4.1.1
+
++ FIX C++ lambda compilation issues for UE5.5
++ FIX AppLovin mediation bundle issue for iOS
+
+---
+
 ### 4.1.0
 
 - FIXED Android build failing on UE 5.5
