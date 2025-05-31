@@ -307,6 +307,14 @@ Then you can call the `SetAudienceNetworkAdvertiserTrackingEnabled` function to 
 
 # Changelog
 
+
+v 3.4.2
+
+- ADDED Limited login functionality on iOS
+- ADDED Exposed some more of user profile info (new GetProfile node)
+
+---
+
 v 2.2.2
 
 - FIXED UPL issue on Android with provider
