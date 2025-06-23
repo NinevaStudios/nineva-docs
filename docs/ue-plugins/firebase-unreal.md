@@ -1031,6 +1031,15 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.7.0
+
++ ADD Possibility to get launch params when app was launched via notification on Android (for Firebase Cloud Messaging)
++ ADD Method to set consent for Firebase Analytics
++ ADD Realtime remote config functionality
++ ADD Firebase installations functionality
++ FIXED Occasional issue with unicode characters for desktop
++ UPDATE C++ SDKs for desktop (to version 12.7.0)
+
 ### 4.6.0
 
 - UPDATE BREAKING CHANGE!!! Removed deprecated Firebase Dynamic Links
