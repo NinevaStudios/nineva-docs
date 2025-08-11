@@ -493,6 +493,21 @@ If you see test ads using Google provided test unit IDs then you are all set for
 
 # Changelog
 
+### 4.2.0
+
++ FIX iOS crash when calling ShowPrivacyOptionsForm (force main thread execution)
++ UPDATE [iOS] Google Mobile Ads SDK iOS to 11.2.0 (Android adapters aligned with Google Mobile Ads SDK 24.5.0)
++ ADD Debug geography enum for consent testing
++ UPDATE Mediation adapters to latest versions:
+	- Chartboost 9.9.1.0
+	- Meta Audience Network (Facebook) 6.20.0.0
+	- Unity Ads core SDK 4.16.0 / adapter 4.16.0.0
+	- Liftoff Monetize (Vungle) 7.5.0.0
+	- AppLovin 13.3.1.1
+	- IronSource 8.10.0.0
++ IMPROVE [iOS] All adapters now use latest versions compatible with Google Mobile Ads SDK 24.5.0 providing performance, security and feature updates
++ CHANGE Default plugin project setting for using custom Gradle version is now 'false'
+
 ### 4.1.1
 
 + FIX C++ lambda compilation issues for UE5.5
