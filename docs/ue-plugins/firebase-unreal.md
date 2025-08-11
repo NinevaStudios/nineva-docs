@@ -1031,6 +1031,13 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.8.0
+
++ UPDATE Android BOM version to 34.0.0 (updated Google Play Services & Crashlytics Gradle plugins)
++ FIXED [iOS] Child/value listener being garbage collected accidentally
++ ADD Sign in with email link auth method
++ ADD Get token implementation for desktop
+
 ### 4.7.0
 
 + ADD Possibility to get launch params when app was launched via notification on Android (for Firebase Cloud Messaging)
