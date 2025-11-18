@@ -493,6 +493,16 @@ If you see test ads using Google provided test unit IDs then you are all set for
 
 # Changelog
 
+### 4.3.0
+
++ ADD Blueprint-accessible `AGMediationConsentLibrary` nodes so you can forward GDPR/CCPA signals directly to Mintegral, InMobi, Pangle, DT Exchange, ironSource, AppLovin, Liftoff Monetize, Unity Ads, Chartboost and Meta; the plugin now ships Android helper stubs for each mediation SDK so the calls reach the native adapters.
++ ADD Android plugin settings to override every AdMob/Mediation dependency version (plus new toggles for Mintegral, InMobi, Pangle and DT Exchange) and have the Gradle UPL read those values automatically—no more editing XML when bumping adapters.
++ UPDATE [iOS] Bundled Google Mobile Ads SDK to 12.8.0 and refreshed the optional mediation frameworks (IronSource 7.8.0.0, Unity 4.9.3.0, Liftoff/Vungle 7.2.2.1, AppLovin 12.3.0.0, InMobi 11.0.0, Mintegral 7.7.9, DT Exchange 8.4.0, Pangle 7.8.0.0) for the latest privacy/security fixes.
++ FIX [iOS] Present banners, consent forms and the Ad Inspector through the shared `IOSView` controller to keep UE 5.7 projects from crashing when showing modal UI.
++ IMPROVE Mediation consent helpers now verify that each ad network is enabled in the plugin settings before invoking its SDK, emitting actionable log errors instead of failing silently.
+
+---
+
 ### 4.2.0
 
 + FIX iOS crash when calling ShowPrivacyOptionsForm (force main thread execution)
@@ -576,7 +586,7 @@ If you see test ads using Google provided test unit IDs then you are all set for
 
 ### 3.2.0
 
-- FIXED TapJoy mediation comppile issue
+- FIXED TapJoy mediation compile issue
 - UPDATE Various Android library versions
 
 ---
