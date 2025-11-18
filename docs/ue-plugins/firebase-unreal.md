@@ -1031,6 +1031,15 @@ The complete table of feature support can be found below.
 
 # Changelog
 
+### 4.9.0
+
++ ADD Missing success/cancel callbacks for realtime database mutating calls (SetValue, UpdateChildren, RemoveValue, OnDisconnect, etc.) on Android, iOS, Desktop and Blueprints so you can react when writes actually complete.
++ UPDATE Remote Config stability: Android implementation now handles synchronous task completion and detailed logging, desktop/iOS respect fetch interval/timeout values and enforce Firebase App availability, and callbacks clean up from the game thread to avoid GC races.
++ FIXED Android Cloud Messaging and Cloud Storage JNI bridges now create UObjects on the game thread and dispose global refs properly, eliminating random crashes/leaks when messages arrive.
++ UPDATE Android Firebase BoM default bumped to 34.2.0 and removed the unused FGAuthIntermediateActivity manifest entry to keep dependencies lean.
++ FIXED Added guardrails for Google Sign-In so an empty Web Client ID is caught early (with logging) instead of launching a broken auth flow.
++ ADD Added the option to copy GoogleService-Info.plist into iOS builds (including a plugin-root toggle) and upgraded Crashlytics APIs to use native log/recordError calls while keeping FIROptions-based initialization for editor builds.
+
 ### 4.8.0
 
 + UPDATE Android BOM version to 34.0.0 (updated Google Play Services & Crashlytics Gradle plugins)
