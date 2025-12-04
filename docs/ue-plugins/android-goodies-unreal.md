@@ -675,7 +675,7 @@ v.2.0.1
 v.1.9.0
 
 - FIXED Notification crash issues for Android 12+
-- ADDED Various Wi-Fi funcitonality (connect to network, toggle Wi-Fi state, check if Wi-Fi is enabled)
+- ADDED Various Wi-Fi functionality (connect to network, toggle Wi-Fi state, check if Wi-Fi is enabled)
 
 v.1.8.1
 
@@ -741,7 +741,7 @@ v.1.2.2
 v.1.2.1
 
 - ADDED Capture screenshot
-- FIXED Performace issue with picking image from gallery
+- FIXED Performance issue with picking image from gallery
 - FIXED Image functions callback handling in game thread
 
 v.1.2.0

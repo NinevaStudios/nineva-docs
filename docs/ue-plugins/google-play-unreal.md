@@ -332,7 +332,7 @@ Video recording API allows you to launch recording of the game play video while 
 
 ## Starting the recording
 
-Before starting the recording you should check whether the recording is supported on currect device and if yes, present the video recording overlay.
+Before starting the recording you should check whether the recording is supported on the correct device and if yes, present the video recording overlay.
 
 ## Check if capture supported
 
@@ -344,7 +344,7 @@ Before starting the recording you should check whether the recording is supporte
 
 ## Getting the information
 
-To fetch the information about what functionality is supported on device, use `Get Capture Capabilites` node.
+To fetch the information about what functionality is supported on device, use `Get Capture Capabilities` node.
 
 ![](images/play-goodies/video_recording/get_capture_capabilities.png)
 
@@ -377,7 +377,7 @@ v2.1.2
 
 v2.1.1
 
-- FIXED 'exported' tag on acitivities for Android 12
+- FIXED 'exported' tag on activities for Android 12
 
 v2.0.0
 

@@ -24,7 +24,7 @@ If you do not need it, you should go to the plugin directory, and modify the `Ne
 
 # Status codes
 
-Some callbacks in the plugin return status codes that can be used to determine whether the preceding API call was successful, or to see the type of error that has occured. Please, refer to the official documentation [here](https://developers.google.com/android/reference/com/google/android/gms/common/api/CommonStatusCodes) and [here](https://developers.google.com/android/reference/com/google/android/gms/nearby/connection/ConnectionsStatusCodes) for the possible status codes and their meaning.
+Some callbacks in the plugin return status codes that can be used to determine whether the preceding API call was successful, or to see the type of error that has occurred. Please, refer to the official documentation [here](https://developers.google.com/android/reference/com/google/android/gms/common/api/CommonStatusCodes) and [here](https://developers.google.com/android/reference/com/google/android/gms/nearby/connection/ConnectionsStatusCodes) for the possible status codes and their meaning.
 
 # Global callbacks
 
@@ -48,7 +48,7 @@ There are several callback groups that are set once per lifetime of your applica
 
 ## Payload Callbacks
 
-- `OnPayloadReceived` - invoked whenever a payload has been received. You can check the payload type, and get the neccessary data from this callback.
+- `OnPayloadReceived` - invoked whenever a payload has been received. You can check the payload type, and get the necessary data from this callback.
 
 ?> For file payloads this callback is received when the file download has only started. Byte payloads are ready to be used right-away.
 

@@ -92,7 +92,7 @@ Result:
 
 This function fades screen and displays native loading spinner at the middle. Call `ShowLoadingDialog` to begin showing a loading screen. Call `DismissLoadingDialog` to dismiss it after the background work is done.
 
-!> All user interface iteractions are blocked during the lifetime of the loading screen
+!> All user interface interactions are blocked during the lifetime of the loading screen
 
 # **App Store rate dialog**
 
@@ -494,7 +494,7 @@ ___
 
 v.1.7.4
 
-+ FIXED File picker paths not being usable to read the file correclty
++ FIXED File picker paths not being usable to read the file correctly
 
 v.1.7.3
 
@@ -508,7 +508,7 @@ v.1.7.0
 
 v.1.6.5
 
-* ADDED Nonce generation to Sign in with Apple to allow intergration with 3rd party services like Firebase
+* ADDED Nonce generation to Sign in with Apple to allow integration with 3rd party services like Firebase
 
 v.1.6.0
 
@@ -535,7 +535,7 @@ v.1.3.0
 * ADDED Added possibility to change size of image picked from gallery
 * ADDED Status bar show/hide functionality
 * FIXED Issue with image picker rotation in lanscape mode
-* FIXED Native UI elements appearence when dark theme is enabled
+* FIXED Native UI elements appearance when dark theme is enabled
 * FIXED Some threading issues on iOS 13
 
 v.1.2.3

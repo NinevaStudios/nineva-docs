@@ -21,7 +21,7 @@ You also need to remove the dependency by removing these lines if you have it in
 - `PrivateDependencyModuleNames.Add("OnlineSubsystemGooglePlay");`
 - `ExtraModuleNames.Add("OnlineSubsystemGooglePlay");`
 
-You might also need to add/modify the `Config/Android/AndroidEngine.ini` file contents fo have all the built-in Google Play Billing features disabled:
+You might also need to add/modify the `Config/Android/AndroidEngine.ini` file contents to have all the built-in Google Play Billing features disabled:
 
 ```ini
 [OnlineSubsystemGooglePlay.Store]
@@ -131,7 +131,7 @@ Once you get a reference to the queue object, you can add transaction observer a
 
 ![](images/monetization/monetization-14.png)
 
-!> Due to the threading issues (delegate functions have to be executed in the main game thread), some delegates can not be overriden in blueprints, and you have to write the logic for them in the code.
+!> Due to the threading issues (delegate functions have to be executed in the main game thread), some delegates can not be overridden in blueprints, and you have to write the logic for them in the code.
 
 These are two methods in the `MGIosPaymentQueue.cpp` file:
 

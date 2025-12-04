@@ -564,7 +564,7 @@ If you see test ads using Google provided test unit IDs then you are all set for
 - ADD Settings checkbox to disable using custom gradle (uncheck it if you use UE5.3+)
 - UPDATE TapJoy mediation on iOS to v13.2.1
 - UPDATE Make addign ATT dialog entry addition to plist optional
-- FIX Some compile isssues
+- FIX Some compile issues
 - FIX Mediations being enabled by default in some cases
 
 ---

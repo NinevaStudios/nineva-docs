@@ -73,7 +73,7 @@ After enabling analytics in your Firebase console you're all set to start loggin
 
 ![](images/firebase/analytics/AnalyticsScreenTracking.png)
 
-### Event loging
+### Event logging
 
 - Log event with parameter
 
@@ -709,7 +709,7 @@ In order to call them from your app use Cloud Function method of respective retu
 
 !> Note: If you don't specify region functions run in the `us-central1` region by default.
 
-You can pass any amount of parameters of different types inside the `Parameters` map, including arrays and maps. To pass them use Value Variant convertor.
+You can pass any amount of parameters of different types inside the `Parameters` map, including arrays and maps. To pass them use Value Variant converter.
 
 ![](images/firebase/cloud-functions/Scr_CloudFunctionsValueVariantConv.png)
 
@@ -739,7 +739,7 @@ Collection reference is a subclass of [Query](https://docs.ninevastudios.com/#/u
 
 ![](images/firebase/firestore/firestore-1.png)
 
-To add an item to the collection, call the `Add` function providing a map of the values to be contained withing the newly created document.
+To add an item to the collection, call the `Add` function providing a map of the values to be contained within the newly created document.
 
 ![](images/firebase/firestore/firestore-2.png)
 
@@ -1226,7 +1226,7 @@ The complete table of feature support can be found below.
 
 ### 1.6.6
 
-- FIXED 'exported' tag on acitivities for Android 12
+- FIXED 'exported' tag on activities for Android 12
 
 ### 1.6.5
 

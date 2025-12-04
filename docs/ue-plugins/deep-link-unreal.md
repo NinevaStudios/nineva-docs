@@ -167,11 +167,11 @@ ___
 
 v1.0.4
 
-* ADDED Supoort for URL schemes on iOS and Facebook app links
+* ADDED Support for URL schemes on iOS and Facebook app links
 
 v1.0.3
 
-* FIXED 'exported' tag on acitivities for Android 12
+* FIXED 'exported' tag on activities for Android 12
 
 v1.0.0
 

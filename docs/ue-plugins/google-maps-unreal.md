@@ -114,9 +114,9 @@ You have to do this because with the new [Google Play App Signing](https://suppo
 
 ![](images/google-maps/new-signing.png)
 
-## Put the API key in the plugin setting in Project Setings.
+## Put the API key in the plugin setting in Project Settings.
 
-Go to your Project Settings, find the plugin settings section and place your API keys into the corresponsing Android/iOS fields.
+Go to your Project Settings, find the plugin settings section and place your API keys into the corresponding Android/iOS fields.
 
 ## Run the Demo Project
 
@@ -169,7 +169,7 @@ if (Target.Platform == UnrealTargetPlatform.IOS)
 }
 ```
 
-Otherwise, you might experience app crashes when creating map view followed by error messages like "attemping to free pointer we didn't allocate".
+Otherwise, you might experience app crashes when creating map view followed by error messages like "attempting to free pointer we didn't allocate".
 More info about this issue can be found [here](https://www.artstation.com/alyamkin/blog/9VEQ/ue4-ios-and-pointer-being-freed-was-not-allocated).
 
 # **Getting started**

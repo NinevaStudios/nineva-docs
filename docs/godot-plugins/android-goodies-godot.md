@@ -787,7 +787,7 @@ func get_battery_scale() -> int
 # The technology of the current battery.
 func get_battery_technology() -> String
 		
-# The current battery temperature in the tenth parts of a Celcius degree.
+# The current battery temperature in the tenth parts of a Celsius degree.
 func get_battery_temperature() -> int
 		
 # The current battery voltage level in milli-volts.

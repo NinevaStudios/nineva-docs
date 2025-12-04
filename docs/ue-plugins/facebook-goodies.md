@@ -339,7 +339,7 @@ v 2.2.0
 
 v 2.1.1
 
-- FIXED 'exported' tag on acitivities for Android 12
+- FIXED 'exported' tag on activities for Android 12
 
 v 1.5.4
 

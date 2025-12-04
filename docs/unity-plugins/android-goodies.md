@@ -562,7 +562,7 @@ Method parameters are:
 - a success callback where you will receive `ImagePickResult` object. Invoke `LoadTexture2D()` or `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` to load `Texture2D` texture. Object also contains such info as display name of the picked image, width, height, size etc. Check the class itself for more information.
 - a cancel callback which is invoked when user cancels taking photo or an error happens.
 - an optional `ImageResultSize` - defaults to `ImageResultSize.Original` - specify this parameter if the photo takes up to much memory and needs to be downscaled before returned.
-- an optional `bool` parameter whether to generate thumnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
+- an optional `bool` parameter whether to generate thumbnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
 
 ```csharp
 var imageResultSize = ImageResultSize.Max512;
@@ -1094,7 +1094,7 @@ Result:
 
 ## AGNotificationManager.cs
 
-### Required permissons
+### Required permissions
 
 - Schedule exact alarms permission must be present in `AndroidManifest.xml` file if you target Android API level 31+ and plan to schedule exact notifications:
 
@@ -1434,7 +1434,7 @@ AGNotificationManager.CancelScheduledNotification(notificationId);
 
 This class allows you to change device wallpaper image
 
-### Required permissons
+### Required permissions
 
 - Set wallpaper permission must be present in `AndroidManifest.xml` file:
 
@@ -1500,7 +1500,7 @@ AGGallery.PickImageFromGallery(
 
 You can show the screen where user can change his live wallpaper by calling `AGWallpaperManager.ShowLiveWallpaperChooser()` method.
 
-### Reseting to default wallpaper
+### Resetting to default wallpaper
 
 To reset the wallpaper to default call `AGWallpaperManager.Clear()` method.
 
@@ -1714,7 +1714,7 @@ AGFlashLight.Disable();
 ### FAQ
 
 - Will GPS work if there is no internet connection or mobile data etc.?
-- Yes, GPS is seperate hardware module that does not depend on internet connection in any way.
+- Yes, GPS is separate hardware module that does not depend on internet connection in any way.
 
 ### Required permissions
 
@@ -1948,7 +1948,7 @@ Method parameters are:
 - a success callback where you will receive `ImagePickResult` object. Invoke `LoadTexture2D()` or `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` to load `Texture2D` texture. Object also contains such info as display name of the picked image, width, height, size etc. Check the class itself for more information.
 - a cancel callback which is invoked when user cancels taking photo or an error happens.
 - an optional `ImageResultSize` - defaults to `ImageResultSize.Original` - specify this parameter if the photo takes up to much memory and needs to be downscaled before returned.
-- an optional `bool` parameter whether to generate thumnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
+- an optional `bool` parameter whether to generate thumbnails for the image (use `true` if you want a small thumbnail image like small avatar picture), defaults to `false` , must be set to `true` if you want to use `LoadThumbnailTexture2D()` or `LoadSmallThumbnailTexture2D()` methods.
 
 Example:
 
@@ -2033,7 +2033,7 @@ AGFingerprintScanner.Authenticate(
     {
         statusText.color = Color.green;
         statusText.text = "Auth success";
-        Debug.Log("Fingerprint authentication sucessful");
+        Debug.Log("Fingerprint authentication successful");
     },
     warning =>
     {
@@ -2359,7 +2359,7 @@ When your build fails, please check the console, it will have a very long error 
 
 **Q:** How do I found out what permissions I have to put in my `AndroidManifest.xml` file?
 
-**A:** Every class has permissions listed in xml reference docs, also check the documenation for specific class in the right column of this documentation. Also check the permissions provided in `AndroidManifest.xml` in `Plugins/Android` folder - it contains all the required permissions for all the functions.
+**A:** Every class has permissions listed in xml reference docs, also check the documentation for specific class in the right column of this documentation. Also check the permissions provided in `AndroidManifest.xml` in `Plugins/Android` folder - it contains all the required permissions for all the functions.
 
 ## Overriding `UnityPlayerActivity`
 
@@ -2376,4 +2376,4 @@ When your build fails, please check the console, it will have a very long error 
 - FIXED Various proguard warnings in different scenarios
 - FIXED Months conversions in date pickers
 - FIXED Saving images to gallery on Android >= 30
-- FIXED Sharing Texture iamges on Android >= 30
+- FIXED Sharing Texture images on Android >= 30

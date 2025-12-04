@@ -1,6 +1,6 @@
 # Nineva Studios documentation
 
-Welcome to the Nineva Studios doucumentation page!
+Welcome to the Nineva Studios documentation!
 
 This documentation is open-source: https://github.com/NinevaStudios/nineva-docs. Please submit your fixes/suggestions as pull requests.
 

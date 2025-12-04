@@ -176,7 +176,7 @@ Result:
 
 ![](/images/ig/address.png ':size=512')
 
-### Preforming simple search
+### Performing simple search
 
 **Example:**
 
@@ -189,7 +189,7 @@ Result:
 
 ![](/images/ig/location.png ':size=512')
 
-### Preforming simple search near location
+### Performing simple search near location
 
 **Example:**
 
@@ -517,7 +517,7 @@ Use `IGCalendar.CreateCalendarEvent()` method to create a calendar event, specif
 
 ```csharp
 IGCalendar.CreateCalendarEvent(id => { Debug.Log(string.Format("Calendar event was created with identifier: {0}", id)); },
-error => { Debug.Log("An error occured: " + error); }, title, startDate, endDate, notes);
+error => { Debug.Log("An error occurred: " + error); }, title, startDate, endDate, notes);
 ```
 
 The `id` you get from successful callback of the event creation can be used later to delete the event from the calendar.
@@ -536,7 +536,7 @@ To create a reminder, call `IGCalendar.CreateReminder()` method, passing actions
 
 ```csharp
 IGCalendar.CreateReminder(id => { Debug.Log(string.Format("Calendar event was created with identifier: {0}", id)); },
-error => { Debug.Log("An error occured: " + error); }, title, reminderDate, reminderDate);
+error => { Debug.Log("An error occurred: " + error); }, title, reminderDate, reminderDate);
 ```
 
 ### Mark a reminder as complete/incomplete
@@ -990,4 +990,3 @@ This class provides to all the functionality of [UIDevice](https://developer.app
 
 + Gets or sets a value indicating whether proximity monitoring is enabled: `IGDevice.IsProximityMonitoringEnabled`
 + Get proximity state of the device: `IGDevice.ProximityState`. **To get the proximity state first you have to set `IGDevice.IsProximityMonitoringEnabled = true`**
-
