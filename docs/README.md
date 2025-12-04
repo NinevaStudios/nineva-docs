@@ -38,8 +38,6 @@ Useful links:
 - [Android Goodies](unity-plugins/android-goodies)
 - [Google Maps View](unity-plugins/google-maps)
 - [iOS Goodies](unity-plugins/ios-goodies)
-- [Mobile Places SDK](unity-plugins/places-sdk)
-- [GIPHY Gif Picker](unity-plugins/giphy)
 
 ## Hire us!
 
