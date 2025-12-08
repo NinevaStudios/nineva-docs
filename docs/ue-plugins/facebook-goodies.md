@@ -61,9 +61,9 @@ In the Android section of your app you need to setup a few things
 2. As a class name put `com.epicgames.unreal.GameActivity` (if using UE4 `com.epicgames.ue4.GameActivity`) which is the default name of the main activity
 3. You need to find your keystore hashes which you are signing your app with. Please follow the [instructions on Facebook developers](https://developers.facebook.com/docs/android/getting-started/#release-key-hash).
 
-## Products setup
+## Use case setup
 
-To setup the login please follow the [Facebook Login Documentation](https://developers.facebook.com/docs/facebook-login). Analytics should be set up automatically.
+To setup the login please follow the [Facebook Login Documentation](https://developers.facebook.com/docs/facebook-login/create-an-app). Analytics should be set up automatically.
 
 # **Login**
 
