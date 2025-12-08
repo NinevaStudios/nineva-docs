@@ -16,8 +16,7 @@ Welcome to Facebook Goodies Documentation for Unreal Engine
 
 Log in on the [Facebook Developer portal](https://developers.facebook.com/apps/) and create an app.
 
-![](images/facebook/FacebookCreateApp.jpg ":size=900")
-![](images/facebook/FacebookCreateApp_2.jpg ":size=900")
+?> Facebook UI for setting up the app changes all the time, it is recommended to use [the official docs for reference](https://developers.facebook.com/docs/development/create-an-app/).
 
 ## Copy your App ID and Client Token to UE Project settings
 
@@ -64,13 +63,7 @@ In the Android section of your app you need to setup a few things
 
 ## Products setup
 
-Add all the products you need and follow the setup instructions for each product on the portal. Please ignore the Plist file modifications, the plugin will do them for you automatically.
-
-![](images/facebook/FacebookAddProducts.jpg ":size=900")
-
-If properly configured your app should have green checkboxes for Login and App Events in the products section.
-
-![](images/facebook/FacebookConfiguredApp.png)
+To setup the login please follow the [Facebook Login Documentation](https://developers.facebook.com/docs/facebook-login). Analytics should be set up automatically.
 
 # **Login**
 
