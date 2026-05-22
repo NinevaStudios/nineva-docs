@@ -1,4 +1,4 @@
-- <a href="https://www.patreon.com/bePatron?u=168010"><img src="/icons/patreon.png" style="height:42px;vertical-align: bottom"></a>
+- <a href="https://screenshotbro.app/" target="_blank" rel="noopener" style="display:inline-block;padding:8px 14px;background:#8930B1;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">Making App Store screenshots? Try Screenshot Bro</a>
 
 - **Unreal Engine Plugins**
 	* **[🛒 BUY ALL ON ITCH.IO](https://nineva-studios.itch.io/unreal-engine-plugins)**
