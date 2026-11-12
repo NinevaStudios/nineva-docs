@@ -15,6 +15,7 @@
 	* [iOS Goodies](ue-plugins/ios-goodies)
 	* [Monetization Goodies](ue-plugins/monetization-unreal)
 	* [Nearby Connections](ue-plugins/nearby-connections-unreal)
+	* [RevenueCat Goodies](ue-plugins/revenuecat-unreal)
 	* **[Common issues](ue-plugins/common-issues)**
 
 - **Unity Plugins**
